@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-import type { Prisma, PrismaClient } from '@prisma/client'
+import type { PrismaClient } from '@prisma/client'
 import { cyan } from 'ansi-colors';
 
 import { Radicalx } from '../radicalx/model';
@@ -18,41 +18,44 @@ export async function initRadicalDb(prisma: PrismaClient) {
 
 async function init1Db(prisma: PrismaClient) {
 
-    const radicalData: Prisma.RadicalCreateManyInput[] =
-        nagaraRadicalData.map(v => (
-            {
-                number: v.number,
-                literal: v.literal,
-                literal_: v._literal,
-                stroke_count: v.stroke_count,
-                is_variant: false,
-            }));
+    for (let i = 0; i < nagaraRadicalData.length; i++) {
+        const radical = nagaraRadicalData[i];
 
-    for (const radical of nagaraRadicalData) {
-        for (const radicalVersion of radical.variant) {
-            radicalData.push({
+        await prisma.radical.upsert({
+            where: {
+                literal: radical.literal
+            },
+            create: {
                 number: radical.number,
-                literal: radicalVersion.literal,
-                literal_: radicalVersion._literal,
-                stroke_count: radicalVersion.stroke_count,
-                is_variant: true,
-            })
+                literal: radical.literal,
+                literal_: radical._literal,
+                stroke_count: radical.stroke_count,
+                is_variant: false
+            },
+            update: {},
+        });
+
+        for (let ix = 0; ix < radical.variant.length; ix++) {
+
+            await prisma.radical.upsert({
+                where: {
+                    literal: radical.variant[ix].literal
+                },
+                create: {
+                    number: radical.number,
+                    literal: radical.variant[ix].literal,
+                    literal_: radical.variant[ix]._literal,
+                    stroke_count: radical.variant[ix].stroke_count,
+                    is_variant: true,
+                },
+                update: {},
+            });
         }
     }
-
-    await prisma.radical.createMany({
-        data: radicalData,
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} radical entries`)
-    });
+    console.log(`Created ${await prisma.radical.count()} radical entries`);
 }
 
 async function init2Db(prisma: PrismaClient) {
-
-    const radicalReadingData: Prisma.Radical_ReadingCreateManyInput[] = [];
-    const radicalMeaningData: Prisma.Radical_MeaningCreateManyInput[] = [];
-    const radicalVariantData: Prisma.Radical_VariantCreateManyInput[] = [];
 
     const radical = await prisma.radical.findMany();
 
@@ -63,60 +66,69 @@ async function init2Db(prisma: PrismaClient) {
         if (radical_id) {
 
             // Create reading data
-            entry.reading.forEach(reading => {
-
-                radicalReadingData.push({
-                    radical_id: radical_id,
-                    value: reading
+            for (let i = 0; i < entry.reading.length; i++) {
+                await prisma.radical_Reading.upsert({
+                    where: {
+                        radical_id_value: {
+                            radical_id: radical_id,
+                            value: entry.reading[i]
+                        }
+                    },
+                    create: {
+                        radical_id: radical_id,
+                        value: entry.reading[i]
+                    },
+                    update: {}
                 });
-            });
+            };
 
             // Create meaning data
-            entry.meaning.forEach(meaning => {
-
-                radicalMeaningData.push({
-                    radical_id: radical_id,
-                    value: meaning
+            for (let i = 0; i < entry.meaning.length; i++) {
+                await prisma.radical_Meaning.upsert({
+                    where: {
+                        radical_id_value: {
+                            radical_id: radical_id,
+                            value: entry.meaning[i]
+                        }
+                    },
+                    create: {
+                        radical_id: radical_id,
+                        value: entry.meaning[i]
+                    },
+                    update: {}
                 });
-            });
+            };
 
             // Create variant data
-            entry.variant.forEach(async variant => {
-
+            for (let i = 0; i < entry.variant.length; i++) {
+   
                 const radicalVariantFromDb = await prisma.radical.findUnique({
                     where: {
-                        literal: variant.literal
+                        literal: entry.variant[i].literal
                     }
                 });
 
                 if (radicalVariantFromDb) {
-                    radicalVariantData.push({
-                        radical_id: radical_id,
-                        radical_variant_id: radicalVariantFromDb.id
+
+                    await prisma.radical_Variant.upsert({
+                        where: {
+                            radical_id_radical_variant_id: {
+                                radical_id: radical_id,
+                                radical_variant_id: radicalVariantFromDb.id
+                            }
+                        },
+                        create: {
+                            radical_id: radical_id,
+                            radical_variant_id: radicalVariantFromDb.id,
+                        },
+                        update: {}
                     });
-                }
-            });
-        }
-    }
+                };
+            };
+        };
+    };
 
-    await prisma.radical_Reading.createMany({
-        data: radicalReadingData,
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} reading entries`)
-    });
-
-    await prisma.radical_Meaning.createMany({
-        data: radicalMeaningData,
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} meaning entries`)
-    });
-
-    await prisma.radical_Variant.createMany({
-        data: radicalVariantData,
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} variant entries`)
-    });
+    console.log(`Created ${await prisma.radical_Reading.count()} reading entries`);
+    console.log(`Created ${await prisma.radical_Meaning.count()} meaning entries`);
+    console.log(`Created ${await prisma.radical_Variant.count()} variant entries`);
 } 

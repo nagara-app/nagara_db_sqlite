@@ -27,7 +27,7 @@ model Kanji {
   meaning    Kanji_Meaning[]
   nanori     Kanji_Nanori[]
 
-  variant        Kanji_Variant[] @relation("variant")
+  variant        Kanji_Variant[] @relation("kanjiVariant")
   kanjiToVariant Kanji_Variant[] @relation("kanjiToVariant")
 
   lookalike        Kanji_Lookalike[] @relation("lookalike")
@@ -117,8 +117,6 @@ model Kanji_QueryCode {
 }
 
 model Kanji_Reading {
-  id Int @id @default(autoincrement())
-
   kanji    Kanji @relation(fields: [kanji_id], references: [id], onDelete: Cascade)
   kanji_id Int
 
@@ -127,13 +125,11 @@ model Kanji_Reading {
 
   value String
 
-  @@unique([kanji_id, kwKanjiReadingType_id, value])
+  @@id([kanji_id, kwKanjiReadingType_id, value])
   @@map("kanji.reading")
 }
 
 model Kanji_Meaning {
-  id Int @id @default(autoincrement())
-
   kanji    Kanji @relation(fields: [kanji_id], references: [id], onDelete: Cascade)
   kanji_id Int
 
@@ -142,19 +138,17 @@ model Kanji_Meaning {
 
   value String
 
-  @@unique([kanji_id, kwLang_id, value])
+  @@id([kanji_id, kwLang_id, value])
   @@map("kanji.meaning")
 }
 
 model Kanji_Nanori {
-  id Int @id @default(autoincrement())
-
   kanji    Kanji @relation(fields: [kanji_id], references: [id], onDelete: Cascade)
   kanji_id Int
 
   value String
 
-  @@unique([kanji_id, value])
+  @@id([kanji_id, value])
   @@map("kanji.nanori")
 }
 
@@ -162,7 +156,7 @@ model Kanji_Variant {
   kanji    Kanji @relation(name: "kanjiToVariant", fields: [kanji_id], references: [id], onDelete: Cascade)
   kanji_id Int
 
-  kanji_variant    Kanji @relation(name: "variant", fields: [kanji_variant_id], references: [id])
+  kanji_variant    Kanji @relation(name: "kanjiVariant", fields: [kanji_variant_id], references: [id])
   kanji_variant_id Int
 
   @@id([kanji_id, kanji_variant_id])
@@ -192,15 +186,13 @@ model Kanji_Antonym {
 }
 
 model Kanji_Synonym {
-  id Int @id @default(autoincrement())
-
   kanji    Kanji @relation(name: "kanjiToSynonym", fields: [kanji_id], references: [id], onDelete: Cascade)
   kanji_id Int
 
   kanji_synonym    Kanji @relation(name: "synonym", fields: [kanji_synonym_id], references: [id])
   kanji_synonym_id Int
 
-  @@unique([kanji_id, kanji_synonym_id])
+  @@id([kanji_id, kanji_synonym_id])
   @@map("kanji.synonym")
 }
 
@@ -226,7 +218,7 @@ model Kanji_Misc_RadName {
 model Radical {
   id           Int                @id @default(autoincrement())
   literal      String             @unique
-  literal_     String?            @unique
+  literal_     String?
   stroke_count Int
   number       Int
   is_variant   Boolean
@@ -234,7 +226,7 @@ model Radical {
   meaning      Radical_Meaning[]
   part         Cross_Kanji_Part[]
 
-  variant          Radical_Variant[] @relation("variant")
+  variant          Radical_Variant[] @relation("radicalVariant")
   radicalToVariant Radical_Variant[] @relation("radicalToVariant")
 
   @@map("radical")
@@ -243,26 +235,22 @@ model Radical {
 // 2
 
 model Radical_Reading {
-  id Int @id @default(autoincrement())
-
   radical    Radical @relation(fields: [radical_id], references: [id], onDelete: Cascade)
   radical_id Int
 
   value String
 
-  @@unique([radical_id, value])
+  @@id([radical_id, value])
   @@map("radical.reading")
 }
 
 model Radical_Meaning {
-  id Int @id @default(autoincrement())
-
   radical    Radical @relation(fields: [radical_id], references: [id], onDelete: Cascade)
   radical_id Int
 
   value String
 
-  @@unique([radical_id, value])
+  @@id([radical_id, value])
   @@map("radical.meaning")
 }
 
@@ -270,7 +258,7 @@ model Radical_Variant {
   radical    Radical @relation(name: "radicalToVariant", fields: [radical_id], references: [id], onDelete: Cascade)
   radical_id Int
 
-  radical_variant    Radical @relation(name: "variant", fields: [radical_variant_id], references: [id])
+  radical_variant    Radical @relation(name: "radicalVariant", fields: [radical_variant_id], references: [id])
   radical_variant_id Int
 
   @@id([radical_id, radical_variant_id])

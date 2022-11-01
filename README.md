@@ -37,8 +37,6 @@
 1. Run the script `npm run migrate`.
 
 
-### Create the postgres database
+### Create the sqlite database
 
-1. Create a `.env` file in the root directory.
-2. Set the `DATABASE_URL` in your `.env` file like `postgresql://test:test@localhost:5432/test?schema=foo&pool_timeout=0`.
-3. Run the script `npm run start`.
+1. Run the script `npm run start`.

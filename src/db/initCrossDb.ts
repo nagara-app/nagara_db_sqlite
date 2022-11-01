@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-import type { Prisma, PrismaClient } from '@prisma/client'
+import type { PrismaClient } from '@prisma/client'
 import { cyan } from 'ansi-colors';
 
 import { KRadFileX } from '../kradfilex/model';
@@ -17,45 +17,37 @@ export async function initCrossDb(prisma: PrismaClient) {
     const kanji = await prisma.kanji.findMany();
     const radical = await prisma.radical.findMany();
 
-    const kanjiPartData: Prisma.Cross_Kanji_PartCreateManyInput[] = [];
-
-    kradfileData.entries.forEach(entry => {
+    for (const entry of kradfileData.entries) {
         const kanji_id = kanji.find(a => a.literal === entry.literal)?.id;
 
         if (kanji_id) {
 
-            entry.parts.forEach((part, i) => {
+            for (let i = 0; i < entry.parts.length; i++) {
 
-                const radicalPart = radical.find(a => a.literal_ === part);
-                const kanjiPart = kanji.find(a => a.literal === part);
+                const radicalPart = radical.find(a => a.literal_ === entry.parts[i]);
+                const kanjiPart = kanji.find(a => a.literal === entry.parts[i]);
 
-                if (radicalPart) {
-                    kanjiPartData.push({
+                await prisma.cross_Kanji_Part.upsert({
+                    where: {
+                        kanji_id_order: {
+                            kanji_id: kanji_id,
+                            order: i
+                        }
+                    },
+                    create: {
                         kanji_id: kanji_id,
                         order: i,
-                        part_radical_id: radicalPart.id
-                    });
-                } else if (kanjiPart) {
-                    kanjiPartData.push({
-                        kanji_id: kanji_id,
-                        order: i,
-                        part_kanji_id: kanjiPart.id
-                    });
-                } else {
-                    kanjiPartData.push({
-                        kanji_id: kanji_id,
-                        order: i,
-                        part_component: part
-                    });
-                }
-            });
-        }
-    });
+                        part_kanji_id: kanjiPart?.id ? kanjiPart.id : null,
+                        part_radical_id: radicalPart?.id ? radicalPart.id: null,
+                        part_component: !radicalPart?.id && !kanjiPart?.id ? entry.parts[i] : null
+                    },
+                    update: {
+                    }
+                });
+            };
+        };
+    };
+    
 
-    await prisma.cross_Kanji_Part.createMany({
-        data: kanjiPartData,
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} kanji part entries`)
-    });
+    console.log(`Created ${await prisma.cross_Kanji_Part.count()} kanji part entries`);
 }

@@ -57,29 +57,32 @@ CREATE TABLE "kanji.querycode" (
 
 -- CreateTable
 CREATE TABLE "kanji.reading" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "kanji_id" INTEGER NOT NULL,
     "kwKanjiReadingType_id" INTEGER NOT NULL,
     "value" TEXT NOT NULL,
+
+    PRIMARY KEY ("kanji_id", "kwKanjiReadingType_id", "value"),
     CONSTRAINT "kanji.reading_kanji_id_fkey" FOREIGN KEY ("kanji_id") REFERENCES "kanji" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "kanji.reading_kwKanjiReadingType_id_fkey" FOREIGN KEY ("kwKanjiReadingType_id") REFERENCES "kw.kanji.readingtype" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- CreateTable
 CREATE TABLE "kanji.meaning" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "kanji_id" INTEGER NOT NULL,
     "kwLang_id" INTEGER NOT NULL,
     "value" TEXT NOT NULL,
+
+    PRIMARY KEY ("kanji_id", "kwLang_id", "value"),
     CONSTRAINT "kanji.meaning_kanji_id_fkey" FOREIGN KEY ("kanji_id") REFERENCES "kanji" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "kanji.meaning_kwLang_id_fkey" FOREIGN KEY ("kwLang_id") REFERENCES "kw.kanji.lang" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- CreateTable
 CREATE TABLE "kanji.nanori" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "kanji_id" INTEGER NOT NULL,
     "value" TEXT NOT NULL,
+
+    PRIMARY KEY ("kanji_id", "value"),
     CONSTRAINT "kanji.nanori_kanji_id_fkey" FOREIGN KEY ("kanji_id") REFERENCES "kanji" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -115,9 +118,10 @@ CREATE TABLE "kanji.antonym" (
 
 -- CreateTable
 CREATE TABLE "kanji.synonym" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "kanji_id" INTEGER NOT NULL,
     "kanji_synonym_id" INTEGER NOT NULL,
+
+    PRIMARY KEY ("kanji_id", "kanji_synonym_id"),
     CONSTRAINT "kanji.synonym_kanji_id_fkey" FOREIGN KEY ("kanji_id") REFERENCES "kanji" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT "kanji.synonym_kanji_synonym_id_fkey" FOREIGN KEY ("kanji_synonym_id") REFERENCES "kanji" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
@@ -142,17 +146,19 @@ CREATE TABLE "radical" (
 
 -- CreateTable
 CREATE TABLE "radical.reading" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "radical_id" INTEGER NOT NULL,
     "value" TEXT NOT NULL,
+
+    PRIMARY KEY ("radical_id", "value"),
     CONSTRAINT "radical.reading_radical_id_fkey" FOREIGN KEY ("radical_id") REFERENCES "radical" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- CreateTable
 CREATE TABLE "radical.meaning" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "radical_id" INTEGER NOT NULL,
     "value" TEXT NOT NULL,
+
+    PRIMARY KEY ("radical_id", "value"),
     CONSTRAINT "radical.meaning_radical_id_fkey" FOREIGN KEY ("radical_id") REFERENCES "radical" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -253,31 +259,10 @@ CREATE UNIQUE INDEX "kanji_literal_key" ON "kanji"("literal");
 CREATE UNIQUE INDEX "kanji.misc_kanji_id_key" ON "kanji.misc"("kanji_id");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "kanji.reading_kanji_id_kwKanjiReadingType_id_value_key" ON "kanji.reading"("kanji_id", "kwKanjiReadingType_id", "value");
-
--- CreateIndex
-CREATE UNIQUE INDEX "kanji.meaning_kanji_id_kwLang_id_value_key" ON "kanji.meaning"("kanji_id", "kwLang_id", "value");
-
--- CreateIndex
-CREATE UNIQUE INDEX "kanji.nanori_kanji_id_value_key" ON "kanji.nanori"("kanji_id", "value");
-
--- CreateIndex
-CREATE UNIQUE INDEX "kanji.synonym_kanji_id_kanji_synonym_id_key" ON "kanji.synonym"("kanji_id", "kanji_synonym_id");
-
--- CreateIndex
 CREATE UNIQUE INDEX "kanji.misc.rad_value_key" ON "kanji.misc.rad"("value");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "radical_literal_key" ON "radical"("literal");
-
--- CreateIndex
-CREATE UNIQUE INDEX "radical_literal__key" ON "radical"("literal_");
-
--- CreateIndex
-CREATE UNIQUE INDEX "radical.reading_radical_id_value_key" ON "radical.reading"("radical_id", "value");
-
--- CreateIndex
-CREATE UNIQUE INDEX "radical.meaning_radical_id_value_key" ON "radical.meaning"("radical_id", "value");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "kw.kanji.codepointtype_value_key" ON "kw.kanji.codepointtype"("value");

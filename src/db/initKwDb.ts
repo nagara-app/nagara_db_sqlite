@@ -91,80 +91,156 @@ export async function initKwDb(prisma: PrismaClient) {
     });
 
     // Create all entries
-    await prisma.kwCodepointType.createMany({
-        data: codepointTypes.map(v => ({ value: v })),
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} codepoint type entries`)
-    });
+    for (let i = 0; i < codepointTypes.length; i++) {
+        await prisma.kwCodepointType.upsert({
+            where: {
+                value: codepointTypes[i],
+            },
+            create: {
+                value: codepointTypes[i]
+            },
+            update: {}
+        });
+    };
+    console.log(`Created ${codepointTypes.length.toString()} codepoint type entries`);
 
-    await prisma.kwDicRefType.createMany({
-        data: dicRefTypes.map(v => ({ value: v })),
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} dictionary reference type entries`)
-    });
 
-    await prisma.kwGrade.createMany({
-        data: grades.map(v => ({ value: v })),
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} grade entries`)
-    });
+    for (let i = 0; i < dicRefTypes.length; i++) {
+        await prisma.kwDicRefType.upsert({
+            where: {
+                value: dicRefTypes[i],
+            },
+            create: {
+                value: dicRefTypes[i]
+            },
+            update: {}
+        });
+    };
+    console.log(`Created ${dicRefTypes.length.toString()} dictionary reference type entries`);
 
-    await prisma.kwJLPT.createMany({
-        data: jlptLevels.map(v => ({ value: v })),
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} JLPT entries`)
-    });
 
-    await prisma.kwKanjiReadingType.createMany({
-        data: kanjiReadingTypes.map(v => ({ value: v })),
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} reading type entries`)
-    });
+    for (let i = 0; i < grades.length; i++) {
+        await prisma.kwGrade.upsert({
+            where: {
+                value: grades[i],
+            },
+            create: {
+                value: grades[i]
+            },
+            update: {}
+        });
+    };
+    console.log(`Created ${grades.length.toString()} grade entries`);
 
-    await prisma.kwLang.createMany({
-        data: languages.map(v => ({ value: v })),
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} language entries`)
-    });
 
-    await prisma.kwMorohashiVol.createMany({
-        data: morohashiVolumes.map(v => ({ value: v })),
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} morohashi volume entries`)
-    });
+    for (let i = 0; i < jlptLevels.length; i++) {
+        await prisma.kwJLPT.upsert({
+            where: {
+                value: jlptLevels[i],
+            },
+            create: {
+                value: jlptLevels[i]
+            },
+            update: {}
+        });
+    };
+    console.log(`Created ${jlptLevels.length.toString()} JLPT entries`);
 
-    await prisma.kwQueryCodeType.createMany({
-        data: queryCodeTypes.map(v => ({ value: v })),
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} query code type entries`)
-    });
 
-    await prisma.kwRadicalType.createMany({
-        data: radicalTypes.map(v => ({ value: v })),
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} radical type entries`)
-    });
+    for (let i = 0; i < kanjiReadingTypes.length; i++) {
+        await prisma.kwKanjiReadingType.upsert({
+            where: {
+                value: kanjiReadingTypes[i],
+            },
+            create: {
+                value: kanjiReadingTypes[i]
+            },
+            update: {}
+        });
+    };
+    console.log(`Created ${kanjiReadingTypes.length.toString()} reading type entries`);
 
-    await prisma.kwSkipMisclass.createMany({
-        data: misclassifications.map(v => ({ value: v })),
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} mis classification entries`)
-    });
 
-    await prisma.kwStrokeCount.createMany({
-        data: strokeCounts.map(v => ({ value: +v })),
-        skipDuplicates: true
-    }).then(v => {
-        console.log(`Created ${v.count.toString()} stroke count entries`)
-    });
+    for (let i = 0; i < languages.length; i++) {
+        await prisma.kwLang.upsert({
+            where: {
+                value: languages[i],
+            },
+            create: {
+                value: languages[i]
+            },
+            update: {}
+        });
+    };
+    console.log(`Created ${languages.length.toString()} language entries`);
+
+
+    for (let i = 0; i < morohashiVolumes.length; i++) {
+        await prisma.kwMorohashiVol.upsert({
+            where: {
+                value: morohashiVolumes[i],
+            },
+            create: {
+                value: morohashiVolumes[i]
+            },
+            update: {}
+        });
+    };
+    console.log(`Created ${morohashiVolumes.length.toString()} morohashi volume entries`);
+
+
+    for (let i = 0; i < queryCodeTypes.length; i++) {
+        await prisma.kwQueryCodeType.upsert({
+            where: {
+                value: queryCodeTypes[i],
+            },
+            create: {
+                value: queryCodeTypes[i]
+            },
+            update: {}
+        });
+    };
+    console.log(`Created ${queryCodeTypes.length.toString()} query code type entries`);
+
+
+    for (let i = 0; i < radicalTypes.length; i++) {
+        await prisma.kwRadicalType.upsert({
+            where: {
+                value: radicalTypes[i],
+            },
+            create: {
+                value: radicalTypes[i]
+            },
+            update: {}
+        });
+    };
+    console.log(`Created ${radicalTypes.length.toString()} radical type entries`);
+
+
+    for (let i = 0; i < misclassifications.length; i++) {
+        await prisma.kwSkipMisclass.upsert({
+            where: {
+                value: misclassifications[i],
+            },
+            create: {
+                value: misclassifications[i]
+            },
+            update: {}
+        });
+    };
+    console.log(`Created ${misclassifications.length.toString()} mis classification entries`);
+
+
+    for (let i = 0; i < strokeCounts.length; i++) {
+        await prisma.kwStrokeCount.upsert({
+            where: {
+                value: +strokeCounts[i],
+            },
+            create: {
+                value: +strokeCounts[i]
+            },
+            update: {}
+        });
+    };
+    console.log(`Created ${strokeCounts.length.toString()} stroke count entries`);
 }
