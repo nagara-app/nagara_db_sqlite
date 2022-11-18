@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:../output/nagara.db"
+  url      = "file:../output/tkdb.db"
 }
 
 //
@@ -92,7 +92,7 @@ model Kanji_DicRef {
 
   mPage Int?
 
-  value Int
+  value String
 
   @@id([kanji_id, kwDicRefType_id])
   @@map("kanji_dicref")

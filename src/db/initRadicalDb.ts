@@ -6,9 +6,9 @@ import { cyan } from 'ansi-colors';
 
 import { Radicalx } from '../radicalx/model';
 
-const nagaraRadicalPath = join(__dirname, '..', '..', 'output/radicalx.json');
-const nagaraRadicalFile = readFileSync(nagaraRadicalPath);
-const nagaraRadicalData = JSON.parse(nagaraRadicalFile.toString()) as Radicalx[];
+const tkRadicalPath = join(__dirname, '..', '..', 'output/radicalx.json');
+const tkRadicalFile = readFileSync(tkRadicalPath);
+const tkRadicalData = JSON.parse(tkRadicalFile.toString()) as Radicalx[];
 
 export async function initRadicalDb(prisma: PrismaClient) {
     console.log(cyan('Initializing radical tables'));
@@ -18,8 +18,8 @@ export async function initRadicalDb(prisma: PrismaClient) {
 
 async function init1Db(prisma: PrismaClient) {
 
-    for (let i = 0; i < nagaraRadicalData.length; i++) {
-        const radical = nagaraRadicalData[i];
+    for (let i = 0; i < tkRadicalData.length; i++) {
+        const radical = tkRadicalData[i];
 
         await prisma.radical.upsert({
             where: {
@@ -59,7 +59,7 @@ async function init2Db(prisma: PrismaClient) {
 
     const radical = await prisma.radical.findMany();
 
-    for (const entry of nagaraRadicalData) {
+    for (const entry of tkRadicalData) {
 
         const radical_id = radical.find(a => a.literal === entry.literal)?.id;
 
