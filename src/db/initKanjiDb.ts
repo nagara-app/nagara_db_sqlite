@@ -94,8 +94,8 @@ async function init2Db(prisma: PrismaClient) {
             const strokeCountArr = Array.isArray(character.misc.stroke_count) ? character.misc.stroke_count : [character.misc.stroke_count];
             const kwStrokeCount_id = kwStrokeCountEntries.find(a => a.value === +strokeCountArr[0])?.id;
 
-            const kwGrade_id = kwGradeEntries.find(a => a.value === character.misc.grade)?.id;
-            const jlpt_id = kwJLPTEntries.find(a => a.value === character.misc.jlpt)?.id;
+            const kwGrade_id = kwGradeEntries.find(a => a.value.toString() === character.misc.grade)?.id;
+            const jlpt_id = kwJLPTEntries.find(a => a.value.toString() === character.misc.jlpt)?.id;
 
             if (kwStrokeCount_id) {
                 await prisma.kanji_Misc.upsert({
@@ -156,9 +156,10 @@ async function init2Db(prisma: PrismaClient) {
 
                         await prisma.kanji_QueryCode.upsert({
                             where: {
-                                kanji_id_kwQueryCodeType_id: {
+                                kanji_id_kwQueryCodeType_id_value: {
                                     kanji_id: kanji_id,
-                                    kwQueryCodeType_id: kwQueryCodeType_id
+                                    kwQueryCodeType_id: kwQueryCodeType_id,
+                                    value: queryCodeArr[i].value
                                 }
                             },
                             create: {
@@ -192,7 +193,8 @@ async function init2Db(prisma: PrismaClient) {
                             create: {
                                 kanji_id: kanji_id,
                                 kwKanjiReadingType_id: kwKanjiReadingType_id,
-                                value: readingArr[i].value
+                                value: readingArr[i].value,
+                                position: i,
                             },
                             update: {}
                         });
@@ -221,7 +223,8 @@ async function init2Db(prisma: PrismaClient) {
                                 create: {
                                     kanji_id: kanji_id,
                                     kwLang_id: kwLang_id,
-                                    value: meaning
+                                    value: meaning,
+                                    position: i,
                                 },
                                 update: {}
                             });
@@ -239,7 +242,8 @@ async function init2Db(prisma: PrismaClient) {
                                 create: {
                                     kanji_id: kanji_id,
                                     kwLang_id: kwLang_id,
-                                    value: meaning.value
+                                    value: meaning.value,
+                                    position: i
                                 },
                                 update: {}
                             });
@@ -262,7 +266,8 @@ async function init2Db(prisma: PrismaClient) {
                         },
                         create: {
                             kanji_id: kanji_id,
-                            value: nanoriArr[i]
+                            value: nanoriArr[i],
+                            position: i
                         },
                         update: {}
                     });

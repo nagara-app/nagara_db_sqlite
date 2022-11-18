@@ -93,7 +93,8 @@ async function init2Db(prisma: PrismaClient) {
                     },
                     create: {
                         radical_id: radical_id,
-                        value: entry.meaning[i]
+                        value: entry.meaning[i],
+                        position: i
                     },
                     update: {}
                 });

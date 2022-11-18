@@ -29,14 +29,14 @@ export async function initCrossDb(prisma: PrismaClient) {
 
                 await prisma.cross_Kanji_Part.upsert({
                     where: {
-                        kanji_id_order: {
+                        kanji_id_position: {
                             kanji_id: kanji_id,
-                            order: i
+                            position: i
                         }
                     },
                     create: {
                         kanji_id: kanji_id,
-                        order: i,
+                        position: i,
                         part_kanji_id: kanjiPart?.id ? kanjiPart.id : null,
                         part_radical_id: radicalPart?.id ? radicalPart.id: null,
                         part_component: !radicalPart?.id && !kanjiPart?.id ? entry.parts[i] : null

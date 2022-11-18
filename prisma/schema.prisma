@@ -57,7 +57,7 @@ model Kanji_Codepoint {
   value String
 
   @@id([kanji_id, kw_codepoint_id])
-  @@map("kanji.codepoint")
+  @@map("kanji_codepoint")
 }
 
 model Kanji_Misc {
@@ -73,12 +73,10 @@ model Kanji_Misc {
   jlpt    KwJLPT? @relation(fields: [jlpt_id], references: [id], onDelete: Cascade)
   jlpt_id Int?
 
-  rad_name Kanji_Misc_RadName[]
-
   freq Int?
 
   @@id([kanji_id])
-  @@map("kanji.misc")
+  @@map("kanji_misc")
 }
 
 model Kanji_DicRef {
@@ -94,10 +92,10 @@ model Kanji_DicRef {
 
   mPage Int?
 
-  value String
+  value Int
 
   @@id([kanji_id, kwDicRefType_id])
-  @@map("kanji.dicref")
+  @@map("kanji_dicref")
 }
 
 model Kanji_QueryCode {
@@ -112,8 +110,8 @@ model Kanji_QueryCode {
 
   value String
 
-  @@id([kanji_id, kwQueryCodeType_id])
-  @@map("kanji.querycode")
+  @@id([kanji_id, kwQueryCodeType_id, value])
+  @@map("kanji_querycode")
 }
 
 model Kanji_Reading {
@@ -124,9 +122,10 @@ model Kanji_Reading {
   kwKanjiReadingType_id Int
 
   value String
+  position Int
 
   @@id([kanji_id, kwKanjiReadingType_id, value])
-  @@map("kanji.reading")
+  @@map("kanji_reading")
 }
 
 model Kanji_Meaning {
@@ -137,9 +136,10 @@ model Kanji_Meaning {
   kwLang_id Int
 
   value String
+  position Int
 
   @@id([kanji_id, kwLang_id, value])
-  @@map("kanji.meaning")
+  @@map("kanji_meaning")
 }
 
 model Kanji_Nanori {
@@ -147,9 +147,10 @@ model Kanji_Nanori {
   kanji_id Int
 
   value String
+  position Int
 
   @@id([kanji_id, value])
-  @@map("kanji.nanori")
+  @@map("kanji_nanori")
 }
 
 model Kanji_Variant {
@@ -160,7 +161,7 @@ model Kanji_Variant {
   kanji_variant_id Int
 
   @@id([kanji_id, kanji_variant_id])
-  @@map("kanji.variant")
+  @@map("kanji_variant")
 }
 
 model Kanji_Lookalike {
@@ -171,7 +172,7 @@ model Kanji_Lookalike {
   kanji_lookalike_id Int
 
   @@id([kanji_id, kanji_lookalike_id])
-  @@map("kanji.lookalike")
+  @@map("kanji_lookalike")
 }
 
 model Kanji_Antonym {
@@ -182,7 +183,7 @@ model Kanji_Antonym {
   kanji_antonym_id Int
 
   @@id([kanji_id, kanji_antonym_id])
-  @@map("kanji.antonym")
+  @@map("kanji_antonym")
 }
 
 model Kanji_Synonym {
@@ -193,20 +194,7 @@ model Kanji_Synonym {
   kanji_synonym_id Int
 
   @@id([kanji_id, kanji_synonym_id])
-  @@map("kanji.synonym")
-}
-
-// 3
-
-model Kanji_Misc_RadName {
-  id Int @id @default(autoincrement())
-
-  kanjiMisc    Kanji_Misc @relation(fields: [kanjiMisc_id], references: [kanji_id], onDelete: Cascade)
-  kanjiMisc_id Int
-
-  value String @unique
-
-  @@map("kanji.misc.rad")
+  @@map("kanji_synonym")
 }
 
 //
@@ -241,7 +229,7 @@ model Radical_Reading {
   value String
 
   @@id([radical_id, value])
-  @@map("radical.reading")
+  @@map("radical_reading")
 }
 
 model Radical_Meaning {
@@ -249,9 +237,10 @@ model Radical_Meaning {
   radical_id Int
 
   value String
+  position Int
 
   @@id([radical_id, value])
-  @@map("radical.meaning")
+  @@map("radical_meaning")
 }
 
 model Radical_Variant {
@@ -262,7 +251,7 @@ model Radical_Variant {
   radical_variant_id Int
 
   @@id([radical_id, radical_variant_id])
-  @@map("radical.variant")
+  @@map("radical_variant")
 }
 
 //
@@ -275,23 +264,23 @@ model KwCodepointType {
 
   kanjiCodepoint Kanji_Codepoint[]
 
-  @@map("kw.kanji.codepointtype")
+  @@map("kw_kanji_codepointtype")
 }
 
 model KwRadicalType {
   id    Int    @id @default(autoincrement())
   value String @unique
 
-  @@map("kw.kanji.radicaltype")
+  @@map("kw_kanji_radicaltype")
 }
 
 model KwGrade {
   id    Int    @id @default(autoincrement())
-  value String @unique
+  value Int @unique
 
   kanjiMisc Kanji_Misc[]
 
-  @@map("kw.kanji.grade")
+  @@map("kw_kanji_grade")
 }
 
 model KwStrokeCount {
@@ -300,16 +289,16 @@ model KwStrokeCount {
 
   strokeCount Kanji_Misc[]
 
-  @@map("kw.kanji.strokecount")
+  @@map("kw_kanji_strokecount")
 }
 
 model KwJLPT {
   id    Int    @id @default(autoincrement())
-  value String @unique
+  value Int @unique
 
   kanjiMisc Kanji_Misc[]
 
-  @@map("kw.kanji.jlpt")
+  @@map("kw_kanji_jlpt")
 }
 
 model KwDicRefType {
@@ -318,7 +307,7 @@ model KwDicRefType {
 
   kanjiDicRef Kanji_DicRef[]
 
-  @@map("kw.kanji.dicref")
+  @@map("kw_kanji_dicref")
 }
 
 model KwMorohashiVol {
@@ -327,7 +316,7 @@ model KwMorohashiVol {
 
   kanjiDicRef Kanji_DicRef[]
 
-  @@map("kw.kanji.morohashivol")
+  @@map("kw_kanji_morohashivol")
 }
 
 model KwQueryCodeType {
@@ -336,7 +325,7 @@ model KwQueryCodeType {
 
   kanjiQueryCode Kanji_QueryCode[]
 
-  @@map("kw.kanji.querycodetype")
+  @@map("kw_kanji_querycodetype")
 }
 
 model KwSkipMisclass {
@@ -345,7 +334,7 @@ model KwSkipMisclass {
 
   kanjiQueryCode Kanji_QueryCode[]
 
-  @@map("kw.kanji.skipmisclass")
+  @@map("kw_kanji_skipmisclass")
 }
 
 model KwKanjiReadingType {
@@ -354,7 +343,7 @@ model KwKanjiReadingType {
 
   kanjiReading Kanji_Reading[]
 
-  @@map("kw.kanji.readingtype")
+  @@map("kw_kanji_readingtype")
 }
 
 model KwLang {
@@ -363,7 +352,7 @@ model KwLang {
 
   kanji_meaning Kanji_Meaning[]
 
-  @@map("kw.kanji.lang")
+  @@map("kw_kanji_lang")
 }
 
 //
@@ -374,7 +363,7 @@ model Cross_Kanji_Part {
   kanji    Kanji @relation(name: "kanjiToPart", fields: [kanji_id], references: [id], onDelete: Cascade)
   kanji_id Int
 
-  order Int
+  position Int
 
   part_kanji    Kanji? @relation(name: "part", fields: [part_kanji_id], references: [id])
   part_kanji_id Int?
@@ -384,6 +373,6 @@ model Cross_Kanji_Part {
 
   part_component String?
 
-  @@id([kanji_id, order])
-  @@map("cross.kanji.part")
+  @@id([kanji_id, position])
+  @@map("cross_kanji_part")
 }

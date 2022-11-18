@@ -122,10 +122,10 @@ export async function initKwDb(prisma: PrismaClient) {
     for (let i = 0; i < grades.length; i++) {
         await prisma.kwGrade.upsert({
             where: {
-                value: grades[i],
+                value: +grades[i],
             },
             create: {
-                value: grades[i]
+                value: +grades[i]
             },
             update: {}
         });
@@ -136,10 +136,10 @@ export async function initKwDb(prisma: PrismaClient) {
     for (let i = 0; i < jlptLevels.length; i++) {
         await prisma.kwJLPT.upsert({
             where: {
-                value: jlptLevels[i],
+                value: +jlptLevels[i],
             },
             create: {
-                value: jlptLevels[i]
+                value: +jlptLevels[i]
             },
             update: {}
         });

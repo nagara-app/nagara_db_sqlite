@@ -11,8 +11,8 @@ const prisma = new PrismaClient()
 async function main() {
 
     await initKwDb(prisma);
-    await initKanjiDb(prisma);
     await initRadicalDb(prisma);
+    await initKanjiDb(prisma);
     await initCrossDb(prisma);
     console.log(green('Finished'));
 
