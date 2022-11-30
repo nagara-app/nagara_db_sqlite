@@ -13,13 +13,16 @@ const kanjidic2Data = JSON.parse(kanjidic2File.toString()) as Kanjidic2;
 export async function initKwDb(prisma: PrismaClient) {
     console.log(cyan('Initializing keyword tables'));
 
-    // Boiler plate for unique keyword values
     const codepointTypes: string[] = [];
     const dicRefTypes: string[] = [];
     const grades: string[] = [];
-    const jlptLevels: string[] = [];
+    // The jlptOld are entries from kanjidic2 which are depricated since 2010
+    // The jlptNew are entries from tanos project
+    const jlptOld: string[] = [];
+    const jlptNew: string[] = ['1','2','3','4','5'];
     const kanjiReadingTypes: string[] = [];
-    const languages: string[] = ['en'];
+    // Add english as this default langague does not exist in kanjidic2
+    const languages: string[] = ['en']; 
     const misclassifications: string[] = [];
     const morohashiVolumes: string[] = [];
     const queryCodeTypes: string[] = [];
@@ -78,7 +81,7 @@ export async function initKwDb(prisma: PrismaClient) {
         }
 
         // Get unique JLPT level values
-        if (char.misc.jlpt && !jlptLevels.includes(char.misc.jlpt)) jlptLevels.push(char.misc.jlpt)
+        if (char.misc.jlpt && !jlptOld.includes(char.misc.jlpt)) jlptOld.push(char.misc.jlpt)
 
         // Get unique grade values
         if (char.misc.grade && !grades.includes(char.misc.grade)) grades.push(char.misc.grade);
@@ -133,18 +136,32 @@ export async function initKwDb(prisma: PrismaClient) {
     console.log(`Created ${grades.length.toString()} grade entries`);
 
 
-    for (let i = 0; i < jlptLevels.length; i++) {
-        await prisma.kwJLPT.upsert({
+    for (let i = 0; i < jlptOld.length; i++) {
+        await prisma.kwJLPTold.upsert({
             where: {
-                value: +jlptLevels[i],
+                value: +jlptOld[i],
             },
             create: {
-                value: +jlptLevels[i]
+                value: +jlptOld[i]
             },
             update: {}
         });
     };
-    console.log(`Created ${jlptLevels.length.toString()} JLPT entries`);
+    console.log(`Created ${jlptOld.length.toString()} JLPT old entries`);
+
+
+    for (let i = 0; i < jlptNew.length; i++) {
+        await prisma.kwJLPTnew.upsert({
+            where: {
+                value: +jlptNew[i],
+            },
+            create: {
+                value: +jlptNew[i]
+            },
+            update: {}
+        });
+    };
+    console.log(`Created ${jlptNew.length.toString()} JLPT new entries`);
 
 
     for (let i = 0; i < kanjiReadingTypes.length; i++) {

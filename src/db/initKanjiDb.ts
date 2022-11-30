@@ -6,6 +6,7 @@ import { cyan } from 'ansi-colors';
 
 import { Kanjidic2 } from '../kanjidic2/model';
 import { Antonym, Lookalike, Synonym } from '../kanjium/model';
+import { TanosKanji } from '../tanosKanji/model';
 
 const kanjidic2Path = join(__dirname, '..', '..', 'output/kanjidic2.json');
 const kanjidic2File = readFileSync(kanjidic2Path);
@@ -22,6 +23,10 @@ const lookalikesData = JSON.parse(lookalikesFile.toString()) as Lookalike[];
 const synonymsPath = join(__dirname, '..', '..', 'input/synonyms.json');
 const synonymsFile = readFileSync(synonymsPath);
 const synonymsData = JSON.parse(synonymsFile.toString()) as Synonym[];
+
+const tanosKanjiPath = join(__dirname, '..', '..', 'output/tanosKanji.json');
+const tanosKanjiFile = readFileSync(tanosKanjiPath);
+const tanosKanjiData = JSON.parse(tanosKanjiFile.toString()) as TanosKanji[];
 
 export async function initKanjiDb(prisma: PrismaClient) {
     console.log(cyan('Initializing kanji tables'));
@@ -50,7 +55,8 @@ async function init2Db(prisma: PrismaClient) {
     const kwCodepointTypeEntries = await prisma.kwCodepointType.findMany();
     const kwDicRefTypeEntries = await prisma.kwDicRefType.findMany();
     const kwGradeEntries = await prisma.kwGrade.findMany();
-    const kwJLPTEntries = await prisma.kwJLPT.findMany();
+    const kwJLPToldEntries = await prisma.kwJLPTold.findMany();
+    const kwJLPTnewEntries = await prisma.kwJLPTnew.findMany();
     const kwKanjiReadingTypeEntries = await prisma.kwKanjiReadingType.findMany();
     const kwLangEntries = await prisma.kwLang.findMany();
     const kwMorohashiVolEntries = await prisma.kwMorohashiVol.findMany();
@@ -95,7 +101,10 @@ async function init2Db(prisma: PrismaClient) {
             const kwStrokeCount_id = kwStrokeCountEntries.find(a => a.value === +strokeCountArr[0])?.id;
 
             const kwGrade_id = kwGradeEntries.find(a => a.value.toString() === character.misc.grade)?.id;
-            const jlpt_id = kwJLPTEntries.find(a => a.value.toString() === character.misc.jlpt)?.id;
+            const jlptOld_id = kwJLPToldEntries.find(a => a.value.toString() === character.misc.jlpt)?.id;
+
+            const tanosKanjiEntry = tanosKanjiData.find(a => a.kanji === character.literal);
+            const jlptNew_id = kwJLPTnewEntries.find(a => a.value.toString() === tanosKanjiEntry?.level)?.id;
 
             if (kwStrokeCount_id) {
                 await prisma.kanji_Misc.upsert({
@@ -106,8 +115,9 @@ async function init2Db(prisma: PrismaClient) {
                         kanji_id: kanji_id,
                         strokeCount_id: kwStrokeCount_id,
                         freq: character.misc.freq ? +character.misc.freq : null,
-                        grade_id: kwGrade_id ? kwGrade_id : null,
-                        jlpt_id: jlpt_id ? jlpt_id : null,
+                        grade_id: kwGrade_id ?? null,
+                        jlptOld_id: jlptOld_id ?? null,
+                        jlptNew_id: jlptNew_id ?? null,
                     },
                     update: {}
                 });

@@ -70,8 +70,11 @@ model Kanji_Misc {
   strokeCount    KwStrokeCount @relation(fields: [strokeCount_id], references: [id], onDelete: Cascade)
   strokeCount_id Int
 
-  jlpt    KwJLPT? @relation(fields: [jlpt_id], references: [id], onDelete: Cascade)
-  jlpt_id Int?
+  jlptOld    KwJLPTold? @relation(fields: [jlptOld_id], references: [id], onDelete: Cascade)
+  jlptOld_id Int?
+
+  jlptNew    KwJLPTnew? @relation(fields: [jlptNew_id], references: [id], onDelete: Cascade)
+  jlptNew_id Int?
 
   freq Int?
 
@@ -292,14 +295,24 @@ model KwStrokeCount {
   @@map("kw_kanji_strokecount")
 }
 
-model KwJLPT {
-  id    Int    @id @default(autoincrement())
+model KwJLPTold {
+  id    Int @id @default(autoincrement())
   value Int @unique
 
   kanjiMisc Kanji_Misc[]
 
-  @@map("kw_kanji_jlpt")
+  @@map("kw_kanji_jlpt_old")
 }
+
+model KwJLPTnew {
+  id    Int @id @default(autoincrement())
+  value Int @unique
+
+  kanjiMisc Kanji_Misc[]
+
+  @@map("kw_kanji_jlpt_new")
+}
+
 
 model KwDicRefType {
   id    Int    @id @default(autoincrement())

@@ -1,12 +1,13 @@
 {
   "author": "Michael Meister",
   "scripts": {
-    "createOutput": "npm run jmdict && npm run kanjidic2 && npm run radkfilex && npm run kradfilex && npm run radicalx",
+    "createOutput": "npm run jmdict && npm run kanjidic2 && npm run radkfilex && npm run kradfilex && npm run radicalx && npm run tanosKanji",
     "jmdict": "ts-node src/jmdict/toJson.ts",
     "kanjidic2": "ts-node src/kanjidic2/toJson.ts",
     "radkfilex": "ts-node src/radkfilex/toJson.ts",
     "kradfilex": "ts-node src/kradfilex/toJson.ts",
     "radicalx": "ts-node src/radicalx/init.ts",
+    "tanosKanji": "ts-node src/tanosKanji/toJson.ts",
     "migrate": "npx prisma migrate dev",
     "push": "npx prisma db push",
     "start": "npx ts-node src/script.ts"

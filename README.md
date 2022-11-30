@@ -30,7 +30,7 @@
 | `npm run radkfilex` | Creates the `kradfilex.json` file in `output` |
 | `npm run kradfilex` | Creates the `radkfilex.json` file in `output` |
 | `npm run radicalx`  | Creates the `radicalx.json` file in `output`  |
-
+| `npm run tanosKanji`| Creates the `tanosKanji.json` file in `output`|
 
 ### Initiate the postgres database
 
