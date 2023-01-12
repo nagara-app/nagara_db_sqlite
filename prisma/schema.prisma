@@ -212,7 +212,7 @@ model Radical {
   literal_     String?
   stroke_count Int
   number       Int
-  is_variant   Boolean
+  variantOf    String?
   reading      Radical_Reading[]
   meaning      Radical_Meaning[]
   part         Cross_Kanji_Part[]

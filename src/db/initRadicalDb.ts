@@ -30,7 +30,6 @@ async function init1Db(prisma: PrismaClient) {
                 literal: radical.literal,
                 literal_: radical._literal,
                 stroke_count: radical.stroke_count,
-                is_variant: false
             },
             update: {},
         });
@@ -46,7 +45,7 @@ async function init1Db(prisma: PrismaClient) {
                     literal: radical.variant[ix].literal,
                     literal_: radical.variant[ix]._literal,
                     stroke_count: radical.variant[ix].stroke_count,
-                    is_variant: true,
+                    variantOf: radical.literal,
                 },
                 update: {},
             });
@@ -80,6 +79,27 @@ async function init2Db(prisma: PrismaClient) {
                     },
                     update: {}
                 });
+
+                for (let ix = 0; ix < entry.variant.length; ix++) {
+
+                    const radical_variant_id = radical.find(a => a.literal === entry.variant[ix].literal)?.id;
+
+                    if (radical_variant_id) {
+                        await prisma.radical_Reading.upsert({
+                            where: {
+                                radical_id_value: {
+                                    radical_id: radical_variant_id,
+                                    value: entry.reading[i]
+                                }
+                            },
+                            create: {
+                                radical_id: radical_variant_id,
+                                value: entry.reading[i]
+                            },
+                            update: {}
+                        });
+                    }
+                }
             };
 
             // Create meaning data
@@ -98,6 +118,29 @@ async function init2Db(prisma: PrismaClient) {
                     },
                     update: {}
                 });
+
+
+                for (let ix = 0; ix < entry.variant.length; ix++) {
+
+                    const radical_variant_id = radical.find(a => a.literal === entry.variant[ix].literal)?.id;
+
+                    if (radical_variant_id) {
+                        await prisma.radical_Meaning.upsert({
+                            where: {
+                                radical_id_value: {
+                                    radical_id: radical_variant_id,
+                                    value: entry.meaning[i]
+                                }
+                            },
+                            create: {
+                                radical_id: radical_variant_id,
+                                value: entry.meaning[i],
+                                position: i,
+                            },
+                            update: {}
+                        });
+                    }
+                }
             };
 
             // Create variant data

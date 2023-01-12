@@ -3,16 +3,11 @@ import { join } from 'path';
 
 import { Radicalx, RadicalxVariant } from './model';
 import { RadKFileX } from '../radkfilex/model';
-import { KRadFileX } from '../kradfilex/model';
 import { Radical, Radvar } from '../kanjium/model';
 
 const radkxPath = join(__dirname, '..', '..', 'output/radkfilex.json');
 const radkxFile = readFileSync(radkxPath);
 const radkxData = JSON.parse(radkxFile.toString()) as RadKFileX;
-
-const kradxPath = join(__dirname, '..', '..', 'output/kradfilex.json');
-const kradxFile = readFileSync(kradxPath);
-const kradxData = JSON.parse(kradxFile.toString()) as KRadFileX;
 
 const radicalsPath = join(__dirname, '..', '..', 'input/radicals.json');
 const radicalsFile = readFileSync(radicalsPath);
@@ -72,13 +67,13 @@ const kanjinumNonExistingVersions: { [key: string]: Array<RadicalxVariant>; } = 
 
 const radkXcomponent = {
     "マ": "龴",
+    "乞": "",
+    "ユ": "ユ",
 }
 
 const radkXkanji = {
-    "九": "k",
-    "ユ": "k",
-    "乃": "k",
-    "乞": "乞",
+    "九": "九",
+    "乃": "乃",
     "也": "也",
     "及": "及",
     "久": "久",
