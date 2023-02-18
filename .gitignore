@@ -105,5 +105,9 @@ dist
 
 # Custom
 input/*
+!input/tanos_vocab.csv
+!input/tanos_kanji.csv
+!input/tkdb_jmdict_jlpt.json
+
 output/*
 .DS_Store

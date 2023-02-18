@@ -1,17 +1,13 @@
 // Documentation
 // https://github.com/Doublevil/JmdictFurigana/blob/master/README.md
 
-interface JMdictFurigana {
-    entry: Entry[];
-}
-
-interface Entry {
+export interface JMdictFurigana {
     text: string;
     reading: string;
-    furigana: Furigana[];
+    furigana: JMdictFurigana_Furigana[];
 }
 
-interface Furigana {
+interface JMdictFurigana_Furigana {
     ruby: string;
     rt?: string;
 }
