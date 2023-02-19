@@ -1,4 +1,4 @@
-import type { TanosVocab } from "../prepare_input/tanos_vocab/tanos_vocab.dto";
+import type { TanosVocab } from "../convert_input/tanos_vocab/tanos_vocab.dto";
 
 export interface JMdictJlpt {
     tanosVocab: TanosVocab;

@@ -1,19 +1,17 @@
-import { writeFile } from "fs/promises";
-import { join } from "path";
 import { Options, Presets, SingleBar } from "cli-progress";
 
-import { readJsonFile, toArray } from "../utils";
+import { readFileFromInput, toArray, writeFileToInputConverted } from "../utils";
 import { Constants } from "../constants";
 
-import type { TanosVocab } from "../prepare_input/tanos_vocab/tanos_vocab.dto";
+import type { TanosVocab } from "../convert_input/tanos_vocab/tanos_vocab.dto";
 import { JMdictJlpt, JMdictJlptMatch } from "./jmdict_jlpt.dto";
-import type { JMdict, JMdictKanji, JMdictRdng, JMdictSens } from "../prepare_input/jmdict/jmdict.dto";
+import type { JMdict, JMdictKanji, JMdictRdng, JMdictSens } from "../convert_input/jmdict/jmdict.dto";
 
 
 const main = async () => {
 
-    const jmdictJson: JMdict = await readJsonFile(Constants.fileNames.jmdictConverted, true);
-    const tanosVocabJson: TanosVocab[] = await readJsonFile(Constants.fileNames.tanosVocabConverted, true);
+    const jmdictJson: JMdict = await readFileFromInput(Constants.fileNames.jmdictConverted, true, true);
+    const tanosVocabJson: TanosVocab[] = await readFileFromInput(Constants.fileNames.tanosVocabConverted, true, true);
 
     const jmdictJlptEntries: JMdictJlpt[] = [];
 
@@ -70,11 +68,7 @@ const main = async () => {
 
     progressBar.stop();
 
-    console.log(`Writing ${Constants.fileNames.jmdictJlpt} file …`);
-    const writeFilePath = join(__dirname, '..', '..', `${Constants.inputDir}/${Constants.inputTempDir}/${Constants.fileNames.jmdictJlpt}`);
-    await writeFile(writeFilePath, JSON.stringify(jmdictJlptEntries, null, 2)).catch(err => {
-        throw err;
-    });
+    await writeFileToInputConverted(Constants.fileNames.jmdictJlpt, jmdictJlptEntries);
 };
 main();
 

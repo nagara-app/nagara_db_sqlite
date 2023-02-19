@@ -8,7 +8,7 @@ import type {
     JMdictSensLSourceLang,
     JMdictSensMisc,
     JMdictSensPos
-} from "../prepare_input/jmdict/jmdict.dto";
+} from "../convert_input/jmdict/jmdict.dto";
 
 export interface TKDB {
     version: string;

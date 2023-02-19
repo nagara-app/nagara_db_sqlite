@@ -16,8 +16,8 @@ import type {
     TKDB_Word_Misc,
     TKDB_Word_Reading
 } from "./tkdb.model";
-import type { JMdict, JMdictEntr, JMdictKanji, JMdictRdng, JMdictSens } from "../prepare_input/jmdict/jmdict.dto";
-import type { JMdictFurigana } from "../prepare_input/jmdict_furigana/jmdict_furigana.dto";
+import type { JMdict, JMdictEntr, JMdictKanji, JMdictRdng, JMdictSens } from "../convert_input/jmdict/jmdict.dto";
+import type { JMdictFurigana } from "../convert_input/jmdict_furigana/jmdict_furigana.dto";
 import type { JMdictJlpt } from '../jmdict_jlpt_json/jmdict_jlpt.dto';
 
 

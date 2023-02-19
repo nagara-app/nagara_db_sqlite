@@ -2,7 +2,7 @@
   "author": "Tanukiwi",
   "scripts": {
     "cjj": "npx ts-node src/jmdict_jlpt_json/index.ts",
-    "pi": "npx ts-node src/prepare_input/index.ts",
+    "convert": "npx ts-node src/convert_input/index.ts",
     "start": "npx ts-node src/tkdb_json/index.ts 1000"
   },
   "devDependencies": {
