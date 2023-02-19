@@ -1,6 +1,6 @@
 import { Options, Presets, SingleBar } from "cli-progress";
 
-import { readFileFromInput, toArray, writeFileToInputConverted } from "../utils";
+import { readJsonFileFromInputConverted, toArray, writeFileToInputConverted } from "../utils";
 import { Constants } from "../constants";
 
 import type { TanosVocab } from "../convert_input/tanos_vocab/tanos_vocab.dto";
@@ -10,8 +10,8 @@ import type { JMdict, JMdictKanji, JMdictRdng, JMdictSens } from "../convert_inp
 
 const main = async () => {
 
-    const jmdictJson: JMdict = await readFileFromInput(Constants.fileNames.jmdictConverted, true, true);
-    const tanosVocabJson: TanosVocab[] = await readFileFromInput(Constants.fileNames.tanosVocabConverted, true, true);
+    const jmdictJson: JMdict = await readJsonFileFromInputConverted(Constants.fileNames.jmdictConverted);
+    const tanosVocabJson: TanosVocab[] = await readJsonFileFromInputConverted(Constants.fileNames.tanosVocabConverted);
 
     const jmdictJlptEntries: JMdictJlpt[] = [];
 

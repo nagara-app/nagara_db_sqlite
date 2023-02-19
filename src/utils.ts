@@ -58,23 +58,23 @@ export const readJsonFileFromInputConverted = async <T>(fileName: string): Promi
     return JSON.parse(file.trim());
 }
 
-export const writeFileToOutput = async (fileName: string, fileContent: any) => {
-    console.log(`Writing ${fileName} file to output …`);
-    const path = `${Constants.outputDir}/${fileName}`;
-    const fullPath = join(__dirname, '..', path);
-    await writeFile(fullPath, JSON.stringify(fileContent, null, 2)).then(() => {
-        console.log(green(`Finished writing ${fileName} file to output`));
-    }).catch(err => {
-        throw (err);
-    });
-}
-
 export const writeFileToInputConverted = async (fileName: string, fileContent: any) => {
     console.log(`Writing ${fileName} file to converted input …`);
     const path = `${Constants.inputDir}/${Constants.inputConvertedDir}/${fileName}`;
     const fullPath = join(__dirname, '..', path);
     await writeFile(fullPath, JSON.stringify(fileContent, null, 2)).then(() => {
         console.log(green(`Finished writing ${fileName} file to converted input`));
+    }).catch(err => {
+        throw (err);
+    });
+}
+
+export const writeFileToOutput = async (fileName: string, fileContent: any) => {
+    console.log(`Writing ${fileName} file to output …`);
+    const path = `${Constants.outputDir}/${fileName}`;
+    const fullPath = join(__dirname, '..', path);
+    await writeFile(fullPath, JSON.stringify(fileContent, null, 2)).then(() => {
+        console.log(green(`Finished writing ${fileName} file to output`));
     }).catch(err => {
         throw (err);
     });
