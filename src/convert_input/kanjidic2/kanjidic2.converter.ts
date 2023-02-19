@@ -1,39 +1,32 @@
 // Converts the kanjidic2.xml.gz file into JSON formated file
 
-import { gunzip } from 'zlib';
-import { readFileSync, writeFileSync } from 'fs';
-import { join } from 'path';
-
 import { ParserOptions, parseStringPromise } from 'xml2js';
 
-const inputFilePath = join(__dirname, '..', '..', 'input/kanjidic2.xml.gz');
-const outputFilePath = join(__dirname, '..', '..', 'output/kanjidic2.json');
+import { handle, readFileFromInput, unzipFile, writeFileToInputConverted } from '../../utils';
+import { Constants } from '../../constants';
 
-function nameToLowerCase(name: string): string {
-    return name.toLowerCase();
-}
+export default async () => {
 
-const parserOptions: ParserOptions = {
-    strict: false,
-    mergeAttrs: true,
-    normalizeTags: true,
-    charkey: 'value',
-    explicitRoot: false,
-    explicitArray: false,
-    attrNameProcessors: [nameToLowerCase],
-}
-
-const file = readFileSync(inputFilePath);
-
-gunzip(file, (err, data) => {
-
-    if (err) {
-        throw err;
+    function nameToLowerCase(name: string): string {
+        return name.toLowerCase();
     }
 
-    parseStringPromise(data, parserOptions).then(result => {
-        writeFileSync(outputFilePath, JSON.stringify(result, null, 2));
-    }).catch(err => {
-        throw err;
-    });
-});
+    const parserOptions: ParserOptions = {
+        strict: false,
+        mergeAttrs: true,
+        normalizeTags: true,
+        charkey: 'value',
+        explicitRoot: false,
+        explicitArray: false,
+        attrNameProcessors: [nameToLowerCase],
+    }
+
+    const zippedFile = await readFileFromInput(Constants.fileNames.kanjidic2);
+    const file = await unzipFile(zippedFile);
+
+    console.log("Parsing file …")
+    const [resultErr, result] = await handle(parseStringPromise(file, parserOptions));
+    if (resultErr) throw (resultErr);
+
+    await writeFileToInputConverted(Constants.fileNames.kanjidic2Converted, result);
+}

@@ -1,17 +1,11 @@
 // Converts the JMdict.gz file into JSON formated file
 
-import { gunzipSync } from 'zlib';
 import { ParserOptions, parseStringPromise } from 'xml2js';
 
 import { Constants } from '../../constants';
-import { handle, readFileFromInput, writeFileToInputConverted } from '../../utils';
+import { handle, readFileFromInput, unzipFile, writeFileToInputConverted } from '../../utils';
 
 export default async () => {
-
-    const file = await readFileFromInput(Constants.fileNames.jmdict);
-
-    console.log("Unzipping file …");
-    const unzippedFile = gunzipSync(file);
 
     function renameAttrName(name: string) {
         switch (name) {
@@ -46,8 +40,11 @@ export default async () => {
         valueProcessors: [renameValue], // rename values that start with '&' and end with ';' symbols
     }
 
+    const zippedFile = await readFileFromInput(Constants.fileNames.jmdict);
+    const file = await unzipFile(zippedFile);
+
     console.log('Parsing file …')
-    const [resultErr, result] = await handle(parseStringPromise(unzippedFile, parserOptions));
+    const [resultErr, result] = await handle(parseStringPromise(file, parserOptions));
     if (resultErr) throw (resultErr);
 
     await writeFileToInputConverted(Constants.fileNames.jmdictConverted, result);

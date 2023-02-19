@@ -3,13 +3,33 @@ import { join } from "path";
 import { green } from "chalk";
 
 import { Constants } from "./constants";
+import { gunzip } from "zlib";
 
 export const toArray = <T>(val: T[] | T | undefined): T[] => val ? Array.isArray(val) ? val : [val] : [];
 
-export const handle = <T>(promise: Promise<T>) =>
-    promise
+export const handle = <T>(promise: Promise<T>) => {
+    return promise
         .then((data) => [undefined, data])
         .catch((error) => Promise.resolve([error, undefined]));
+}
+
+export const unzipFile = async (zippedFile: Buffer) => {
+    const promise = new Promise(async (resolve, reject) => {
+        gunzip(zippedFile, (err, data) => {
+            if (err) {
+                reject(err)
+            }
+            resolve(data);
+        });
+    });
+
+    console.log(`Unzipping file …`);
+    const [unzipErr, unzipedFile] = await handle(promise);
+    if (unzipErr) throw (unzipErr);
+    return unzipedFile;
+}
+
+
 
 export const readFileFromInput = async (fileName: string): Promise<Buffer> => {
     console.log(`Reading ${fileName} file from input …`);
