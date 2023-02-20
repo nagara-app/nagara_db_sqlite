@@ -1,0 +1,2514 @@
+[
+    {
+        "kanji": "握",
+        "synonyms": "把"
+    },
+    {
+        "kanji": "悪",
+        "synonyms": "醜,粗,憎"
+    },
+    {
+        "kanji": "圧",
+        "synonyms": "押"
+    },
+    {
+        "kanji": "暗",
+        "synonyms": "陰,闇,冥"
+    },
+    {
+        "kanji": "闇",
+        "synonyms": "陰,暗,冥"
+    },
+    {
+        "kanji": "囲",
+        "synonyms": "抱"
+    },
+    {
+        "kanji": "威",
+        "synonyms": "畏,恐"
+    },
+    {
+        "kanji": "為",
+        "synonyms": "作,造"
+    },
+    {
+        "kanji": "畏",
+        "synonyms": "恐,威"
+    },
+    {
+        "kanji": "異",
+        "synonyms": "差"
+    },
+    {
+        "kanji": "維",
+        "synonyms": "綱"
+    },
+    {
+        "kanji": "衣",
+        "synonyms": "服"
+    },
+    {
+        "kanji": "遺",
+        "synonyms": "贈"
+    },
+    {
+        "kanji": "一",
+        "synonyms": "壱"
+    },
+    {
+        "kanji": "壱",
+        "synonyms": "一"
+    },
+    {
+        "kanji": "陰",
+        "synonyms": "暗,闇"
+    },
+    {
+        "kanji": "浦",
+        "synonyms": "浜"
+    },
+    {
+        "kanji": "運",
+        "synonyms": "輸"
+    },
+    {
+        "kanji": "餌",
+        "synonyms": "食"
+    },
+    {
+        "kanji": "影",
+        "synonyms": "映"
+    },
+    {
+        "kanji": "映",
+        "synonyms": "影"
+    },
+    {
+        "kanji": "栄",
+        "synonyms": "盛,繁,華"
+    },
+    {
+        "kanji": "永",
+        "synonyms": "久"
+    },
+    {
+        "kanji": "衛",
+        "synonyms": "守"
+    },
+    {
+        "kanji": "益",
+        "synonyms": "増"
+    },
+    {
+        "kanji": "越",
+        "synonyms": "超"
+    },
+    {
+        "kanji": "延",
+        "synonyms": "伸"
+    },
+    {
+        "kanji": "怨",
+        "synonyms": "恨"
+    },
+    {
+        "kanji": "沿",
+        "synonyms": "循"
+    },
+    {
+        "kanji": "縁",
+        "synonyms": "端,辺"
+    },
+    {
+        "kanji": "往",
+        "synonyms": "行"
+    },
+    {
+        "kanji": "押",
+        "synonyms": "圧"
+    },
+    {
+        "kanji": "王",
+        "synonyms": "皇"
+    },
+    {
+        "kanji": "温",
+        "synonyms": "暖"
+    },
+    {
+        "kanji": "音",
+        "synonyms": "声"
+    },
+    {
+        "kanji": "下",
+        "synonyms": "低"
+    },
+    {
+        "kanji": "佳",
+        "synonyms": "良,善"
+    },
+    {
+        "kanji": "嫁",
+        "synonyms": "妻"
+    },
+    {
+        "kanji": "寡",
+        "synonyms": "孤,少"
+    },
+    {
+        "kanji": "果",
+        "synonyms": "菓"
+    },
+    {
+        "kanji": "歌",
+        "synonyms": "謡,唱"
+    },
+    {
+        "kanji": "河",
+        "synonyms": "川,江"
+    },
+    {
+        "kanji": "火",
+        "synonyms": "焼,燃"
+    },
+    {
+        "kanji": "禍",
+        "synonyms": "災,凶"
+    },
+    {
+        "kanji": "箇",
+        "synonyms": "個"
+    },
+    {
+        "kanji": "苛",
+        "synonyms": "酷"
+    },
+    {
+        "kanji": "荷",
+        "synonyms": "担"
+    },
+    {
+        "kanji": "華",
+        "synonyms": "栄"
+    },
+    {
+        "kanji": "菓",
+        "synonyms": "果"
+    },
+    {
+        "kanji": "貨",
+        "synonyms": "銭"
+    },
+    {
+        "kanji": "我",
+        "synonyms": "朕"
+    },
+    {
+        "kanji": "画",
+        "synonyms": "絵,描,図,書"
+    },
+    {
+        "kanji": "会",
+        "synonyms": "遭"
+    },
+    {
+        "kanji": "回",
+        "synonyms": "番"
+    },
+    {
+        "kanji": "壊",
+        "synonyms": "毀,崩"
+    },
+    {
+        "kanji": "戒",
+        "synonyms": "警"
+    },
+    {
+        "kanji": "改",
+        "synonyms": "革,更"
+    },
+    {
+        "kanji": "絵",
+        "synonyms": "画,描,図"
+    },
+    {
+        "kanji": "涯",
+        "synonyms": "限"
+    },
+    {
+        "kanji": "蓋",
+        "synonyms": "覆"
+    },
+    {
+        "kanji": "嚇",
+        "synonyms": "喝"
+    },
+    {
+        "kanji": "各",
+        "synonyms": "毎"
+    },
+    {
+        "kanji": "拡",
+        "synonyms": "広"
+    },
+    {
+        "kanji": "獲",
+        "synonyms": "虜,奴"
+    },
+    {
+        "kanji": "覚",
+        "synonyms": "悟,醒"
+    },
+    {
+        "kanji": "革",
+        "synonyms": "改,更"
+    },
+    {
+        "kanji": "喝",
+        "synonyms": "嚇"
+    },
+    {
+        "kanji": "活",
+        "synonyms": "生"
+    },
+    {
+        "kanji": "寒",
+        "synonyms": "冷,凍"
+    },
+    {
+        "kanji": "喚",
+        "synonyms": "呼"
+    },
+    {
+        "kanji": "完",
+        "synonyms": "全"
+    },
+    {
+        "kanji": "官",
+        "synonyms": "司"
+    },
+    {
+        "kanji": "慣",
+        "synonyms": "習"
+    },
+    {
+        "kanji": "甘",
+        "synonyms": "旨"
+    },
+    {
+        "kanji": "監",
+        "synonyms": "視"
+    },
+    {
+        "kanji": "緩",
+        "synonyms": "徐"
+    },
+    {
+        "kanji": "貫",
+        "synonyms": "徹"
+    },
+    {
+        "kanji": "還",
+        "synonyms": "返,復,帰"
+    },
+    {
+        "kanji": "丸",
+        "synonyms": "球"
+    },
+    {
+        "kanji": "願",
+        "synonyms": "欲"
+    },
+    {
+        "kanji": "喜",
+        "synonyms": "好,興"
+    },
+    {
+        "kanji": "基",
+        "synonyms": "本"
+    },
+    {
+        "kanji": "忌",
+        "synonyms": "嫌"
+    },
+    {
+        "kanji": "棋",
+        "synonyms": "碁"
+    },
+    {
+        "kanji": "棄",
+        "synonyms": "捨"
+    },
+    {
+        "kanji": "帰",
+        "synonyms": "還,復"
+    },
+    {
+        "kanji": "規",
+        "synonyms": "則"
+    },
+    {
+        "kanji": "貴",
+        "synonyms": "尊"
+    },
+    {
+        "kanji": "輝",
+        "synonyms": "美"
+    },
+    {
+        "kanji": "偽",
+        "synonyms": "詐"
+    },
+    {
+        "kanji": "儀",
+        "synonyms": "礼"
+    },
+    {
+        "kanji": "欺",
+        "synonyms": "詐"
+    },
+    {
+        "kanji": "吉",
+        "synonyms": "福"
+    },
+    {
+        "kanji": "脚",
+        "synonyms": "足"
+    },
+    {
+        "kanji": "虐",
+        "synonyms": "残,酷"
+    },
+    {
+        "kanji": "久",
+        "synonyms": "永"
+    },
+    {
+        "kanji": "朽",
+        "synonyms": "腐"
+    },
+    {
+        "kanji": "球",
+        "synonyms": "丸"
+    },
+    {
+        "kanji": "旧",
+        "synonyms": "古,故,昔"
+    },
+    {
+        "kanji": "巨",
+        "synonyms": "大"
+    },
+    {
+        "kanji": "虚",
+        "synonyms": "空,無"
+    },
+    {
+        "kanji": "凶",
+        "synonyms": "禍,災"
+    },
+    {
+        "kanji": "強",
+        "synonyms": "剛,豪"
+    },
+    {
+        "kanji": "恐",
+        "synonyms": "威,虞"
+    },
+    {
+        "kanji": "興",
+        "synonyms": "喜"
+    },
+    {
+        "kanji": "業",
+        "synonyms": "職"
+    },
+    {
+        "kanji": "曲",
+        "synonyms": "屈"
+    },
+    {
+        "kanji": "極",
+        "synonyms": "棟"
+    },
+    {
+        "kanji": "勤",
+        "synonyms": "労"
+    },
+    {
+        "kanji": "労",
+        "synonyms": "勤"
+    },
+    {
+        "kanji": "具",
+        "synonyms": "備"
+    },
+    {
+        "kanji": "虞",
+        "synonyms": "恐"
+    },
+    {
+        "kanji": "空",
+        "synonyms": "虚,無"
+    },
+    {
+        "kanji": "屈",
+        "synonyms": "曲"
+    },
+    {
+        "kanji": "掘",
+        "synonyms": "堀,窟"
+    },
+    {
+        "kanji": "窟",
+        "synonyms": "洞,穴,孔,堀,掘"
+    },
+    {
+        "kanji": "形",
+        "synonyms": "模"
+    },
+    {
+        "kanji": "慶",
+        "synonyms": "福"
+    },
+    {
+        "kanji": "継",
+        "synonyms": "続"
+    },
+    {
+        "kanji": "警",
+        "synonyms": "戒"
+    },
+    {
+        "kanji": "穴",
+        "synonyms": "孔,窟"
+    },
+    {
+        "kanji": "券",
+        "synonyms": "票,標"
+    },
+    {
+        "kanji": "剣",
+        "synonyms": "刀"
+    },
+    {
+        "kanji": "嫌",
+        "synonyms": "忌"
+    },
+    {
+        "kanji": "建",
+        "synonyms": "立"
+    },
+    {
+        "kanji": "憲",
+        "synonyms": "法"
+    },
+    {
+        "kanji": "研",
+        "synonyms": "磨,摩"
+    },
+    {
+        "kanji": "見",
+        "synonyms": "視,覧"
+    },
+    {
+        "kanji": "遣",
+        "synonyms": "発"
+    },
+    {
+        "kanji": "顕",
+        "synonyms": "現"
+    },
+    {
+        "kanji": "験",
+        "synonyms": "検"
+    },
+    {
+        "kanji": "検",
+        "synonyms": "験"
+    },
+    {
+        "kanji": "元",
+        "synonyms": "本,源"
+    },
+    {
+        "kanji": "減",
+        "synonyms": "少,損"
+    },
+    {
+        "kanji": "源",
+        "synonyms": "本,元"
+    },
+    {
+        "kanji": "現",
+        "synonyms": "顕"
+    },
+    {
+        "kanji": "言",
+        "synonyms": "語,申"
+    },
+    {
+        "kanji": "申",
+        "synonyms": "言"
+    },
+    {
+        "kanji": "限",
+        "synonyms": "涯"
+    },
+    {
+        "kanji": "個",
+        "synonyms": "箇"
+    },
+    {
+        "kanji": "古",
+        "synonyms": "旧,故,昔"
+    },
+    {
+        "kanji": "呼",
+        "synonyms": "喚"
+    },
+    {
+        "kanji": "孤",
+        "synonyms": "寡,少,独,唯"
+    },
+    {
+        "kanji": "庫",
+        "synonyms": "蔵,倉"
+    },
+    {
+        "kanji": "戸",
+        "synonyms": "門,扉"
+    },
+    {
+        "kanji": "故",
+        "synonyms": "旧,古,昔"
+    },
+    {
+        "kanji": "午",
+        "synonyms": "昼"
+    },
+    {
+        "kanji": "悟",
+        "synonyms": "覚,醒"
+    },
+    {
+        "kanji": "碁",
+        "synonyms": "棋"
+    },
+    {
+        "kanji": "語",
+        "synonyms": "言,話,談"
+    },
+    {
+        "kanji": "乞",
+        "synonyms": "請"
+    },
+    {
+        "kanji": "五",
+        "synonyms": "伍"
+    },
+    {
+        "kanji": "伍",
+        "synonyms": "五"
+    },
+    {
+        "kanji": "功",
+        "synonyms": "績"
+    },
+    {
+        "kanji": "后",
+        "synonyms": "妃"
+    },
+    {
+        "kanji": "好",
+        "synonyms": "喜"
+    },
+    {
+        "kanji": "孔",
+        "synonyms": "穴,窟"
+    },
+    {
+        "kanji": "広",
+        "synonyms": "拡"
+    },
+    {
+        "kanji": "恒",
+        "synonyms": "常"
+    },
+    {
+        "kanji": "控",
+        "synonyms": "抑"
+    },
+    {
+        "kanji": "更",
+        "synonyms": "改,革"
+    },
+    {
+        "kanji": "校",
+        "synonyms": "較"
+    },
+    {
+        "kanji": "較",
+        "synonyms": "校"
+    },
+    {
+        "kanji": "江",
+        "synonyms": "川,河"
+    },
+    {
+        "kanji": "皇",
+        "synonyms": "王"
+    },
+    {
+        "kanji": "紅",
+        "synonyms": "朱,赤"
+    },
+    {
+        "kanji": "綱",
+        "synonyms": "維,索,縄"
+    },
+    {
+        "kanji": "行",
+        "synonyms": "往,進,歩,参,伺,上"
+    },
+    {
+        "kanji": "降",
+        "synonyms": "落"
+    },
+    {
+        "kanji": "剛",
+        "synonyms": "強,豪"
+    },
+    {
+        "kanji": "豪",
+        "synonyms": "剛,強"
+    },
+    {
+        "kanji": "合",
+        "synonyms": "集"
+    },
+    {
+        "kanji": "国",
+        "synonyms": "域,邦"
+    },
+    {
+        "kanji": "域",
+        "synonyms": "国"
+    },
+    {
+        "kanji": "酷",
+        "synonyms": "虐,残,苛"
+    },
+    {
+        "kanji": "恨",
+        "synonyms": "怨"
+    },
+    {
+        "kanji": "根",
+        "synonyms": "本"
+    },
+    {
+        "kanji": "差",
+        "synonyms": "異"
+    },
+    {
+        "kanji": "査",
+        "synonyms": "調,捜,索"
+    },
+    {
+        "kanji": "沙",
+        "synonyms": "砂"
+    },
+    {
+        "kanji": "砂",
+        "synonyms": "沙"
+    },
+    {
+        "kanji": "詐",
+        "synonyms": "欺,偽"
+    },
+    {
+        "kanji": "催",
+        "synonyms": "促"
+    },
+    {
+        "kanji": "再",
+        "synonyms": "復"
+    },
+    {
+        "kanji": "塞",
+        "synonyms": "窒"
+    },
+    {
+        "kanji": "妻",
+        "synonyms": "嫁"
+    },
+    {
+        "kanji": "宰",
+        "synonyms": "制"
+    },
+    {
+        "kanji": "採",
+        "synonyms": "采,摘"
+    },
+    {
+        "kanji": "栽",
+        "synonyms": "培"
+    },
+    {
+        "kanji": "歳",
+        "synonyms": "年"
+    },
+    {
+        "kanji": "災",
+        "synonyms": "禍,凶"
+    },
+    {
+        "kanji": "采",
+        "synonyms": "採,摘"
+    },
+    {
+        "kanji": "細",
+        "synonyms": "小"
+    },
+    {
+        "kanji": "在",
+        "synonyms": "存"
+    },
+    {
+        "kanji": "材",
+        "synonyms": "樹,木"
+    },
+    {
+        "kanji": "財",
+        "synonyms": "資"
+    },
+    {
+        "kanji": "坂",
+        "synonyms": "堤,斜"
+    },
+    {
+        "kanji": "崎",
+        "synonyms": "岬,峡"
+    },
+    {
+        "kanji": "作",
+        "synonyms": "為,造"
+    },
+    {
+        "kanji": "索",
+        "synonyms": "査,調,捜,縄,綱,求,探"
+    },
+    {
+        "kanji": "求",
+        "synonyms": "索,買"
+    },
+    {
+        "kanji": "皿",
+        "synonyms": "盤"
+    },
+    {
+        "kanji": "三",
+        "synonyms": "参"
+    },
+    {
+        "kanji": "参",
+        "synonyms": "三,来,行,伺"
+    },
+    {
+        "kanji": "来",
+        "synonyms": "参"
+    },
+    {
+        "kanji": "産",
+        "synonyms": "生"
+    },
+    {
+        "kanji": "算",
+        "synonyms": "数"
+    },
+    {
+        "kanji": "酸",
+        "synonyms": "酢"
+    },
+    {
+        "kanji": "斬",
+        "synonyms": "絶"
+    },
+    {
+        "kanji": "残",
+        "synonyms": "虐,酷"
+    },
+    {
+        "kanji": "司",
+        "synonyms": "官,主,曹"
+    },
+    {
+        "kanji": "四",
+        "synonyms": "肆"
+    },
+    {
+        "kanji": "肆",
+        "synonyms": "四"
+    },
+    {
+        "kanji": "子",
+        "synonyms": "孫,児"
+    },
+    {
+        "kanji": "市",
+        "synonyms": "都"
+    },
+    {
+        "kanji": "支",
+        "synonyms": "枝,派"
+    },
+    {
+        "kanji": "旨",
+        "synonyms": "甘"
+    },
+    {
+        "kanji": "枝",
+        "synonyms": "支"
+    },
+    {
+        "kanji": "祉",
+        "synonyms": "福"
+    },
+    {
+        "kanji": "糸",
+        "synonyms": "条,線"
+    },
+    {
+        "kanji": "脂",
+        "synonyms": "油"
+    },
+    {
+        "kanji": "至",
+        "synonyms": "到"
+    },
+    {
+        "kanji": "視",
+        "synonyms": "監,見"
+    },
+    {
+        "kanji": "詞",
+        "synonyms": "文"
+    },
+    {
+        "kanji": "文",
+        "synonyms": "詞"
+    },
+    {
+        "kanji": "資",
+        "synonyms": "財"
+    },
+    {
+        "kanji": "似",
+        "synonyms": "如"
+    },
+    {
+        "kanji": "児",
+        "synonyms": "子,稚,幼"
+    },
+    {
+        "kanji": "持",
+        "synonyms": "執"
+    },
+    {
+        "kanji": "識",
+        "synonyms": "知"
+    },
+    {
+        "kanji": "執",
+        "synonyms": "持"
+    },
+    {
+        "kanji": "疾",
+        "synonyms": "速,迅,早,病"
+    },
+    {
+        "kanji": "写",
+        "synonyms": "謄,模"
+    },
+    {
+        "kanji": "捨",
+        "synonyms": "棄,措"
+    },
+    {
+        "kanji": "斜",
+        "synonyms": "坂"
+    },
+    {
+        "kanji": "釈",
+        "synonyms": "解,説"
+    },
+    {
+        "kanji": "解",
+        "synonyms": "釈,説"
+    },
+    {
+        "kanji": "弱",
+        "synonyms": "柔"
+    },
+    {
+        "kanji": "主",
+        "synonyms": "司"
+    },
+    {
+        "kanji": "守",
+        "synonyms": "衛"
+    },
+    {
+        "kanji": "朱",
+        "synonyms": "紅,赤"
+    },
+    {
+        "kanji": "狩",
+        "synonyms": "猟"
+    },
+    {
+        "kanji": "首",
+        "synonyms": "頭"
+    },
+    {
+        "kanji": "樹",
+        "synonyms": "材,木"
+    },
+    {
+        "kanji": "需",
+        "synonyms": "須"
+    },
+    {
+        "kanji": "収",
+        "synonyms": "納"
+    },
+    {
+        "kanji": "愁",
+        "synonyms": "憂"
+    },
+    {
+        "kanji": "終",
+        "synonyms": "了"
+    },
+    {
+        "kanji": "習",
+        "synonyms": "慣"
+    },
+    {
+        "kanji": "臭",
+        "synonyms": "嗅"
+    },
+    {
+        "kanji": "舟",
+        "synonyms": "船"
+    },
+    {
+        "kanji": "集",
+        "synonyms": "合"
+    },
+    {
+        "kanji": "醜",
+        "synonyms": "悪,粗"
+    },
+    {
+        "kanji": "充",
+        "synonyms": "満"
+    },
+    {
+        "kanji": "従",
+        "synonyms": "随,順"
+    },
+    {
+        "kanji": "柔",
+        "synonyms": "弱,軟"
+    },
+    {
+        "kanji": "縮",
+        "synonyms": "短"
+    },
+    {
+        "kanji": "准",
+        "synonyms": "準"
+    },
+    {
+        "kanji": "循",
+        "synonyms": "沿"
+    },
+    {
+        "kanji": "準",
+        "synonyms": "准"
+    },
+    {
+        "kanji": "純",
+        "synonyms": "粋"
+    },
+    {
+        "kanji": "遵",
+        "synonyms": "順"
+    },
+    {
+        "kanji": "順",
+        "synonyms": "遵"
+    },
+    {
+        "kanji": "暑",
+        "synonyms": "熱"
+    },
+    {
+        "kanji": "書",
+        "synonyms": "図,画"
+    },
+    {
+        "kanji": "徐",
+        "synonyms": "緩"
+    },
+    {
+        "kanji": "傷",
+        "synonyms": "瘍"
+    },
+    {
+        "kanji": "唱",
+        "synonyms": "歌,謡"
+    },
+    {
+        "kanji": "宵",
+        "synonyms": "夕"
+    },
+    {
+        "kanji": "小",
+        "synonyms": "細,少"
+    },
+    {
+        "kanji": "少",
+        "synonyms": "寡,孤,希,小"
+    },
+    {
+        "kanji": "希",
+        "synonyms": "少"
+    },
+    {
+        "kanji": "昇",
+        "synonyms": "登"
+    },
+    {
+        "kanji": "昭",
+        "synonyms": "明"
+    },
+    {
+        "kanji": "焼",
+        "synonyms": "燃,火"
+    },
+    {
+        "kanji": "粧",
+        "synonyms": "装"
+    },
+    {
+        "kanji": "賞",
+        "synonyms": "賜"
+    },
+    {
+        "kanji": "賜",
+        "synonyms": "賞,頂"
+    },
+    {
+        "kanji": "上",
+        "synonyms": "登,乗,行,与,献,参,伺"
+    },
+    {
+        "kanji": "献",
+        "synonyms": "上,与"
+    },
+    {
+        "kanji": "乗",
+        "synonyms": "登,上"
+    },
+    {
+        "kanji": "場",
+        "synonyms": "地"
+    },
+    {
+        "kanji": "嬢",
+        "synonyms": "娘"
+    },
+    {
+        "kanji": "常",
+        "synonyms": "恒"
+    },
+    {
+        "kanji": "条",
+        "synonyms": "糸"
+    },
+    {
+        "kanji": "浄",
+        "synonyms": "清"
+    },
+    {
+        "kanji": "職",
+        "synonyms": "業"
+    },
+    {
+        "kanji": "食",
+        "synonyms": "餌,頂"
+    },
+    {
+        "kanji": "辱",
+        "synonyms": "恥,羞"
+    },
+    {
+        "kanji": "伸",
+        "synonyms": "延"
+    },
+    {
+        "kanji": "新",
+        "synonyms": "鮮"
+    },
+    {
+        "kanji": "森",
+        "synonyms": "林"
+    },
+    {
+        "kanji": "深",
+        "synonyms": "遠"
+    },
+    {
+        "kanji": "遠",
+        "synonyms": "深"
+    },
+    {
+        "kanji": "親",
+        "synonyms": "戚"
+    },
+    {
+        "kanji": "辛",
+        "synonyms": "辣"
+    },
+    {
+        "kanji": "進",
+        "synonyms": "行,歩,踏,走"
+    },
+    {
+        "kanji": "人",
+        "synonyms": "仁,民"
+    },
+    {
+        "kanji": "仁",
+        "synonyms": "人"
+    },
+    {
+        "kanji": "尋",
+        "synonyms": "探,伺,聞,問"
+    },
+    {
+        "kanji": "甚",
+        "synonyms": "太"
+    },
+    {
+        "kanji": "尽",
+        "synonyms": "究"
+    },
+    {
+        "kanji": "究",
+        "synonyms": "尽"
+    },
+    {
+        "kanji": "迅",
+        "synonyms": "速,疾,早"
+    },
+    {
+        "kanji": "陣",
+        "synonyms": "陳"
+    },
+    {
+        "kanji": "須",
+        "synonyms": "需"
+    },
+    {
+        "kanji": "酢",
+        "synonyms": "酸"
+    },
+    {
+        "kanji": "図",
+        "synonyms": "画,書"
+    },
+    {
+        "kanji": "睡",
+        "synonyms": "眠"
+    },
+    {
+        "kanji": "粋",
+        "synonyms": "純"
+    },
+    {
+        "kanji": "随",
+        "synonyms": "従"
+    },
+    {
+        "kanji": "数",
+        "synonyms": "算"
+    },
+    {
+        "kanji": "制",
+        "synonyms": "宰"
+    },
+    {
+        "kanji": "晴",
+        "synonyms": "陽"
+    },
+    {
+        "kanji": "清",
+        "synonyms": "浄"
+    },
+    {
+        "kanji": "生",
+        "synonyms": "活,産"
+    },
+    {
+        "kanji": "盛",
+        "synonyms": "栄,繁,隆"
+    },
+    {
+        "kanji": "声",
+        "synonyms": "音"
+    },
+    {
+        "kanji": "製",
+        "synonyms": "造"
+    },
+    {
+        "kanji": "誓",
+        "synonyms": "盟"
+    },
+    {
+        "kanji": "請",
+        "synonyms": "乞"
+    },
+    {
+        "kanji": "醒",
+        "synonyms": "覚,悟"
+    },
+    {
+        "kanji": "税",
+        "synonyms": "租"
+    },
+    {
+        "kanji": "戚",
+        "synonyms": "親"
+    },
+    {
+        "kanji": "斥",
+        "synonyms": "排"
+    },
+    {
+        "kanji": "昔",
+        "synonyms": "古,故,旧"
+    },
+    {
+        "kanji": "積",
+        "synonyms": "累"
+    },
+    {
+        "kanji": "績",
+        "synonyms": "功"
+    },
+    {
+        "kanji": "脊",
+        "synonyms": "呂"
+    },
+    {
+        "kanji": "赤",
+        "synonyms": "朱,紅"
+    },
+    {
+        "kanji": "接",
+        "synonyms": "摩,磨"
+    },
+    {
+        "kanji": "窃",
+        "synonyms": "賊,盗,奪"
+    },
+    {
+        "kanji": "説",
+        "synonyms": "釈,解"
+    },
+    {
+        "kanji": "絶",
+        "synonyms": "斬,断"
+    },
+    {
+        "kanji": "先",
+        "synonyms": "前"
+    },
+    {
+        "kanji": "千",
+        "synonyms": "移"
+    },
+    {
+        "kanji": "移",
+        "synonyms": "千"
+    },
+    {
+        "kanji": "川",
+        "synonyms": "河,江"
+    },
+    {
+        "kanji": "戦",
+        "synonyms": "闘"
+    },
+    {
+        "kanji": "洗",
+        "synonyms": "濯"
+    },
+    {
+        "kanji": "旋",
+        "synonyms": "転,復"
+    },
+    {
+        "kanji": "線",
+        "synonyms": "糸"
+    },
+    {
+        "kanji": "船",
+        "synonyms": "舟"
+    },
+    {
+        "kanji": "選",
+        "synonyms": "択"
+    },
+    {
+        "kanji": "銭",
+        "synonyms": "貨"
+    },
+    {
+        "kanji": "鮮",
+        "synonyms": "新"
+    },
+    {
+        "kanji": "前",
+        "synonyms": "先"
+    },
+    {
+        "kanji": "善",
+        "synonyms": "美,良,佳"
+    },
+    {
+        "kanji": "全",
+        "synonyms": "完"
+    },
+    {
+        "kanji": "措",
+        "synonyms": "置,捨"
+    },
+    {
+        "kanji": "租",
+        "synonyms": "税"
+    },
+    {
+        "kanji": "粗",
+        "synonyms": "悪,醜"
+    },
+    {
+        "kanji": "組",
+        "synonyms": "班"
+    },
+    {
+        "kanji": "双",
+        "synonyms": "両"
+    },
+    {
+        "kanji": "倉",
+        "synonyms": "庫,蔵"
+    },
+    {
+        "kanji": "壮",
+        "synonyms": "勇"
+    },
+    {
+        "kanji": "捜",
+        "synonyms": "査,調,索,探"
+    },
+    {
+        "kanji": "早",
+        "synonyms": "速,疾,迅"
+    },
+    {
+        "kanji": "曹",
+        "synonyms": "司,輩"
+    },
+    {
+        "kanji": "装",
+        "synonyms": "粧"
+    },
+    {
+        "kanji": "走",
+        "synonyms": "奔,歩,進"
+    },
+    {
+        "kanji": "遭",
+        "synonyms": "会"
+    },
+    {
+        "kanji": "増",
+        "synonyms": "益"
+    },
+    {
+        "kanji": "憎",
+        "synonyms": "悪"
+    },
+    {
+        "kanji": "蔵",
+        "synonyms": "庫,倉"
+    },
+    {
+        "kanji": "贈",
+        "synonyms": "遺"
+    },
+    {
+        "kanji": "造",
+        "synonyms": "製,作,為"
+    },
+    {
+        "kanji": "促",
+        "synonyms": "催"
+    },
+    {
+        "kanji": "則",
+        "synonyms": "規"
+    },
+    {
+        "kanji": "捉",
+        "synonyms": "捕,虜"
+    },
+    {
+        "kanji": "束",
+        "synonyms": "縛"
+    },
+    {
+        "kanji": "測",
+        "synonyms": "計"
+    },
+    {
+        "kanji": "計",
+        "synonyms": "測"
+    },
+    {
+        "kanji": "足",
+        "synonyms": "脚"
+    },
+    {
+        "kanji": "速",
+        "synonyms": "疾,迅,早"
+    },
+    {
+        "kanji": "俗",
+        "synonyms": "凡"
+    },
+    {
+        "kanji": "賊",
+        "synonyms": "窃,奪"
+    },
+    {
+        "kanji": "続",
+        "synonyms": "継"
+    },
+    {
+        "kanji": "存",
+        "synonyms": "在,知,思"
+    },
+    {
+        "kanji": "孫",
+        "synonyms": "子"
+    },
+    {
+        "kanji": "尊",
+        "synonyms": "貴"
+    },
+    {
+        "kanji": "損",
+        "synonyms": "減,少"
+    },
+    {
+        "kanji": "太",
+        "synonyms": "甚,大"
+    },
+    {
+        "kanji": "惰",
+        "synonyms": "怠,慢"
+    },
+    {
+        "kanji": "耐",
+        "synonyms": "忍"
+    },
+    {
+        "kanji": "怠",
+        "synonyms": "惰,慢"
+    },
+    {
+        "kanji": "替",
+        "synonyms": "代"
+    },
+    {
+        "kanji": "滞",
+        "synonyms": "留"
+    },
+    {
+        "kanji": "代",
+        "synonyms": "替"
+    },
+    {
+        "kanji": "大",
+        "synonyms": "巨,太"
+    },
+    {
+        "kanji": "択",
+        "synonyms": "選"
+    },
+    {
+        "kanji": "濯",
+        "synonyms": "洗"
+    },
+    {
+        "kanji": "奪",
+        "synonyms": "窃,賊,盗"
+    },
+    {
+        "kanji": "棚",
+        "synonyms": "台"
+    },
+    {
+        "kanji": "台",
+        "synonyms": "棚"
+    },
+    {
+        "kanji": "単",
+        "synonyms": "独"
+    },
+    {
+        "kanji": "担",
+        "synonyms": "負,荷"
+    },
+    {
+        "kanji": "探",
+        "synonyms": "尋,捜,索"
+    },
+    {
+        "kanji": "旦",
+        "synonyms": "朝"
+    },
+    {
+        "kanji": "短",
+        "synonyms": "縮"
+    },
+    {
+        "kanji": "端",
+        "synonyms": "縁,辺,末"
+    },
+    {
+        "kanji": "断",
+        "synonyms": "絶"
+    },
+    {
+        "kanji": "暖",
+        "synonyms": "温"
+    },
+    {
+        "kanji": "談",
+        "synonyms": "話,語"
+    },
+    {
+        "kanji": "知",
+        "synonyms": "識,存"
+    },
+    {
+        "kanji": "地",
+        "synonyms": "場"
+    },
+    {
+        "kanji": "恥",
+        "synonyms": "辱,羞"
+    },
+    {
+        "kanji": "稚",
+        "synonyms": "幼,児"
+    },
+    {
+        "kanji": "置",
+        "synonyms": "措"
+    },
+    {
+        "kanji": "逐",
+        "synonyms": "追"
+    },
+    {
+        "kanji": "窒",
+        "synonyms": "塞"
+    },
+    {
+        "kanji": "中",
+        "synonyms": "内"
+    },
+    {
+        "kanji": "昼",
+        "synonyms": "午"
+    },
+    {
+        "kanji": "鋳",
+        "synonyms": "冶"
+    },
+    {
+        "kanji": "朝",
+        "synonyms": "旦"
+    },
+    {
+        "kanji": "調",
+        "synonyms": "査,捜,索"
+    },
+    {
+        "kanji": "超",
+        "synonyms": "越"
+    },
+    {
+        "kanji": "朕",
+        "synonyms": "我"
+    },
+    {
+        "kanji": "陳",
+        "synonyms": "陣"
+    },
+    {
+        "kanji": "追",
+        "synonyms": "逐"
+    },
+    {
+        "kanji": "通",
+        "synonyms": "透"
+    },
+    {
+        "kanji": "低",
+        "synonyms": "下"
+    },
+    {
+        "kanji": "堤",
+        "synonyms": "坂"
+    },
+    {
+        "kanji": "摘",
+        "synonyms": "採,采"
+    },
+    {
+        "kanji": "徹",
+        "synonyms": "貫"
+    },
+    {
+        "kanji": "転",
+        "synonyms": "旋"
+    },
+    {
+        "kanji": "登",
+        "synonyms": "昇,上,乗"
+    },
+    {
+        "kanji": "都",
+        "synonyms": "市"
+    },
+    {
+        "kanji": "奴",
+        "synonyms": "虜,獲"
+    },
+    {
+        "kanji": "怒",
+        "synonyms": "奮"
+    },
+    {
+        "kanji": "凍",
+        "synonyms": "寒,冷"
+    },
+    {
+        "kanji": "刀",
+        "synonyms": "剣"
+    },
+    {
+        "kanji": "棟",
+        "synonyms": "極"
+    },
+    {
+        "kanji": "盗",
+        "synonyms": "窃,奪"
+    },
+    {
+        "kanji": "答",
+        "synonyms": "応"
+    },
+    {
+        "kanji": "応",
+        "synonyms": "答"
+    },
+    {
+        "kanji": "到",
+        "synonyms": "至"
+    },
+    {
+        "kanji": "討",
+        "synonyms": "伐"
+    },
+    {
+        "kanji": "謄",
+        "synonyms": "写"
+    },
+    {
+        "kanji": "踏",
+        "synonyms": "進"
+    },
+    {
+        "kanji": "透",
+        "synonyms": "通"
+    },
+    {
+        "kanji": "陶",
+        "synonyms": "冶"
+    },
+    {
+        "kanji": "頭",
+        "synonyms": "首"
+    },
+    {
+        "kanji": "闘",
+        "synonyms": "戦"
+    },
+    {
+        "kanji": "洞",
+        "synonyms": "窟"
+    },
+    {
+        "kanji": "道",
+        "synonyms": "路"
+    },
+    {
+        "kanji": "路",
+        "synonyms": "道"
+    },
+    {
+        "kanji": "独",
+        "synonyms": "単,唯,孤,寡"
+    },
+    {
+        "kanji": "内",
+        "synonyms": "中"
+    },
+    {
+        "kanji": "縄",
+        "synonyms": "索,綱"
+    },
+    {
+        "kanji": "軟",
+        "synonyms": "柔"
+    },
+    {
+        "kanji": "二",
+        "synonyms": "弐,両"
+    },
+    {
+        "kanji": "弐",
+        "synonyms": "二,両"
+    },
+    {
+        "kanji": "如",
+        "synonyms": "似"
+    },
+    {
+        "kanji": "忍",
+        "synonyms": "耐"
+    },
+    {
+        "kanji": "熱",
+        "synonyms": "暑"
+    },
+    {
+        "kanji": "年",
+        "synonyms": "歳"
+    },
+    {
+        "kanji": "燃",
+        "synonyms": "焼,火"
+    },
+    {
+        "kanji": "納",
+        "synonyms": "収"
+    },
+    {
+        "kanji": "把",
+        "synonyms": "握,柄"
+    },
+    {
+        "kanji": "派",
+        "synonyms": "支"
+    },
+    {
+        "kanji": "破",
+        "synonyms": "敗"
+    },
+    {
+        "kanji": "排",
+        "synonyms": "斥"
+    },
+    {
+        "kanji": "敗",
+        "synonyms": "破"
+    },
+    {
+        "kanji": "輩",
+        "synonyms": "曹"
+    },
+    {
+        "kanji": "培",
+        "synonyms": "栽"
+    },
+    {
+        "kanji": "陪",
+        "synonyms": "伴,副"
+    },
+    {
+        "kanji": "縛",
+        "synonyms": "束"
+    },
+    {
+        "kanji": "発",
+        "synonyms": "遣"
+    },
+    {
+        "kanji": "髪",
+        "synonyms": "毛"
+    },
+    {
+        "kanji": "伐",
+        "synonyms": "討"
+    },
+    {
+        "kanji": "伴",
+        "synonyms": "陪"
+    },
+    {
+        "kanji": "搬",
+        "synonyms": "般"
+    },
+    {
+        "kanji": "板",
+        "synonyms": "版"
+    },
+    {
+        "kanji": "氾",
+        "synonyms": "汎,凡"
+    },
+    {
+        "kanji": "汎",
+        "synonyms": "氾,凡"
+    },
+    {
+        "kanji": "版",
+        "synonyms": "板"
+    },
+    {
+        "kanji": "班",
+        "synonyms": "組"
+    },
+    {
+        "kanji": "畔",
+        "synonyms": "辺"
+    },
+    {
+        "kanji": "繁",
+        "synonyms": "栄,盛"
+    },
+    {
+        "kanji": "般",
+        "synonyms": "搬"
+    },
+    {
+        "kanji": "晩",
+        "synonyms": "暮,夕"
+    },
+    {
+        "kanji": "番",
+        "synonyms": "回"
+    },
+    {
+        "kanji": "盤",
+        "synonyms": "皿"
+    },
+    {
+        "kanji": "妃",
+        "synonyms": "后"
+    },
+    {
+        "kanji": "扉",
+        "synonyms": "戸,門"
+    },
+    {
+        "kanji": "秘",
+        "synonyms": "密"
+    },
+    {
+        "kanji": "備",
+        "synonyms": "具"
+    },
+    {
+        "kanji": "美",
+        "synonyms": "輝,善"
+    },
+    {
+        "kanji": "肘",
+        "synonyms": "腕"
+    },
+    {
+        "kanji": "標",
+        "synonyms": "票,券"
+    },
+    {
+        "kanji": "票",
+        "synonyms": "標,券"
+    },
+    {
+        "kanji": "描",
+        "synonyms": "絵,画"
+    },
+    {
+        "kanji": "病",
+        "synonyms": "疾"
+    },
+    {
+        "kanji": "浜",
+        "synonyms": "浦"
+    },
+    {
+        "kanji": "付",
+        "synonyms": "附"
+    },
+    {
+        "kanji": "富",
+        "synonyms": "裕"
+    },
+    {
+        "kanji": "布",
+        "synonyms": "敷"
+    },
+    {
+        "kanji": "敷",
+        "synonyms": "布"
+    },
+    {
+        "kanji": "腐",
+        "synonyms": "朽"
+    },
+    {
+        "kanji": "負",
+        "synonyms": "担,荷"
+    },
+    {
+        "kanji": "附",
+        "synonyms": "付"
+    },
+    {
+        "kanji": "副",
+        "synonyms": "陪"
+    },
+    {
+        "kanji": "復",
+        "synonyms": "還,返,旋,帰,再"
+    },
+    {
+        "kanji": "服",
+        "synonyms": "衣"
+    },
+    {
+        "kanji": "福",
+        "synonyms": "吉,慶,祉"
+    },
+    {
+        "kanji": "覆",
+        "synonyms": "蓋"
+    },
+    {
+        "kanji": "分",
+        "synonyms": "別"
+    },
+    {
+        "kanji": "奮",
+        "synonyms": "怒"
+    },
+    {
+        "kanji": "柄",
+        "synonyms": "把"
+    },
+    {
+        "kanji": "拾",
+        "synonyms": "十"
+    },
+    {
+        "kanji": "十",
+        "synonyms": "拾"
+    },
+    {
+        "kanji": "別",
+        "synonyms": "分"
+    },
+    {
+        "kanji": "辺",
+        "synonyms": "縁,端,畔"
+    },
+    {
+        "kanji": "返",
+        "synonyms": "還,復,旋"
+    },
+    {
+        "kanji": "保",
+        "synonyms": "宝"
+    },
+    {
+        "kanji": "捕",
+        "synonyms": "捉,虜"
+    },
+    {
+        "kanji": "歩",
+        "synonyms": "行,進,走"
+    },
+    {
+        "kanji": "暮",
+        "synonyms": "晩,夕"
+    },
+    {
+        "kanji": "宝",
+        "synonyms": "保"
+    },
+    {
+        "kanji": "崩",
+        "synonyms": "壊"
+    },
+    {
+        "kanji": "抱",
+        "synonyms": "囲"
+    },
+    {
+        "kanji": "法",
+        "synonyms": "憲,律,則"
+    },
+    {
+        "kanji": "邦",
+        "synonyms": "国"
+    },
+    {
+        "kanji": "堀",
+        "synonyms": "掘,窟"
+    },
+    {
+        "kanji": "奔",
+        "synonyms": "走"
+    },
+    {
+        "kanji": "本",
+        "synonyms": "基,源,根,元"
+    },
+    {
+        "kanji": "凡",
+        "synonyms": "汎,氾,俗,庸"
+    },
+    {
+        "kanji": "摩",
+        "synonyms": "磨,接,研"
+    },
+    {
+        "kanji": "磨",
+        "synonyms": "摩,接,研"
+    },
+    {
+        "kanji": "枚",
+        "synonyms": "葉"
+    },
+    {
+        "kanji": "毎",
+        "synonyms": "各"
+    },
+    {
+        "kanji": "末",
+        "synonyms": "端"
+    },
+    {
+        "kanji": "慢",
+        "synonyms": "惰,怠"
+    },
+    {
+        "kanji": "満",
+        "synonyms": "充"
+    },
+    {
+        "kanji": "岬",
+        "synonyms": "崎,峡"
+    },
+    {
+        "kanji": "峡",
+        "synonyms": "岬,崎"
+    },
+    {
+        "kanji": "密",
+        "synonyms": "秘"
+    },
+    {
+        "kanji": "民",
+        "synonyms": "人"
+    },
+    {
+        "kanji": "眠",
+        "synonyms": "睡"
+    },
+    {
+        "kanji": "無",
+        "synonyms": "空,虚"
+    },
+    {
+        "kanji": "娘",
+        "synonyms": "嬢"
+    },
+    {
+        "kanji": "冥",
+        "synonyms": "暗,闇"
+    },
+    {
+        "kanji": "明",
+        "synonyms": "昭,朗"
+    },
+    {
+        "kanji": "盟",
+        "synonyms": "誓"
+    },
+    {
+        "kanji": "模",
+        "synonyms": "形,写,謄"
+    },
+    {
+        "kanji": "毛",
+        "synonyms": "髪"
+    },
+    {
+        "kanji": "猛",
+        "synonyms": "勇"
+    },
+    {
+        "kanji": "木",
+        "synonyms": "材,樹"
+    },
+    {
+        "kanji": "門",
+        "synonyms": "戸,扉"
+    },
+    {
+        "kanji": "冶",
+        "synonyms": "陶,鋳"
+    },
+    {
+        "kanji": "薬",
+        "synonyms": "療"
+    },
+    {
+        "kanji": "油",
+        "synonyms": "脂"
+    },
+    {
+        "kanji": "癒",
+        "synonyms": "滋"
+    },
+    {
+        "kanji": "滋",
+        "synonyms": "癒"
+    },
+    {
+        "kanji": "輸",
+        "synonyms": "運"
+    },
+    {
+        "kanji": "唯",
+        "synonyms": "独,孤,寡"
+    },
+    {
+        "kanji": "勇",
+        "synonyms": "猛,壮"
+    },
+    {
+        "kanji": "憂",
+        "synonyms": "愁"
+    },
+    {
+        "kanji": "裕",
+        "synonyms": "富"
+    },
+    {
+        "kanji": "融",
+        "synonyms": "溶"
+    },
+    {
+        "kanji": "夕",
+        "synonyms": "暮,晩,宵"
+    },
+    {
+        "kanji": "幼",
+        "synonyms": "稚,児"
+    },
+    {
+        "kanji": "庸",
+        "synonyms": "凡"
+    },
+    {
+        "kanji": "溶",
+        "synonyms": "融"
+    },
+    {
+        "kanji": "葉",
+        "synonyms": "枚"
+    },
+    {
+        "kanji": "謡",
+        "synonyms": "歌,唱"
+    },
+    {
+        "kanji": "陽",
+        "synonyms": "晴"
+    },
+    {
+        "kanji": "抑",
+        "synonyms": "控"
+    },
+    {
+        "kanji": "欲",
+        "synonyms": "願"
+    },
+    {
+        "kanji": "落",
+        "synonyms": "降"
+    },
+    {
+        "kanji": "陸",
+        "synonyms": "六"
+    },
+    {
+        "kanji": "漆",
+        "synonyms": "七"
+    },
+    {
+        "kanji": "七",
+        "synonyms": "漆"
+    },
+    {
+        "kanji": "六",
+        "synonyms": "陸"
+    },
+    {
+        "kanji": "律",
+        "synonyms": "法,則"
+    },
+    {
+        "kanji": "立",
+        "synonyms": "建"
+    },
+    {
+        "kanji": "留",
+        "synonyms": "滞"
+    },
+    {
+        "kanji": "隆",
+        "synonyms": "盛"
+    },
+    {
+        "kanji": "虜",
+        "synonyms": "捉,捕,獲,奴"
+    },
+    {
+        "kanji": "了",
+        "synonyms": "終"
+    },
+    {
+        "kanji": "両",
+        "synonyms": "二,弐,双"
+    },
+    {
+        "kanji": "涼",
+        "synonyms": "冷"
+    },
+    {
+        "kanji": "猟",
+        "synonyms": "狩"
+    },
+    {
+        "kanji": "療",
+        "synonyms": "薬"
+    },
+    {
+        "kanji": "良",
+        "synonyms": "佳,善"
+    },
+    {
+        "kanji": "林",
+        "synonyms": "森"
+    },
+    {
+        "kanji": "累",
+        "synonyms": "積"
+    },
+    {
+        "kanji": "冷",
+        "synonyms": "寒,凍,涼"
+    },
+    {
+        "kanji": "礼",
+        "synonyms": "儀"
+    },
+    {
+        "kanji": "練",
+        "synonyms": "錬"
+    },
+    {
+        "kanji": "錬",
+        "synonyms": "練"
+    },
+    {
+        "kanji": "呂",
+        "synonyms": "脊"
+    },
+    {
+        "kanji": "朗",
+        "synonyms": "明"
+    },
+    {
+        "kanji": "話",
+        "synonyms": "談,語"
+    },
+    {
+        "kanji": "腕",
+        "synonyms": "肘"
+    },
+    {
+        "kanji": "嗅",
+        "synonyms": "臭"
+    },
+    {
+        "kanji": "毀",
+        "synonyms": "壊"
+    },
+    {
+        "kanji": "瘍",
+        "synonyms": "傷"
+    },
+    {
+        "kanji": "羞",
+        "synonyms": "恥,辱"
+    },
+    {
+        "kanji": "辣",
+        "synonyms": "辛"
+    },
+    {
+        "kanji": "寝",
+        "synonyms": "休"
+    },
+    {
+        "kanji": "休",
+        "synonyms": "寝"
+    },
+    {
+        "kanji": "覧",
+        "synonyms": "見"
+    },
+    {
+        "kanji": "頂",
+        "synonyms": "食,飲,賜"
+    },
+    {
+        "kanji": "飲",
+        "synonyms": "頂"
+    },
+    {
+        "kanji": "訪",
+        "synonyms": "伺"
+    },
+    {
+        "kanji": "伺",
+        "synonyms": "訪,尋,問,聞,参,行,承"
+    },
+    {
+        "kanji": "問",
+        "synonyms": "伺,尋,聞"
+    },
+    {
+        "kanji": "聞",
+        "synonyms": "問,伺,尋,承"
+    },
+    {
+        "kanji": "承",
+        "synonyms": "聞,伺"
+    },
+    {
+        "kanji": "買",
+        "synonyms": "求"
+    },
+    {
+        "kanji": "思",
+        "synonyms": "存"
+    },
+    {
+        "kanji": "亡",
+        "synonyms": "死"
+    },
+    {
+        "kanji": "死",
+        "synonyms": "亡"
+    },
+    {
+        "kanji": "着",
+        "synonyms": "召"
+    },
+    {
+        "kanji": "召",
+        "synonyms": "着"
+    },
+    {
+        "kanji": "与",
+        "synonyms": "上,献"
+    },
+    {
+        "kanji": "煮",
+        "synonyms": "茹"
+    },
+    {
+        "kanji": "茹",
+        "synonyms": "煮"
+    },
+    {
+        "kanji": "勅",
+        "synonyms": "詔"
+    },
+    {
+        "kanji": "詔",
+        "synonyms": "勅"
+    },
+    {
+        "kanji": "喧",
+        "synonyms": "嘩"
+    },
+    {
+        "kanji": "嘩",
+        "synonyms": "喧"
+    },
+    {
+        "kanji": "家",
+        "synonyms": "屋"
+    },
+    {
+        "kanji": "屋",
+        "synonyms": "家"
+    },
+    {
+        "kanji": "肝",
+        "synonyms": "胆"
+    },
+    {
+        "kanji": "胆",
+        "synonyms": "肝"
+    }
+]

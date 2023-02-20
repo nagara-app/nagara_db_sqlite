@@ -5,14 +5,22 @@ import { parse } from 'csv-parse';
 import { Constants } from '../../constants';
 import { readFileFromInput, writeFileToInputConverted } from '../../utils';
 
-export default async () => {
+export default async (): Promise<void> => {
+  const file = await readFileFromInput(Constants.fileNames.tanosVocab);
 
-    const file = await readFileFromInput(Constants.fileNames.tanosVocab);
+  console.log('Parsing file …');
 
-    console.log("Parsing file …");
-    parse(file, { columns: true, trim: true, delimiter: Constants.csvDelimiter }, async (err, rows) => {
-        if (err) throw err;
-
-        await writeFileToInputConverted(Constants.fileNames.tanosVocabConverted, rows);
+  const parsePromise = new Promise<Buffer>((resolve, reject) => {
+    parse(file, { columns: true, trim: true, delimiter: Constants.csvDelimiter }, (err, rows) => {
+      if (err !== undefined) {
+        reject(err);
+      }
+      resolve(rows);
     });
-}
+  });
+
+  console.log(`Unzipping file …`);
+  const result = await parsePromise;
+
+  await writeFileToInputConverted(Constants.fileNames.tanosVocabConverted, result);
+};

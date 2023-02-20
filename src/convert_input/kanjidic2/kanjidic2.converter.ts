@@ -1,32 +1,32 @@
 // Converts the kanjidic2.xml.gz file into JSON formated file
 
-import { ParserOptions, parseStringPromise } from 'xml2js';
+import { parseStringPromise } from 'xml2js';
 
-import { handle, readFileFromInput, unzipFile, writeFileToInputConverted } from '../../utils';
+import type { ParserOptions } from 'xml2js';
+
+import { readFileFromInput, unzipFile, writeFileToInputConverted } from '../../utils';
 import { Constants } from '../../constants';
 
-export default async () => {
+export default async (): Promise<void> => {
+  function nameToLowerCase(name: string): string {
+    return name.toLowerCase();
+  }
 
-    function nameToLowerCase(name: string): string {
-        return name.toLowerCase();
-    }
+  const parserOptions: ParserOptions = {
+    strict: false,
+    mergeAttrs: true,
+    normalizeTags: true,
+    charkey: 'value',
+    explicitRoot: false,
+    explicitArray: false,
+    attrNameProcessors: [nameToLowerCase],
+  };
 
-    const parserOptions: ParserOptions = {
-        strict: false,
-        mergeAttrs: true,
-        normalizeTags: true,
-        charkey: 'value',
-        explicitRoot: false,
-        explicitArray: false,
-        attrNameProcessors: [nameToLowerCase],
-    }
+  const zippedFile = await readFileFromInput(Constants.fileNames.kanjidic2);
+  const file = await unzipFile(zippedFile);
 
-    const zippedFile = await readFileFromInput(Constants.fileNames.kanjidic2);
-    const file = await unzipFile(zippedFile);
+  console.log('Parsing file …');
+  const result = await parseStringPromise(file, parserOptions);
 
-    console.log("Parsing file …")
-    const [resultErr, result] = await handle(parseStringPromise(file, parserOptions));
-    if (resultErr) throw (resultErr);
-
-    await writeFileToInputConverted(Constants.fileNames.kanjidic2Converted, result);
-}
+  await writeFileToInputConverted(Constants.fileNames.kanjidic2Converted, result);
+};

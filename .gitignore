@@ -108,6 +108,9 @@ input/*
 !input/tanos_vocab.csv
 !input/tanos_kanji.csv
 !input/tkdb_jmdict_jlpt.json
+!input/kanjium_antonyms.json
+!input/kanjium_lookalikes.json
+!input/kanjium_synonyms.json
 
 output/*
 .DS_Store
