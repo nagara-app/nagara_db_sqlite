@@ -8,6 +8,9 @@ import type { JMdict } from '../input/jmdict/jmdict.dto';
 import type { JMdictJlpt } from '../input/jmdict_jlpt/jmdict_jlpt.dto';
 import type { Kanjidic2 } from '../input/kanjidic2/kanjidic2.dto';
 import type { TanosKanji } from '../input/tanos_kanji/tanos_kanji.dto';
+import type { KanjiumAntonym } from '../input/kanjium_antonym/kanjium_antonym.dto';
+import type { KanjiumSynonym } from '../input/kanjium_synonym/kanjium_synonym.dto';
+import type { KanjiumLookalike } from '../input/kanjium_lookalike/kanjium_lookalike.dto';
 
 const main = async (): Promise<void> => {
   const limiter = process.argv[2] !== undefined ? parseInt(process.argv[2]) : undefined;
@@ -17,8 +20,21 @@ const main = async (): Promise<void> => {
   const tkdbJmdictJlptJson: JMdictJlpt[] = await readJsonFileFromInput(Constants.fileNames.tkdbJmdictJlpt);
   const kanjidic2: Kanjidic2 = await readJsonFileFromInputConverted(Constants.fileNames.kanjidic2Converted);
   const tanosKanji: TanosKanji[] = await readJsonFileFromInputConverted(Constants.fileNames.tanosKanjiConverted);
+  const kanjiumAntonym: KanjiumAntonym[] = await readJsonFileFromInput(Constants.fileNames.kanjiumAntonym);
+  const kanjiumSynonym: KanjiumSynonym[] = await readJsonFileFromInput(Constants.fileNames.kanjiumSynonym);
+  const kanjiumLookalike: KanjiumLookalike[] = await readJsonFileFromInput(Constants.fileNames.kanjiumLookalike);
 
-  const mapper = new TKDBmapper(limiter, jmdictJson, jmdictFuriganaJson, tkdbJmdictJlptJson, kanjidic2, tanosKanji);
+  const mapper = new TKDBmapper(
+    limiter,
+    jmdictJson,
+    jmdictFuriganaJson,
+    tkdbJmdictJlptJson,
+    kanjidic2,
+    tanosKanji,
+    kanjiumAntonym,
+    kanjiumSynonym,
+    kanjiumLookalike,
+  );
 
   const words: TKDB_Kanji[] = mapper.kanji();
 

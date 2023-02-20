@@ -35,6 +35,9 @@ import type {
   Kanjidic2CharQcodeEntr,
 } from '../input/kanjidic2/kanjidic2.dto';
 import type { TanosKanji } from '../input/tanos_kanji/tanos_kanji.dto';
+import type { KanjiumAntonym } from '../input/kanjium_antonym/kanjium_antonym.dto';
+import type { KanjiumSynonym } from '../input/kanjium_synonym/kanjium_synonym.dto';
+import type { KanjiumLookalike } from '../input/kanjium_lookalike/kanjium_lookalike.dto';
 
 export class TKDBmapper {
   limiter: number | undefined;
@@ -45,6 +48,9 @@ export class TKDBmapper {
 
   kanjidic2: Kanjidic2;
   tanosKanji: TanosKanji[];
+  kanjiumAntonym: KanjiumAntonym[];
+  kanjiumSynonym: KanjiumSynonym[];
+  kanjiumLookalike: KanjiumLookalike[];
 
   constructor(
     limiter: number | undefined,
@@ -53,6 +59,9 @@ export class TKDBmapper {
     jmdictJlpt: JMdictJlpt[],
     kanjidic2: Kanjidic2,
     tanosKanji: TanosKanji[],
+    kanjiumAntonym: KanjiumAntonym[],
+    kanjiumSynonym: KanjiumSynonym[],
+    kanjiumLookalike: KanjiumLookalike[],
   ) {
     this.limiter = limiter;
     this.jmdict = jmdict;
@@ -60,6 +69,9 @@ export class TKDBmapper {
     this.jmdictJlpt = jmdictJlpt;
     this.kanjidic2 = kanjidic2;
     this.tanosKanji = tanosKanji;
+    this.kanjiumAntonym = kanjiumAntonym;
+    this.kanjiumSynonym = kanjiumSynonym;
+    this.kanjiumLookalike = kanjiumLookalike;
   }
 
   //
@@ -436,11 +448,26 @@ export class TKDBmapper {
     const dicref = this.kanjiDicref(toArray(kd2character.dic_number?.dic_ref));
     const jlpt = this.tanosKanji.find((a) => a.kanji === kd2character.literal)?.jlpt;
 
+    const antonym =
+      this.kanjiumAntonym.find((a) => a.kanji === kd2character.literal)?.antonyms?.split(Constants.kanjiumDelimiter) ??
+      [];
+
+    const synonym =
+      this.kanjiumSynonym.find((a) => a.kanji === kd2character.literal)?.synonyms?.split(Constants.kanjiumDelimiter) ??
+      [];
+
+    const lookalike =
+      this.kanjiumLookalike.find((a) => a.kanji === kd2character.literal)?.similar?.split(Constants.kanjiumDelimiter) ??
+      [];
+
     const misc: TKDB_Kanji_Misc = {
       jlpt,
       codepoint,
       querycode,
       dicref,
+      antonym,
+      synonym,
+      lookalike,
     };
 
     return misc;

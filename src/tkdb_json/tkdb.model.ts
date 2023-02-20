@@ -92,6 +92,9 @@ export interface TKDB_Kanji_Misc {
   querycode: TKDB_Kanji_Querycode;
   dicref: TKDB_Kanji_Dicref;
   jlpt: TKDB_Tag_JLPT | undefined;
+  lookalike: string[];
+  antonym: string[];
+  synonym: string[];
 }
 
 export type TKDB_Kanji_Codepoint = {
