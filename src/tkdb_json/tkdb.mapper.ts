@@ -18,28 +18,57 @@ import type {
   TKDB_Word_Meaning_Source,
   TKDB_Word_Misc,
   TKDB_Word_Reading,
+  TKDB_Kanji,
+  TKDB_Kanji_Codepoint,
+  TKDB_Kanji_Querycode,
+  TKDB_Kanji_Dicref,
+  TKDB_Kanji_Misc,
 } from './tkdb.model';
 import type { JMdict, JMdictEntr, JMdictKanji, JMdictRdng, JMdictSens } from '../convert_input/jmdict/jmdict.dto';
 import type { JMdictFurigana } from '../convert_input/jmdict_furigana/jmdict_furigana.dto';
 import type { JMdictJlpt } from '../jmdict_jlpt_json/jmdict_jlpt.dto';
+import type {
+  Kanjidic2,
+  Kanjidic2Char,
+  Kanjidic2CharCpEntr,
+  Kanjidic2CharDicNumDicRef,
+  Kanjidic2CharQcodeEntr,
+} from '../convert_input/kanjidic2/kanjidic2.dto';
+import type { TanosKanji } from '../convert_input/tanos_kanji/tanos_kanji.dto';
 
 export class TKDBmapper {
-  limiter?: number;
+  limiter: number | undefined;
 
   jmdict: JMdict;
   jmdictFurigana: JMdictFurigana[];
   jmdictJlpt: JMdictJlpt[];
 
-  constructor(limiter: number, jmdict: JMdict, jmdictFurigana: JMdictFurigana[], jmdictJlpt: JMdictJlpt[]) {
+  kanjidic2: Kanjidic2;
+  tanosKanji: TanosKanji[];
+
+  constructor(
+    limiter: number | undefined,
+    jmdict: JMdict,
+    jmdictFurigana: JMdictFurigana[],
+    jmdictJlpt: JMdictJlpt[],
+    kanjidic2: Kanjidic2,
+    tanosKanji: TanosKanji[],
+  ) {
     this.limiter = limiter;
     this.jmdict = jmdict;
     this.jmdictFurigana = jmdictFurigana;
     this.jmdictJlpt = jmdictJlpt;
+    this.kanjidic2 = kanjidic2;
+    this.tanosKanji = tanosKanji;
   }
 
+  //
+  // Word mappings
+  //
+
   word(): TKDB_Word[] {
-    const entries = this.limiter !== undefined ? this.jmdict.entry.slice(0, this.limiter) : this.jmdict.entry;
     const words: TKDB_Word[] = [];
+    const entries = this.limiter !== undefined ? this.jmdict.entry.slice(0, this.limiter) : this.jmdict.entry;
 
     const progressOptions: Options = {
       hideCursor: true,
@@ -363,5 +392,93 @@ export class TKDBmapper {
     common = !common ? jmReadings.some((a) => this.isCommonWordReading(a.re_pri)) : false;
 
     return common;
+  }
+
+  //
+  // Kanji mappings
+  //
+
+  kanji(): TKDB_Kanji[] {
+    const kanji: TKDB_Kanji[] = [];
+    const charaters =
+      this.limiter !== undefined ? this.kanjidic2.character.slice(0, this.limiter) : this.kanjidic2.character;
+
+    const progressOptions: Options = {
+      hideCursor: true,
+      etaBuffer: 10000,
+    };
+
+    console.log('Mapping kanjidic2 entries to kanji …');
+    const progressBar = new SingleBar(progressOptions, Presets.shades_classic);
+    progressBar.start(charaters.length, 0);
+    let i = 1;
+
+    for (const character of charaters) {
+      progressBar.update(i);
+      i++;
+
+      const literal = character.literal;
+      const misc = this.kanjiMisc(character);
+
+      kanji.push({
+        literal,
+        misc,
+      });
+    }
+    progressBar.stop();
+
+    return kanji;
+  }
+
+  private kanjiMisc(kd2character: Kanjidic2Char): TKDB_Kanji_Misc {
+    const codepoint = this.kanjiCodepoint(kd2character.codepoint.cp_value);
+    const querycode = this.kanjiQuerycode(toArray(kd2character.query_code?.q_code));
+    const dicref = this.kanjiDicref(toArray(kd2character.dic_number?.dic_ref));
+    const jlpt = this.tanosKanji.find((a) => a.kanji === kd2character.literal)?.jlpt;
+
+    const misc: TKDB_Kanji_Misc = {
+      jlpt,
+      codepoint,
+      querycode,
+      dicref,
+    };
+
+    return misc;
+  }
+
+  private kanjiCodepoint(kd2Codepoint: Kanjidic2CharCpEntr[]): TKDB_Kanji_Codepoint {
+    const codepoint: TKDB_Kanji_Codepoint = {};
+
+    kd2Codepoint.forEach((a) => {
+      codepoint[a.cp_type] = a.value;
+    });
+
+    return codepoint;
+  }
+
+  private kanjiQuerycode(kd2Querycode: Kanjidic2CharQcodeEntr[]): TKDB_Kanji_Querycode {
+    const querycode: TKDB_Kanji_Querycode = {};
+
+    kd2Querycode
+      .filter((a) => a.skip_misclass === undefined)
+      .forEach((a) => {
+        querycode[a.qc_type] = a.value;
+      });
+
+    return querycode;
+  }
+
+  private kanjiDicref(kd2Dicref: Kanjidic2CharDicNumDicRef[]): TKDB_Kanji_Dicref {
+    const dicref: TKDB_Kanji_Dicref = {};
+
+    kd2Dicref.forEach((a) => {
+      if (a.dr_type === 'moro' && a.m_vol !== undefined && a.m_page !== undefined) {
+        dicref[a.dr_type] = `${a.value}:${a.m_vol}:${a.m_page}`;
+      } else {
+        dicref[a.dr_type] = a.value;
+      }
+    });
+
+    return dicref;
   }
 }

@@ -28,7 +28,7 @@ export interface Kanjidic2CharCp {
 
 export interface Kanjidic2CharCpEntr {
   value: string;
-  cp_type: string;
+  cp_type: Kanjidic2CharCpType;
 }
 
 export interface Kanjidic2CharRad {
@@ -60,7 +60,7 @@ export interface Kanjidic2CharDicNum {
 
 export interface Kanjidic2CharDicNumDicRef {
   value: string;
-  dr_type: string;
+  dr_type: Kanjidic2CharDicNumDicRefType;
   m_vol?: string;
   m_page?: string;
 }
@@ -71,8 +71,8 @@ export interface Kanjidic2CharQcode {
 
 export interface Kanjidic2CharQcodeEntr {
   value: string;
-  qc_type: string;
-  skip_misclass?: string;
+  qc_type: Kanjidic2CharQcodeType;
+  skip_misclass?: Kanjidic2CharQcodeMisclassType;
 }
 
 export interface Kanjidic2CharRdngMng {
@@ -94,3 +94,32 @@ export interface Kanjidic2CharRdngMngGrpMng {
   value: string;
   m_lang: string;
 }
+
+export type Kanjidic2CharCpType = 'ucs' | 'jis208' | 'jis212' | 'jis213';
+export type Kanjidic2CharQcodeMisclassType = 'posn' | 'stroke_diff' | 'stroke_count' | 'stroke_and_posn';
+export type Kanjidic2CharQcodeType = 'skip' | 'shDesc' | 'fourCorner' | 'deroo';
+export type Kanjidic2CharDicNumDicRefType =
+  | 'nelsonC'
+  | 'nelsonN'
+  | 'halpernNjecd'
+  | 'halpernKkd'
+  | 'halpernKkld'
+  | 'halpernKkld2ed'
+  | 'heisig'
+  | 'heisig6'
+  | 'gakken'
+  | 'oneillNames'
+  | 'oneillKk'
+  | 'moro'
+  | 'henshall'
+  | 'shKk'
+  | 'shKk2'
+  | 'jfCards'
+  | 'tuttCards'
+  | 'kanjiInContext'
+  | 'kodanshaCompact'
+  | 'maniette'
+  | 'sakade'
+  | 'henshall3'
+  | 'crowley'
+  | 'busyPeople';

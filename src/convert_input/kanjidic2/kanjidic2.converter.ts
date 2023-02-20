@@ -12,6 +12,17 @@ export default async (): Promise<void> => {
     return name.toLowerCase();
   }
 
+  function nameFromSnakeToCamelCase(value: string, name: string): string {
+    // Convert to camelCase so it can be reused as a key for json
+    switch (name) {
+      case 'QC_TYPE':
+      case 'DR_TYPE':
+        return value.toLowerCase().replace(/(_\w)/g, (m) => m.toUpperCase().substring(1));
+      default:
+        return value;
+    }
+  }
+
   const parserOptions: ParserOptions = {
     strict: false,
     mergeAttrs: true,
@@ -20,6 +31,7 @@ export default async (): Promise<void> => {
     explicitRoot: false,
     explicitArray: false,
     attrNameProcessors: [nameToLowerCase],
+    attrValueProcessors: [nameFromSnakeToCamelCase],
   };
 
   const zippedFile = await readFileFromInput(Constants.fileNames.kanjidic2);

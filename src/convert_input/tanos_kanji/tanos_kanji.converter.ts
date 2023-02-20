@@ -1,4 +1,4 @@
-// Converts the tanos_vocab.csv file into JSON formated file
+// Converts the tanos_kanji.csv file into JSON formated file
 
 import { parse } from 'csv-parse';
 
@@ -6,7 +6,7 @@ import { Constants } from '../../constants';
 import { readFileFromInput, writeFileToInputConverted } from '../../utils';
 
 export default async (): Promise<void> => {
-  const file = await readFileFromInput(Constants.fileNames.tanosVocab);
+  const file = await readFileFromInput(Constants.fileNames.tanosKanji);
 
   console.log('Parsing file …');
 
@@ -21,5 +21,5 @@ export default async (): Promise<void> => {
 
   const result = await parsePromise;
 
-  await writeFileToInputConverted(Constants.fileNames.tanosVocabConverted, result);
+  await writeFileToInputConverted(Constants.fileNames.tanosKanjiConverted, result);
 };

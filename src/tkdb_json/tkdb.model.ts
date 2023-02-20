@@ -9,12 +9,17 @@ import type {
   JMdictSensMisc,
   JMdictSensPos,
 } from '../convert_input/jmdict/jmdict.dto';
+import type {
+  Kanjidic2CharCpType,
+  Kanjidic2CharDicNumDicRefType,
+  Kanjidic2CharQcodeType,
+} from '../convert_input/kanjidic2/kanjidic2.dto';
 
 export interface TKDB {
   version: string;
   dateOfCreation: string;
   words: TKDB_Word[];
-  // kanji: TKDB_Kanji[];
+  kanji: TKDB_Kanji[];
   // radicals: TKDB_Radical[];
   tags: {
     lang: TKDB_Tag_Lang[];
@@ -74,15 +79,36 @@ export interface TKDB_Word_Meaning_Source {
 
 export interface TKDB_Word_Misc {
   common: boolean;
-  jlpt: string | undefined;
+  jlpt: TKDB_Tag_JLPT | undefined;
 }
 
-/*
-export interface TKDB_Kanji {}
+export interface TKDB_Kanji {
+  literal: string;
+  misc: TKDB_Kanji_Misc;
+}
 
-export interface TKDB_Radical {}
-*/
+export interface TKDB_Kanji_Misc {
+  codepoint: TKDB_Kanji_Codepoint;
+  querycode: TKDB_Kanji_Querycode;
+  dicref: TKDB_Kanji_Dicref;
+  jlpt: TKDB_Tag_JLPT | undefined;
+}
 
+export type TKDB_Kanji_Codepoint = {
+  [key in Kanjidic2CharCpType]?: string;
+};
+
+export type TKDB_Kanji_Querycode = {
+  [key in Kanjidic2CharQcodeType]?: string;
+};
+
+export type TKDB_Kanji_Dicref = {
+  [key in Kanjidic2CharDicNumDicRefType]?: string;
+};
+
+// export interface TKDB_Radical {}
+
+export type TKDB_Tag_JLPT = 'n1' | 'n2' | 'n3' | 'n4' | 'n5';
 export type TKDB_Tag_Lang = JMdictSensGlossLang | JMdictSensLSourceLang;
 export type TKDB_Tag_Word_Reading_Info = JMdictKanjiInf | JMdcitRdngInf;
 export type TKDB_Tag_Word_Meaning_Gloss_Type = JMdictSensGlossType;

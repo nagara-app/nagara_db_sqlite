@@ -13,6 +13,8 @@ export const Constants = {
     tkdbJmdictJlpt: 'tkdb_jmdict_jlpt.json',
     tanosVocab: 'tanos_vocab.csv',
     tanosVocabConverted: 'tanos_vocab.json',
+    tanosKanji: 'tanos_kanji.csv',
+    tanosKanjiConverted: 'tanos_kanji.json',
     kanjidic2: 'kanjidic2.xml.gz',
     kanjidic2Converted: 'kanjidic2.json',
   },

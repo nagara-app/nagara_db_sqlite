@@ -1,8 +1,6 @@
 import type { TKDB_Tag_JLPT } from '../../tkdb_json/tkdb.model';
 
-export interface TanosVocab {
+export interface TanosKanji {
   jlpt: TKDB_Tag_JLPT;
   kanji: string;
-  kana: string;
-  english: string;
 }
