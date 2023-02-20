@@ -24,17 +24,17 @@ import type {
   TKDB_Kanji_Dicref,
   TKDB_Kanji_Misc,
 } from './tkdb.model';
-import type { JMdict, JMdictEntr, JMdictKanji, JMdictRdng, JMdictSens } from '../convert_input/jmdict/jmdict.dto';
-import type { JMdictFurigana } from '../convert_input/jmdict_furigana/jmdict_furigana.dto';
-import type { JMdictJlpt } from '../jmdict_jlpt_json/jmdict_jlpt.dto';
+import type { JMdict, JMdictEntr, JMdictKanji, JMdictRdng, JMdictSens } from '../input/jmdict/jmdict.dto';
+import type { JMdictFurigana } from '../input/jmdict_furigana/jmdict_furigana.dto';
+import type { JMdictJlpt } from '../input/jmdict_jlpt/jmdict_jlpt.dto';
 import type {
   Kanjidic2,
   Kanjidic2Char,
   Kanjidic2CharCpEntr,
   Kanjidic2CharDicNumDicRef,
   Kanjidic2CharQcodeEntr,
-} from '../convert_input/kanjidic2/kanjidic2.dto';
-import type { TanosKanji } from '../convert_input/tanos_kanji/tanos_kanji.dto';
+} from '../input/kanjidic2/kanjidic2.dto';
+import type { TanosKanji } from '../input/tanos_kanji/tanos_kanji.dto';
 
 export class TKDBmapper {
   limiter: number | undefined;

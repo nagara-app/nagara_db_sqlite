@@ -1,16 +1,18 @@
+// Creates the jmdict_jlpt.json file based on TanosVocab and JMdict
+
 import { Presets, SingleBar } from 'cli-progress';
 
 import type { Options } from 'cli-progress';
 
-import { readJsonFileFromInputConverted, toArray, writeFileToInputConverted } from '../utils';
-import { Constants } from '../constants';
+import { readJsonFileFromInputConverted, toArray, writeFileToInputConverted } from '../../utils';
+import { Constants } from '../../constants';
 import { JMdictJlptMatch } from './jmdict_jlpt.dto';
 
-import type { TanosVocab } from '../convert_input/tanos_vocab/tanos_vocab.dto';
+import type { TanosVocab } from '../tanos_vocab/tanos_vocab.dto';
 import type { JMdictJlpt } from './jmdict_jlpt.dto';
-import type { JMdict, JMdictKanji, JMdictRdng, JMdictSens } from '../convert_input/jmdict/jmdict.dto';
+import type { JMdict, JMdictKanji, JMdictRdng, JMdictSens } from '../jmdict/jmdict.dto';
 
-const main = async (): Promise<void> => {
+export default async (): Promise<void> => {
   const jmdictJson: JMdict = await readJsonFileFromInputConverted(Constants.fileNames.jmdictConverted);
   const tanosVocabJson: TanosVocab[] = await readJsonFileFromInputConverted(Constants.fileNames.tanosVocabConverted);
 
@@ -68,7 +70,6 @@ const main = async (): Promise<void> => {
 
   await writeFileToInputConverted(Constants.fileNames.jmdictJlpt, jmdictJlptEntries);
 };
-void main();
 
 function kanjiMatch(jmdictKanjis: JMdictKanji[], tanosKanjis: string[]): boolean {
   return jmdictKanjis.some((b) => {

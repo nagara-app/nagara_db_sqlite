@@ -3,11 +3,11 @@ import { Constants } from '../constants';
 import { readJsonFileFromInput, readJsonFileFromInputConverted, toArray, writeFileToOutput } from '../utils';
 
 import type { TKDB_Kanji } from './tkdb.model';
-import type { JMdictFurigana } from '../convert_input/jmdict_furigana/jmdict_furigana.dto';
-import type { JMdict } from '../convert_input/jmdict/jmdict.dto';
-import type { JMdictJlpt } from '../jmdict_jlpt_json/jmdict_jlpt.dto';
-import type { Kanjidic2 } from '../convert_input/kanjidic2/kanjidic2.dto';
-import type { TanosKanji } from '../convert_input/tanos_kanji/tanos_kanji.dto';
+import type { JMdictFurigana } from '../input/jmdict_furigana/jmdict_furigana.dto';
+import type { JMdict } from '../input/jmdict/jmdict.dto';
+import type { JMdictJlpt } from '../input/jmdict_jlpt/jmdict_jlpt.dto';
+import type { Kanjidic2 } from '../input/kanjidic2/kanjidic2.dto';
+import type { TanosKanji } from '../input/tanos_kanji/tanos_kanji.dto';
 
 const main = async (): Promise<void> => {
   const limiter = process.argv[2] !== undefined ? parseInt(process.argv[2]) : undefined;

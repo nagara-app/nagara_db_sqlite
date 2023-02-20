@@ -8,12 +8,12 @@ import type {
   JMdictSensLSourceLang,
   JMdictSensMisc,
   JMdictSensPos,
-} from '../convert_input/jmdict/jmdict.dto';
+} from '../input/jmdict/jmdict.dto';
 import type {
   Kanjidic2CharCpType,
   Kanjidic2CharDicNumDicRefType,
   Kanjidic2CharQcodeType,
-} from '../convert_input/kanjidic2/kanjidic2.dto';
+} from '../input/kanjidic2/kanjidic2.dto';
 
 export interface TKDB {
   version: string;

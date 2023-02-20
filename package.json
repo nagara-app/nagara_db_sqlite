@@ -4,8 +4,7 @@
     "lint": "eslint src/**/*.ts",
     "lintfix": "eslint src/**/*.ts --fix",
     "format": "npx prettier --write .",
-    "cjj": "npx ts-node src/jmdict_jlpt_json/index.ts",
-    "convert": "npx ts-node src/convert_input/index.ts",
+    "convert": "npx ts-node src/input/index.ts",
     "start": "npx ts-node src/tkdb_json/index.ts 1000"
   },
   "devDependencies": {
