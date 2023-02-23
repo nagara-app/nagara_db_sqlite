@@ -95,6 +95,7 @@ export interface TKDB_Kanji_Misc {
   lookalike: string[];
   antonym: string[];
   synonym: string[];
+  strokecount: number | undefined;
 }
 
 export type TKDB_Kanji_Codepoint = {

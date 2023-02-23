@@ -446,6 +446,10 @@ export class TKDBmapper {
     const codepoint = this.kanjiCodepoint(kd2character.codepoint.cp_value);
     const querycode = this.kanjiQuerycode(toArray(kd2character.query_code?.q_code));
     const dicref = this.kanjiDicref(toArray(kd2character.dic_number?.dic_ref));
+
+    const firstStrokecountEntryFromKd2 = toArray(kd2character.misc.stroke_count)[0];
+    const strokecount = firstStrokecountEntryFromKd2 !== undefined ? parseInt(firstStrokecountEntryFromKd2) : undefined;
+
     const jlpt = this.tanosKanji.find((a) => a.kanji === kd2character.literal)?.jlpt;
 
     const antonym =
@@ -468,6 +472,7 @@ export class TKDBmapper {
       antonym,
       synonym,
       lookalike,
+      strokecount,
     };
 
     return misc;
