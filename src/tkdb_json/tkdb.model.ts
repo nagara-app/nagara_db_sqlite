@@ -41,7 +41,7 @@ export interface TKDB_Word {
 
 export interface TKDB_Word_Reading {
   kanji?: string;
-  furigana?: TKDB_Word_Reading_Furigana[];
+  furigana?: TKDB_Word_Reading_Furigana[]; // derived from JMdict Furigana
   uniqeKanji?: string[];
   kana: string;
   common: boolean;
@@ -79,7 +79,7 @@ export interface TKDB_Word_Meaning_Source {
 
 export interface TKDB_Word_Misc {
   common: boolean;
-  jlpt: TKDB_Tag_JLPT | undefined;
+  jlpt: TKDB_Tag_Jlpt | undefined; // derived from tanos
 }
 
 export interface TKDB_Kanji {
@@ -91,11 +91,13 @@ export interface TKDB_Kanji_Misc {
   codepoint: TKDB_Kanji_Codepoint;
   querycode: TKDB_Kanji_Querycode;
   dicref: TKDB_Kanji_Dicref;
-  jlpt: TKDB_Tag_JLPT | undefined;
-  lookalike: string[];
-  antonym: string[];
-  synonym: string[];
+  jlpt: TKDB_Tag_Jlpt | undefined; // derived from tanos
+  lookalike: string[]; // derived from kanjium
+  antonym: string[]; // derived from kanjium
+  synonym: string[]; // derived from kanjium
   strokecount: number | undefined;
+  grade: TKDB_Tag_Kanji_Grade | undefined;
+  frequency: number | undefined;
 }
 
 export type TKDB_Kanji_Codepoint = {
@@ -112,7 +114,17 @@ export type TKDB_Kanji_Dicref = {
 
 // export interface TKDB_Radical {}
 
-export type TKDB_Tag_JLPT = 'n1' | 'n2' | 'n3' | 'n4' | 'n5';
+export type TKDB_Tag_Kanji_Grade =
+  | 'kyouiku1'
+  | 'kyouiku2'
+  | 'kyouiku3'
+  | 'kyouiku4'
+  | 'kyouiku5'
+  | 'kyouiku6'
+  | 'jouyou'
+  | 'jinmeiyou1'
+  | 'jinmeiyou2';
+export type TKDB_Tag_Jlpt = 'n1' | 'n2' | 'n3' | 'n4' | 'n5';
 export type TKDB_Tag_Lang = JMdictSensGlossLang | JMdictSensLSourceLang;
 export type TKDB_Tag_Word_Reading_Info = JMdictKanjiInf | JMdcitRdngInf;
 export type TKDB_Tag_Word_Meaning_Gloss_Type = JMdictSensGlossType;

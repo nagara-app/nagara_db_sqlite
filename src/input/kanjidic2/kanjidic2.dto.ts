@@ -41,7 +41,7 @@ export interface Kanjidic2CharRadVal {
 }
 
 export interface Kanjidic2CharMisc {
-  grade?: string;
+  grade?: Kanjidic2MiscGrade;
   stroke_count: string | string[];
   variant?: Kanjidic2CharMiscVar | Kanjidic2CharMiscVar[];
   freq?: string;
@@ -95,6 +95,8 @@ export interface Kanjidic2CharRdngMngGrpMng {
   m_lang: string;
 }
 
+export type Kanjidic2MiscGrade = '1' | '2' | '3' | '4' | '5' | '6' | '8' | '9' | '10';
+export type Kanjidic2MiscJlpt = '1' | '2' | '3' | '4';
 export type Kanjidic2CharCpType = 'ucs' | 'jis208' | 'jis212' | 'jis213';
 export type Kanjidic2CharQcodeMisclassType = 'posn' | 'stroke_diff' | 'stroke_count' | 'stroke_and_posn';
 export type Kanjidic2CharQcodeType = 'skip' | 'shDesc' | 'fourCorner' | 'deroo';

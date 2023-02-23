@@ -23,6 +23,7 @@ import type {
   TKDB_Kanji_Querycode,
   TKDB_Kanji_Dicref,
   TKDB_Kanji_Misc,
+  TKDB_Tag_Kanji_Grade,
 } from './tkdb.model';
 import type { JMdict, JMdictEntr, JMdictKanji, JMdictRdng, JMdictSens } from '../input/jmdict/jmdict.dto';
 import type { JMdictFurigana } from '../input/jmdict_furigana/jmdict_furigana.dto';
@@ -33,6 +34,7 @@ import type {
   Kanjidic2CharCpEntr,
   Kanjidic2CharDicNumDicRef,
   Kanjidic2CharQcodeEntr,
+  Kanjidic2MiscGrade,
 } from '../input/kanjidic2/kanjidic2.dto';
 import type { TanosKanji } from '../input/tanos_kanji/tanos_kanji.dto';
 import type { KanjiumAntonym } from '../input/kanjium_antonym/kanjium_antonym.dto';
@@ -447,9 +449,13 @@ export class TKDBmapper {
     const querycode = this.kanjiQuerycode(toArray(kd2character.query_code?.q_code));
     const dicref = this.kanjiDicref(toArray(kd2character.dic_number?.dic_ref));
 
-    const firstStrokecountEntryFromKd2 = toArray(kd2character.misc.stroke_count)[0];
-    const strokecount = firstStrokecountEntryFromKd2 !== undefined ? parseInt(firstStrokecountEntryFromKd2) : undefined;
+    const kd2FirstStrokecount = toArray(kd2character.misc.stroke_count)[0];
+    const strokecount = kd2FirstStrokecount !== undefined ? parseInt(kd2FirstStrokecount) : undefined;
 
+    const kd2Frequency = kd2character.misc.freq;
+    const frequency = kd2Frequency !== undefined ? parseInt(kd2Frequency) : undefined;
+
+    const grade = kd2character.misc.grade !== undefined ? this.kanjiGrade(kd2character.misc.grade) : undefined;
     const jlpt = this.tanosKanji.find((a) => a.kanji === kd2character.literal)?.jlpt;
 
     const antonym =
@@ -473,6 +479,8 @@ export class TKDBmapper {
       synonym,
       lookalike,
       strokecount,
+      grade,
+      frequency,
     };
 
     return misc;
@@ -512,5 +520,28 @@ export class TKDBmapper {
     });
 
     return dicref;
+  }
+
+  private kanjiGrade(kd2Grade: Kanjidic2MiscGrade): TKDB_Tag_Kanji_Grade {
+    switch (kd2Grade) {
+      case '1':
+        return 'kyouiku1';
+      case '2':
+        return 'kyouiku2';
+      case '3':
+        return 'kyouiku3';
+      case '4':
+        return 'kyouiku4';
+      case '5':
+        return 'kyouiku5';
+      case '6':
+        return 'kyouiku6';
+      case '8':
+        return 'jouyou';
+      case '9':
+        return 'jinmeiyou1';
+      case '10':
+        return 'jinmeiyou2';
+    }
   }
 }
