@@ -1,6 +1,11 @@
 // Creates the jmdict_jlpt.json file based on TanosVocab and JMdict
 
-import { readJsonFileFromInput, readJsonFileFromInputConverted, writeFileToInputConverted } from '../../utils';
+import {
+  readJsonFileFromInput,
+  readJsonFileFromInputConverted,
+  toKvgHex,
+  writeFileToInputConverted,
+} from '../../utils';
 import { Constants } from '../../constants';
 import { Presets, SingleBar } from 'cli-progress';
 
@@ -80,6 +85,7 @@ export default async (): Promise<void> => {
         radkfilexRadical,
         radical: {
           literal: kanjiumRadicalMatch.radical,
+          kvgHexcode: toKvgHex(kanjiumRadicalMatch.radical),
           number: kanjiumRadicalMatch.number,
           reading: kanjiumRadicalMatch.names.split(Constants.kanjiumRadicalNamesDelimiter),
           meaning: kanjiumRadicalMatch.meaning.split(Constants.kanjiumRadicalMeaningDelimiter),
@@ -92,6 +98,7 @@ export default async (): Promise<void> => {
         radkfilexRadical,
         radical: {
           literal: kanjiumRadicalVariantMatch.radvar,
+          kvgHexcode: toKvgHex(kanjiumRadicalVariantMatch.radvar),
           number: kanjiumRadicalVariantMatch.number,
           reading: kanjiumRadicalVariantMatch.names.split(Constants.kanjiumRadicalNamesDelimiter),
           meaning: kanjiumRadicalVariantMatch.meaning.split(Constants.kanjiumRadicalMeaningDelimiter),

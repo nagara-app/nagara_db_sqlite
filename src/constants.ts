@@ -40,4 +40,6 @@ export const Constants = {
   kanjiumRadicalNamesDelimiter: '・',
   iso639Delimiter: '|',
   iso639Headers: ['iso6392t', 'iso6392b', 'iso6391', 'englishName', 'frenchName'],
+  kvgPadFill: '0',
+  kvgPadLenght: 5,
 };

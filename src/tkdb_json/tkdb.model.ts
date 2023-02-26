@@ -113,6 +113,7 @@ export interface TKDB_Kanji_Part {
 }
 
 export interface TKDB_Kanji_Misc {
+  kvgHexcode: string; // used for kvg
   codepoint: TKDB_Kanji_Codepoint;
   querycode: TKDB_Kanji_Querycode;
   dicref: TKDB_Kanji_Dicref;
@@ -140,6 +141,7 @@ export type TKDB_Kanji_Dicref = {
 
 export interface TKDB_Radical {
   literal: string;
+  kvgHexcode: string; // used for kvg
   number: number;
   strokecount: number;
   reading: string[];

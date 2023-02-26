@@ -4,7 +4,7 @@ import { Presets, SingleBar } from 'cli-progress';
 import type { Options } from 'cli-progress';
 
 import { Constants } from '../constants';
-import { toArray } from '../utils';
+import { toArray, toKvgHex } from '../utils';
 
 import type {
   TKDB_Word,
@@ -562,6 +562,8 @@ export class TKDBmapper {
     const querycode = this.kanjiQuerycode(toArray(kd2character.query_code?.q_code));
     const dicref = this.kanjiDicref(toArray(kd2character.dic_number?.dic_ref));
 
+    const kvgHexcode = toKvgHex(kd2character.literal);
+
     const kd2FirstStrokecount = toArray(kd2character.misc.stroke_count)[0];
     const strokecount = kd2FirstStrokecount !== undefined ? parseInt(kd2FirstStrokecount) : undefined;
 
@@ -588,6 +590,7 @@ export class TKDBmapper {
 
     const misc: TKDB_Kanji_Misc = {
       jlpt,
+      kvgHexcode,
       codepoint,
       querycode,
       dicref,

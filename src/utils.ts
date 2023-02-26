@@ -71,3 +71,21 @@ export const writeFileToOutput = async (fileName: string, fileContent: any): Pro
       throw err;
     });
 };
+
+// Transforms a string to hexadecimal string
+
+const toHex = (text: string): string => {
+  let hex;
+  let result = '';
+
+  for (let i = 0; i < text.length; i++) {
+    hex = text.charCodeAt(i).toString(16);
+    result += ('000' + hex).slice(-4);
+  }
+
+  return result;
+};
+
+export const toKvgHex = (text: string): string => {
+  return toHex(text).padStart(Constants.kvgPadLenght, Constants.kvgPadFill);
+};
