@@ -26,7 +26,8 @@ export const readFileFromInput = async (fileName: string): Promise<Buffer> => {
   console.log(`Reading ${fileName} file from input …`);
   const path = `${Constants.inputDir}/${fileName}`;
   const fullPath = join(__dirname, '..', path);
-  return await readFile(fullPath);
+  const file = await readFile(fullPath);
+  return file;
 };
 
 export const readJsonFileFromInput = async <T>(fileName: string): Promise<T> => {

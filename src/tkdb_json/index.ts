@@ -11,6 +11,9 @@ import type { TanosKanji } from '../input/tanos_kanji/tanos_kanji.dto';
 import type { KanjiumAntonym } from '../input/kanjium_antonym/kanjium_antonym.dto';
 import type { KanjiumSynonym } from '../input/kanjium_synonym/kanjium_synonym.dto';
 import type { KanjiumLookalike } from '../input/kanjium_lookalike/kanjium_lookalike.dto';
+import type { Iso639 } from '../input/iso639/iso639.dto';
+import type { Kradfilex } from '../input/kradfilex/kradfilex.dto';
+import type { RadkfilexKanjium } from '../input/radkfilex_kanjium/radkfilex_kanjium.dto';
 
 const main = async (): Promise<void> => {
   const limiter = process.argv[2] !== undefined ? parseInt(process.argv[2]) : undefined;
@@ -23,6 +26,11 @@ const main = async (): Promise<void> => {
   const kanjiumAntonym: KanjiumAntonym[] = await readJsonFileFromInput(Constants.fileNames.kanjiumAntonym);
   const kanjiumSynonym: KanjiumSynonym[] = await readJsonFileFromInput(Constants.fileNames.kanjiumSynonym);
   const kanjiumLookalike: KanjiumLookalike[] = await readJsonFileFromInput(Constants.fileNames.kanjiumLookalike);
+  const kradfilex: Kradfilex[] = await readJsonFileFromInputConverted(Constants.fileNames.kradfilexConverted);
+  const radkfilexKanjium: RadkfilexKanjium[] = await readJsonFileFromInputConverted(
+    Constants.fileNames.radkfilexKanjium,
+  );
+  const iso639: Iso639[] = await readJsonFileFromInputConverted(Constants.fileNames.iso639Converted);
 
   const mapper = new TKDBmapper(
     limiter,
@@ -34,23 +42,32 @@ const main = async (): Promise<void> => {
     kanjiumAntonym,
     kanjiumSynonym,
     kanjiumLookalike,
+    kradfilex,
+    radkfilexKanjium,
+    iso639,
   );
 
-  const words: TKDB_Kanji[] = mapper.kanji();
+  const kanji: TKDB_Kanji[] = mapper.kanji();
 
-  await writeFileToOutput(Constants.fileNames.tkdbJson, words);
+  await writeFileToOutput(Constants.fileNames.tkdbJson, kanji);
 
   const uniqueInfs: string[] = [];
   kanjidic2.character.forEach((a) => {
-    const meaning = toArray(a.dic_number);
+    const meaning = toArray(a.misc);
     meaning.forEach((b) => {
-      const inf = toArray(b.dic_ref);
+      const inf = toArray(b.variant);
       inf.forEach((c) => {
-        if (c.dr_type !== undefined) {
-          if (!uniqueInfs.includes(c.dr_type)) {
-            uniqueInfs.push(c.dr_type);
-          }
+        if (!uniqueInfs.includes(c.var_type)) {
+          uniqueInfs.push(c.var_type);
         }
+        /*
+        const mean = toArray(c.reading);
+        mean.forEach((d) => {
+          if (!uniqueInfs.includes(d.r_type)) {
+            uniqueInfs.push(d.r_type);
+          }
+        });
+        */
       });
     });
   });

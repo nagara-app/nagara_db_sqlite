@@ -104,13 +104,10 @@ dist
 .tern-port
 
 # Custom
-input/*
-!input/tanos_vocab.csv
-!input/tanos_kanji.csv
-!input/tkdb_jmdict_jlpt.json
-!input/kanjium_antonyms.json
-!input/kanjium_lookalikes.json
-!input/kanjium_synonyms.json
+input/converted/*
+input/JMdict.gz
+input/JmdictFurigana.json
+input/kanjidic2.xml.gz
 
 output/*
 .DS_Store

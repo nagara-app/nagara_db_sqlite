@@ -51,7 +51,7 @@ export interface Kanjidic2CharMisc {
 
 export interface Kanjidic2CharMiscVar {
   value: string;
-  var_type: string;
+  var_type: Kanjidic2CharMiscVarType;
 }
 
 export interface Kanjidic2CharDicNum {
@@ -87,14 +87,27 @@ export interface Kanjidic2CharRdngMngGrp {
 
 export interface Kanjidic2CharRdngMngGrpRdng {
   value: string;
-  r_type: string;
+  r_type: Kanjidic2CharRdngMngGrpRdngType;
 }
 
 export interface Kanjidic2CharRdngMngGrpMng {
   value: string;
-  m_lang: string;
+  m_lang: Kanjidic2CharRdngMngGrpMngLang;
 }
 
+export type Kanjidic2CharMiscVarType =
+  | 'jis208'
+  | 'jis212'
+  | 'nelson_c'
+  | 'deroo'
+  | 'oneill'
+  | 'jis213'
+  | 'njecd'
+  | 's_h'
+  | 'ucs';
+
+export type Kanjidic2CharRdngMngGrpRdngType = 'pinyin' | 'korean_r' | 'korean_h' | 'vietnam' | 'ja_on' | 'ja_kun';
+export type Kanjidic2CharRdngMngGrpMngLang = 'fr' | 'es' | 'pt'; // ISO 639-1
 export type Kanjidic2MiscGrade = '1' | '2' | '3' | '4' | '5' | '6' | '8' | '9' | '10';
 export type Kanjidic2MiscJlpt = '1' | '2' | '3' | '4';
 export type Kanjidic2CharCpType = 'ucs' | 'jis208' | 'jis212' | 'jis213';

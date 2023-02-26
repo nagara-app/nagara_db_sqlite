@@ -42,7 +42,7 @@ export interface JMdictSens {
 
 export interface JMdictSensLSrc {
   value: string;
-  lang: string;
+  lang?: JMdictSensLSourceLang;
   ls_type?: 'part';
   ls_wasei?: 'y';
 }
@@ -271,7 +271,7 @@ export type JMdictSensMisc =
   | 'poet'
   | 'leg'
   | 'work'
-  | 'm-sl';
+  | 'm-sl'; // ISO 639-2T
 
 export type JMdictSensLSourceLang =
   | 'por'
@@ -341,4 +341,4 @@ export type JMdictSensLSourceLang =
   | 'ice'
   | 'slo'
   | 'scr'
-  | undefined;
+  | undefined; // ISO 639-2T
