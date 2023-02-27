@@ -5,7 +5,7 @@
     "lintfix": "eslint src/**/*.ts --fix",
     "format": "npx prettier --write .",
     "convert": "npx ts-node src/input/index.ts",
-    "start": "npx ts-node src/tkdb_json/index.ts"
+    "start": "npx ts-node src/tkdb_json/index.ts 1000"
   },
   "devDependencies": {
     "@types/chalk": "^2.2.0",

@@ -4,7 +4,9 @@ import { Presets, SingleBar } from 'cli-progress';
 import type { Options } from 'cli-progress';
 
 import { Constants } from '../constants';
-import { toArray, toKvgHex } from '../utils';
+import { getDate, toArray, toKvgHex } from '../utils';
+
+import { TKDB_Kanji_Part_Type } from './tkdb.model';
 
 import type {
   TKDB_Word,
@@ -26,8 +28,10 @@ import type {
   TKDB_Kanji_Meaning,
   TKDB_Kanji_Reading,
   TKDB_Kanji_Part,
-  // TKDB_Kanji_Part,
+  TKDB,
+  TKDB_Radical,
 } from './tkdb.model';
+
 import type { JMdict, JMdictEntr, JMdictKanji, JMdictRdng, JMdictSens } from '../input/jmdict/jmdict.dto';
 import type { JMdictFurigana } from '../input/jmdict_furigana/jmdict_furigana.dto';
 import type { JMdictJlpt } from '../input/jmdict_jlpt/jmdict_jlpt.dto';
@@ -49,6 +53,7 @@ import type { KanjiumLookalike } from '../input/kanjium_lookalike/kanjium_lookal
 import type { Iso639 } from '../input/iso639/iso639.dto';
 import type { Kradfilex } from '../input/kradfilex/kradfilex.dto';
 import type { RadkfilexKanjium } from '../input/radkfilex_kanjium/radkfilex_kanjium.dto';
+import { Tags } from '../tags';
 
 export class TKDBmapper {
   limiter: number | undefined;
@@ -96,10 +101,301 @@ export class TKDBmapper {
   }
 
   //
+  // Init
+  //
+
+  init(): TKDB {
+    const version = Constants.version;
+    const dateOfCreation = getDate();
+    const tags = Tags;
+    const radicals = this.radicals();
+    const kanji = this.kanji();
+    const words = this.words();
+
+    return {
+      version,
+      dateOfCreation,
+      tags,
+      radicals,
+      kanji,
+      words,
+    };
+  }
+
+  //
+  // Radical mappings
+  //
+
+  private radicals(): TKDB_Radical[] {
+    const radicals: TKDB_Radical[] = [];
+
+    for (const radkfilexKanjiumEntry of this.radkfilexKanjium) {
+      if (radkfilexKanjiumEntry.radical !== undefined) {
+        radicals.push(radkfilexKanjiumEntry.radical);
+      }
+    }
+
+    return radicals;
+  }
+
+  //
+  // Kanji mappings
+  //
+
+  private kanji(): TKDB_Kanji[] {
+    const kanji: TKDB_Kanji[] = [];
+    const charaters =
+      this.limiter !== undefined ? this.kanjidic2.character.slice(0, this.limiter) : this.kanjidic2.character;
+
+    const progressOptions: Options = {
+      hideCursor: true,
+      etaBuffer: 10000,
+    };
+
+    console.log('Mapping kanjidic2 entries to kanji …');
+    const progressBar = new SingleBar(progressOptions, Presets.shades_classic);
+    progressBar.start(charaters.length, 0);
+    let i = 1;
+
+    for (const character of charaters) {
+      progressBar.update(i);
+      i++;
+
+      const literal = character.literal;
+      const reading = this.kanjiReading(character.reading_meaning);
+      const meaning = this.kanjiMeaning(toArray(character.reading_meaning?.rmgroup?.meaning));
+      const part = this.kanjiPart(literal);
+      const misc = this.kanjiMisc(character);
+
+      kanji.push({
+        literal,
+        reading,
+        meaning,
+        part,
+        misc,
+      });
+    }
+    progressBar.stop();
+
+    return kanji;
+  }
+
+  private kanjiMeaning(kd2Meanings: Array<string | Kanjidic2CharRdngMngGrpMng>): TKDB_Kanji_Meaning[] {
+    const meaning: TKDB_Kanji_Meaning[] = [];
+    kd2Meanings.forEach((kd2Meaning) => {
+      if (typeof kd2Meaning === 'string') {
+        meaning.push({
+          lang: Constants.langCodeEnglish,
+          value: kd2Meaning,
+        });
+      } else {
+        meaning.push({
+          lang: this.iso639.find((a) => a.iso6391 === kd2Meaning.m_lang)?.iso6392t ?? '',
+          value: kd2Meaning.value,
+        });
+      }
+    });
+
+    return meaning;
+  }
+
+  private kanjiReading(kd2ReadingMeaning: Kanjidic2CharRdngMng | undefined): TKDB_Kanji_Reading {
+    const reading: TKDB_Kanji_Reading = {
+      kun: [],
+      on: [],
+      nanori: [],
+    };
+
+    if (kd2ReadingMeaning !== undefined) {
+      toArray(kd2ReadingMeaning.nanori).forEach((kd2Nanori) => {
+        reading.nanori.push(kd2Nanori);
+      });
+
+      toArray(kd2ReadingMeaning.rmgroup?.reading).forEach((kd2Reading) => {
+        switch (kd2Reading.r_type) {
+          case 'ja_kun':
+            reading.kun.push(kd2Reading.value);
+            break;
+          case 'ja_on':
+            reading.on.push(kd2Reading.value);
+            break;
+          default:
+            break;
+        }
+      });
+    }
+
+    return reading;
+  }
+
+  private kanjiPart(literal: string): TKDB_Kanji_Part[] {
+    const parts: TKDB_Kanji_Part[] = [];
+    const kradfilexEntry = this.kradfilex.find((a) => a.kanji === literal);
+
+    if (kradfilexEntry !== undefined) {
+      kradfilexEntry.radicals.forEach((kradfilexRadical) => {
+        const radkfileKanjiumEntry = this.radkfilexKanjium.find((a) => a.radkfilexRadical === kradfilexRadical);
+        if (radkfileKanjiumEntry !== undefined) {
+          if (radkfileKanjiumEntry.radical !== undefined) {
+            parts.push({
+              literal: radkfileKanjiumEntry.radical.literal,
+              type: TKDB_Kanji_Part_Type.RADICAL,
+            });
+          } else if (radkfileKanjiumEntry.kanji !== undefined) {
+            parts.push({
+              literal: radkfileKanjiumEntry.kanji,
+              type: TKDB_Kanji_Part_Type.KANJI,
+            });
+          } else if (radkfileKanjiumEntry.component !== undefined) {
+            parts.push({
+              literal: radkfileKanjiumEntry.component,
+              type: TKDB_Kanji_Part_Type.COMPONENT,
+            });
+          }
+        }
+      });
+    }
+
+    return parts;
+  }
+
+  private kanjiMisc(kd2character: Kanjidic2Char): TKDB_Kanji_Misc {
+    const codepoint = this.kanjiCodepoint(kd2character.codepoint.cp_value);
+    const querycode = this.kanjiQuerycode(toArray(kd2character.query_code?.q_code));
+    const dicref = this.kanjiDicref(toArray(kd2character.dic_number?.dic_ref));
+
+    const kvgHexcode = toKvgHex(kd2character.literal);
+
+    const kd2FirstStrokecount = toArray(kd2character.misc.stroke_count)[0];
+    const strokecount = kd2FirstStrokecount !== undefined ? parseInt(kd2FirstStrokecount) : undefined;
+
+    const kd2Frequency = kd2character.misc.freq;
+    const frequency = kd2Frequency !== undefined ? parseInt(kd2Frequency) : undefined;
+
+    const grade = kd2character.misc.grade !== undefined ? this.kanjiGrade(kd2character.misc.grade) : undefined;
+    const jlpt = this.tanosKanji.find((a) => a.kanji === kd2character.literal)?.jlpt;
+
+    const antonym =
+      this.kanjiumAntonym.find((a) => a.kanji === kd2character.literal)?.antonyms?.split(Constants.kanjiumDelimiter) ??
+      [];
+
+    const synonym =
+      this.kanjiumSynonym.find((a) => a.kanji === kd2character.literal)?.synonyms?.split(Constants.kanjiumDelimiter) ??
+      [];
+
+    const lookalike =
+      this.kanjiumLookalike.find((a) => a.kanji === kd2character.literal)?.similar?.split(Constants.kanjiumDelimiter) ??
+      [];
+
+    const kd2Variant = kd2character.misc.variant;
+    const variant = kd2Variant !== undefined ? this.kanjiVariant(toArray(kd2Variant)) : [];
+
+    const misc: TKDB_Kanji_Misc = {
+      jlpt,
+      kvgHexcode,
+      codepoint,
+      querycode,
+      dicref,
+      antonym,
+      synonym,
+      lookalike,
+      strokecount,
+      grade,
+      frequency,
+      variant,
+    };
+
+    return misc;
+  }
+
+  private kanjiVariant(kd2Variants: Kanjidic2CharMiscVar[]): string[] {
+    const variants: string[] = [];
+
+    kd2Variants.forEach((kd2Variant) => {
+      switch (kd2Variant.var_type) {
+        case 'jis208':
+        case 'jis212':
+        case 'jis213':
+        case 'ucs': {
+          const variant = this.kanjidic2.character.find((a) =>
+            a.codepoint.cp_value.some((b) => b.cp_type === kd2Variant.var_type && b.value === kd2Variant.value),
+          )?.literal;
+
+          if (variant !== undefined) {
+            variants.push(variant);
+          }
+          break;
+        }
+      }
+    });
+
+    return variants;
+  }
+
+  private kanjiCodepoint(kd2Codepoint: Kanjidic2CharCpEntr[]): TKDB_Kanji_Codepoint {
+    const codepoint: TKDB_Kanji_Codepoint = {};
+
+    kd2Codepoint.forEach((a) => {
+      codepoint[a.cp_type] = a.value;
+    });
+
+    return codepoint;
+  }
+
+  private kanjiQuerycode(kd2Querycode: Kanjidic2CharQcodeEntr[]): TKDB_Kanji_Querycode {
+    const querycode: TKDB_Kanji_Querycode = {};
+
+    kd2Querycode
+      .filter((a) => a.skip_misclass === undefined)
+      .forEach((a) => {
+        querycode[a.qc_type] = a.value;
+      });
+
+    return querycode;
+  }
+
+  private kanjiDicref(kd2Dicref: Kanjidic2CharDicNumDicRef[]): TKDB_Kanji_Dicref {
+    const dicref: TKDB_Kanji_Dicref = {};
+
+    kd2Dicref.forEach((a) => {
+      if (a.dr_type === 'moro' && a.m_vol !== undefined && a.m_page !== undefined) {
+        dicref[a.dr_type] = `${a.value}:${a.m_vol}:${a.m_page}`;
+      } else {
+        dicref[a.dr_type] = a.value;
+      }
+    });
+
+    return dicref;
+  }
+
+  private kanjiGrade(kd2Grade: Kanjidic2MiscGrade): TKDB_Tag_Kanji_Grade {
+    switch (kd2Grade) {
+      case '1':
+        return 'kyouiku1';
+      case '2':
+        return 'kyouiku2';
+      case '3':
+        return 'kyouiku3';
+      case '4':
+        return 'kyouiku4';
+      case '5':
+        return 'kyouiku5';
+      case '6':
+        return 'kyouiku6';
+      case '8':
+        return 'jouyou';
+      case '9':
+        return 'jinmeiyou1';
+      case '10':
+        return 'jinmeiyou2';
+    }
+  }
+
+  //
   // Word mappings
   //
 
-  word(): TKDB_Word[] {
+  private words(): TKDB_Word[] {
     const words: TKDB_Word[] = [];
     const entries = this.limiter !== undefined ? this.jmdict.entry.slice(0, this.limiter) : this.jmdict.entry;
 
@@ -434,258 +730,5 @@ export class TKDBmapper {
     common = !common ? jmReadings.some((a) => this.isCommonWordReading(a.re_pri)) : false;
 
     return common;
-  }
-
-  //
-  // Kanji mappings
-  //
-
-  kanji(): TKDB_Kanji[] {
-    const kanji: TKDB_Kanji[] = [];
-    const charaters =
-      this.limiter !== undefined ? this.kanjidic2.character.slice(0, this.limiter) : this.kanjidic2.character;
-
-    const progressOptions: Options = {
-      hideCursor: true,
-      etaBuffer: 10000,
-    };
-
-    console.log('Mapping kanjidic2 entries to kanji …');
-    const progressBar = new SingleBar(progressOptions, Presets.shades_classic);
-    progressBar.start(charaters.length, 0);
-    let i = 1;
-
-    for (const character of charaters) {
-      progressBar.update(i);
-      i++;
-
-      const literal = character.literal;
-      const reading = this.kanjiReading(character.reading_meaning);
-      const meaning = this.kanjiMeaning(toArray(character.reading_meaning?.rmgroup?.meaning));
-      const part = this.kanjiPart(literal);
-      const misc = this.kanjiMisc(character);
-
-      kanji.push({
-        literal,
-        reading,
-        meaning,
-        part,
-        misc,
-      });
-    }
-    progressBar.stop();
-
-    return kanji;
-  }
-
-  private kanjiMeaning(kd2Meanings: Array<string | Kanjidic2CharRdngMngGrpMng>): TKDB_Kanji_Meaning[] {
-    const meaning: TKDB_Kanji_Meaning[] = [];
-    kd2Meanings.forEach((kd2Meaning) => {
-      if (typeof kd2Meaning === 'string') {
-        meaning.push({
-          lang: Constants.langCodeEnglish,
-          value: kd2Meaning,
-        });
-      } else {
-        meaning.push({
-          lang: this.iso639.find((a) => a.iso6391 === kd2Meaning.m_lang)?.iso6392t ?? '',
-          value: kd2Meaning.value,
-        });
-      }
-    });
-
-    return meaning;
-  }
-
-  private kanjiReading(kd2ReadingMeaning: Kanjidic2CharRdngMng | undefined): TKDB_Kanji_Reading {
-    const reading: TKDB_Kanji_Reading = {
-      kun: [],
-      on: [],
-      nanori: [],
-    };
-
-    if (kd2ReadingMeaning !== undefined) {
-      toArray(kd2ReadingMeaning.nanori).forEach((kd2Nanori) => {
-        reading.nanori.push(kd2Nanori);
-      });
-
-      toArray(kd2ReadingMeaning.rmgroup?.reading).forEach((kd2Reading) => {
-        switch (kd2Reading.r_type) {
-          case 'ja_kun':
-            reading.kun.push(kd2Reading.value);
-            break;
-          case 'ja_on':
-            reading.on.push(kd2Reading.value);
-            break;
-          default:
-            break;
-        }
-      });
-    }
-
-    return reading;
-  }
-
-  private kanjiPart(literal: string): TKDB_Kanji_Part[] {
-    const parts: TKDB_Kanji_Part[] = [];
-    const kradfilexEntry = this.kradfilex.find((a) => a.kanji === literal);
-
-    if (kradfilexEntry !== undefined) {
-      kradfilexEntry.radicals.forEach((kradfilexRadical) => {
-        const radkfileKanjiumEntry = this.radkfilexKanjium.find((a) => a.radkfilexRadical === kradfilexRadical);
-        if (radkfileKanjiumEntry !== undefined) {
-          if (radkfileKanjiumEntry.radical !== undefined) {
-            parts.push({
-              literal: radkfileKanjiumEntry.radical.literal,
-              type: 'radical',
-            });
-          } else if (radkfileKanjiumEntry.kanji !== undefined) {
-            parts.push({
-              literal: radkfileKanjiumEntry.kanji,
-              type: 'kanji',
-            });
-          } else if (radkfileKanjiumEntry.component !== undefined) {
-            parts.push({
-              literal: radkfileKanjiumEntry.component,
-              type: 'component',
-            });
-          }
-        }
-      });
-    }
-
-    return parts;
-  }
-
-  private kanjiMisc(kd2character: Kanjidic2Char): TKDB_Kanji_Misc {
-    const codepoint = this.kanjiCodepoint(kd2character.codepoint.cp_value);
-    const querycode = this.kanjiQuerycode(toArray(kd2character.query_code?.q_code));
-    const dicref = this.kanjiDicref(toArray(kd2character.dic_number?.dic_ref));
-
-    const kvgHexcode = toKvgHex(kd2character.literal);
-
-    const kd2FirstStrokecount = toArray(kd2character.misc.stroke_count)[0];
-    const strokecount = kd2FirstStrokecount !== undefined ? parseInt(kd2FirstStrokecount) : undefined;
-
-    const kd2Frequency = kd2character.misc.freq;
-    const frequency = kd2Frequency !== undefined ? parseInt(kd2Frequency) : undefined;
-
-    const grade = kd2character.misc.grade !== undefined ? this.kanjiGrade(kd2character.misc.grade) : undefined;
-    const jlpt = this.tanosKanji.find((a) => a.kanji === kd2character.literal)?.jlpt;
-
-    const antonym =
-      this.kanjiumAntonym.find((a) => a.kanji === kd2character.literal)?.antonyms?.split(Constants.kanjiumDelimiter) ??
-      [];
-
-    const synonym =
-      this.kanjiumSynonym.find((a) => a.kanji === kd2character.literal)?.synonyms?.split(Constants.kanjiumDelimiter) ??
-      [];
-
-    const lookalike =
-      this.kanjiumLookalike.find((a) => a.kanji === kd2character.literal)?.similar?.split(Constants.kanjiumDelimiter) ??
-      [];
-
-    const kd2Variant = kd2character.misc.variant;
-    const variant = kd2Variant !== undefined ? this.kanjiVariant(toArray(kd2Variant)) : [];
-
-    const misc: TKDB_Kanji_Misc = {
-      jlpt,
-      kvgHexcode,
-      codepoint,
-      querycode,
-      dicref,
-      antonym,
-      synonym,
-      lookalike,
-      strokecount,
-      grade,
-      frequency,
-      variant,
-    };
-
-    return misc;
-  }
-
-  private kanjiVariant(kd2Variants: Kanjidic2CharMiscVar[]): string[] {
-    const variants: string[] = [];
-
-    kd2Variants.forEach((kd2Variant) => {
-      switch (kd2Variant.var_type) {
-        case 'jis208':
-        case 'jis212':
-        case 'jis213':
-        case 'ucs': {
-          const variant = this.kanjidic2.character.find((a) =>
-            a.codepoint.cp_value.some((b) => b.cp_type === kd2Variant.var_type && b.value === kd2Variant.value),
-          )?.literal;
-
-          if (variant !== undefined) {
-            variants.push(variant);
-          }
-          break;
-        }
-      }
-    });
-
-    return variants;
-  }
-
-  private kanjiCodepoint(kd2Codepoint: Kanjidic2CharCpEntr[]): TKDB_Kanji_Codepoint {
-    const codepoint: TKDB_Kanji_Codepoint = {};
-
-    kd2Codepoint.forEach((a) => {
-      codepoint[a.cp_type] = a.value;
-    });
-
-    return codepoint;
-  }
-
-  private kanjiQuerycode(kd2Querycode: Kanjidic2CharQcodeEntr[]): TKDB_Kanji_Querycode {
-    const querycode: TKDB_Kanji_Querycode = {};
-
-    kd2Querycode
-      .filter((a) => a.skip_misclass === undefined)
-      .forEach((a) => {
-        querycode[a.qc_type] = a.value;
-      });
-
-    return querycode;
-  }
-
-  private kanjiDicref(kd2Dicref: Kanjidic2CharDicNumDicRef[]): TKDB_Kanji_Dicref {
-    const dicref: TKDB_Kanji_Dicref = {};
-
-    kd2Dicref.forEach((a) => {
-      if (a.dr_type === 'moro' && a.m_vol !== undefined && a.m_page !== undefined) {
-        dicref[a.dr_type] = `${a.value}:${a.m_vol}:${a.m_page}`;
-      } else {
-        dicref[a.dr_type] = a.value;
-      }
-    });
-
-    return dicref;
-  }
-
-  private kanjiGrade(kd2Grade: Kanjidic2MiscGrade): TKDB_Tag_Kanji_Grade {
-    switch (kd2Grade) {
-      case '1':
-        return 'kyouiku1';
-      case '2':
-        return 'kyouiku2';
-      case '3':
-        return 'kyouiku3';
-      case '4':
-        return 'kyouiku4';
-      case '5':
-        return 'kyouiku5';
-      case '6':
-        return 'kyouiku6';
-      case '8':
-        return 'jouyou';
-      case '9':
-        return 'jinmeiyou1';
-      case '10':
-        return 'jinmeiyou2';
-    }
   }
 }

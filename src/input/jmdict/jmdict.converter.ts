@@ -5,9 +5,20 @@ import { parseStringPromise } from 'xml2js';
 import type { ParserOptions } from 'xml2js';
 
 import { Constants } from '../../constants';
-import { readFileFromInput, unzipFile, writeFileToInputConverted } from '../../utils';
+import { readFileFromInput, toCamelcaseFromKebabcase, unzipFile, writeFileToInputConverted } from '../../utils';
 
 export default async (): Promise<void> => {
+  function nameFromKebabToCamelCase(value: string, name: string): string {
+    switch (name) {
+      case 'pos':
+      case 'field':
+      case 'misc':
+        return toCamelcaseFromKebabcase(value);
+      default:
+        return value;
+    }
+  }
+
   function renameAttrName(name: string): string {
     switch (name) {
       case 'xml:lang':
@@ -24,7 +35,12 @@ export default async (): Promise<void> => {
   }
 
   function renameValue(value: string): string {
-    return value.replace(/^&|;$/gi, '');
+    if (value === '∫') {
+      // the parser conerts &int; to ∫
+      return 'int';
+    } else {
+      return value.replace(/^&|;$/gi, '');
+    }
   }
 
   const parserOptions: ParserOptions = {
@@ -38,7 +54,10 @@ export default async (): Promise<void> => {
       nameToLowerCase, // lower case attribute names
       renameAttrName, // rename attributes
     ],
-    valueProcessors: [renameValue], // rename values that start with '&' and end with ';' symbols
+    valueProcessors: [
+      renameValue, // rename values that start with '&' and end with ';' symbols
+      nameFromKebabToCamelCase, // convert to camelCase so it can be reused as a tag key for json
+    ],
   };
 
   const zippedFile = await readFileFromInput(Constants.fileNames.jmdict);

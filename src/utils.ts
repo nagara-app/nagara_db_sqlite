@@ -72,7 +72,36 @@ export const writeFileToOutput = async (fileName: string, fileContent: any): Pro
     });
 };
 
+export const toCamelcaseFromSnakecase = (text: string): string => {
+  return text.toLowerCase().replace(/(_\w)/g, (m) => m.toUpperCase().substring(1));
+};
+
+export const toCamelcaseFromKebabcase = (text: string): string => {
+  return (
+    text.charAt(0).toLowerCase() +
+    text.slice(1).replace(/-./g, (x) => {
+      if (x[1] !== undefined) {
+        return x[1].toUpperCase();
+      } else {
+        return '';
+      }
+    })
+  );
+};
+
 // Transforms a string to hexadecimal string
+
+export const getDate = (): string => {
+  const d = new Date();
+  let month = (d.getMonth() + 1).toString();
+  let day = '' + d.getDate().toString();
+  const year = d.getFullYear().toString();
+
+  if (month.length < 2) month = '0' + month;
+  if (day.length < 2) day = '0' + day;
+
+  return [year, month, day].join('-');
+};
 
 const toHex = (text: string): string => {
   let hex;

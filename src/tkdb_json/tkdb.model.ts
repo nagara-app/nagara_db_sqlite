@@ -20,14 +20,22 @@ export interface TKDB {
   words: TKDB_Word[];
   kanji: TKDB_Kanji[];
   radicals: TKDB_Radical[];
-  tags: {
-    wordMeaningDial: TKDB_Tag_Word_Meaning_Dialect[];
-    wordMeaningMisc: TKDB_Tag_Word_Meaning_Misc[];
-    wordMeaningPos: TKDB_Tag_Word_Meaning_Pos[];
-    wordMeaningField: TKDB_Tag_Word_Meaning_Field[];
-    wordMeaningGlossType: TKDB_Tag_Word_Meaning_Gloss_Type[];
-    wordReadingInfo: TKDB_Tag_Word_Reading_Info[];
-  };
+  tags: TKDB_Tag;
+}
+
+//
+// Tags
+//
+
+export interface TKDB_Tag {
+  jlpt: Record<TKDB_Tag_Jlpt, string>;
+  kanjiGrade: Record<TKDB_Tag_Kanji_Grade, string>;
+  wordMeaningDial: Record<TKDB_Tag_Word_Meaning_Dialect, string>;
+  wordMeaningMisc: Record<TKDB_Tag_Word_Meaning_Misc, string>;
+  wordMeaningPos: Record<TKDB_Tag_Word_Meaning_Pos, string>;
+  wordMeaningField: Record<TKDB_Tag_Word_Meaning_Field, string>;
+  wordMeaningGlossType: Record<TKDB_Tag_Word_Meaning_Gloss_Type, string>;
+  wordReadingInfo: Record<TKDB_Tag_Word_Reading_Info, string>;
 }
 
 //
@@ -109,7 +117,13 @@ export interface TKDB_Kanji_Reading {
 
 export interface TKDB_Kanji_Part {
   literal: string;
-  type: TKDB_Tag_Kanji_Part_Type;
+  type: TKDB_Kanji_Part_Type;
+}
+
+export enum TKDB_Kanji_Part_Type {
+  KANJI = 'kanji',
+  RADICAL = 'radical',
+  COMPONENT = 'component',
 }
 
 export interface TKDB_Kanji_Misc {
@@ -163,7 +177,6 @@ export type TKDB_Tag_Word_Meaning_Field = JMdictSensField;
 export type TKDB_Tag_Word_Meaning_Dialect = JMdictSensDial;
 export type TKDB_Tag_Word_Meaning_Misc = JMdictSensMisc;
 
-export type TKDB_Tag_Kanji_Part_Type = 'kanji' | 'radical' | 'component';
 export type TKDB_Tag_Kanji_Grade =
   | 'kyouiku1'
   | 'kyouiku2'

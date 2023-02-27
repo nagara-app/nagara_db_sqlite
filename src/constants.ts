@@ -1,4 +1,5 @@
 export const Constants = {
+  version: '0.0.0',
   inputDir: 'input',
   inputConvertedDir: 'converted',
   outputDir: 'output',
@@ -42,4 +43,5 @@ export const Constants = {
   iso639Headers: ['iso6392t', 'iso6392b', 'iso6391', 'englishName', 'frenchName'],
   kvgPadFill: '0',
   kvgPadLenght: 5,
+  tags: {},
 };

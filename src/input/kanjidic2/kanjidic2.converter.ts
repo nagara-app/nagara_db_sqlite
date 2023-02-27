@@ -4,7 +4,7 @@ import { parseStringPromise } from 'xml2js';
 
 import type { ParserOptions } from 'xml2js';
 
-import { readFileFromInput, unzipFile, writeFileToInputConverted } from '../../utils';
+import { readFileFromInput, toCamelcaseFromSnakecase, unzipFile, writeFileToInputConverted } from '../../utils';
 import { Constants } from '../../constants';
 
 export default async (): Promise<void> => {
@@ -17,7 +17,7 @@ export default async (): Promise<void> => {
     switch (name) {
       case 'QC_TYPE':
       case 'DR_TYPE':
-        return value.toLowerCase().replace(/(_\w)/g, (m) => m.toUpperCase().substring(1));
+        return toCamelcaseFromSnakecase(value);
       default:
         return value;
     }

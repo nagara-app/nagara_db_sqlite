@@ -2,7 +2,7 @@ import { TKDBmapper } from './tkdb.mapper';
 import { Constants } from '../constants';
 import { readJsonFileFromInput, readJsonFileFromInputConverted, toArray, writeFileToOutput } from '../utils';
 
-import type { TKDB_Kanji } from './tkdb.model';
+import type { TKDB } from './tkdb.model';
 import type { JMdictFurigana } from '../input/jmdict_furigana/jmdict_furigana.dto';
 import type { JMdict } from '../input/jmdict/jmdict.dto';
 import type { JMdictJlpt } from '../input/jmdict_jlpt/jmdict_jlpt.dto';
@@ -47,18 +47,16 @@ const main = async (): Promise<void> => {
     iso639,
   );
 
-  const kanji: TKDB_Kanji[] = mapper.kanji();
-
-  await writeFileToOutput(Constants.fileNames.tkdbJson, kanji);
+  const tkdb: TKDB = mapper.init();
 
   const uniqueInfs: string[] = [];
-  kanjidic2.character.forEach((a) => {
-    const meaning = toArray(a.misc);
+  jmdictJson.entry.forEach((a) => {
+    const meaning = toArray(a.sense);
     meaning.forEach((b) => {
-      const inf = toArray(b.variant);
+      const inf = toArray(b.misc);
       inf.forEach((c) => {
-        if (!uniqueInfs.includes(c.var_type)) {
-          uniqueInfs.push(c.var_type);
+        if (!uniqueInfs.includes(c)) {
+          uniqueInfs.push(c);
         }
         /*
         const mean = toArray(c.reading);
@@ -73,6 +71,8 @@ const main = async (): Promise<void> => {
   });
 
   console.log(uniqueInfs);
+
+  await writeFileToOutput(Constants.fileNames.tkdbJson, tkdb);
 };
 
 void main();
