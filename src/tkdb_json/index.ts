@@ -1,6 +1,6 @@
 import { TKDBmapper } from './tkdb.mapper';
 import { Constants } from '../constants';
-import { readJsonFileFromInput, readJsonFileFromInputConverted, toArray, writeFileToOutput } from '../utils';
+import { readJsonFileFromInput, readJsonFileFromInputConverted, writeFileToOutput } from '../utils';
 
 import type { TKDB } from './tkdb.model';
 import type { JMdictFurigana } from '../input/jmdict_furigana/jmdict_furigana.dto';
@@ -48,29 +48,6 @@ const main = async (): Promise<void> => {
   );
 
   const tkdb: TKDB = mapper.init();
-
-  const uniqueInfs: string[] = [];
-  jmdictJson.entry.forEach((a) => {
-    const meaning = toArray(a.sense);
-    meaning.forEach((b) => {
-      const inf = toArray(b.misc);
-      inf.forEach((c) => {
-        if (!uniqueInfs.includes(c)) {
-          uniqueInfs.push(c);
-        }
-        /*
-        const mean = toArray(c.reading);
-        mean.forEach((d) => {
-          if (!uniqueInfs.includes(d.r_type)) {
-            uniqueInfs.push(d.r_type);
-          }
-        });
-        */
-      });
-    });
-  });
-
-  console.log(uniqueInfs);
 
   await writeFileToOutput(Constants.fileNames.tkdbJson, tkdb);
 };
