@@ -39,7 +39,9 @@ Follow these steps:
 
 ## How does it work?
 
-All data sources are stored under `input`. If the original data source format is not JSON, a parser converts the data source to JSON and stores it under `input/converted`. A mapper file loads all input files, maps them to the TKDB object and exports them as a JSON file under `output`. Prisma uses this JSON file to map it to its schema and exports it to a SQLite database under `output`.
+All data sources are stored under `input`. If the original data source format is not JSON, a parser converts the data source to JSON and stores it under `input/converted`. A mapper file loads all JSON input files, maps them to the TKDB object and exports them as a JSON file under `output`. Prisma uses this JSON file to map it to its schema and exports it to a SQLite database under `output`.
+
+`jmdict_jlpt.json` and `radkfilex_kanjium.json` are special files created during the conversion.
 
 ![Creation process](tkdb_creation_process.png)
 
@@ -197,7 +199,7 @@ All data sources are stored under `input`. If the original data source format is
 
 ## License, copyright and attribution
 
-This project is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). You can find the copy of this license in the file `LICENSE.txt`.
+This project is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). You can find the copy of this license in the [license file](LICENSE.txt).
 
 When using this database, you must also attribute the projects from which the data source originates:
 
