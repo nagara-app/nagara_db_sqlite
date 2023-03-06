@@ -149,6 +149,11 @@ const missingRadkfilexVariantsInKanjium: MissingVariantsinKanjium[] = [
     strokecount: 12,
     variantOfKanjiumRadical: '无',
   },
+  {
+    radkfilexRadical: '尤',
+    strokecount: 4,
+    variantOfKanjiumRadical: '尢',
+  },
 ];
 
 interface RadkfilexKanjiumMap {
@@ -241,10 +246,6 @@ const radkfilexKanjiumMap: RadkfilexKanjiumMap[] = [
   {
     radkfilexRadical: '礼',
     kanjiumRadical: '礻',
-  },
-  {
-    radkfilexRadical: '尤', // Looks correcter: 尤
-    kanjiumRadical: '尢',
   },
   {
     radkfilexRadical: '疔',
