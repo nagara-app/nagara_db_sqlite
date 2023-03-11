@@ -264,13 +264,13 @@ export class TKDBmapper {
     const querycode = this.kanjiQuerycode(toArray(kd2character.query_code?.q_code));
     const dicref = this.kanjiDicref(toArray(kd2character.dic_number?.dic_ref));
 
-    const kvgHexcode = toKvgHex(kd2character.literal);
+    const hexcode = toKvgHex(kd2character.literal);
 
     const kd2FirstStrokecount = toArray(kd2character.misc.stroke_count)[0];
-    const strokecount = kd2FirstStrokecount !== undefined ? parseInt(kd2FirstStrokecount) : undefined;
+    const strokes = kd2FirstStrokecount !== undefined ? parseInt(kd2FirstStrokecount) : undefined;
 
     const kd2Frequency = kd2character.misc.freq;
-    const frequency = kd2Frequency !== undefined ? parseInt(kd2Frequency) : undefined;
+    const frequencyJ = kd2Frequency !== undefined ? parseInt(kd2Frequency) : undefined;
 
     const grade = kd2character.misc.grade !== undefined ? this.kanjiGrade(kd2character.misc.grade) : undefined;
     const jlpt = this.tanosKanji.find((a) => a.kanji === kd2character.literal)?.jlpt;
@@ -292,16 +292,16 @@ export class TKDBmapper {
 
     const misc: TKDB_Kanji_Misc = {
       jlpt,
-      kvgHexcode,
+      hexcode,
       codepoint,
       querycode,
       dicref,
       antonym,
       synonym,
       lookalike,
-      strokecount,
+      strokes,
       grade,
-      frequency,
+      frequencyJ,
       variant,
     };
 

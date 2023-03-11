@@ -30,6 +30,10 @@ export interface TKDB {
 export interface TKDB_Tag {
   jlpt: Record<TKDB_Tag_Jlpt, string>;
   kanjiGrade: Record<TKDB_Tag_Kanji_Grade, string>;
+  kanjiReadingType: Record<TKDB_Tag_Kanji_Reading_Type, string>;
+  kanjiCodepointType: Record<TKDB_Kanji_Codepoint_Type, string>;
+  kanjiDicrefType: Record<TKDB_Kanji_Dicref_Type, string>;
+  kanjiQuerycodeType: Record<TKDB_Kanji_Querycode_Type, string>;
   wordMeaningDial: Record<TKDB_Tag_Word_Meaning_Dialect, string>;
   wordMeaningMisc: Record<TKDB_Tag_Word_Meaning_Misc, string>;
   wordMeaningPos: Record<TKDB_Tag_Word_Meaning_Pos, string>;
@@ -127,7 +131,7 @@ export enum TKDB_Kanji_Part_Type {
 }
 
 export interface TKDB_Kanji_Misc {
-  kvgHexcode: string; // used for kvg
+  hexcode: string; // used for kanjivg
   codepoint: TKDB_Kanji_Codepoint;
   querycode: TKDB_Kanji_Querycode;
   dicref: TKDB_Kanji_Dicref;
@@ -136,28 +140,31 @@ export interface TKDB_Kanji_Misc {
   antonym: string[]; // derived from kanjium
   synonym: string[]; // derived from kanjium
   variant: string[];
-  strokecount: number | undefined;
+  strokes: number | undefined;
   grade: TKDB_Tag_Kanji_Grade | undefined;
-  frequency: number | undefined;
+  frequencyJ: number | undefined;
 }
 
+export type TKDB_Kanji_Codepoint_Type = Kanjidic2CharCpType;
 export type TKDB_Kanji_Codepoint = {
   [key in Kanjidic2CharCpType]?: string;
 };
 
+export type TKDB_Kanji_Querycode_Type = Kanjidic2CharQcodeType;
 export type TKDB_Kanji_Querycode = {
-  [key in Kanjidic2CharQcodeType]?: string;
+  [key in TKDB_Kanji_Querycode_Type]?: string;
 };
 
+export type TKDB_Kanji_Dicref_Type = Kanjidic2CharDicNumDicRefType;
 export type TKDB_Kanji_Dicref = {
-  [key in Kanjidic2CharDicNumDicRefType]?: string;
+  [key in TKDB_Kanji_Dicref_Type]?: string;
 };
 
 export interface TKDB_Radical {
   literal: string;
-  kvgHexcode: string; // used for kvg
+  hexcode: string; // used for kanjivg
   number: number;
-  strokecount: number;
+  strokes: number;
   reading: string[];
   meaning: string[];
   variantOf?: string;
@@ -177,6 +184,16 @@ export type TKDB_Tag_Word_Meaning_Field = JMdictSensField;
 export type TKDB_Tag_Word_Meaning_Dialect = JMdictSensDial;
 export type TKDB_Tag_Word_Meaning_Misc = JMdictSensMisc;
 
+export enum TKDB_Tag_Kanji_Part_Type {
+  KANJI = 'kanji',
+  RADICAL = 'radical',
+  COMPONENT = 'component',
+}
+export enum TKDB_Tag_Kanji_Reading_Type {
+  ON = 'on',
+  KUN = 'kun',
+  NANORI = 'nanori',
+}
 export type TKDB_Tag_Kanji_Grade =
   | 'kyouiku1'
   | 'kyouiku2'
