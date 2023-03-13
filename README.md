@@ -2,9 +2,9 @@
 
 ## What is it?
 
-Tanukiwi Database (TKDB) is an open-source database which consists of Japanese words, kanji and radical. The data itself is coming from several sources that were carefully selected.
+Tanukiwi Database (TKDB) is an open-source database in JSON format which consists of Japanese words, kanji and radical. The data itself is coming from several sources that were carefully selected.
 
-TKDB is available in two formats: JSON and SQLite. You can use it for any projects, but appropiate attribution to this project and the source data must be given.
+You can use it for any projects, but appropiate attribution to this project and the source data must be given.
 
 ## Why was it created?
 
@@ -45,10 +45,9 @@ All data sources are stored under `input`. If the original data source format is
 
 ![Creation process](tkdb_creation_process.png)
 
-## Format
+## Types
 
-- The JSON format can be derived from the [typescript interfaces](./src/tkdb_json/tkdb.model.ts).
-- The SQLite format can be derived from the [prisma schema](./prisma/schema.prisma).
+- The JSON types can be derived from the [typescript interfaces](./src/tkdb_json/tkdb.model.ts).
 
 ## Example entries
 
