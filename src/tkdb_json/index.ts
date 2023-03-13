@@ -1,5 +1,5 @@
 import { TKDBmapper } from './tkdb.mapper';
-import { Constants } from '../constants';
+import { CONSTANTS } from '../constants';
 import { readJsonFileFromInput, readJsonFileFromInputConverted, writeFileToOutput } from '../utils';
 
 import type { TKDB } from './tkdb.model';
@@ -18,19 +18,19 @@ import type { RadkfilexKanjium } from '../input/radkfilex_kanjium/radkfilex_kanj
 const main = async (): Promise<void> => {
   const limiter = process.argv[2] !== undefined ? parseInt(process.argv[2]) : undefined;
 
-  const jmdictJson: JMdict = await readJsonFileFromInputConverted(Constants.fileNames.jmdictConverted);
-  const jmdictFuriganaJson: JMdictFurigana[] = await readJsonFileFromInput(Constants.fileNames.jmdictFurigana);
-  const tkdbJmdictJlptJson: JMdictJlpt[] = await readJsonFileFromInput(Constants.fileNames.tkdbJmdictJlpt);
-  const kanjidic2: Kanjidic2 = await readJsonFileFromInputConverted(Constants.fileNames.kanjidic2Converted);
-  const tanosKanji: TanosKanji[] = await readJsonFileFromInputConverted(Constants.fileNames.tanosKanjiConverted);
-  const kanjiumAntonym: KanjiumAntonym[] = await readJsonFileFromInput(Constants.fileNames.kanjiumAntonym);
-  const kanjiumSynonym: KanjiumSynonym[] = await readJsonFileFromInput(Constants.fileNames.kanjiumSynonym);
-  const kanjiumLookalike: KanjiumLookalike[] = await readJsonFileFromInput(Constants.fileNames.kanjiumLookalike);
-  const kradfilex: Kradfilex[] = await readJsonFileFromInputConverted(Constants.fileNames.kradfilexConverted);
+  const jmdictJson: JMdict = await readJsonFileFromInputConverted(CONSTANTS.fileNames.jmdictConverted);
+  const jmdictFuriganaJson: JMdictFurigana[] = await readJsonFileFromInput(CONSTANTS.fileNames.jmdictFurigana);
+  const tkdbJmdictJlptJson: JMdictJlpt[] = await readJsonFileFromInput(CONSTANTS.fileNames.tkdbJmdictJlpt);
+  const kanjidic2: Kanjidic2 = await readJsonFileFromInputConverted(CONSTANTS.fileNames.kanjidic2Converted);
+  const tanosKanji: TanosKanji[] = await readJsonFileFromInputConverted(CONSTANTS.fileNames.tanosKanjiConverted);
+  const kanjiumAntonym: KanjiumAntonym[] = await readJsonFileFromInput(CONSTANTS.fileNames.kanjiumAntonym);
+  const kanjiumSynonym: KanjiumSynonym[] = await readJsonFileFromInput(CONSTANTS.fileNames.kanjiumSynonym);
+  const kanjiumLookalike: KanjiumLookalike[] = await readJsonFileFromInput(CONSTANTS.fileNames.kanjiumLookalike);
+  const kradfilex: Kradfilex[] = await readJsonFileFromInputConverted(CONSTANTS.fileNames.kradfilexConverted);
   const radkfilexKanjium: RadkfilexKanjium[] = await readJsonFileFromInputConverted(
-    Constants.fileNames.radkfilexKanjium,
+    CONSTANTS.fileNames.radkfilexKanjium,
   );
-  const iso639: Iso639[] = await readJsonFileFromInputConverted(Constants.fileNames.iso639Converted);
+  const iso639: Iso639[] = await readJsonFileFromInputConverted(CONSTANTS.fileNames.iso639Converted);
 
   const mapper = new TKDBmapper(
     limiter,
@@ -49,7 +49,7 @@ const main = async (): Promise<void> => {
 
   const tkdb: TKDB = mapper.init();
 
-  await writeFileToOutput(Constants.fileNames.tkdbJson, tkdb);
+  await writeFileToOutput(CONSTANTS.fileNames.tkdbJson, tkdb);
 };
 
 void main();

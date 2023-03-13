@@ -5,7 +5,7 @@ import { Presets, SingleBar } from 'cli-progress';
 import type { Options } from 'cli-progress';
 
 import { readJsonFileFromInputConverted, toArray, writeFileToInputConverted } from '../../utils';
-import { Constants } from '../../constants';
+import { CONSTANTS } from '../../constants';
 import { JMdictJlptMatch } from './jmdict_jlpt.dto';
 
 import type { TanosVocab } from '../tanos_vocab/tanos_vocab.dto';
@@ -13,8 +13,8 @@ import type { JMdictJlpt } from './jmdict_jlpt.dto';
 import type { JMdict, JMdictKanji, JMdictRdng, JMdictSens } from '../jmdict/jmdict.dto';
 
 export default async (): Promise<void> => {
-  const jmdictJson: JMdict = await readJsonFileFromInputConverted(Constants.fileNames.jmdictConverted);
-  const tanosVocabJson: TanosVocab[] = await readJsonFileFromInputConverted(Constants.fileNames.tanosVocabConverted);
+  const jmdictJson: JMdict = await readJsonFileFromInputConverted(CONSTANTS.fileNames.jmdictConverted);
+  const tanosVocabJson: TanosVocab[] = await readJsonFileFromInputConverted(CONSTANTS.fileNames.tanosVocabConverted);
 
   const jmdictJlptEntries: JMdictJlpt[] = [];
 
@@ -32,9 +32,9 @@ export default async (): Promise<void> => {
     progressBar.update(i);
     i++;
 
-    const tanosKanjis = tanosVocabEntry.kanji.split(Constants.tanosDelimiter);
-    const tanosKanas = tanosVocabEntry.kana.replace(Constants.tanosVocabSuruSuffix, '').split(Constants.tanosDelimiter);
-    const tanosEnglishMeanings = tanosVocabEntry.english.toLowerCase().split(Constants.tanosDelimiter);
+    const tanosKanjis = tanosVocabEntry.kanji.split(CONSTANTS.tanosDelimiter);
+    const tanosKanas = tanosVocabEntry.kana.replace(CONSTANTS.tanosVocabSuruSuffix, '').split(CONSTANTS.tanosDelimiter);
+    const tanosEnglishMeanings = tanosVocabEntry.english.toLowerCase().split(CONSTANTS.tanosDelimiter);
 
     const jmdictEntryByKanjiReading = jmdictJson.entry.find((a) => {
       return kanjiMatch(toArray(a.k_ele), tanosKanjis) && readingMatch(toArray(a.r_ele), tanosKanas);
@@ -68,7 +68,7 @@ export default async (): Promise<void> => {
 
   progressBar.stop();
 
-  await writeFileToInputConverted(Constants.fileNames.jmdictJlpt, jmdictJlptEntries);
+  await writeFileToInputConverted(CONSTANTS.fileNames.jmdictJlpt, jmdictJlptEntries);
 };
 
 function kanjiMatch(jmdictKanjis: JMdictKanji[], tanosKanjis: string[]): boolean {

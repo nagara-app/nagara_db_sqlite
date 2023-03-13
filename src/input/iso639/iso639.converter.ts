@@ -2,11 +2,11 @@
 
 import { parse } from 'csv-parse';
 
-import { Constants } from '../../constants';
+import { CONSTANTS } from '../../constants';
 import { readFileFromInput, writeFileToInputConverted } from '../../utils';
 
 export default async (): Promise<void> => {
-  const file = await readFileFromInput(Constants.fileNames.iso639);
+  const file = await readFileFromInput(CONSTANTS.fileNames.iso639);
 
   console.log('Parsing file …');
 
@@ -14,8 +14,8 @@ export default async (): Promise<void> => {
     parse(
       file.toString().trim(),
       {
-        columns: Constants.iso639Headers,
-        delimiter: Constants.iso639Delimiter,
+        columns: CONSTANTS.iso639Headers,
+        delimiter: CONSTANTS.iso639Delimiter,
       },
       (err, rows) => {
         if (err !== undefined) {
@@ -28,5 +28,5 @@ export default async (): Promise<void> => {
 
   const result = await parsePromise;
 
-  await writeFileToInputConverted(Constants.fileNames.iso639Converted, result);
+  await writeFileToInputConverted(CONSTANTS.fileNames.iso639Converted, result);
 };

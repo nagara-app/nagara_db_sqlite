@@ -2,13 +2,13 @@
 
 import { codeToString, convert } from 'encoding-japanese';
 
-import { Constants } from '../../constants';
+import { CONSTANTS } from '../../constants';
 import { readFileFromInput, writeFileToInputConverted } from '../../utils';
 
 import type { Radkfilex } from './radkfilex.dto';
 
 export default async (): Promise<void> => {
-  const file = await readFileFromInput(Constants.fileNames.radkfilex);
+  const file = await readFileFromInput(CONSTANTS.fileNames.radkfilex);
 
   console.log('Parsing file …');
 
@@ -48,5 +48,5 @@ export default async (): Promise<void> => {
     }
   });
 
-  await writeFileToInputConverted(Constants.fileNames.radkfilexConverted, radkfilex);
+  await writeFileToInputConverted(CONSTANTS.fileNames.radkfilexConverted, radkfilex);
 };

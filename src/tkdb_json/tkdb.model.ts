@@ -20,26 +20,27 @@ export interface TKDB {
   words: TKDB_Word[];
   kanji: TKDB_Kanji[];
   radicals: TKDB_Radical[];
-  tags: TKDB_Tag;
+  keywords: TKDB_Keyword;
 }
 
 //
-// Tags
+// Keywords
 //
 
-export interface TKDB_Tag {
-  jlpt: Record<TKDB_Tag_Jlpt, string>;
-  kanjiGrade: Record<TKDB_Tag_Kanji_Grade, string>;
-  kanjiReadingType: Record<TKDB_Tag_Kanji_Reading_Type, string>;
+export interface TKDB_Keyword {
+  jlpt: Record<TKDB_Keyword_Jlpt, string>;
+  lang: Record<TKDB_Keyword_Lang, string>;
+  kanjiGrade: Record<TKDB_Keyword_Kanji_Grade, string>;
+  kanjiReadingType: Record<TKDB_Keyword_Kanji_Reading_Type, string>;
   kanjiCodepointType: Record<TKDB_Kanji_Codepoint_Type, string>;
   kanjiDicrefType: Record<TKDB_Kanji_Dicref_Type, string>;
   kanjiQuerycodeType: Record<TKDB_Kanji_Querycode_Type, string>;
-  wordMeaningDial: Record<TKDB_Tag_Word_Meaning_Dialect, string>;
-  wordMeaningMisc: Record<TKDB_Tag_Word_Meaning_Misc, string>;
-  wordMeaningPos: Record<TKDB_Tag_Word_Meaning_Pos, string>;
-  wordMeaningField: Record<TKDB_Tag_Word_Meaning_Field, string>;
-  wordMeaningGlossType: Record<TKDB_Tag_Word_Meaning_Gloss_Type, string>;
-  wordReadingInfo: Record<TKDB_Tag_Word_Reading_Info, string>;
+  wordMeaningDial: Record<TKDB_Keyword_Word_Meaning_Dialect, string>;
+  wordMeaningMisc: Record<TKDB_Keyword_Word_Meaning_Misc, string>;
+  wordMeaningPos: Record<TKDB_Keyword_Word_Meaning_Pos, string>;
+  wordMeaningField: Record<TKDB_Keyword_Word_Meaning_Field, string>;
+  wordMeaningGlossType: Record<TKDB_Keyword_Word_Meaning_Gloss_Type, string>;
+  wordReadingInfo: Record<TKDB_Keyword_Word_Reading_Info, string>;
 }
 
 //
@@ -59,7 +60,7 @@ export interface TKDB_Word_Reading {
   uniqeKanji?: string[];
   kana: string;
   common: boolean;
-  info: TKDB_Tag_Word_Reading_Info[];
+  info: TKDB_Keyword_Word_Reading_Info[];
 }
 
 export interface TKDB_Word_Reading_Furigana {
@@ -69,11 +70,11 @@ export interface TKDB_Word_Reading_Furigana {
 
 export interface TKDB_Word_Meaning {
   gloss: TKDB_Word_Meaning_Gloss[];
-  lang: TKDB_Tag_Lang;
-  pos: TKDB_Tag_Word_Meaning_Pos[];
-  field: TKDB_Tag_Word_Meaning_Field[];
-  dialect: TKDB_Tag_Word_Meaning_Dialect[];
-  misc: TKDB_Tag_Word_Meaning_Misc[];
+  lang: TKDB_Keyword_Lang;
+  pos: TKDB_Keyword_Word_Meaning_Pos[];
+  field: TKDB_Keyword_Word_Meaning_Field[];
+  dialect: TKDB_Keyword_Word_Meaning_Dialect[];
+  misc: TKDB_Keyword_Word_Meaning_Misc[];
   source: TKDB_Word_Meaning_Source[];
   info: string[];
   related: string[]; // represents the id of another entry that is related to this meaning
@@ -81,11 +82,11 @@ export interface TKDB_Word_Meaning {
 
 export interface TKDB_Word_Meaning_Gloss {
   value: string;
-  type?: TKDB_Tag_Word_Meaning_Gloss_Type | undefined;
+  type?: TKDB_Keyword_Word_Meaning_Gloss_Type | undefined;
 }
 
 export interface TKDB_Word_Meaning_Source {
-  lang: TKDB_Tag_Lang;
+  lang: TKDB_Keyword_Lang;
   wasei: boolean;
   full: boolean;
   value?: string;
@@ -93,7 +94,7 @@ export interface TKDB_Word_Meaning_Source {
 
 export interface TKDB_Word_Misc {
   common: boolean;
-  jlpt: TKDB_Tag_Jlpt | undefined; // derived from tanos
+  jlpt: TKDB_Keyword_Jlpt | undefined; // derived from tanos
 }
 
 //
@@ -109,7 +110,7 @@ export interface TKDB_Kanji {
 }
 
 export interface TKDB_Kanji_Meaning {
-  lang: TKDB_Tag_Lang;
+  lang: TKDB_Keyword_Lang;
   value: string;
 }
 
@@ -135,13 +136,13 @@ export interface TKDB_Kanji_Misc {
   codepoint: TKDB_Kanji_Codepoint;
   querycode: TKDB_Kanji_Querycode;
   dicref: TKDB_Kanji_Dicref;
-  jlpt: TKDB_Tag_Jlpt | undefined; // derived from tanos
+  jlpt: TKDB_Keyword_Jlpt | undefined; // derived from tanos
   lookalike: string[]; // derived from kanjium
   antonym: string[]; // derived from kanjium
   synonym: string[]; // derived from kanjium
   variant: string[];
   strokes: number | undefined;
-  grade: TKDB_Tag_Kanji_Grade | undefined;
+  grade: TKDB_Keyword_Kanji_Grade | undefined;
   frequencyJ: number | undefined;
 }
 
@@ -171,30 +172,30 @@ export interface TKDB_Radical {
 }
 
 //
-// Tags
+// Keywords
 //
 
-export type TKDB_Tag_Lang = Iso6392t;
-export type TKDB_Tag_Jlpt = 'n1' | 'n2' | 'n3' | 'n4' | 'n5';
+export type TKDB_Keyword_Lang = Iso6392t;
+export type TKDB_Keyword_Jlpt = 'n1' | 'n2' | 'n3' | 'n4' | 'n5';
 
-export type TKDB_Tag_Word_Reading_Info = JMdictKanjiInf | JMdcitRdngInf;
-export type TKDB_Tag_Word_Meaning_Gloss_Type = JMdictSensGlossType;
-export type TKDB_Tag_Word_Meaning_Pos = JMdictSensPos;
-export type TKDB_Tag_Word_Meaning_Field = JMdictSensField;
-export type TKDB_Tag_Word_Meaning_Dialect = JMdictSensDial;
-export type TKDB_Tag_Word_Meaning_Misc = JMdictSensMisc;
+export type TKDB_Keyword_Word_Reading_Info = JMdictKanjiInf | JMdcitRdngInf;
+export type TKDB_Keyword_Word_Meaning_Gloss_Type = JMdictSensGlossType;
+export type TKDB_Keyword_Word_Meaning_Pos = JMdictSensPos;
+export type TKDB_Keyword_Word_Meaning_Field = JMdictSensField;
+export type TKDB_Keyword_Word_Meaning_Dialect = JMdictSensDial;
+export type TKDB_Keyword_Word_Meaning_Misc = JMdictSensMisc;
 
-export enum TKDB_Tag_Kanji_Part_Type {
+export enum TKDB_Keyword_Kanji_Part_Type {
   KANJI = 'kanji',
   RADICAL = 'radical',
   COMPONENT = 'component',
 }
-export enum TKDB_Tag_Kanji_Reading_Type {
+export enum TKDB_Keyword_Kanji_Reading_Type {
   ON = 'on',
   KUN = 'kun',
   NANORI = 'nanori',
 }
-export type TKDB_Tag_Kanji_Grade =
+export type TKDB_Keyword_Kanji_Grade =
   | 'kyouiku1'
   | 'kyouiku2'
   | 'kyouiku3'

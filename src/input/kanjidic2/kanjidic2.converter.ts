@@ -5,7 +5,7 @@ import { parseStringPromise } from 'xml2js';
 import type { ParserOptions } from 'xml2js';
 
 import { readFileFromInput, toCamelcaseFromSnakecase, unzipFile, writeFileToInputConverted } from '../../utils';
-import { Constants } from '../../constants';
+import { CONSTANTS } from '../../constants';
 
 export default async (): Promise<void> => {
   function nameToLowerCase(name: string): string {
@@ -34,11 +34,11 @@ export default async (): Promise<void> => {
     attrValueProcessors: [nameFromSnakeToCamelCase],
   };
 
-  const zippedFile = await readFileFromInput(Constants.fileNames.kanjidic2);
+  const zippedFile = await readFileFromInput(CONSTANTS.fileNames.kanjidic2);
   const file = await unzipFile(zippedFile);
 
   console.log('Parsing file …');
   const result = await parseStringPromise(file, parserOptions);
 
-  await writeFileToInputConverted(Constants.fileNames.kanjidic2Converted, result);
+  await writeFileToInputConverted(CONSTANTS.fileNames.kanjidic2Converted, result);
 };

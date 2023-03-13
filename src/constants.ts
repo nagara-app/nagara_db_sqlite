@@ -1,4 +1,4 @@
-export const Constants = {
+export const CONSTANTS = {
   version: '0.0.0',
   inputDir: 'input',
   inputConvertedDir: 'converted',
@@ -30,7 +30,7 @@ export const Constants = {
     iso639: 'ISO-639-2_utf-8.txt',
     iso639Converted: 'iso639.json',
   },
-  commonTags: ['news1', 'ichi1', 'spec1', 'spec2', 'gai1'],
+  commonKeywords: ['news1', 'ichi1', 'spec1', 'spec2', 'gai1'],
   langCodeEnglish: 'eng',
   jmdictXrefSeparator: '・',
   csvDelimiter: ',',

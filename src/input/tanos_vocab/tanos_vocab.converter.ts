@@ -2,16 +2,16 @@
 
 import { parse } from 'csv-parse';
 
-import { Constants } from '../../constants';
+import { CONSTANTS } from '../../constants';
 import { readFileFromInput, writeFileToInputConverted } from '../../utils';
 
 export default async (): Promise<void> => {
-  const file = await readFileFromInput(Constants.fileNames.tanosVocab);
+  const file = await readFileFromInput(CONSTANTS.fileNames.tanosVocab);
 
   console.log('Parsing file …');
 
   const parsePromise = new Promise<Buffer>((resolve, reject) => {
-    parse(file, { columns: true, trim: true, delimiter: Constants.csvDelimiter }, (err, rows) => {
+    parse(file, { columns: true, trim: true, delimiter: CONSTANTS.csvDelimiter }, (err, rows) => {
       if (err !== undefined) {
         reject(err);
       }
@@ -21,5 +21,5 @@ export default async (): Promise<void> => {
 
   const result = await parsePromise;
 
-  await writeFileToInputConverted(Constants.fileNames.tanosVocabConverted, result);
+  await writeFileToInputConverted(CONSTANTS.fileNames.tanosVocabConverted, result);
 };

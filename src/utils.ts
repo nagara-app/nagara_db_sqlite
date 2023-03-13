@@ -2,7 +2,7 @@ import { readFile, writeFile } from 'fs/promises';
 import { join } from 'path';
 import { green } from 'chalk';
 
-import { Constants } from './constants';
+import { CONSTANTS } from './constants';
 import { gunzip } from 'zlib';
 
 export const toArray = <T>(val: T[] | T | undefined): T[] =>
@@ -24,7 +24,7 @@ export const unzipFile = async (zippedFile: Buffer): Promise<Buffer> => {
 
 export const readFileFromInput = async (fileName: string): Promise<Buffer> => {
   console.log(`Reading ${fileName} file from input …`);
-  const path = `${Constants.inputDir}/${fileName}`;
+  const path = `${CONSTANTS.inputDir}/${fileName}`;
   const fullPath = join(__dirname, '..', path);
   const file = await readFile(fullPath);
   return file;
@@ -32,7 +32,7 @@ export const readFileFromInput = async (fileName: string): Promise<Buffer> => {
 
 export const readJsonFileFromInput = async <T>(fileName: string): Promise<T> => {
   console.log(`Reading ${fileName} file from input …`);
-  const path = `${Constants.inputDir}/${fileName}`;
+  const path = `${CONSTANTS.inputDir}/${fileName}`;
   const fullPath = join(__dirname, '..', path);
   const file = await readFile(fullPath, 'utf8');
   return JSON.parse(file.trim());
@@ -40,7 +40,7 @@ export const readJsonFileFromInput = async <T>(fileName: string): Promise<T> => 
 
 export const readJsonFileFromInputConverted = async <T>(fileName: string): Promise<T> => {
   console.log(`Reading ${fileName} file from input converted …`);
-  const path = `${Constants.inputDir}/${Constants.inputConvertedDir}/${fileName}`;
+  const path = `${CONSTANTS.inputDir}/${CONSTANTS.inputConvertedDir}/${fileName}`;
   const fullPath = join(__dirname, '..', path);
   const file = await readFile(fullPath, 'utf8');
   return JSON.parse(file.trim());
@@ -48,7 +48,7 @@ export const readJsonFileFromInputConverted = async <T>(fileName: string): Promi
 
 export const writeFileToInputConverted = async (fileName: string, fileContent: any): Promise<void> => {
   console.log(`Writing ${fileName} file to converted input …`);
-  const path = `${Constants.inputDir}/${Constants.inputConvertedDir}/${fileName}`;
+  const path = `${CONSTANTS.inputDir}/${CONSTANTS.inputConvertedDir}/${fileName}`;
   const fullPath = join(__dirname, '..', path);
   await writeFile(fullPath, JSON.stringify(fileContent, null, 2))
     .then(() => {
@@ -61,7 +61,7 @@ export const writeFileToInputConverted = async (fileName: string, fileContent: a
 
 export const writeFileToOutput = async (fileName: string, fileContent: any): Promise<void> => {
   console.log(`Writing ${fileName} file to output …`);
-  const path = `${Constants.outputDir}/${fileName}`;
+  const path = `${CONSTANTS.outputDir}/${fileName}`;
   const fullPath = join(__dirname, '..', path);
   await writeFile(fullPath, JSON.stringify(fileContent, null, 2))
     .then(() => {
@@ -116,5 +116,5 @@ const toHex = (text: string): string => {
 };
 
 export const toKvgHex = (text: string): string => {
-  return toHex(text).padStart(Constants.kvgPadLenght, Constants.kvgPadFill);
+  return toHex(text).padStart(CONSTANTS.kvgPadLenght, CONSTANTS.kvgPadFill);
 };

@@ -2,14 +2,14 @@
 
 import { codeToString, convert } from 'encoding-japanese';
 
-import { Constants } from '../../constants';
+import { CONSTANTS } from '../../constants';
 import { readFileFromInput, writeFileToInputConverted } from '../../utils';
 
 import type { Kradfilex } from './kradfilex.dto';
 
 export default async (): Promise<void> => {
-  const file1 = await readFileFromInput(Constants.fileNames.kradfile);
-  const file2 = await readFileFromInput(Constants.fileNames.kradfile2);
+  const file1 = await readFileFromInput(CONSTANTS.fileNames.kradfile);
+  const file2 = await readFileFromInput(CONSTANTS.fileNames.kradfile2);
 
   const file = Buffer.concat([file1, file2]);
 
@@ -41,5 +41,5 @@ export default async (): Promise<void> => {
     }
   });
 
-  await writeFileToInputConverted(Constants.fileNames.kradfilexConverted, kradfilex);
+  await writeFileToInputConverted(CONSTANTS.fileNames.kradfilexConverted, kradfilex);
 };

@@ -3,19 +3,20 @@ import { Presets, SingleBar } from 'cli-progress';
 
 import type { Options } from 'cli-progress';
 
-import { Constants } from '../constants';
-import { getDate, toArray, toKvgHex } from '../utils';
+import { CONSTANTS } from '../constants';
+import { KEYWORDS } from '../keywords';
 
+import { getDate, toArray, toKvgHex } from '../utils';
 import { TKDB_Kanji_Part_Type } from './tkdb.model';
 
 import type {
   TKDB_Word,
   TKDB_Word_Meaning,
-  TKDB_Tag_Word_Meaning_Dialect,
-  TKDB_Tag_Word_Meaning_Field,
+  TKDB_Keyword_Word_Meaning_Dialect,
+  TKDB_Keyword_Word_Meaning_Field,
   TKDB_Word_Meaning_Gloss,
-  TKDB_Tag_Word_Meaning_Misc,
-  TKDB_Tag_Word_Meaning_Pos,
+  TKDB_Keyword_Word_Meaning_Misc,
+  TKDB_Keyword_Word_Meaning_Pos,
   TKDB_Word_Meaning_Source,
   TKDB_Word_Misc,
   TKDB_Word_Reading,
@@ -24,7 +25,7 @@ import type {
   TKDB_Kanji_Querycode,
   TKDB_Kanji_Dicref,
   TKDB_Kanji_Misc,
-  TKDB_Tag_Kanji_Grade,
+  TKDB_Keyword_Kanji_Grade,
   TKDB_Kanji_Meaning,
   TKDB_Kanji_Reading,
   TKDB_Kanji_Part,
@@ -53,7 +54,6 @@ import type { KanjiumLookalike } from '../input/kanjium_lookalike/kanjium_lookal
 import type { Iso639 } from '../input/iso639/iso639.dto';
 import type { Kradfilex } from '../input/kradfilex/kradfilex.dto';
 import type { RadkfilexKanjium } from '../input/radkfilex_kanjium/radkfilex_kanjium.dto';
-import { Tags } from '../tags';
 
 export class TKDBmapper {
   limiter: number | undefined;
@@ -105,17 +105,21 @@ export class TKDBmapper {
   //
 
   init(): TKDB {
-    const version = Constants.version;
+    const version = CONSTANTS.version;
     const dateOfCreation = getDate();
-    const tags = Tags;
     const radicals = this.radicals();
     const kanji = this.kanji();
     const words = this.words();
+    const keywords = KEYWORDS;
+
+    this.iso639.forEach((lang) => {
+      keywords.lang[lang.iso6392t] = lang.englishName;
+    });
 
     return {
       version,
       dateOfCreation,
-      tags,
+      keywords,
       radicals,
       kanji,
       words,
@@ -185,7 +189,7 @@ export class TKDBmapper {
     kd2Meanings.forEach((kd2Meaning) => {
       if (typeof kd2Meaning === 'string') {
         meaning.push({
-          lang: Constants.langCodeEnglish,
+          lang: CONSTANTS.langCodeEnglish,
           value: kd2Meaning,
         });
       } else {
@@ -276,15 +280,15 @@ export class TKDBmapper {
     const jlpt = this.tanosKanji.find((a) => a.kanji === kd2character.literal)?.jlpt;
 
     const antonym =
-      this.kanjiumAntonym.find((a) => a.kanji === kd2character.literal)?.antonyms?.split(Constants.kanjiumDelimiter) ??
+      this.kanjiumAntonym.find((a) => a.kanji === kd2character.literal)?.antonyms?.split(CONSTANTS.kanjiumDelimiter) ??
       [];
 
     const synonym =
-      this.kanjiumSynonym.find((a) => a.kanji === kd2character.literal)?.synonyms?.split(Constants.kanjiumDelimiter) ??
+      this.kanjiumSynonym.find((a) => a.kanji === kd2character.literal)?.synonyms?.split(CONSTANTS.kanjiumDelimiter) ??
       [];
 
     const lookalike =
-      this.kanjiumLookalike.find((a) => a.kanji === kd2character.literal)?.similar?.split(Constants.kanjiumDelimiter) ??
+      this.kanjiumLookalike.find((a) => a.kanji === kd2character.literal)?.similar?.split(CONSTANTS.kanjiumDelimiter) ??
       [];
 
     const kd2Variant = kd2character.misc.variant;
@@ -368,7 +372,7 @@ export class TKDBmapper {
     return dicref;
   }
 
-  private kanjiGrade(kd2Grade: Kanjidic2MiscGrade): TKDB_Tag_Kanji_Grade {
+  private kanjiGrade(kd2Grade: Kanjidic2MiscGrade): TKDB_Keyword_Kanji_Grade {
     switch (kd2Grade) {
       case '1':
         return 'kyouiku1';
@@ -520,7 +524,7 @@ export class TKDBmapper {
       return false;
     } else {
       const priArr = toArray(pri);
-      return priArr.some((pri) => Constants.commonTags.includes(pri));
+      return priArr.some((pri) => CONSTANTS.commonKeywords.includes(pri));
     }
   }
 
@@ -530,10 +534,10 @@ export class TKDBmapper {
     jmSenses.forEach((jmSense) => {
       const gloss: TKDB_Word_Meaning_Gloss[] = this.wordMeaningGloss(jmSense);
       const lang: string = this.wordMeaningLang(jmSense);
-      const pos: TKDB_Tag_Word_Meaning_Pos[] = toArray(jmSense.pos);
-      const field: TKDB_Tag_Word_Meaning_Field[] = toArray(jmSense.field);
-      const dialect: TKDB_Tag_Word_Meaning_Dialect[] = toArray(jmSense.dial);
-      const misc: TKDB_Tag_Word_Meaning_Misc[] = toArray(jmSense.misc);
+      const pos: TKDB_Keyword_Word_Meaning_Pos[] = toArray(jmSense.pos);
+      const field: TKDB_Keyword_Word_Meaning_Field[] = toArray(jmSense.field);
+      const dialect: TKDB_Keyword_Word_Meaning_Dialect[] = toArray(jmSense.dial);
+      const misc: TKDB_Keyword_Word_Meaning_Misc[] = toArray(jmSense.misc);
       const source: TKDB_Word_Meaning_Source[] = this.wordMeaningSource(jmSense);
       const info: string[] = toArray(jmSense.s_inf);
       const related: string[] = this.wordMeaningRelated(jmSense);
@@ -577,12 +581,12 @@ export class TKDBmapper {
     const jmdictSensGlossFirst = toArray(jmSense.gloss)[0];
     if (typeof jmdictSensGlossFirst === 'string') {
       // If type is string, gloss entry can be considered english without other properties
-      return Constants.langCodeEnglish;
+      return CONSTANTS.langCodeEnglish;
     } else {
       if (jmdictSensGlossFirst?.lang !== undefined) {
         return this.iso639.find((a) => a.iso6392t === jmdictSensGlossFirst.lang)?.iso6392t ?? '';
       } else {
-        return Constants.langCodeEnglish;
+        return CONSTANTS.langCodeEnglish;
       }
     }
   }
@@ -595,7 +599,7 @@ export class TKDBmapper {
     jmSenseLSrc.forEach((lsrc) => {
       const lang =
         lsrc.lang === undefined
-          ? Constants.langCodeEnglish
+          ? CONSTANTS.langCodeEnglish
           : this.iso639.find((a) => a.iso6392t === lsrc.lang)?.iso6392t ?? '';
 
       wordMeaningSource.push({
@@ -622,7 +626,7 @@ export class TKDBmapper {
     const jmSenseXRefs = toArray(jmSense.xref);
 
     jmSenseXRefs.forEach((jmSenseXRef) => {
-      const xrefItems = jmSenseXRef.split(Constants.jmdictXrefSeparator);
+      const xrefItems = jmSenseXRef.split(CONSTANTS.jmdictXrefSeparator);
 
       // "kanjiOrKana" format
       if (xrefItems.length === 1) {

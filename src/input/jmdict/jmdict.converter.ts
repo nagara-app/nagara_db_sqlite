@@ -4,7 +4,7 @@ import { parseStringPromise } from 'xml2js';
 
 import type { ParserOptions } from 'xml2js';
 
-import { Constants } from '../../constants';
+import { CONSTANTS } from '../../constants';
 import { readFileFromInput, toCamelcaseFromKebabcase, unzipFile, writeFileToInputConverted } from '../../utils';
 
 export default async (): Promise<void> => {
@@ -60,11 +60,11 @@ export default async (): Promise<void> => {
     ],
   };
 
-  const zippedFile = await readFileFromInput(Constants.fileNames.jmdict);
+  const zippedFile = await readFileFromInput(CONSTANTS.fileNames.jmdict);
   const file = await unzipFile(zippedFile);
 
   console.log('Parsing file …');
   const result = await parseStringPromise(file, parserOptions);
 
-  await writeFileToInputConverted(Constants.fileNames.jmdictConverted, result);
+  await writeFileToInputConverted(CONSTANTS.fileNames.jmdictConverted, result);
 };

@@ -6,7 +6,7 @@ import {
   toKvgHex,
   writeFileToInputConverted,
 } from '../../utils';
-import { Constants } from '../../constants';
+import { CONSTANTS } from '../../constants';
 import { Presets, SingleBar } from 'cli-progress';
 
 import type { Options } from 'cli-progress';
@@ -18,10 +18,10 @@ import type { RadkfilexKanjium } from './radkfilex_kanjium.dto';
 
 export default async (): Promise<void> => {
   // Read required files
-  const radkfilexEntries: Radkfilex[] = await readJsonFileFromInputConverted(Constants.fileNames.radkfilexConverted);
-  const kanjiumRadicalEntries: KanjiumRadical[] = await readJsonFileFromInput(Constants.fileNames.kanjiumRadical);
+  const radkfilexEntries: Radkfilex[] = await readJsonFileFromInputConverted(CONSTANTS.fileNames.radkfilexConverted);
+  const kanjiumRadicalEntries: KanjiumRadical[] = await readJsonFileFromInput(CONSTANTS.fileNames.kanjiumRadical);
   const kanjiumRadicalVariantEntries: KanjiumRadvars[] = await readJsonFileFromInput(
-    Constants.fileNames.kanjiumRadicalVariant,
+    CONSTANTS.fileNames.kanjiumRadicalVariant,
   );
 
   // Add kanjium radical variants that are available in radkfilex but missing in kanjium
@@ -85,11 +85,11 @@ export default async (): Promise<void> => {
         radkfilexRadical,
         radical: {
           literal: kanjiumRadicalMatch.radical,
-          kvgHexcode: toKvgHex(kanjiumRadicalMatch.radical),
+          hexcode: toKvgHex(kanjiumRadicalMatch.radical),
           number: kanjiumRadicalMatch.number,
-          reading: kanjiumRadicalMatch.names.split(Constants.kanjiumRadicalNamesDelimiter),
-          meaning: kanjiumRadicalMatch.meaning.split(Constants.kanjiumRadicalMeaningDelimiter),
-          strokecount: kanjiumRadicalMatch.strokes,
+          reading: kanjiumRadicalMatch.names.split(CONSTANTS.kanjiumRadicalNamesDelimiter),
+          meaning: kanjiumRadicalMatch.meaning.split(CONSTANTS.kanjiumRadicalMeaningDelimiter),
+          strokes: kanjiumRadicalMatch.strokes,
         },
         match: true,
       });
@@ -98,11 +98,11 @@ export default async (): Promise<void> => {
         radkfilexRadical,
         radical: {
           literal: kanjiumRadicalVariantMatch.radvar,
-          kvgHexcode: toKvgHex(kanjiumRadicalVariantMatch.radvar),
+          hexcode: toKvgHex(kanjiumRadicalVariantMatch.radvar),
           number: kanjiumRadicalVariantMatch.number,
-          reading: kanjiumRadicalVariantMatch.names.split(Constants.kanjiumRadicalNamesDelimiter),
-          meaning: kanjiumRadicalVariantMatch.meaning.split(Constants.kanjiumRadicalMeaningDelimiter),
-          strokecount: kanjiumRadicalVariantMatch.strokes,
+          reading: kanjiumRadicalVariantMatch.names.split(CONSTANTS.kanjiumRadicalNamesDelimiter),
+          meaning: kanjiumRadicalVariantMatch.meaning.split(CONSTANTS.kanjiumRadicalMeaningDelimiter),
+          strokes: kanjiumRadicalVariantMatch.strokes,
           variantOf: kanjiumRadicalVariantMatch.radical,
         },
         match: true,
@@ -116,7 +116,7 @@ export default async (): Promise<void> => {
     } else if (componentMatch !== undefined) {
       radkfilexKanjium.push({
         radkfilexRadical,
-        kanji: componentMatch,
+        component: componentMatch,
         match: true,
       });
     } else {
@@ -129,7 +129,7 @@ export default async (): Promise<void> => {
 
   progressBar.stop();
 
-  await writeFileToInputConverted(Constants.fileNames.radkfilexKanjium, radkfilexKanjium);
+  await writeFileToInputConverted(CONSTANTS.fileNames.radkfilexKanjium, radkfilexKanjium);
 };
 
 interface MissingVariantsinKanjium {

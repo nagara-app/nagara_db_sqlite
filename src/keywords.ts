@@ -1,5 +1,7 @@
-import type { TKDB_Tag } from './tkdb_json/tkdb.model';
-export const Tags: TKDB_Tag = {
+import type { TKDB_Keyword } from './tkdb_json/tkdb.model';
+
+export const KEYWORDS: TKDB_Keyword = {
+  lang: {},
   jlpt: {
     n1: 'JLPT N1',
     n2: 'JLPT N2',
