@@ -103,18 +103,6 @@ export const getDate = (): string => {
   return [year, month, day].join('-');
 };
 
-const toHex = (text: string): string => {
-  let hex;
-  let result = '';
-
-  for (let i = 0; i < text.length; i++) {
-    hex = text.charCodeAt(i).toString(16);
-    result += ('000' + hex).slice(-4);
-  }
-
-  return result;
-};
-
 export const toKvgHex = (text: string): string => {
-  return toHex(text).padStart(CONSTANTS.kvgPadLenght, CONSTANTS.kvgPadFill);
+  return (text.codePointAt(0) ?? '').toString(16).padStart(CONSTANTS.kvgPadLenght, CONSTANTS.kvgPadFill);
 };
