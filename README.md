@@ -196,6 +196,14 @@ All data sources are stored under `input`. If the original data source format is
 }
 ```
 
+## Options
+
+It takes about 5 minutes to build the whole JSON. To limit the entries created, add a limiter to the json script in `package.json` as in succeeding example.
+
+```
+"json": "npx ts-node src/tkdb_json/index.ts 1000",
+```
+
 ## License, copyright and attribution
 
 This project is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). You can find the copy of this license in the [license file](LICENSE.txt).
