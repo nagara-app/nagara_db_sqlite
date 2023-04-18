@@ -37,7 +37,7 @@ export const CONSTANTS = {
   tanosDelimiter: ',',
   tanosVocabSuruSuffix: '・する',
   kanjiumDelimiter: ',',
-  kanjiumRadicalMeaningDelimiter: ',',
+  kanjiumRadicalMeaningDelimiter: ', ',
   kanjiumRadicalNamesDelimiter: '・',
   iso639Delimiter: '|',
   iso639Headers: ['iso6392t', 'iso6392b', 'iso6391', 'englishName', 'frenchName'],

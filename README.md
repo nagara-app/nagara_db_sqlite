@@ -34,7 +34,7 @@ Follow these steps:
    ```
 5. Run below to create the database to the `output` directory.
    ```
-   npm run start
+   npm run json
    ```
 
 ## How does it work?
