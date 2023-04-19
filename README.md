@@ -216,3 +216,4 @@ When using this database, you must also attribute the projects from which the da
 - Furigana data from [JmdictFurigana](https://github.com/Doublevil/JmdictFurigana) by [Doublevil](https://github.com/Doublevil), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 - JLPT data from [tanos](http://www.tanos.co.uk/jlpt/) by [Jonathan Waller](http://www.tanos.co.uk/contact/), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - Similar, antonym and synonym kanji data and radical data from [kanjium](https://github.com/mifunetoshiro/kanjium) by [Uros O.](https://github.com/mifunetoshiro), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- Kanji stroke order graphics from [KanjiVG](https://kanjivg.tagaini.net/index.html) by Ulrich Apel, licensed under [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/).

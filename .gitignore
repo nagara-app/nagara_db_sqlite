@@ -108,6 +108,7 @@ input/converted/*
 input/JMdict.gz
 input/JmdictFurigana.json
 input/kanjidic2.xml.gz
+input/kanjivg-all.zip
 
 output/*
 .DS_Store
