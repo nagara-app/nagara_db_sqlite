@@ -14,6 +14,7 @@ import type { KanjiumLookalike } from '../input/kanjium_lookalike/kanjium_lookal
 import type { Iso639 } from '../input/iso639/iso639.dto';
 import type { Kradfilex } from '../input/kradfilex/kradfilex.dto';
 import type { RadkfilexKanjium } from '../input/radkfilex_kanjium/radkfilex_kanjium.dto';
+import type { KanjiVG } from '../input/kanjivg/kanjivg.dto';
 
 const main = async (): Promise<void> => {
   const limiter = process.argv[2] !== undefined ? parseInt(process.argv[2]) : undefined;
@@ -30,6 +31,7 @@ const main = async (): Promise<void> => {
   const radkfilexKanjium: RadkfilexKanjium[] = await readJsonFileFromInputConverted(
     CONSTANTS.fileNames.radkfilexKanjium,
   );
+  const kanjivg: KanjiVG[] = await readJsonFileFromInputConverted(CONSTANTS.fileNames.kanjivgConverted);
   const iso639: Iso639[] = await readJsonFileFromInputConverted(CONSTANTS.fileNames.iso639Converted);
 
   const mapper = new TKDBmapper(
@@ -44,6 +46,7 @@ const main = async (): Promise<void> => {
     kanjiumLookalike,
     kradfilex,
     radkfilexKanjium,
+    kanjivg,
     iso639,
   );
 

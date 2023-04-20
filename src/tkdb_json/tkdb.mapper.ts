@@ -31,6 +31,7 @@ import type {
   TKDB_Kanji_Part,
   TKDB,
   TKDB_Radical,
+  TKDB_Kanji_Stroke,
 } from './tkdb.model';
 
 import type { JMdict, JMdictEntr, JMdictKanji, JMdictRdng, JMdictSens } from '../input/jmdict/jmdict.dto';
@@ -54,6 +55,7 @@ import type { KanjiumLookalike } from '../input/kanjium_lookalike/kanjium_lookal
 import type { Iso639 } from '../input/iso639/iso639.dto';
 import type { Kradfilex } from '../input/kradfilex/kradfilex.dto';
 import type { RadkfilexKanjium } from '../input/radkfilex_kanjium/radkfilex_kanjium.dto';
+import type { KanjiVG } from '../input/kanjivg/kanjivg.dto';
 
 export class TKDBmapper {
   limiter: number | undefined;
@@ -69,6 +71,7 @@ export class TKDBmapper {
   kanjiumLookalike: KanjiumLookalike[];
   kradfilex: Kradfilex[];
   radkfilexKanjium: RadkfilexKanjium[];
+  kanjivg: KanjiVG[];
 
   iso639: Iso639[];
 
@@ -84,6 +87,7 @@ export class TKDBmapper {
     kanjiumLookalike: KanjiumLookalike[],
     kradfilex: Kradfilex[],
     radkfilexKanjium: RadkfilexKanjium[],
+    kanjivg: KanjiVG[],
     iso639: Iso639[],
   ) {
     this.limiter = limiter;
@@ -97,6 +101,7 @@ export class TKDBmapper {
     this.kanjiumLookalike = kanjiumLookalike;
     this.kradfilex = kradfilex;
     this.radkfilexKanjium = radkfilexKanjium;
+    this.kanjivg = kanjivg;
     this.iso639 = iso639;
   }
 
@@ -268,8 +273,6 @@ export class TKDBmapper {
     const querycode = this.kanjiQuerycode(toArray(kd2character.query_code?.q_code));
     const dicref = this.kanjiDicref(toArray(kd2character.dic_number?.dic_ref));
 
-    const hexcode = toKvgHex(kd2character.literal);
-
     const kd2FirstStrokecount = toArray(kd2character.misc.stroke_count)[0];
     const strokes = kd2FirstStrokecount !== undefined ? parseInt(kd2FirstStrokecount) : undefined;
 
@@ -294,9 +297,12 @@ export class TKDBmapper {
     const kd2Variant = kd2character.misc.variant;
     const variant = kd2Variant !== undefined ? this.kanjiVariant(toArray(kd2Variant)) : [];
 
+    const hexcode = toKvgHex(kd2character.literal);
+    const strokepaths = this.kanjiStrokes(hexcode);
+
     const misc: TKDB_Kanji_Misc = {
       jlpt,
-      hexcode,
+      strokepaths,
       codepoint,
       querycode,
       dicref,
@@ -334,6 +340,24 @@ export class TKDBmapper {
     });
 
     return variants;
+  }
+
+  private kanjiStrokes(hexcode: string): TKDB_Kanji_Stroke[] {
+    const strokes: TKDB_Kanji_Stroke[] = [];
+
+    const kanjivgEntry = this.kanjivg.find((a) => a.kanjiHexcode === hexcode);
+
+    if (kanjivgEntry !== undefined) {
+      kanjivgEntry.strokes.forEach((kanjivgStroke) => {
+        strokes.push({
+          path: kanjivgStroke.path,
+          x: kanjivgStroke.x,
+          y: kanjivgStroke.y,
+        });
+      });
+    }
+
+    return strokes;
   }
 
   private kanjiCodepoint(kd2Codepoint: Kanjidic2CharCpEntr[]): TKDB_Kanji_Codepoint {

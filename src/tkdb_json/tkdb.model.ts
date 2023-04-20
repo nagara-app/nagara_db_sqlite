@@ -132,7 +132,6 @@ export enum TKDB_Kanji_Part_Type {
 }
 
 export interface TKDB_Kanji_Misc {
-  hexcode: string; // used for kanjivg
   codepoint: TKDB_Kanji_Codepoint;
   querycode: TKDB_Kanji_Querycode;
   dicref: TKDB_Kanji_Dicref;
@@ -142,8 +141,15 @@ export interface TKDB_Kanji_Misc {
   synonym: string[]; // derived from kanjium
   variant: string[];
   strokes: number | undefined;
+  strokepaths: TKDB_Kanji_Stroke[];
   grade: TKDB_Keyword_Kanji_Grade | undefined;
   frequencyJ: number | undefined;
+}
+
+export interface TKDB_Kanji_Stroke {
+  path: string;
+  x: string;
+  y: string;
 }
 
 export type TKDB_Kanji_Codepoint_Type = Kanjidic2CharCpType;
