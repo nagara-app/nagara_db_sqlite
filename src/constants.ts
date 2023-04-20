@@ -23,6 +23,8 @@ export const CONSTANTS = {
     kanjiumRadicalVariant: 'kanjium_radvars.json',
     radkfilex: 'radkfilex',
     radkfilexConverted: 'radkxfilex.json',
+    kanjivg: 'kanjivg.zip',
+    kanjivgConverted: 'kanjivg.json',
     kradfile: 'kradfile',
     kradfile2: 'kradfile2',
     kradfilexConverted: 'kradfilex.json',
@@ -43,4 +45,5 @@ export const CONSTANTS = {
   iso639Headers: ['iso6392t', 'iso6392b', 'iso6391', 'englishName', 'frenchName'],
   kvgPadFill: '0',
   kvgPadLenght: 5,
+  kanjivgExtension: '.svg',
 };

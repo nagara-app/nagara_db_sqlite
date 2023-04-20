@@ -26,6 +26,7 @@ Follow these steps:
    | JMdict.gz           | http://ftp.edrdg.org/pub/Nihongo//JMdict.gz          |
    | JMdictFurigana.json | https://github.com/Doublevil/JmdictFurigana/releases |
    | kanjidic2.xml.gz    | http://nihongo.monash.edu/kanjidic2/kanjidic2.xml.gz |
+   | kanjivg.zip         | https://github.com/KanjiVG/kanjivg/releases          |
 
 3. Store the files in the `input` directory.
 4. Run below to prepare and convert the input files.
@@ -216,4 +217,4 @@ When using this database, you must also attribute the projects from which the da
 - Furigana data from [JmdictFurigana](https://github.com/Doublevil/JmdictFurigana) by [Doublevil](https://github.com/Doublevil), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 - JLPT data from [tanos](http://www.tanos.co.uk/jlpt/) by [Jonathan Waller](http://www.tanos.co.uk/contact/), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - Similar, antonym and synonym kanji data and radical data from [kanjium](https://github.com/mifunetoshiro/kanjium) by [Uros O.](https://github.com/mifunetoshiro), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
-- Kanji stroke order graphics from [KanjiVG](https://kanjivg.tagaini.net/index.html) by Ulrich Apel, licensed under [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/).
+- Kanji stroke order graphics from [KanjiVG](https://github.com/KanjiVG/kanjivg/releases) by [Ulrich Apel](https://kanjivg.tagaini.net/index.html), licensed under [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/).

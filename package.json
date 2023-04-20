@@ -9,9 +9,11 @@
     "migrate": "npx prisma migrate dev"
   },
   "devDependencies": {
+    "@types/adm-zip": "^0.5.0",
     "@types/chalk": "^2.2.0",
     "@types/cli-progress": "^3.11.0",
     "@types/encoding-japanese": "^2.0.0",
+    "@types/jsdom": "^21.1.1",
     "@types/node": "^18.7.0",
     "@types/wanakana": "^4.0.3",
     "@types/xml2js": "^0.4.11",
@@ -25,10 +27,14 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "adm-zip": "^0.5.10",
     "chalk": "^4.1.2",
     "cli-progress": "^3.11.2",
     "csv-parse": "^5.3.3",
     "encoding-japanese": "^2.0.0",
+    "jsdom": "^21.1.1",
+    "node-html-parser": "^6.1.5",
+    "parse5": "^7.1.2",
     "wanakana": "^5.0.2",
     "xml2js": "^0.4.23"
   }
