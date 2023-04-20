@@ -1,6 +1,5 @@
 import { blue } from 'chalk';
 
-/*
 import iso639 from './iso639/iso639.converter';
 import radkfilex from './radkfilex/radkfilex.converter';
 import kradfilex from './kradfilex/kradfilex.converter';
@@ -10,13 +9,11 @@ import kanjidic2 from './kanjidic2/kanjidic2.converter';
 import jmdictJlpt from './jmdict_jlpt/jmdict_jlpt.creator';
 import jmdict from './jmdict/jmdict.converter';
 import radkfilexKanjium from './radkfilex_kanjium/radkfilex_kanjium.converter';
-*/
 import kanjivg from './kanjivg/kanjivg.converter';
 
 const main = async (): Promise<void> => {
   console.log(blue('Converting files from input …'));
 
-  /*
   await iso639();
   await radkfilex();
   await kradfilex();
@@ -26,7 +23,6 @@ const main = async (): Promise<void> => {
   await tanosVocab();
   await tanosKanji();
   await jmdictJlpt();
-  */
   await kanjivg();
 };
 void main();

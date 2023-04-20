@@ -7,6 +7,7 @@ import { CONSTANTS } from '../../constants';
 
 export default async (): Promise<void> => {
   // Unpack the kanjivg zip file
+  console.log(`Reading ${CONSTANTS.fileNames.kanjivg} file from input …`);
   const zip = new AdmZip(
     path.join(__dirname, '..', '..', '..', `${CONSTANTS.inputDir}/${CONSTANTS.fileNames.kanjivg}`),
   );
