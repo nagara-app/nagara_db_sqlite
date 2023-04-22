@@ -274,7 +274,7 @@ export class TKDBmapper {
     const dicref = this.kanjiDicref(toArray(kd2character.dic_number?.dic_ref));
 
     const kd2FirstStrokecount = toArray(kd2character.misc.stroke_count)[0];
-    const strokes = kd2FirstStrokecount !== undefined ? parseInt(kd2FirstStrokecount) : undefined;
+    const strokecount = kd2FirstStrokecount !== undefined ? parseInt(kd2FirstStrokecount) : undefined;
 
     const kd2Frequency = kd2character.misc.freq;
     const frequencyJ = kd2Frequency !== undefined ? parseInt(kd2Frequency) : undefined;
@@ -298,11 +298,11 @@ export class TKDBmapper {
     const variant = kd2Variant !== undefined ? this.kanjiVariant(toArray(kd2Variant)) : [];
 
     const hexcode = toKvgHex(kd2character.literal);
-    const strokepaths = this.kanjiStrokes(hexcode);
+    const strokes = this.kanjiStrokes(hexcode);
 
     const misc: TKDB_Kanji_Misc = {
       jlpt,
-      strokepaths,
+      strokecount,
       codepoint,
       querycode,
       dicref,

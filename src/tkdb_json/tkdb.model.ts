@@ -140,8 +140,8 @@ export interface TKDB_Kanji_Misc {
   antonym: string[]; // derived from kanjium
   synonym: string[]; // derived from kanjium
   variant: string[];
-  strokes: number | undefined;
-  strokepaths: TKDB_Kanji_Stroke[];
+  strokecount: number | undefined;
+  strokes: TKDB_Kanji_Stroke[];
   grade: TKDB_Keyword_Kanji_Grade | undefined;
   frequencyJ: number | undefined;
 }
