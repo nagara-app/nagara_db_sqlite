@@ -171,7 +171,7 @@ export interface TKDB_Radical {
   literal: string;
   hexcode: string; // used for kanjivg
   number: number;
-  strokes: number;
+  strokecount: number;
   reading: string[];
   meaning: string[];
   variantOf?: string;

@@ -89,7 +89,7 @@ export default async (): Promise<void> => {
           number: kanjiumRadicalMatch.number,
           reading: kanjiumRadicalMatch.names.split(CONSTANTS.kanjiumRadicalNamesDelimiter),
           meaning: kanjiumRadicalMatch.meaning.split(CONSTANTS.kanjiumRadicalMeaningDelimiter),
-          strokes: kanjiumRadicalMatch.strokes,
+          strokecount: kanjiumRadicalMatch.strokes,
         },
         match: true,
       });
@@ -102,7 +102,7 @@ export default async (): Promise<void> => {
           number: kanjiumRadicalVariantMatch.number,
           reading: kanjiumRadicalVariantMatch.names.split(CONSTANTS.kanjiumRadicalNamesDelimiter),
           meaning: kanjiumRadicalVariantMatch.meaning.split(CONSTANTS.kanjiumRadicalMeaningDelimiter),
-          strokes: kanjiumRadicalVariantMatch.strokes,
+          strokecount: kanjiumRadicalVariantMatch.strokes,
           variantOf: kanjiumRadicalVariantMatch.radical,
         },
         match: true,
