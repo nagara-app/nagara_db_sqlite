@@ -169,7 +169,6 @@ export type TKDB_Kanji_Dicref = {
 
 export interface TKDB_Radical {
   literal: string;
-  hexcode: string; // used for kanjivg
   number: number;
   strokecount: number;
   reading: string[];
