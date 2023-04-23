@@ -40,14 +40,14 @@ export default async (): Promise<void> => {
         const pathElement = dom.querySelector(`#kvg\\:${fileName}-s${i}`);
         const path = pathElement?.getAttribute('d') ?? undefined;
 
-        // Get the string from path between the first M and first c letter
-        const pathBeginning = path?.substring(path.indexOf('M') + 1, path.indexOf('c')) ?? undefined;
+        // Get the string value from the path variable where the string is between the first M character and first c or C
+        const pathBeginning = path?.match(/[Mm](.*?)[Cc]/)?.[1];
 
         // Separate the x and y values from pathBeginning by a comma
         const x = pathBeginning?.split(',')[0] ?? undefined;
         const y = pathBeginning?.split(',')[1] ?? undefined;
 
-        // If path, x or y is undefined, or if i is over 100 break the loop
+        // If path, x or y is undefined or not a double, the loop should break
         if (path === undefined || x === undefined || y === undefined) {
           break;
         } else {
