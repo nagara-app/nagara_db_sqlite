@@ -345,7 +345,7 @@ export class TKDBmapper {
   private kanjiStrokes(hexcode: string): TKDB_Kanji_Stroke[] {
     const strokes: TKDB_Kanji_Stroke[] = [];
 
-    const kanjivgEntry = this.kanjivg.find((a) => a.kanjiHexcode === hexcode);
+    const kanjivgEntry = this.kanjivg.find((a) => a.hexcode === hexcode);
 
     if (kanjivgEntry !== undefined) {
       kanjivgEntry.strokes.forEach((kanjivgStroke) => {
