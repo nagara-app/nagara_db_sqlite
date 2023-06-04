@@ -21,6 +21,7 @@ export const CONSTANTS = {
     kanjiumLookalike: 'kanjium_lookalikes.json',
     kanjiumRadical: 'kanjium_radicals.json',
     kanjiumRadicalVariant: 'kanjium_radvars.json',
+    kanjiumFrequency: 'kanjium_frequency.json',
     radkfilex: 'radkfilex',
     radkfilexConverted: 'radkxfilex.json',
     kanjivg: 'kanjivg.zip',

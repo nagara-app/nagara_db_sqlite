@@ -143,7 +143,8 @@ export interface TKDB_Kanji_Misc {
   strokecount: number | undefined;
   strokes: TKDB_Kanji_Stroke[];
   grade: TKDB_Keyword_Kanji_Grade | undefined;
-  frequencyJ: number | undefined;
+  frequencyJ: number | undefined; // frequency by JMdict
+  frequencyK: number | undefined; // frequency by Kanjium
 }
 
 export interface TKDB_Kanji_Stroke {

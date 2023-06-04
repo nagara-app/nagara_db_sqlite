@@ -11,6 +11,7 @@ import type { TanosKanji } from '../input/tanos_kanji/tanos_kanji.dto';
 import type { KanjiumAntonym } from '../input/kanjium_antonym/kanjium_antonym.dto';
 import type { KanjiumSynonym } from '../input/kanjium_synonym/kanjium_synonym.dto';
 import type { KanjiumLookalike } from '../input/kanjium_lookalike/kanjium_lookalike.dto';
+import type { KanjiumFrequency } from '../input/kanjium_frequency/kanjium_frequency.dto';
 import type { Iso639 } from '../input/iso639/iso639.dto';
 import type { Kradfilex } from '../input/kradfilex/kradfilex.dto';
 import type { RadkfilexKanjium } from '../input/radkfilex_kanjium/radkfilex_kanjium.dto';
@@ -27,6 +28,7 @@ const main = async (): Promise<void> => {
   const kanjiumAntonym: KanjiumAntonym[] = await readJsonFileFromInput(CONSTANTS.fileNames.kanjiumAntonym);
   const kanjiumSynonym: KanjiumSynonym[] = await readJsonFileFromInput(CONSTANTS.fileNames.kanjiumSynonym);
   const kanjiumLookalike: KanjiumLookalike[] = await readJsonFileFromInput(CONSTANTS.fileNames.kanjiumLookalike);
+  const kanjiumFrequency: KanjiumFrequency[] = await readJsonFileFromInput(CONSTANTS.fileNames.kanjiumFrequency);
   const kradfilex: Kradfilex[] = await readJsonFileFromInputConverted(CONSTANTS.fileNames.kradfilexConverted);
   const radkfilexKanjium: RadkfilexKanjium[] = await readJsonFileFromInputConverted(
     CONSTANTS.fileNames.radkfilexKanjium,
@@ -44,6 +46,7 @@ const main = async (): Promise<void> => {
     kanjiumAntonym,
     kanjiumSynonym,
     kanjiumLookalike,
+    kanjiumFrequency,
     kradfilex,
     radkfilexKanjium,
     kanjivg,

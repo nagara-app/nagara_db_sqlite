@@ -52,6 +52,7 @@ import type { TanosKanji } from '../input/tanos_kanji/tanos_kanji.dto';
 import type { KanjiumAntonym } from '../input/kanjium_antonym/kanjium_antonym.dto';
 import type { KanjiumSynonym } from '../input/kanjium_synonym/kanjium_synonym.dto';
 import type { KanjiumLookalike } from '../input/kanjium_lookalike/kanjium_lookalike.dto';
+import type { KanjiumFrequency } from '../input/kanjium_frequency/kanjium_frequency.dto';
 import type { Iso639 } from '../input/iso639/iso639.dto';
 import type { Kradfilex } from '../input/kradfilex/kradfilex.dto';
 import type { RadkfilexKanjium } from '../input/radkfilex_kanjium/radkfilex_kanjium.dto';
@@ -69,6 +70,7 @@ export class TKDBmapper {
   kanjiumAntonym: KanjiumAntonym[];
   kanjiumSynonym: KanjiumSynonym[];
   kanjiumLookalike: KanjiumLookalike[];
+  kanjiumFrequency: KanjiumFrequency[];
   kradfilex: Kradfilex[];
   radkfilexKanjium: RadkfilexKanjium[];
   kanjivg: KanjiVG[];
@@ -85,6 +87,7 @@ export class TKDBmapper {
     kanjiumAntonym: KanjiumAntonym[],
     kanjiumSynonym: KanjiumSynonym[],
     kanjiumLookalike: KanjiumLookalike[],
+    kanjiumFrequency: KanjiumFrequency[],
     kradfilex: Kradfilex[],
     radkfilexKanjium: RadkfilexKanjium[],
     kanjivg: KanjiVG[],
@@ -99,6 +102,7 @@ export class TKDBmapper {
     this.kanjiumAntonym = kanjiumAntonym;
     this.kanjiumSynonym = kanjiumSynonym;
     this.kanjiumLookalike = kanjiumLookalike;
+    this.kanjiumFrequency = kanjiumFrequency;
     this.kradfilex = kradfilex;
     this.radkfilexKanjium = radkfilexKanjium;
     this.kanjivg = kanjivg;
@@ -294,6 +298,8 @@ export class TKDBmapper {
       this.kanjiumLookalike.find((a) => a.kanji === kd2character.literal)?.similar?.split(CONSTANTS.kanjiumDelimiter) ??
       [];
 
+    const frequencyK = this.kanjiumFrequency.find((a) => a.kanji === kd2character.literal)?.frequency ?? undefined;
+
     const kd2Variant = kd2character.misc.variant;
     const variant = kd2Variant !== undefined ? this.kanjiVariant(toArray(kd2Variant)) : [];
 
@@ -312,6 +318,7 @@ export class TKDBmapper {
       strokes,
       grade,
       frequencyJ,
+      frequencyK,
       variant,
     };
 
