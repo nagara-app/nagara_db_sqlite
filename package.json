@@ -6,6 +6,7 @@
     "format": "npx prettier --write .",
     "convert": "npx ts-node src/input/index.ts",
     "json": "npx ts-node src/tkdb_json/index.ts",
+    "csv": "npx ts-node src/tkdb_csv/index.ts",
     "migrate": "npx prisma migrate dev"
   },
   "devDependencies": {

@@ -33,6 +33,10 @@ export const CONSTANTS = {
     iso639: 'ISO-639-2_utf-8.txt',
     iso639Converted: 'iso639.json',
   },
+  csvFileNames: {
+    kanjiStroke: 'kanji_stroke.csv',
+    kanji: 'kanji.csv',
+  },
   commonKeywords: ['news1', 'ichi1', 'spec1', 'spec2', 'gai1'],
   langCodeEnglish: 'eng',
   jmdictXrefSeparator: '・',
@@ -47,4 +51,5 @@ export const CONSTANTS = {
   kvgPadFill: '0',
   kvgPadLenght: 5,
   kanjivgExtension: '.svg',
+  tkdbCsvDelimiter: ';',
 };
