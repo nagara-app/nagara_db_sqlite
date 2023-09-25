@@ -22,7 +22,7 @@ export interface JMdictRdng {
   reb: string;
   re_nokanji?: string;
   re_restr?: string | string[];
-  re_inf?: JMdcitRdngInf | JMdcitRdngInf[];
+  re_inf?: JMdictRdngInf | JMdictRdngInf[];
   re_pri?: string | string[];
 }
 
@@ -55,7 +55,7 @@ export interface JMdictSensGloss {
 
 export type JMdictKanjiInf = 'ateji' | 'rK' | 'io' | 'ik' | 'iK' | 'oK';
 
-export type JMdcitRdngInf = 'ok' | 'ik' | 'gikun';
+export type JMdictRdngInf = 'ok' | 'ik' | 'gikun';
 
 export type JMdictSensGlossLang = 'dut' | 'ger' | 'rus' | 'spa' | 'hun' | 'swe' | 'fre' | 'slv';
 
@@ -167,7 +167,7 @@ export type JMdictSensField =
   | 'med'
   | 'hanaf'
   | 'physics'
-  | 'ma'
+  | 'mA'
   | 'sumo'
   | 'shogi'
   | 'sports'

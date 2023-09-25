@@ -123,7 +123,7 @@ export const KEYWORDS: TKDB_Keyword = {
     law: 'law',
     ling: 'linguistics',
     logic: 'logic',
-    ma: 'martial arts',
+    mA: 'martial arts',
     mahj: 'mahjong',
     math: 'mathematics',
     mech: 'mechanical engineering',
@@ -155,10 +155,10 @@ export const KEYWORDS: TKDB_Keyword = {
     zool: 'zoology',
   },
   wordMeaningGlossType: {
-    expl: 'explanation',
-    fig: 'figurative',
+    expl: 'explanatory',
+    fig: 'figuratively',
     lit: 'literal',
-    tm: 'trademark',
+    tm: 'literally',
   },
   wordMeaningMisc: {
     mSl: 'manga slang',
@@ -281,14 +281,19 @@ export const KEYWORDS: TKDB_Keyword = {
     vUnspec: 'verb unspecified',
     vz: 'ichidan verb - zuru verb (alternative form of -jiru verbs)',
   },
-  wordReadingInfo: {
-    ateji: 'ateji (phonetic) reading',
-    gikun: 'gikun (meaning as reading) or jukujikun (special kanji reading)',
+  wordKanjiInfo: {
     iK: 'word containing irregular kanji usage',
-    ik: 'word containing irregular kana usage',
     io: 'irregular okurigana usage',
     oK: 'word containing out-dated kanji',
-    ok: 'out-dated or obsolete kana usage',
+    ik: 'word containing irregular kana usage',
+    ateji: 'ateji (phonetic) reading',
     rK: 'rarely-used kanji form',
+    // sK: 'search-only kanji form',
+  },
+  wordKanaInfo: {
+    gikun: 'gikun (meaning as reading) or jukujikun (special kanji reading)',
+    ok: 'out-dated or obsolete kana usage',
+    ik: 'word containing irregular kana usage',
+    // sk: 'search-only kana form',
   },
 };

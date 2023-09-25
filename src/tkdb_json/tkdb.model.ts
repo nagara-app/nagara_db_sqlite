@@ -1,7 +1,7 @@
 import type { Iso6392t } from '../input/iso639/iso639.dto';
 import type {
-  JMdcitRdngInf,
   JMdictKanjiInf,
+  JMdictRdngInf,
   JMdictSensDial,
   JMdictSensField,
   JMdictSensGlossType,
@@ -40,7 +40,8 @@ export interface TKDB_Keyword {
   wordMeaningPos: Record<TKDB_Keyword_Word_Meaning_Pos, string>;
   wordMeaningField: Record<TKDB_Keyword_Word_Meaning_Field, string>;
   wordMeaningGlossType: Record<TKDB_Keyword_Word_Meaning_Gloss_Type, string>;
-  wordReadingInfo: Record<TKDB_Keyword_Word_Reading_Info, string>;
+  wordKanjiInfo: Record<TKDB_Keyword_Word_Kanji_Info, string>;
+  wordKanaInfo: Record<TKDB_Keyword_Word_Kana_Info, string>;
 }
 
 //
@@ -57,10 +58,12 @@ export interface TKDB_Word {
 export interface TKDB_Word_Reading {
   kanji?: string;
   furigana?: TKDB_Word_Reading_Furigana[]; // derived from JMdict Furigana
-  uniqeKanji?: string[];
+  kanjiLiteral?: string[];
   kana: string;
   common: boolean;
-  info: TKDB_Keyword_Word_Reading_Info[];
+  jlpt: TKDB_Keyword_Jlpt | undefined; // derived from tanos
+  kanjiInfo?: TKDB_Keyword_Word_Kanji_Info[];
+  kanaInfo: TKDB_Keyword_Word_Kana_Info[];
 }
 
 export interface TKDB_Word_Reading_Furigana {
@@ -77,7 +80,9 @@ export interface TKDB_Word_Meaning {
   misc: TKDB_Keyword_Word_Meaning_Misc[];
   source: TKDB_Word_Meaning_Source[];
   info: string[];
-  related: string[]; // represents the id of another entry that is related to this meaning
+  kanjiRestr: string[];
+  kanaRestr: string[];
+  related: TKDB_Word_Meaning_Reference[];
 }
 
 export interface TKDB_Word_Meaning_Gloss {
@@ -95,7 +100,29 @@ export interface TKDB_Word_Meaning_Source {
 export interface TKDB_Word_Misc {
   common: boolean;
   jlpt: TKDB_Keyword_Jlpt | undefined; // derived from tanos
+  freq?: number | undefined;
 }
+
+export type TKDB_Word_Meaning_Reference =
+  | {
+      type: 'kanji';
+      id: string;
+      kanji: string;
+      meaningIndex?: number;
+    }
+  | {
+      type: 'kana';
+      id: string;
+      kana: string;
+      meaningIndex?: number;
+    }
+  | {
+      type: 'both';
+      id: string;
+      kanji: string;
+      kana: string;
+      meaningIndex?: number;
+    };
 
 //
 // Kanji
@@ -184,7 +211,8 @@ export interface TKDB_Radical {
 export type TKDB_Keyword_Lang = Iso6392t;
 export type TKDB_Keyword_Jlpt = 'n1' | 'n2' | 'n3' | 'n4' | 'n5';
 
-export type TKDB_Keyword_Word_Reading_Info = JMdictKanjiInf | JMdcitRdngInf;
+export type TKDB_Keyword_Word_Kanji_Info = JMdictKanjiInf;
+export type TKDB_Keyword_Word_Kana_Info = JMdictRdngInf;
 export type TKDB_Keyword_Word_Meaning_Gloss_Type = JMdictSensGlossType;
 export type TKDB_Keyword_Word_Meaning_Pos = JMdictSensPos;
 export type TKDB_Keyword_Word_Meaning_Field = JMdictSensField;

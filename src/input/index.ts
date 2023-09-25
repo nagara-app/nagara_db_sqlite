@@ -10,6 +10,7 @@ import jmdictJlpt from './jmdict_jlpt/jmdict_jlpt.creator';
 import jmdict from './jmdict/jmdict.converter';
 import radkfilexKanjium from './radkfilex_kanjium/radkfilex_kanjium.converter';
 import kanjivg from './kanjivg/kanjivg.converter';
+import wordfreqCk from './wordfreq_ck/wordfreq_ck.converter';
 
 const main = async (): Promise<void> => {
   console.log(blue('Converting files from input …'));
@@ -24,5 +25,6 @@ const main = async (): Promise<void> => {
   await tanosKanji();
   await jmdictJlpt();
   await kanjivg();
+  await wordfreqCk();
 };
 void main();

@@ -32,6 +32,7 @@ import type {
   TKDB,
   TKDB_Radical,
   TKDB_Kanji_Stroke,
+  TKDB_Word_Meaning_Reference,
 } from './tkdb.model';
 
 import type { JMdict, JMdictEntr, JMdictKanji, JMdictRdng, JMdictSens } from '../input/jmdict/jmdict.dto';
@@ -449,8 +450,8 @@ export class TKDBmapper {
       i++;
 
       const id = entry.ent_seq;
-      const reading = this.wordReading(toArray(entry.k_ele), toArray(entry.r_ele));
-      const meaning = this.wordMeaning(toArray(entry.sense));
+      const reading = this.wordReading(id, toArray(entry.k_ele), toArray(entry.r_ele));
+      const meaning = this.wordMeaning(entry.ent_seq, toArray(entry.sense));
       const misc = this.wordMisc(entry);
 
       words.push({
@@ -465,7 +466,7 @@ export class TKDBmapper {
     return words;
   }
 
-  private wordReading(jmKanjis: JMdictKanji[], jmReadings: JMdictRdng[]): TKDB_Word_Reading[] {
+  private wordReading(jmEntrySeq: string, jmKanjis: JMdictKanji[], jmReadings: JMdictRdng[]): TKDB_Word_Reading[] {
     const wordReading: TKDB_Word_Reading[] = [];
 
     jmReadings.sort((a, b) => {
@@ -477,17 +478,22 @@ export class TKDBmapper {
 
     jmReadings.forEach((jmdictReading) => {
       const kana = jmdictReading.reb;
-      const info = toArray(jmdictReading.re_inf);
+      const kanaInfo = toArray(jmdictReading.re_inf);
       const common = this.isCommonWordReading(jmdictReading.re_pri);
 
       // When kanji element is present
       if (jmKanjis.length > 0) {
-        // When reading has associated kanji
+        // When reading has no associated kanji
         if (jmdictReading.re_nokanji !== undefined) {
+          const jlpt = this.jmdictJlpt.find(
+            (a) => a.sequence === jmEntrySeq && a.tanosVocab.kanji === '' && a.tanosVocab.kana === kana,
+          )?.tanosVocab.jlpt;
+
           wordReading.push({
             kana,
             common,
-            info,
+            kanaInfo,
+            jlpt,
           });
         }
 
@@ -497,20 +503,25 @@ export class TKDBmapper {
           readingRestrictions.forEach((restriction) => {
             const jmdictKanjiFromRest = jmKanjis.find((a) => a.keb === restriction);
 
-            const info = toArray(jmdictKanjiFromRest?.ke_inf);
+            const kanjiInfo = toArray(jmdictKanjiFromRest?.ke_inf);
             const common = this.isCommonWordReading(jmdictKanjiFromRest?.ke_pri);
             const furigana = toArray(
               this.jmdictFurigana.find((a) => a.text === restriction && a.reading === kana)?.furigana,
             );
-            const uniqeKanji = this.getUniqueKanjis(jmdictKanjiFromRest?.keb);
+            const kanjiLiteral = this.getUniqueKanjis(jmdictKanjiFromRest?.keb);
+            const jlpt = this.jmdictJlpt.find(
+              (a) => a.sequence === jmEntrySeq && a.tanosVocab.kanji === restriction && a.tanosVocab.kana === kana,
+            )?.tanosVocab.jlpt;
 
             wordReading.push({
               kanji: restriction,
               furigana,
-              uniqeKanji,
+              kanjiLiteral,
               kana,
               common,
-              info,
+              kanaInfo,
+              kanjiInfo,
+              jlpt,
             });
 
             jmKanjis = jmKanjis.filter((a) => a.keb !== restriction);
@@ -520,18 +531,25 @@ export class TKDBmapper {
         // When reading has no associated kanji or restriction
         else {
           jmKanjis.forEach((a) => {
-            const info = toArray(a.ke_inf);
+            const kanjiInfo = toArray(a.ke_inf);
             const common = this.isCommonWordReading(a.ke_pri);
             const furigana = toArray(this.jmdictFurigana.find((b) => b.text === a.keb && b.reading === kana)?.furigana);
-            const uniqeKanji = this.getUniqueKanjis(a.keb);
+            const kanjiLiteral = this.getUniqueKanjis(a.keb);
+            const kanji = a.keb;
+
+            const jlpt = this.jmdictJlpt.find(
+              (a) => a.sequence === jmEntrySeq && a.tanosVocab.kanji === kanji && a.tanosVocab.kana === kana,
+            )?.tanosVocab.jlpt;
 
             wordReading.push({
-              kanji: a.keb,
+              kanji,
               furigana,
-              uniqeKanji,
+              kanjiLiteral,
               kana,
               common,
-              info,
+              kanaInfo,
+              kanjiInfo,
+              jlpt,
             });
           });
         }
@@ -539,10 +557,15 @@ export class TKDBmapper {
 
       // When kanji element is not present
       else {
+        const jlpt = this.jmdictJlpt.find(
+          (a) => a.sequence === jmEntrySeq && a.tanosVocab.kanji === '' && a.tanosVocab.kana === kana,
+        )?.tanosVocab.jlpt;
+
         wordReading.push({
           kana,
-          info,
+          kanaInfo,
           common,
+          jlpt,
         });
       }
     });
@@ -559,7 +582,7 @@ export class TKDBmapper {
     }
   }
 
-  private wordMeaning(jmSenses: JMdictSens[]): TKDB_Word_Meaning[] {
+  private wordMeaning(jmSeq: string, jmSenses: JMdictSens[]): TKDB_Word_Meaning[] {
     const wordMeaning: TKDB_Word_Meaning[] = [];
 
     jmSenses.forEach((jmSense) => {
@@ -571,7 +594,9 @@ export class TKDBmapper {
       const misc: TKDB_Keyword_Word_Meaning_Misc[] = toArray(jmSense.misc);
       const source: TKDB_Word_Meaning_Source[] = this.wordMeaningSource(jmSense);
       const info: string[] = toArray(jmSense.s_inf);
-      const related: string[] = this.wordMeaningRelated(jmSense);
+      const related: TKDB_Word_Meaning_Reference[] = this.wordMeaningRelated(jmSeq, jmSense);
+      const kanaRestr: string[] = toArray(jmSense.stagr);
+      const kanjiRestr: string[] = toArray(jmSense.stagk);
 
       wordMeaning.push({
         gloss,
@@ -583,6 +608,8 @@ export class TKDBmapper {
         misc,
         source,
         related,
+        kanaRestr,
+        kanjiRestr,
       });
     });
 
@@ -627,11 +654,19 @@ export class TKDBmapper {
 
     const jmSenseLSrc = toArray(jmSense.lsource);
 
-    jmSenseLSrc.forEach((lsrc) => {
-      const lang =
-        lsrc.lang === undefined
-          ? CONSTANTS.langCodeEnglish
-          : this.iso639.find((a) => a.iso6392t === lsrc.lang)?.iso6392t ?? '';
+    for (const lsrc of jmSenseLSrc) {
+      let lang;
+
+      if (lsrc === undefined) {
+        lang = CONSTANTS.langCodeEnglish;
+      } else {
+        const isco639Code = this.iso639.find((a) => a.iso6392t === lsrc.lang)?.iso6392t;
+        if (isco639Code !== undefined) {
+          lang = isco639Code;
+        } else {
+          break;
+        }
+      }
 
       wordMeaningSource.push({
         lang,
@@ -639,12 +674,12 @@ export class TKDBmapper {
         full: lsrc.ls_type !== undefined,
         value: lsrc.value,
       });
-    });
+    }
 
     return wordMeaningSource;
   }
 
-  private wordMeaningRelated(jmSense: JMdictSens): string[] {
+  private wordMeaningRelated(jmSeq: string, jmSense: JMdictSens): TKDB_Word_Meaning_Reference[] {
     /**
      * Examples:
      * - `"kanji・kana・senseIndex"` - refers to the word with specific reading and specific sense,
@@ -653,7 +688,7 @@ export class TKDBmapper {
      * - `"kanjiOrKana"` - refers to a word with any sense
      */
 
-    const related: string[] = [];
+    const related: TKDB_Word_Meaning_Reference[] = [];
     const jmSenseXRefs = toArray(jmSense.xref);
 
     jmSenseXRefs.forEach((jmSenseXRef) => {
@@ -661,31 +696,70 @@ export class TKDBmapper {
 
       // "kanjiOrKana" format
       if (xrefItems.length === 1) {
-        const entry = this.getJmdictEntryByKanjiOrKana(xrefItems[0] ?? '');
-        if (entry?.ent_seq !== undefined) related.push(entry?.ent_seq);
+        const entryDetails = this.getEntryIdAndReadingByKanjiOrKana(jmSeq, xrefItems[0] ?? '');
+        if (entryDetails !== undefined)
+          if (entryDetails.kanji !== undefined) {
+            related.push({
+              type: 'kanji',
+              id: entryDetails.id,
+              kanji: entryDetails.kanji,
+            });
+          } else if (entryDetails.kana !== undefined) {
+            related.push({
+              type: 'kana',
+              id: entryDetails.id,
+              kana: entryDetails.kana,
+            });
+          }
       } else if (xrefItems.length === 2) {
-        const senseIndex = parseInt(xrefItems[1] ?? '');
+        const meaningIndex = parseInt(xrefItems[1] ?? '');
 
         // "kanji・kana" format
-        if (isNaN(senseIndex)) {
-          const entry = this.getJmdictEntryByKanjiAndKana(xrefItems[0] ?? '', xrefItems[1] ?? '');
-          if (entry?.ent_seq !== undefined) {
-            related.push(entry?.ent_seq);
+        if (isNaN(meaningIndex)) {
+          const kanji = xrefItems[0];
+          const kana = xrefItems[1];
+          if (kanji !== undefined && kana !== undefined) {
+            const entryId = this.getEntryIdByKanjiAndKana(kanji, kana);
+            if (entryId !== undefined) {
+              related.push({ id: entryId, type: 'both', kanji, kana });
+            }
           }
         }
 
         // "kanjiOrKana・senseIndex"
         else {
-          const entry = this.getJmdictEntryByKanjiOrKana(xrefItems[0] ?? '');
-          if (entry?.ent_seq !== undefined) related.push(entry?.ent_seq);
+          const entryDetails = this.getEntryIdAndReadingByKanjiOrKana(jmSeq, xrefItems[0] ?? '');
+
+          if (entryDetails !== undefined) {
+            if (entryDetails.kanji !== undefined) {
+              related.push({
+                type: 'kanji',
+                id: entryDetails.id,
+                kanji: entryDetails.kanji,
+                meaningIndex,
+              });
+            } else if (entryDetails.kana !== undefined) {
+              related.push({
+                type: 'kana',
+                id: entryDetails.id,
+                kana: entryDetails.kana,
+                meaningIndex,
+              });
+            }
+          }
         }
       }
 
       // "kanji・kana・senseIndex" format
       else if (xrefItems.length === 3) {
-        const entry = this.getJmdictEntryByKanjiAndKana(xrefItems[0] ?? '', xrefItems[1] ?? '');
-        if (entry?.ent_seq !== undefined) {
-          related.push(entry?.ent_seq);
+        const kanji = xrefItems[0];
+        const kana = xrefItems[1];
+        const meaningIndex = xrefItems[2] !== undefined ? +xrefItems[2] : undefined;
+        if (kanji !== undefined && kana !== undefined && meaningIndex !== undefined) {
+          const entryId = this.getEntryIdByKanjiAndKana(kanji, kana);
+          if (entryId !== undefined) {
+            related.push({ id: entryId, type: 'both', kanji, kana, meaningIndex });
+          }
         }
       }
     });
@@ -693,36 +767,83 @@ export class TKDBmapper {
     return related;
   }
 
-  private getJmdictEntryByKanjiOrKana(kanjiOrKana: string): JMdictEntr | undefined {
-    const entry = this.jmdict.entry.find((a) => {
-      const jmdictKanjis = toArray(a.k_ele);
-      const jmdictKanji = jmdictKanjis.find((b) => b.keb === kanjiOrKana);
-
-      const jmdictReadings = toArray(a.r_ele);
-      const jmdictReading = jmdictReadings.find((b) => b.reb === kanjiOrKana);
-
-      // When kanji found, return true
-      if (jmdictKanji !== undefined) {
-        return true;
-      }
-      // When kanji not found, check if reading has a match
-      else {
-        if (jmdictReading !== undefined) {
-          // When a kanji elements are available, the reading should have "no kanji" property
-          if (a.k_ele !== undefined) {
-            return jmdictReading.re_nokanji;
-          } else {
-            return true;
-          }
-        } else {
-          return false;
-        }
-      }
+  private getEntryIdAndReadingByKanjiOrKana(
+    exclEntry: string,
+    kanjiOrKana: string,
+  ): { id: string; kanji?: string; kana?: string } | undefined {
+    // Find entry by kanji
+    const entryByKanji = this.jmdict.entry.find((entry) => {
+      const kanjiEntry = toArray(entry.k_ele).find((kanji) => kanji.keb === kanjiOrKana && exclEntry !== entry.ent_seq);
+      return kanjiEntry;
     });
-    return entry;
+
+    if (entryByKanji !== undefined) {
+      return {
+        id: entryByKanji.ent_seq,
+        kanji: kanjiOrKana,
+      };
+    }
+
+    // Find entry where reading only exists once
+    const entriesByReading = this.jmdict.entry.filter((entry) => {
+      const readingEntry = toArray(entry.r_ele).find(
+        (reading) => reading.reb === kanjiOrKana && exclEntry !== entry.ent_seq,
+      );
+      return readingEntry;
+    });
+
+    if (entriesByReading[0] !== undefined && entriesByReading.length === 1) {
+      return {
+        id: entriesByReading[0].ent_seq,
+        kana: kanjiOrKana,
+      };
+    }
+
+    // Find entry by reading with no kanji
+    const entryByReadingNoKanji = this.jmdict.entry.find((entry) => {
+      const readingEntry = toArray(entry.r_ele).find(
+        (reading) => reading.reb === kanjiOrKana && reading.re_nokanji !== undefined,
+      );
+      return readingEntry;
+    });
+
+    if (entryByReadingNoKanji !== undefined) {
+      return {
+        id: entryByReadingNoKanji.ent_seq,
+        kana: kanjiOrKana,
+      };
+    }
+
+    // Find entry by reading only
+    const entryByReadingOnly = this.jmdict.entry.find((entry) => {
+      const kanjiEntries = toArray(entry.k_ele);
+      const readingEntry = toArray(entry.r_ele).find((readingObj) => readingObj.reb === kanjiOrKana);
+      return kanjiEntries.length === 0 && readingEntry !== undefined;
+    });
+
+    if (entryByReadingOnly !== undefined) {
+      return {
+        id: entryByReadingOnly.ent_seq,
+        kana: kanjiOrKana,
+      };
+    }
+
+    // Find entry with first matching reading
+    const entryByFirstReading = this.jmdict.entry.find((entry) => {
+      return toArray(entry.r_ele).find((readingObj) => readingObj.reb === kanjiOrKana);
+    });
+
+    if (entryByFirstReading !== undefined) {
+      return {
+        id: entryByFirstReading.ent_seq,
+        kana: kanjiOrKana,
+      };
+    }
+
+    return undefined;
   }
 
-  private getJmdictEntryByKanjiAndKana(kanji: string, kana: string): JMdictEntr | undefined {
+  private getEntryIdByKanjiAndKana(kanji: string, kana: string): string | undefined {
     const entry = this.jmdict.entry.find((a) => {
       const jmdictKanjis = toArray(a.k_ele);
       const jmdcitKanji = jmdictKanjis.find((b) => b.keb === kanji);
@@ -732,29 +853,54 @@ export class TKDBmapper {
 
       return jmdcitKanji !== undefined && jmdictReading !== undefined;
     });
-    return entry;
+    return entry?.ent_seq;
   }
 
   private wordMisc(jmEntry: JMdictEntr): TKDB_Word_Misc {
     const common = this.isCommonWord(jmEntry);
     const jlpt = this.jmdictJlpt.find((a) => a.sequence === jmEntry.ent_seq)?.tanosVocab.jlpt;
+    const freq = this.wordFreq(jmEntry);
 
     return {
       common,
       jlpt,
+      freq,
     };
   }
 
+  private wordFreq(jmEntry: JMdictEntr): number | undefined {
+    const nfStrings = toArray(jmEntry.r_ele)
+      .flatMap((a) => toArray(a.re_pri))
+      .concat(toArray(jmEntry.k_ele).flatMap((a) => toArray(a.ke_pri)))
+      .filter((str) => str.startsWith('nf'));
+    const ichi = toArray(jmEntry.r_ele)
+      .flatMap((a) => toArray(a.re_pri))
+      .concat(toArray(jmEntry.k_ele).flatMap((a) => toArray(a.ke_pri)))
+      .some((a) => a === 'ichi1');
+
+    if (ichi) return 0;
+
+    // If there are no 'nf' strings, handle the empty case as needed
+    if (nfStrings.length !== 0) {
+      // Extract the numbers from the 'nf' strings and find the minimum
+      const numbers: number[] = nfStrings.map((str) => parseInt(str.slice(2), 10));
+      const minNumber: number = Math.min(...numbers);
+      return minNumber;
+    } else {
+      return undefined;
+    }
+  }
+
   private getUniqueKanjis(kanjiReading?: string): string[] {
-    const uniqeKanji: string[] = [];
+    const kanjiLiteral: string[] = [];
 
     if (kanjiReading !== undefined) {
       kanjiReading.split('').forEach((char) => {
-        if (!uniqeKanji.includes(char) && isKanji(char)) uniqeKanji.push(char);
+        if (!kanjiLiteral.includes(char) && isKanji(char)) kanjiLiteral.push(char);
       });
     }
 
-    return uniqeKanji;
+    return kanjiLiteral;
   }
 
   private isCommonWord(jmEntry: JMdictEntr): boolean {
@@ -762,7 +908,7 @@ export class TKDBmapper {
     const jmReadings = toArray(jmEntry.r_ele);
 
     let common = jmKanjis.some((a) => this.isCommonWordReading(a.ke_pri));
-    common = !common ? jmReadings.some((a) => this.isCommonWordReading(a.re_pri)) : false;
+    common = common ? jmReadings.some((a) => this.isCommonWordReading(a.re_pri)) : false;
 
     return common;
   }
