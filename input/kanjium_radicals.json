@@ -1,0 +1,1928 @@
+[
+    {
+        "meaning": "one",
+        "names": "いち",
+        "notes": null,
+        "number": 1,
+        "radical": "一",
+        "radvar": null,
+        "strokes": 1
+    },
+    {
+        "meaning": "line",
+        "names": "ぼう・たてぼう",
+        "notes": null,
+        "number": 2,
+        "radical": "丨",
+        "radvar": null,
+        "strokes": 1
+    },
+    {
+        "meaning": "dot",
+        "names": "てん・ちょぼ・ちゅ・ちゅてん",
+        "notes": null,
+        "number": 3,
+        "radical": "丶",
+        "radvar": null,
+        "strokes": 1
+    },
+    {
+        "meaning": "slash",
+        "names": "の・のかんむり・はらいぼう",
+        "notes": null,
+        "number": 4,
+        "radical": "丿",
+        "radvar": null,
+        "strokes": 1
+    },
+    {
+        "meaning": "second",
+        "names": "おつ・おつにょう・つりばり",
+        "notes": "Also ⺄.",
+        "number": 5,
+        "radical": "乙",
+        "radvar": "乚",
+        "strokes": 1
+    },
+    {
+        "meaning": "hook",
+        "names": "はねぼう",
+        "notes": null,
+        "number": 6,
+        "radical": "亅",
+        "radvar": null,
+        "strokes": 1
+    },
+    {
+        "meaning": "two",
+        "names": "に",
+        "notes": null,
+        "number": 7,
+        "radical": "二",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "lid",
+        "names": "けいさん・けいさんかんむり・なべぶた",
+        "notes": null,
+        "number": 8,
+        "radical": "亠",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "man, human",
+        "names": "ひと・にんべん・ひとやね・ひとかんむり・ひとがしら",
+        "notes": "Also 𠆢 when at top (ひとやね, ひとかんむり or ひとがしら).",
+        "number": 9,
+        "radical": "人",
+        "radvar": "亻",
+        "strokes": 2
+    },
+    {
+        "meaning": "legs",
+        "names": "にんにょう・ひとあし",
+        "notes": null,
+        "number": 10,
+        "radical": "儿",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "enter",
+        "names": "いる・にゅう・いりがしら・いりやね",
+        "notes": null,
+        "number": 11,
+        "radical": "入",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "eight",
+        "names": "はち・は・はちがしら",
+        "notes": null,
+        "number": 12,
+        "radical": "八",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "open country",
+        "names": "けいがまえ・まきがまえ・どうがまえ・えんがまえ",
+        "notes": null,
+        "number": 13,
+        "radical": "冂",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "cover",
+        "names": "わかんむり",
+        "notes": null,
+        "number": 14,
+        "radical": "冖",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "ice",
+        "names": "にすい",
+        "notes": null,
+        "number": 15,
+        "radical": "冫",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "table",
+        "names": "つくえ・きにょう・つくえきにょう・かぜかんむり・かぜがまえ・かざがまえ",
+        "notes": null,
+        "number": 16,
+        "radical": "几",
+        "radvar": "𠘨",
+        "strokes": 2
+    },
+    {
+        "meaning": "container, open mouth",
+        "names": "かんにょう・うけばこ・かんがまえ",
+        "notes": null,
+        "number": 17,
+        "radical": "凵",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "knife, sword",
+        "names": "かたな・りっとう",
+        "notes": null,
+        "number": 18,
+        "radical": "刀",
+        "radvar": "刂",
+        "strokes": 2
+    },
+    {
+        "meaning": "power, force",
+        "names": "ちから・りきづくり",
+        "notes": null,
+        "number": 19,
+        "radical": "力",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "wrap, embrace",
+        "names": "つつみがまえ・くがまえ",
+        "notes": null,
+        "number": 20,
+        "radical": "勹",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "spoon",
+        "names": "さじ・さじのひ・さじづくり・ひ",
+        "notes": null,
+        "number": 21,
+        "radical": "匕",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "box",
+        "names": "はこ・はこがまえ",
+        "notes": null,
+        "number": 22,
+        "radical": "匚",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "hiding enclosure",
+        "names": "かくしがまえ",
+        "notes": null,
+        "number": 23,
+        "radical": "匸",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "ten, complete",
+        "names": "じゅう・じゅうへん",
+        "notes": null,
+        "number": 24,
+        "radical": "十",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "divination",
+        "names": "ぼく・ぼくづくり・ぼくのと・と・うらない",
+        "notes": null,
+        "number": 25,
+        "radical": "卜",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "kneel",
+        "names": "ふし・ふしづくり・わりふ",
+        "notes": null,
+        "number": 26,
+        "radical": "卩",
+        "radvar": "㔾",
+        "strokes": 2
+    },
+    {
+        "meaning": "cliff",
+        "names": "がんだれ",
+        "notes": null,
+        "number": 27,
+        "radical": "厂",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "private",
+        "names": "む",
+        "notes": null,
+        "number": 28,
+        "radical": "厶",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "right hand",
+        "names": "また",
+        "notes": null,
+        "number": 29,
+        "radical": "又",
+        "radvar": null,
+        "strokes": 2
+    },
+    {
+        "meaning": "mouth, opening",
+        "names": "くち・くちへん",
+        "notes": null,
+        "number": 30,
+        "radical": "口",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "enclosure",
+        "names": "くに・くにがまえ",
+        "notes": null,
+        "number": 31,
+        "radical": "囗",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "earth",
+        "names": "つち・つちへん・どへん",
+        "notes": null,
+        "number": 32,
+        "radical": "土",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "scholar, bachelor",
+        "names": "さむらい",
+        "notes": null,
+        "number": 33,
+        "radical": "士",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "go slowly, winter",
+        "names": "ちかんむり・ふゆがしら",
+        "notes": null,
+        "number": 34,
+        "radical": "夂",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "go slowly",
+        "names": "なつあし・すいにょう",
+        "notes": null,
+        "number": 35,
+        "radical": "夊",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "evening, sunset",
+        "names": "ゆう・ゆうべ・た",
+        "notes": null,
+        "number": 36,
+        "radical": "夕",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "big, very",
+        "names": "だい・おおきい",
+        "notes": null,
+        "number": 37,
+        "radical": "大",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "woman, female",
+        "names": "おんな・おんなへん",
+        "notes": null,
+        "number": 38,
+        "radical": "女",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "child, seed",
+        "names": "こ・こへん",
+        "notes": null,
+        "number": 39,
+        "radical": "子",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "roof",
+        "names": "うかんむり",
+        "notes": null,
+        "number": 40,
+        "radical": "宀",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "thumb, inch",
+        "names": "すん・すんづくり",
+        "notes": null,
+        "number": 41,
+        "radical": "寸",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "small, insignificant",
+        "names": "しょう・ちいさい・なおがしら・つ",
+        "notes": "Also ⺍ (called つ because it looks like katakana ツ).",
+        "number": 42,
+        "radical": "小",
+        "radvar": "⺌",
+        "strokes": 3
+    },
+    {
+        "meaning": "lame",
+        "names": "まげあし・だいのまげあし・あう・おうにょう",
+        "notes": null,
+        "number": 43,
+        "radical": "尢",
+        "radvar": "尣",
+        "strokes": 3
+    },
+    {
+        "meaning": "corpse",
+        "names": "しかばね・かばね・かばねだれ",
+        "notes": null,
+        "number": 44,
+        "radical": "尸",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "sprout",
+        "names": "くさのめ・めばえ・てつ",
+        "notes": null,
+        "number": 45,
+        "radical": "屮",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "mountain",
+        "names": "やま・やまへん・やまかんむり",
+        "notes": null,
+        "number": 46,
+        "radical": "山",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "river",
+        "names": "かわ・まがりがわ・さんぼんがわ",
+        "notes": "Also 巜.",
+        "number": 47,
+        "radical": "巛",
+        "radvar": "川",
+        "strokes": 3
+    },
+    {
+        "meaning": "work",
+        "names": "こう・たくみ・たくみへん・え",
+        "notes": null,
+        "number": 48,
+        "radical": "工",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "oneself",
+        "names": "おのれ・き・つちのと",
+        "notes": null,
+        "number": 49,
+        "radical": "己",
+        "radvar": "巳",
+        "strokes": 3
+    },
+    {
+        "meaning": "turban, scarf",
+        "names": "はば・はばへん・きんべん",
+        "notes": null,
+        "number": 50,
+        "radical": "巾",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "pestle",
+        "names": "かん・いちじゅう・ほす・ひる・たてかん",
+        "notes": null,
+        "number": 51,
+        "radical": "干",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "short, tiny",
+        "names": "いとがしら・よう",
+        "notes": null,
+        "number": 52,
+        "radical": "幺",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "house on cliff",
+        "names": "まだれ",
+        "notes": null,
+        "number": 53,
+        "radical": "广",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "long stride",
+        "names": "えんにょう・いんにょう",
+        "notes": null,
+        "number": 54,
+        "radical": "廴",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "two hands, twenty",
+        "names": "にじゅう・にじゅうあし・こまぬき",
+        "notes": null,
+        "number": 55,
+        "radical": "廾",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "shoot, arrow",
+        "names": "しきがまえ・いぐるみ",
+        "notes": null,
+        "number": 56,
+        "radical": "弋",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "bow",
+        "names": "ゆみ・ゆみへん",
+        "notes": null,
+        "number": 57,
+        "radical": "弓",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "pig snout",
+        "names": "けい・けいがしら・いのこがしら",
+        "notes": null,
+        "number": 58,
+        "radical": "彑",
+        "radvar": "彐",
+        "strokes": 3
+    },
+    {
+        "meaning": "bristle, beard",
+        "names": "さん・さんづくり",
+        "notes": null,
+        "number": 59,
+        "radical": "彡",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "step",
+        "names": "ぎょうにんべん",
+        "notes": null,
+        "number": 60,
+        "radical": "彳",
+        "radvar": null,
+        "strokes": 3
+    },
+    {
+        "meaning": "heart",
+        "names": "こころ・したごころ・りっしんべん",
+        "notes": "Also 㣺 when at bottom (したごころ).",
+        "number": 61,
+        "radical": "心",
+        "radvar": "忄",
+        "strokes": 4
+    },
+    {
+        "meaning": "spear, halberd",
+        "names": "ほこ・ほこづくり・ほこがまえ・かのほこ",
+        "notes": null,
+        "number": 62,
+        "radical": "戈",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "door, house",
+        "names": "と・とだれ・とかんむり",
+        "notes": "Simplified Chinese: 户.",
+        "number": 63,
+        "radical": "戶",
+        "radvar": "戸",
+        "strokes": 4
+    },
+    {
+        "meaning": "hand",
+        "names": "て・てへん",
+        "notes": null,
+        "number": 64,
+        "radical": "手",
+        "radvar": "扌",
+        "strokes": 4
+    },
+    {
+        "meaning": "branch",
+        "names": "し・しにょう・えだにょう・じゅうまた",
+        "notes": null,
+        "number": 65,
+        "radical": "支",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "rap",
+        "names": "ぼくにょう・ぼくづくり・とまた・のぶん・しぶん",
+        "notes": null,
+        "number": 66,
+        "radical": "攴",
+        "radvar": "攵",
+        "strokes": 4
+    },
+    {
+        "meaning": "script, literature",
+        "names": "ぶん・ぶんにょう",
+        "notes": null,
+        "number": 67,
+        "radical": "文",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "dipper",
+        "names": "と・とます・ますづくり",
+        "notes": null,
+        "number": 68,
+        "radical": "斗",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "axe",
+        "names": "おの・おのづくり・きん",
+        "notes": null,
+        "number": 69,
+        "radical": "斤",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "square",
+        "names": "ほう・ほうへん・かた・かたへん",
+        "notes": null,
+        "number": 70,
+        "radical": "方",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "perish",
+        "names": "む・むにょう・すでのつくり",
+        "notes": "Always uses its variant form as a component in other kanji and has 5 strokes in Jōyō and Jinmeiyō kanji (and in 漑), and 4 as a component in other kanji.",
+        "number": 71,
+        "radical": "无",
+        "radvar": "旡",
+        "strokes": 4
+    },
+    {
+        "meaning": "sun, day",
+        "names": "ひ・ひへん・にち・にちへん",
+        "notes": null,
+        "number": 72,
+        "radical": "日",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "say",
+        "names": "ひらび・いわく",
+        "notes": null,
+        "number": 73,
+        "radical": "曰",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "moon, month",
+        "names": "つき・つきへん",
+        "notes": null,
+        "number": 74,
+        "radical": "月",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "tree",
+        "names": "き・きへん",
+        "notes": null,
+        "number": 75,
+        "radical": "木",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "lack, yawn",
+        "names": "あくび・けんづくり・かける・けつ",
+        "notes": null,
+        "number": 76,
+        "radical": "欠",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "stop",
+        "names": "とまる・とめる・とめへん",
+        "notes": null,
+        "number": 77,
+        "radical": "止",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "death, decay",
+        "names": "がつ・がってん・がつへん・かばね・かばねへん・いちたへん",
+        "notes": null,
+        "number": 78,
+        "radical": "歹",
+        "radvar": "歺",
+        "strokes": 4
+    },
+    {
+        "meaning": "weapon, lance",
+        "names": "るまた・ほこづくり",
+        "notes": null,
+        "number": 79,
+        "radical": "殳",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "mother, do not",
+        "names": "なし・なかれ・はは・ははのかん",
+        "notes": null,
+        "number": 80,
+        "radical": "毋",
+        "radvar": "母",
+        "strokes": 4
+    },
+    {
+        "meaning": "compare, compete",
+        "names": "ひ・くらべる・ならびひ",
+        "notes": null,
+        "number": 81,
+        "radical": "比",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "fur, hair",
+        "names": "け",
+        "notes": null,
+        "number": 82,
+        "radical": "毛",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "clan",
+        "names": "うじ",
+        "notes": null,
+        "number": 83,
+        "radical": "氏",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "steam, breath",
+        "names": "きがまえ",
+        "notes": null,
+        "number": 84,
+        "radical": "气",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "water",
+        "names": "みず・したみず・さんずい",
+        "notes": "Also 氺 when at bottom (したみず).",
+        "number": 85,
+        "radical": "水",
+        "radvar": "氵",
+        "strokes": 4
+    },
+    {
+        "meaning": "fire",
+        "names": "ひ・ひへん・れっか・れんが",
+        "notes": null,
+        "number": 86,
+        "radical": "火",
+        "radvar": "灬",
+        "strokes": 4
+    },
+    {
+        "meaning": "claw",
+        "names": "つめ・つめがしら・つめかんむり・そうにょう・のつ",
+        "notes": "Also 爫.",
+        "number": 87,
+        "radical": "爪",
+        "radvar": "爫",
+        "strokes": 4
+    },
+    {
+        "meaning": "father",
+        "names": "ちち",
+        "notes": null,
+        "number": 88,
+        "radical": "父",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "mix, twine, cross",
+        "names": "こう・めめ",
+        "notes": null,
+        "number": 89,
+        "radical": "爻",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "split wood",
+        "names": "しょうへん",
+        "notes": null,
+        "number": 90,
+        "radical": "爿",
+        "radvar": "丬",
+        "strokes": 4
+    },
+    {
+        "meaning": "slice",
+        "names": "かた・かたへん",
+        "notes": null,
+        "number": 91,
+        "radical": "片",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "fang",
+        "names": "きば・きばへん",
+        "notes": "Has 4 strokes as itself, 5 as a component in Jōyō kanji (and in 冴), and 4 as a component in other kanji.",
+        "number": 92,
+        "radical": "牙",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "cow",
+        "names": "うし・うしへん",
+        "notes": "Also ⺧.",
+        "number": 93,
+        "radical": "牛",
+        "radvar": "牜",
+        "strokes": 4
+    },
+    {
+        "meaning": "dog",
+        "names": "いぬ・けものへん",
+        "notes": null,
+        "number": 94,
+        "radical": "犬",
+        "radvar": "犭",
+        "strokes": 4
+    },
+    {
+        "meaning": "dark, profound",
+        "names": "げん",
+        "notes": null,
+        "number": 95,
+        "radical": "玄",
+        "radvar": null,
+        "strokes": 4
+    },
+    {
+        "meaning": "jade, king",
+        "names": "たま・たまへん・おう・おうへん・あうさま",
+        "notes": "Also ⺩ (たまへん).",
+        "number": 96,
+        "radical": "玉",
+        "radvar": "王",
+        "strokes": 4
+    },
+    {
+        "meaning": "melon",
+        "names": "うり",
+        "notes": null,
+        "number": 97,
+        "radical": "瓜",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "tile",
+        "names": "かわら",
+        "notes": null,
+        "number": 98,
+        "radical": "瓦",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "sweet",
+        "names": "あまい・かん",
+        "notes": null,
+        "number": 99,
+        "radical": "甘",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "life",
+        "names": "うむ・うまれる・いきる",
+        "notes": null,
+        "number": 100,
+        "radical": "生",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "use",
+        "names": "もちいる・よう",
+        "notes": null,
+        "number": 101,
+        "radical": "用",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "field",
+        "names": "た・たへん",
+        "notes": null,
+        "number": 102,
+        "radical": "田",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "bolt of cloth",
+        "names": "ひき・ひきへん",
+        "notes": null,
+        "number": 103,
+        "radical": "疋",
+        "radvar": "𤴔",
+        "strokes": 5
+    },
+    {
+        "meaning": "sickness",
+        "names": "やまい・やまいだれ",
+        "notes": null,
+        "number": 104,
+        "radical": "疒",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "footsteps",
+        "names": "はつがしら",
+        "notes": null,
+        "number": 105,
+        "radical": "癶",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "white",
+        "names": "しろ・しろへん",
+        "notes": null,
+        "number": 106,
+        "radical": "白",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "skin",
+        "names": "かわ・けがわ・ひのかわ",
+        "notes": null,
+        "number": 107,
+        "radical": "皮",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "dish",
+        "names": "さら",
+        "notes": null,
+        "number": 108,
+        "radical": "皿",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "eye",
+        "names": "め・めへん・よこめ",
+        "notes": null,
+        "number": 109,
+        "radical": "目",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "spear",
+        "names": "ほこ・ほこへん・むのほこ",
+        "notes": null,
+        "number": 110,
+        "radical": "矛",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "arrow",
+        "names": "や・やへん",
+        "notes": null,
+        "number": 111,
+        "radical": "矢",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "stone",
+        "names": "いし・いしへん",
+        "notes": null,
+        "number": 112,
+        "radical": "石",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "sign",
+        "names": "しめす・しめすへん",
+        "notes": "Also ⺬.",
+        "number": 113,
+        "radical": "示",
+        "radvar": "礻",
+        "strokes": 5
+    },
+    {
+        "meaning": "track",
+        "names": "あしあと・ぐうのあし",
+        "notes": null,
+        "number": 114,
+        "radical": "禸",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "grain",
+        "names": "のぎ・のぎへん",
+        "notes": null,
+        "number": 115,
+        "radical": "禾",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "cave",
+        "names": "あな・あなかんむり",
+        "notes": null,
+        "number": 116,
+        "radical": "穴",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "stand, erect",
+        "names": "たつ・たつへん",
+        "notes": null,
+        "number": 117,
+        "radical": "立",
+        "radvar": null,
+        "strokes": 5
+    },
+    {
+        "meaning": "bamboo",
+        "names": "たけ・たけかんむり",
+        "notes": null,
+        "number": 118,
+        "radical": "竹",
+        "radvar": "⺮",
+        "strokes": 6
+    },
+    {
+        "meaning": "rice",
+        "names": "こめ・こめへん",
+        "notes": null,
+        "number": 119,
+        "radical": "米",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "silk",
+        "names": "いと・いとへん",
+        "notes": "Simplified Chinese: 纟.",
+        "number": 120,
+        "radical": "糸",
+        "radvar": "糹",
+        "strokes": 6
+    },
+    {
+        "meaning": "jar",
+        "names": "ほとぎ・ほとぎへん",
+        "notes": null,
+        "number": 121,
+        "radical": "缶",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "net",
+        "names": "あみ・あみがしら・あみめ・よこめ・よんかしら",
+        "notes": null,
+        "number": 122,
+        "radical": "网",
+        "radvar": "罒",
+        "strokes": 6
+    },
+    {
+        "meaning": "sheep",
+        "names": "ひつじ・ひつじへん・ひつじかんむり",
+        "notes": "Also ⺶ (ひつじへん).",
+        "number": 123,
+        "radical": "羊",
+        "radvar": "𦍌",
+        "strokes": 6
+    },
+    {
+        "meaning": "feather",
+        "names": "はね",
+        "notes": null,
+        "number": 124,
+        "radical": "羽",
+        "radvar": "羽",
+        "strokes": 6
+    },
+    {
+        "meaning": "old",
+        "names": "おい・おいかんむり・おいがしら",
+        "notes": null,
+        "number": 125,
+        "radical": "老",
+        "radvar": "耂",
+        "strokes": 6
+    },
+    {
+        "meaning": "beard",
+        "names": "しかし・しかして・しこうして",
+        "notes": null,
+        "number": 126,
+        "radical": "而",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "plow",
+        "names": "すき・すきへん・らいすき・らいへん",
+        "notes": null,
+        "number": 127,
+        "radical": "耒",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "ear",
+        "names": "みみ・みみへん",
+        "notes": null,
+        "number": 128,
+        "radical": "耳",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "brush",
+        "names": "ふで・ふでづくり・ふでがしら",
+        "notes": "Also ⺻ (ふでがしら).",
+        "number": 129,
+        "radical": "聿",
+        "radvar": "⺺",
+        "strokes": 6
+    },
+    {
+        "meaning": "meat",
+        "names": "にく・にくづき",
+        "notes": null,
+        "number": 130,
+        "radical": "肉",
+        "radvar": "⺼",
+        "strokes": 6
+    },
+    {
+        "meaning": "minster, official",
+        "names": "しん・おみ",
+        "notes": null,
+        "number": 131,
+        "radical": "臣",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "self",
+        "names": "みずから",
+        "notes": null,
+        "number": 132,
+        "radical": "自",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "arrive",
+        "names": "いたる",
+        "notes": null,
+        "number": 133,
+        "radical": "至",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "mortar",
+        "names": "うす",
+        "notes": null,
+        "number": 134,
+        "radical": "臼",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "tongue",
+        "names": "した・したへん",
+        "notes": null,
+        "number": 135,
+        "radical": "舌",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "opposite",
+        "names": "ます・まいあし",
+        "notes": "Has 6 strokes as itself, 7 as a component in Jōyō and Jinmeiyō kanji and 6 as a component in other kanji.",
+        "number": 136,
+        "radical": "舛",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "boat",
+        "names": "ふね・ふねへん",
+        "notes": null,
+        "number": 137,
+        "radical": "舟",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "stopping",
+        "names": "うしとら・こん・こんづくり・ねづくり",
+        "notes": null,
+        "number": 138,
+        "radical": "艮",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "colour, prettiness",
+        "names": "いろ",
+        "notes": null,
+        "number": 139,
+        "radical": "色",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "grass",
+        "names": "くさ・くさかんむり",
+        "notes": "Also 䒑 and rarely 艹 and 艹.",
+        "number": 140,
+        "radical": "艸",
+        "radvar": "艹",
+        "strokes": 6
+    },
+    {
+        "meaning": "tiger, tiger stripes",
+        "names": "とら・とらがしら・とらかんむり",
+        "notes": "とらだれ would be more accurate.",
+        "number": 141,
+        "radical": "虍",
+        "radvar": "虎",
+        "strokes": 6
+    },
+    {
+        "meaning": "insect",
+        "names": "むし・むしへん",
+        "notes": null,
+        "number": 142,
+        "radical": "虫",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "blood",
+        "names": "ち・ちへん",
+        "notes": null,
+        "number": 143,
+        "radical": "血",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "go, do",
+        "names": "ぎょう・ぎょうがまえ・いく・ゆきがまえ",
+        "notes": null,
+        "number": 144,
+        "radical": "行",
+        "radvar": null,
+        "strokes": 6
+    },
+    {
+        "meaning": "clothes",
+        "names": "ころも・ころもへん",
+        "notes": null,
+        "number": 145,
+        "radical": "衣",
+        "radvar": "衤",
+        "strokes": 6
+    },
+    {
+        "meaning": "west",
+        "names": "にし・かなめのかしら・おおいかんむり",
+        "notes": "Also 襾.",
+        "number": 146,
+        "radical": "西",
+        "radvar": "覀",
+        "strokes": 6
+    },
+    {
+        "meaning": "see",
+        "names": "みる",
+        "notes": null,
+        "number": 147,
+        "radical": "見",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "horn",
+        "names": "つの・かく・つのへん",
+        "notes": null,
+        "number": 148,
+        "radical": "角",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "speech",
+        "names": "いう・げん・ごんべん・ことば",
+        "notes": "Simplified Chinese: 讠.",
+        "number": 149,
+        "radical": "言",
+        "radvar": "訁",
+        "strokes": 7
+    },
+    {
+        "meaning": "valley",
+        "names": "たに・たにへん",
+        "notes": null,
+        "number": 150,
+        "radical": "谷",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "bean",
+        "names": "まめ・まめへん",
+        "notes": null,
+        "number": 151,
+        "radical": "豆",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "pig",
+        "names": "いのこ・いのこへん・ぶた",
+        "notes": null,
+        "number": 152,
+        "radical": "豕",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "cat, badger",
+        "names": "むじな・むじなへん",
+        "notes": null,
+        "number": 153,
+        "radical": "豸",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "shell",
+        "names": "かい・かいへん・こがい",
+        "notes": "Simplified Chinese: 贝.",
+        "number": 154,
+        "radical": "貝",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "red, naked",
+        "names": "あか・あかへん",
+        "notes": null,
+        "number": 155,
+        "radical": "赤",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "run",
+        "names": "はしる・そうにょう",
+        "notes": null,
+        "number": 156,
+        "radical": "走",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "foot",
+        "names": "あし・あしへん",
+        "notes": null,
+        "number": 157,
+        "radical": "足",
+        "radvar": "𧾷",
+        "strokes": 7
+    },
+    {
+        "meaning": "body",
+        "names": "み・みへん",
+        "notes": null,
+        "number": 158,
+        "radical": "身",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "cart, car",
+        "names": "くるま・くるまへん",
+        "notes": "Simplified Chinese: 车.",
+        "number": 159,
+        "radical": "車",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "bitter",
+        "names": "しん・からい",
+        "notes": null,
+        "number": 160,
+        "radical": "辛",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "morning",
+        "names": "たつ・しんのたつ",
+        "notes": null,
+        "number": 161,
+        "radical": "辰",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "walk",
+        "names": "しんにょう・しんにゅう",
+        "notes": "The old form is 辶.",
+        "number": 162,
+        "radical": "辵",
+        "radvar": "辶",
+        "strokes": 3
+    },
+    {
+        "meaning": "town",
+        "names": "おおざと・おおざとづくり・ゆう",
+        "notes": null,
+        "number": 163,
+        "radical": "邑",
+        "radvar": "⻏",
+        "strokes": 7
+    },
+    {
+        "meaning": "wine, alcohol",
+        "names": "とり・とりへん・ひよみのとり・さけのとり",
+        "notes": null,
+        "number": 164,
+        "radical": "酉",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "divide, distinguish, choose",
+        "names": "のごめ・のごめへん",
+        "notes": null,
+        "number": 165,
+        "radical": "釆",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "village, mile",
+        "names": "さと・さとへん",
+        "notes": null,
+        "number": 166,
+        "radical": "里",
+        "radvar": null,
+        "strokes": 7
+    },
+    {
+        "meaning": "metal, gold",
+        "names": "かね・かねへん",
+        "notes": "Simplified Chinese: 钅.",
+        "number": 167,
+        "radical": "金",
+        "radvar": "釒",
+        "strokes": 8
+    },
+    {
+        "meaning": "long, grow",
+        "names": "ながい",
+        "notes": "Simplified Chinese: 长.",
+        "number": 168,
+        "radical": "長",
+        "radvar": "镸",
+        "strokes": 8
+    },
+    {
+        "meaning": "gate",
+        "names": "もん・もんがまえ・かどがまえ",
+        "notes": "Simplified Chinese: 门.",
+        "number": 169,
+        "radical": "門",
+        "radvar": null,
+        "strokes": 8
+    },
+    {
+        "meaning": "mound, dam",
+        "names": "こざと・こざとへん・おか・ぎふのふ",
+        "notes": null,
+        "number": 170,
+        "radical": "阜",
+        "radvar": "⻖",
+        "strokes": 8
+    },
+    {
+        "meaning": "slave, capture",
+        "names": "たい・たいづくり・れいづくり・れいのつくり",
+        "notes": null,
+        "number": 171,
+        "radical": "隶",
+        "radvar": null,
+        "strokes": 8
+    },
+    {
+        "meaning": "small bird",
+        "names": "ふるとり",
+        "notes": null,
+        "number": 172,
+        "radical": "隹",
+        "radvar": null,
+        "strokes": 8
+    },
+    {
+        "meaning": "rain",
+        "names": "あめ・あめかんむり・あまかんむり",
+        "notes": null,
+        "number": 173,
+        "radical": "雨",
+        "radvar": "⻗",
+        "strokes": 8
+    },
+    {
+        "meaning": "blue",
+        "names": "あお・あおへん",
+        "notes": null,
+        "number": 174,
+        "radical": "青",
+        "radvar": "靑",
+        "strokes": 8
+    },
+    {
+        "meaning": "wrong",
+        "names": "あらず",
+        "notes": null,
+        "number": 175,
+        "radical": "非",
+        "radvar": null,
+        "strokes": 8
+    },
+    {
+        "meaning": "face",
+        "names": "めん",
+        "notes": null,
+        "number": 176,
+        "radical": "面",
+        "radvar": null,
+        "strokes": 9
+    },
+    {
+        "meaning": "leather, rawhide",
+        "names": "かわ・かくのかわ・かわへん・つくりがわ",
+        "notes": null,
+        "number": 177,
+        "radical": "革",
+        "radvar": null,
+        "strokes": 9
+    },
+    {
+        "meaning": "tanned leather",
+        "names": "なめしがわ",
+        "notes": "Simplified Chinese: 韦.",
+        "number": 178,
+        "radical": "韋",
+        "radvar": null,
+        "strokes": 10
+    },
+    {
+        "meaning": "leek",
+        "names": "にら",
+        "notes": null,
+        "number": 179,
+        "radical": "韭",
+        "radvar": null,
+        "strokes": 9
+    },
+    {
+        "meaning": "sound",
+        "names": "おと",
+        "notes": null,
+        "number": 180,
+        "radical": "音",
+        "radvar": null,
+        "strokes": 9
+    },
+    {
+        "meaning": "leaf",
+        "names": "おおがい・いちのかい",
+        "notes": "Simplified Chinese: 页.",
+        "number": 181,
+        "radical": "頁",
+        "radvar": null,
+        "strokes": 9
+    },
+    {
+        "meaning": "wind",
+        "names": "かぜ",
+        "notes": "Simplified Chinese: 风.",
+        "number": 182,
+        "radical": "風",
+        "radvar": null,
+        "strokes": 9
+    },
+    {
+        "meaning": "fly",
+        "names": "とぶ",
+        "notes": "Simplified Chinese: 飞.",
+        "number": 183,
+        "radical": "飛",
+        "radvar": null,
+        "strokes": 9
+    },
+    {
+        "meaning": "eat, food",
+        "names": "しょく・しょくへん",
+        "notes": "Also 𩙿. Simplified Chinese: 饣.",
+        "number": 184,
+        "radical": "食",
+        "radvar": "飠",
+        "strokes": 9
+    },
+    {
+        "meaning": "head",
+        "names": "くび",
+        "notes": null,
+        "number": 185,
+        "radical": "首",
+        "radvar": null,
+        "strokes": 9
+    },
+    {
+        "meaning": "fragrance",
+        "names": "か・こう・かおり・においこう",
+        "notes": null,
+        "number": 186,
+        "radical": "香",
+        "radvar": null,
+        "strokes": 9
+    },
+    {
+        "meaning": "horse",
+        "names": "うま・うまへん",
+        "notes": "Simplified Chinese: 马.",
+        "number": 187,
+        "radical": "馬",
+        "radvar": null,
+        "strokes": 10
+    },
+    {
+        "meaning": "bone",
+        "names": "ほね・ほねへん",
+        "notes": null,
+        "number": 188,
+        "radical": "骨",
+        "radvar": null,
+        "strokes": 10
+    },
+    {
+        "meaning": "tall",
+        "names": "たかい",
+        "notes": null,
+        "number": 189,
+        "radical": "高",
+        "radvar": null,
+        "strokes": 10
+    },
+    {
+        "meaning": "long hair",
+        "names": "かみがしら・かみかんむり",
+        "notes": null,
+        "number": 190,
+        "radical": "髟",
+        "radvar": null,
+        "strokes": 10
+    },
+    {
+        "meaning": "fight",
+        "names": "たたかいがまえ・とうがまえ",
+        "notes": null,
+        "number": 191,
+        "radical": "鬥",
+        "radvar": null,
+        "strokes": 10
+    },
+    {
+        "meaning": "herbs, sacrificial wine",
+        "names": "ちょう・においざけ・かおりぐさ",
+        "notes": null,
+        "number": 192,
+        "radical": "鬯",
+        "radvar": null,
+        "strokes": 10
+    },
+    {
+        "meaning": "tripod, cauldron",
+        "names": "れき・れきのかなえ",
+        "notes": null,
+        "number": 193,
+        "radical": "鬲",
+        "radvar": null,
+        "strokes": 10
+    },
+    {
+        "meaning": "ghost, demon",
+        "names": "おに・きにょう",
+        "notes": null,
+        "number": 194,
+        "radical": "鬼",
+        "radvar": null,
+        "strokes": 10
+    },
+    {
+        "meaning": "fish",
+        "names": "うお・うおへん・さかな",
+        "notes": "Simplified Chinese: 鱼.",
+        "number": 195,
+        "radical": "魚",
+        "radvar": null,
+        "strokes": 11
+    },
+    {
+        "meaning": "bird",
+        "names": "とり・とりへん",
+        "notes": "Simplified Chinese: 鸟.",
+        "number": 196,
+        "radical": "鳥",
+        "radvar": null,
+        "strokes": 11
+    },
+    {
+        "meaning": "salt",
+        "names": "ろ・しお・しおへん",
+        "notes": null,
+        "number": 197,
+        "radical": "鹵",
+        "radvar": null,
+        "strokes": 11
+    },
+    {
+        "meaning": "deer",
+        "names": "しか・しかへん",
+        "notes": null,
+        "number": 198,
+        "radical": "鹿",
+        "radvar": null,
+        "strokes": 11
+    },
+    {
+        "meaning": "wheat",
+        "names": "むぎ・ぼく・ばくにょう",
+        "notes": null,
+        "number": 199,
+        "radical": "麥",
+        "radvar": "麦",
+        "strokes": 11
+    },
+    {
+        "meaning": "hemp, flax",
+        "names": "あさ・あさかんむり",
+        "notes": "あさだれ would be more accurate.",
+        "number": 200,
+        "radical": "麻",
+        "radvar": null,
+        "strokes": 11
+    },
+    {
+        "meaning": "yellow",
+        "names": "き・きいろ",
+        "notes": null,
+        "number": 201,
+        "radical": "黄",
+        "radvar": "黃",
+        "strokes": 11
+    },
+    {
+        "meaning": "millet",
+        "names": "きび",
+        "notes": null,
+        "number": 202,
+        "radical": "黍",
+        "radvar": null,
+        "strokes": 12
+    },
+    {
+        "meaning": "black",
+        "names": "くろ・くろい・くろへん",
+        "notes": null,
+        "number": 203,
+        "radical": "黑",
+        "radvar": "黒",
+        "strokes": 12
+    },
+    {
+        "meaning": "embroidery, needlework",
+        "names": "ち・ぬいとり・ふつ・ふつへん",
+        "notes": null,
+        "number": 204,
+        "radical": "黹",
+        "radvar": null,
+        "strokes": 12
+    },
+    {
+        "meaning": "frog, amphibian",
+        "names": "おおがえる・べん・ぼう・ひきがえる",
+        "notes": "Simplified Chinese: 黾.",
+        "number": 205,
+        "radical": "黽",
+        "radvar": null,
+        "strokes": 13
+    },
+    {
+        "meaning": "tripod",
+        "names": "かなえ・てい",
+        "notes": null,
+        "number": 206,
+        "radical": "鼎",
+        "radvar": null,
+        "strokes": 13
+    },
+    {
+        "meaning": "drum",
+        "names": "つづみ",
+        "notes": null,
+        "number": 207,
+        "radical": "鼓",
+        "radvar": null,
+        "strokes": 13
+    },
+    {
+        "meaning": "rat, mouse",
+        "names": "ねずみ・ねずみへん",
+        "notes": null,
+        "number": 208,
+        "radical": "鼠",
+        "radvar": null,
+        "strokes": 13
+    },
+    {
+        "meaning": "nose",
+        "names": "はな・はなへん",
+        "notes": null,
+        "number": 209,
+        "radical": "鼻",
+        "radvar": null,
+        "strokes": 14
+    },
+    {
+        "meaning": "even, uniformly",
+        "names": "さい・せい・ととのえる",
+        "notes": "Simplified Chinese: 齐.",
+        "number": 210,
+        "radical": "齊",
+        "radvar": "斉",
+        "strokes": 14
+    },
+    {
+        "meaning": "tooth, molar",
+        "names": "は・はへん",
+        "notes": "Simplified Chinese: 齿.",
+        "number": 211,
+        "radical": "齒",
+        "radvar": "歯",
+        "strokes": 15
+    },
+    {
+        "meaning": "dragon",
+        "names": "りゅう・たつ",
+        "notes": "Simplified Chinese: 龙.",
+        "number": 212,
+        "radical": "龍",
+        "radvar": "竜",
+        "strokes": 16
+    },
+    {
+        "meaning": "turtle, tortoise",
+        "names": "かめ",
+        "notes": "Simplified Chinese: 龟.",
+        "number": 213,
+        "radical": "龜",
+        "radvar": "亀",
+        "strokes": 16
+    },
+    {
+        "meaning": "flute",
+        "names": "やく・やくのふえ",
+        "notes": null,
+        "number": 214,
+        "radical": "龠",
+        "radvar": null,
+        "strokes": 17
+    }
+]

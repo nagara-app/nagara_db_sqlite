@@ -1,42 +1,45 @@
 # Tanukiwi Database (TKDB)
 
+## What is it?
 
-## Prerequisites
+Tanukiwi Database (TKDB) is an open-source database in JSON format which consists of Japanese words, kanji and radical. The data itself is coming from several sources that were carefully selected.
 
-### Download input files
+You can use it for any projects, but appropiate attribution to this project and the source data must be given.
 
-1. Download the following files:
+## Why was it created?
 
-| File                | Link                                                                     |
-| ------------------- | ------------------------------------------------------------------------ |
-| JMdict.gz           | http://ftp.edrdg.org/pub/Nihongo//JMdict.gz                              |
-| JMdictFurigana.json | https://github.com/Doublevil/JmdictFurigana/releases                     |
-| kanjidic2.xml.gz    | http://nihongo.monash.edu/kanjidic2/kanjidic2.xml.gz                     |
-| kradzip.zip         | http://ftp.edrdg.org/pub/Nihongo/kradzip.zip                             |
-| kanjidb.sqlite      | https://github.com/mifunetoshiro/kanjium/blob/master/data/kanjidb.sqlite |
+While there are many great Japanese dictionary sources, they come in different formats and focus on either vocabulary or kanji. This project aims to provide a single comprehensive database in which words, kanji, and radicals are related.
 
-2. Store the files `JMdict.gz`, `JmdictFurigana.json` and `kanjidic2.xml` files in the `input ` directory.
-3. Unzip the `kradzip.zip` and store the files `kradfile`, `kradfile2` and `radkfilex` in the `input` directory.
-4. Open the `kanjidb.sqlite` db with [SQLite Browser](https://sqlitebrowser.org/) and export the tables `antonyms`, `lookalikes`, `radicals`, `radvars`, and `synonyms` as `.json` files. Store the files in the `input` directory.
+## How can I use it?
 
-### Create output files
+You have to build the database by yourself by running:
 
-1. Run the script `npm run createOutput`. This will run following scripts:
+```
+npm run create
+```
 
-| Script              | Description                                   | 
-| ------------------- | --------------------------------------------- |
-| `npm run jmdict`    | Creates the `jmdict.json` file in `output`    |
-| `npm run kanjidic2` | Creates the `kanjidic2.json` file in `output` |
-| `npm run radkfilex` | Creates the `kradfilex.json` file in `output` |
-| `npm run kradfilex` | Creates the `radkfilex.json` file in `output` |
-| `npm run radicalx`  | Creates the `radicalx.json` file in `output`  |
-| `npm run tanosKanji`| Creates the `tanosKanji.json` file in `output`|
+This command includes 3 main steps.
 
-### Initiate the postgres database
+1. Downloading all files from sources
+2. Converting all files to JSON
+3. Processing all files into a single JSON file called `tkdb.json` stored under [output/tkdb.json](./output/tkdb.json).
 
-1. Run the script `npm run migrate`.
+The repository is missing some source files because they are too large to commit here. Also this project does not intend to redistribute source material. Therefore, you must first download some source files, add them to the repository, and then initiate the database creation process.
 
+## Types
 
-### Create the sqlite database
+- The JSON types can be derived from the [typescript interfaces](./src/type/tkdb.d.ts).
 
-1. Run the script `npm run start`.
+## License, copyright and attribution
+
+This project is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). You can find the copy of this license in the [license file](LICENSE.txt).
+
+When using this database, you must also attribute the projects from which the data source originates:
+
+- Kanji data from [KANJIDIC2](http://www.edrdg.org/wiki/index.php/KANJIDIC_Project) by the [Electronic Dictionary Research and Development Group](https://www.edrdg.org/), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- Kanji decomposition data from [RADKFILE/KRADFILE](https://www.edrdg.org/krad/kradinf.html) by the [Electronic Dictionary Research and Development Group](https://www.edrdg.org/), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- Japanese dictionary data from [JMDICT](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) by the [Electronic Dictionary Research and Development Group](https://www.edrdg.org/), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- Furigana data from [JmdictFurigana](https://github.com/Doublevil/JmdictFurigana) by [Doublevil](https://github.com/Doublevil), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- JLPT data from [tanos](http://www.tanos.co.uk/jlpt/) by [Jonathan Waller](http://www.tanos.co.uk/contact/), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- Similar, antonym and synonym kanji data and radical data from [kanjium](https://github.com/mifunetoshiro/kanjium) by [Uros O.](https://github.com/mifunetoshiro), licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+- Kanji stroke order graphics from [KanjiVG](https://github.com/KanjiVG/kanjivg/releases) by [Ulrich Apel](https://kanjivg.tagaini.net/index.html), licensed under [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/).

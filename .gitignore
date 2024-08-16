@@ -104,6 +104,13 @@ dist
 .tern-port
 
 # Custom
-input/*
+input/converted/*
+input/JMdict.gz
+input/JmdictFurigana.json
+input/kanjidic2.xml.gz
+input/kanjivg-all.zip
+input/converted
+input/download
+
 output/*
 .DS_Store

@@ -1,0 +1,1950 @@
+[
+    {
+        "kanji": "会",
+        "similar": "今,令,合"
+    },
+    {
+        "kanji": "令",
+        "similar": "今,会,合"
+    },
+    {
+        "kanji": "今",
+        "similar": "令,会,合"
+    },
+    {
+        "kanji": "合",
+        "similar": "今,令,会"
+    },
+    {
+        "kanji": "沿",
+        "similar": "治,冶,浴"
+    },
+    {
+        "kanji": "冶",
+        "similar": "沿,治,浴"
+    },
+    {
+        "kanji": "治",
+        "similar": "冶,沿,浴"
+    },
+    {
+        "kanji": "浴",
+        "similar": "治,冶,沿"
+    },
+    {
+        "kanji": "朱",
+        "similar": "矢,失,先"
+    },
+    {
+        "kanji": "矢",
+        "similar": "失,朱,先"
+    },
+    {
+        "kanji": "失",
+        "similar": "朱,矢,先"
+    },
+    {
+        "kanji": "先",
+        "similar": "失,朱,矢"
+    },
+    {
+        "kanji": "内",
+        "similar": "肉,丙"
+    },
+    {
+        "kanji": "東",
+        "similar": "束,乗,垂"
+    },
+    {
+        "kanji": "垂",
+        "similar": "東,束,乗"
+    },
+    {
+        "kanji": "入",
+        "similar": "八,人"
+    },
+    {
+        "kanji": "同",
+        "similar": "何,伺"
+    },
+    {
+        "kanji": "伺",
+        "similar": "同,何"
+    },
+    {
+        "kanji": "八",
+        "similar": "人,入"
+    },
+    {
+        "kanji": "人",
+        "similar": "入,八"
+    },
+    {
+        "kanji": "肉",
+        "similar": "丙,内"
+    },
+    {
+        "kanji": "刃",
+        "similar": "力,刀"
+    },
+    {
+        "kanji": "力",
+        "similar": "刀,刃"
+    },
+    {
+        "kanji": "刀",
+        "similar": "刃,力"
+    },
+    {
+        "kanji": "慕",
+        "similar": "幕,募"
+    },
+    {
+        "kanji": "巣",
+        "similar": "草,単"
+    },
+    {
+        "kanji": "何",
+        "similar": "伺,同"
+    },
+    {
+        "kanji": "衰",
+        "similar": "衷,哀"
+    },
+    {
+        "kanji": "末",
+        "similar": "未,夫"
+    },
+    {
+        "kanji": "学",
+        "similar": "宇,字"
+    },
+    {
+        "kanji": "老",
+        "similar": "考,孝"
+    },
+    {
+        "kanji": "李",
+        "similar": "秀,季"
+    },
+    {
+        "kanji": "宇",
+        "similar": "字,学"
+    },
+    {
+        "kanji": "字",
+        "similar": "学,宇"
+    },
+    {
+        "kanji": "幸",
+        "similar": "辛,宰"
+    },
+    {
+        "kanji": "鳥",
+        "similar": "烏,島"
+    },
+    {
+        "kanji": "草",
+        "similar": "単,巣"
+    },
+    {
+        "kanji": "巳",
+        "similar": "已,己"
+    },
+    {
+        "kanji": "己",
+        "similar": "巳,已"
+    },
+    {
+        "kanji": "已",
+        "similar": "己,巳"
+    },
+    {
+        "kanji": "募",
+        "similar": "慕,幕"
+    },
+    {
+        "kanji": "辛",
+        "similar": "宰,幸"
+    },
+    {
+        "kanji": "幕",
+        "similar": "募,慕"
+    },
+    {
+        "kanji": "晋",
+        "similar": "普,昔"
+    },
+    {
+        "kanji": "著",
+        "similar": "着,春"
+    },
+    {
+        "kanji": "普",
+        "similar": "昔,晋"
+    },
+    {
+        "kanji": "昔",
+        "similar": "晋,普"
+    },
+    {
+        "kanji": "夫",
+        "similar": "末,未"
+    },
+    {
+        "kanji": "未",
+        "similar": "夫,末"
+    },
+    {
+        "kanji": "秀",
+        "similar": "季,李"
+    },
+    {
+        "kanji": "林",
+        "similar": "村,材"
+    },
+    {
+        "kanji": "材",
+        "similar": "林,村"
+    },
+    {
+        "kanji": "乗",
+        "similar": "東,束,垂"
+    },
+    {
+        "kanji": "束",
+        "similar": "乗,東,垂"
+    },
+    {
+        "kanji": "村",
+        "similar": "材,林"
+    },
+    {
+        "kanji": "粟",
+        "similar": "票,栗"
+    },
+    {
+        "kanji": "氷",
+        "similar": "永,水"
+    },
+    {
+        "kanji": "永",
+        "similar": "水,氷"
+    },
+    {
+        "kanji": "水",
+        "similar": "氷,永"
+    },
+    {
+        "kanji": "島",
+        "similar": "鳥,烏"
+    },
+    {
+        "kanji": "由",
+        "similar": "甲,田,申"
+    },
+    {
+        "kanji": "甲",
+        "similar": "田,由,申"
+    },
+    {
+        "kanji": "田",
+        "similar": "由,甲,申"
+    },
+    {
+        "kanji": "申",
+        "similar": "田,由,甲"
+    },
+    {
+        "kanji": "春",
+        "similar": "著,着"
+    },
+    {
+        "kanji": "栗",
+        "similar": "粟,票"
+    },
+    {
+        "kanji": "季",
+        "similar": "李,秀"
+    },
+    {
+        "kanji": "票",
+        "similar": "栗,粟"
+    },
+    {
+        "kanji": "縁",
+        "similar": "録,緑"
+    },
+    {
+        "kanji": "録",
+        "similar": "緑,縁"
+    },
+    {
+        "kanji": "考",
+        "similar": "孝,老"
+    },
+    {
+        "kanji": "孝",
+        "similar": "老,考"
+    },
+    {
+        "kanji": "丙",
+        "similar": "内,肉"
+    },
+    {
+        "kanji": "単",
+        "similar": "巣,草"
+    },
+    {
+        "kanji": "着",
+        "similar": "春,著"
+    },
+    {
+        "kanji": "運",
+        "similar": "連,蓮"
+    },
+    {
+        "kanji": "衷",
+        "similar": "哀,衰"
+    },
+    {
+        "kanji": "哀",
+        "similar": "衰,衷"
+    },
+    {
+        "kanji": "計",
+        "similar": "討,訂"
+    },
+    {
+        "kanji": "討",
+        "similar": "訂,計"
+    },
+    {
+        "kanji": "訂",
+        "similar": "計,討"
+    },
+    {
+        "kanji": "宰",
+        "similar": "幸,辛"
+    },
+    {
+        "kanji": "遅",
+        "similar": "送,迷"
+    },
+    {
+        "kanji": "蓮",
+        "similar": "運,連"
+    },
+    {
+        "kanji": "送",
+        "similar": "迷,遅"
+    },
+    {
+        "kanji": "迷",
+        "similar": "送,遅"
+    },
+    {
+        "kanji": "連",
+        "similar": "蓮,運"
+    },
+    {
+        "kanji": "緑",
+        "similar": "縁,録"
+    },
+    {
+        "kanji": "烏",
+        "similar": "島,鳥"
+    },
+    {
+        "kanji": "体",
+        "similar": "休,本"
+    },
+    {
+        "kanji": "休",
+        "similar": "体,本"
+    },
+    {
+        "kanji": "本",
+        "similar": "休,体"
+    },
+    {
+        "kanji": "待",
+        "similar": "侍,持"
+    },
+    {
+        "kanji": "持",
+        "similar": "待,侍"
+    },
+    {
+        "kanji": "侍",
+        "similar": "待,持"
+    },
+    {
+        "kanji": "方",
+        "similar": "万"
+    },
+    {
+        "kanji": "旦",
+        "similar": "且"
+    },
+    {
+        "kanji": "子",
+        "similar": "了"
+    },
+    {
+        "kanji": "矛",
+        "similar": "予"
+    },
+    {
+        "kanji": "亭",
+        "similar": "享"
+    },
+    {
+        "kanji": "享",
+        "similar": "亭"
+    },
+    {
+        "kanji": "伐",
+        "similar": "代"
+    },
+    {
+        "kanji": "代",
+        "similar": "伐"
+    },
+    {
+        "kanji": "往",
+        "similar": "住"
+    },
+    {
+        "kanji": "金",
+        "similar": "余"
+    },
+    {
+        "kanji": "便",
+        "similar": "使"
+    },
+    {
+        "kanji": "候",
+        "similar": "侯"
+    },
+    {
+        "kanji": "使",
+        "similar": "便"
+    },
+    {
+        "kanji": "到",
+        "similar": "倒"
+    },
+    {
+        "kanji": "侯",
+        "similar": "候"
+    },
+    {
+        "kanji": "検",
+        "similar": "倹"
+    },
+    {
+        "kanji": "象",
+        "similar": "像"
+    },
+    {
+        "kanji": "義",
+        "similar": "儀,犠"
+    },
+    {
+        "kanji": "犠",
+        "similar": "義,儀"
+    },
+    {
+        "kanji": "営",
+        "similar": "党"
+    },
+    {
+        "kanji": "昌",
+        "similar": "冒"
+    },
+    {
+        "kanji": "涼",
+        "similar": "凍"
+    },
+    {
+        "kanji": "区",
+        "similar": "凶"
+    },
+    {
+        "kanji": "功",
+        "similar": "切"
+    },
+    {
+        "kanji": "倒",
+        "similar": "到"
+    },
+    {
+        "kanji": "勅",
+        "similar": "刺"
+    },
+    {
+        "kanji": "切",
+        "similar": "功"
+    },
+    {
+        "kanji": "刺",
+        "similar": "勅"
+    },
+    {
+        "kanji": "四",
+        "similar": "匹"
+    },
+    {
+        "kanji": "凶",
+        "similar": "区"
+    },
+    {
+        "kanji": "干",
+        "similar": "千,午,牛"
+    },
+    {
+        "kanji": "牛",
+        "similar": "干,千,午"
+    },
+    {
+        "kanji": "千",
+        "similar": "干,午,牛"
+    },
+    {
+        "kanji": "午",
+        "similar": "千,干,牛"
+    },
+    {
+        "kanji": "卵",
+        "similar": "卯"
+    },
+    {
+        "kanji": "卯",
+        "similar": "卵"
+    },
+    {
+        "kanji": "源",
+        "similar": "原"
+    },
+    {
+        "kanji": "反",
+        "similar": "友"
+    },
+    {
+        "kanji": "友",
+        "similar": "反"
+    },
+    {
+        "kanji": "愛",
+        "similar": "受"
+    },
+    {
+        "kanji": "吏",
+        "similar": "史"
+    },
+    {
+        "kanji": "名",
+        "similar": "各"
+    },
+    {
+        "kanji": "各",
+        "similar": "名"
+    },
+    {
+        "kanji": "史",
+        "similar": "吏"
+    },
+    {
+        "kanji": "吹",
+        "similar": "吸"
+    },
+    {
+        "kanji": "吸",
+        "similar": "吹"
+    },
+    {
+        "kanji": "昧",
+        "similar": "味"
+    },
+    {
+        "kanji": "間",
+        "similar": "問"
+    },
+    {
+        "kanji": "党",
+        "similar": "営"
+    },
+    {
+        "kanji": "匹",
+        "similar": "四"
+    },
+    {
+        "kanji": "困",
+        "similar": "因"
+    },
+    {
+        "kanji": "因",
+        "similar": "困"
+    },
+    {
+        "kanji": "司",
+        "similar": "可"
+    },
+    {
+        "kanji": "可",
+        "similar": "司"
+    },
+    {
+        "kanji": "士",
+        "similar": "土"
+    },
+    {
+        "kanji": "庄",
+        "similar": "圧"
+    },
+    {
+        "kanji": "理",
+        "similar": "埋"
+    },
+    {
+        "kanji": "域",
+        "similar": "城"
+    },
+    {
+        "kanji": "城",
+        "similar": "域"
+    },
+    {
+        "kanji": "墓",
+        "similar": "基"
+    },
+    {
+        "kanji": "掘",
+        "similar": "堀"
+    },
+    {
+        "kanji": "推",
+        "similar": "堆"
+    },
+    {
+        "kanji": "提",
+        "similar": "堤"
+    },
+    {
+        "kanji": "搭",
+        "similar": "塔"
+    },
+    {
+        "kanji": "基",
+        "similar": "墓"
+    },
+    {
+        "kanji": "璧",
+        "similar": "壁"
+    },
+    {
+        "kanji": "土",
+        "similar": "士"
+    },
+    {
+        "kanji": "絡",
+        "similar": "終"
+    },
+    {
+        "kanji": "終",
+        "similar": "絡"
+    },
+    {
+        "kanji": "夜",
+        "similar": "夕"
+    },
+    {
+        "kanji": "夕",
+        "similar": "夜"
+    },
+    {
+        "kanji": "太",
+        "similar": "大,犬"
+    },
+    {
+        "kanji": "大",
+        "similar": "太,犬"
+    },
+    {
+        "kanji": "犬",
+        "similar": "大,太"
+    },
+    {
+        "kanji": "寄",
+        "similar": "奇"
+    },
+    {
+        "kanji": "秦",
+        "similar": "奏"
+    },
+    {
+        "kanji": "了",
+        "similar": "子"
+    },
+    {
+        "kanji": "宮",
+        "similar": "官"
+    },
+    {
+        "kanji": "足",
+        "similar": "定"
+    },
+    {
+        "kanji": "宣",
+        "similar": "宜"
+    },
+    {
+        "kanji": "宜",
+        "similar": "宣"
+    },
+    {
+        "kanji": "窒",
+        "similar": "室"
+    },
+    {
+        "kanji": "官",
+        "similar": "宮"
+    },
+    {
+        "kanji": "奇",
+        "similar": "寄"
+    },
+    {
+        "kanji": "祭",
+        "similar": "察"
+    },
+    {
+        "kanji": "少",
+        "similar": "小"
+    },
+    {
+        "kanji": "小",
+        "similar": "少"
+    },
+    {
+        "kanji": "室",
+        "similar": "窒"
+    },
+    {
+        "kanji": "臣",
+        "similar": "巨"
+    },
+    {
+        "kanji": "布",
+        "similar": "市"
+    },
+    {
+        "kanji": "市",
+        "similar": "布"
+    },
+    {
+        "kanji": "師",
+        "similar": "帥"
+    },
+    {
+        "kanji": "帥",
+        "similar": "師"
+    },
+    {
+        "kanji": "度",
+        "similar": "席"
+    },
+    {
+        "kanji": "常",
+        "similar": "帯"
+    },
+    {
+        "kanji": "帯",
+        "similar": "常"
+    },
+    {
+        "kanji": "圧",
+        "similar": "庄"
+    },
+    {
+        "kanji": "席",
+        "similar": "度"
+    },
+    {
+        "kanji": "廷",
+        "similar": "延"
+    },
+    {
+        "kanji": "延",
+        "similar": "廷"
+    },
+    {
+        "kanji": "住",
+        "similar": "往"
+    },
+    {
+        "kanji": "徴",
+        "similar": "微"
+    },
+    {
+        "kanji": "微",
+        "similar": "徴"
+    },
+    {
+        "kanji": "撤",
+        "similar": "徹"
+    },
+    {
+        "kanji": "患",
+        "similar": "忠"
+    },
+    {
+        "kanji": "恩",
+        "similar": "思"
+    },
+    {
+        "kanji": "窓",
+        "similar": "恋"
+    },
+    {
+        "kanji": "思",
+        "similar": "恩"
+    },
+    {
+        "kanji": "忠",
+        "similar": "患"
+    },
+    {
+        "kanji": "感",
+        "similar": "惑"
+    },
+    {
+        "kanji": "受",
+        "similar": "愛"
+    },
+    {
+        "kanji": "惑",
+        "similar": "感"
+    },
+    {
+        "kanji": "毛",
+        "similar": "手"
+    },
+    {
+        "kanji": "抽",
+        "similar": "押"
+    },
+    {
+        "kanji": "押",
+        "similar": "抽"
+    },
+    {
+        "kanji": "招",
+        "similar": "拐"
+    },
+    {
+        "kanji": "拐",
+        "similar": "招"
+    },
+    {
+        "kanji": "捨",
+        "similar": "拾"
+    },
+    {
+        "kanji": "狭",
+        "similar": "挟"
+    },
+    {
+        "kanji": "拾",
+        "similar": "捨"
+    },
+    {
+        "kanji": "堀",
+        "similar": "掘"
+    },
+    {
+        "kanji": "堆",
+        "similar": "推"
+    },
+    {
+        "kanji": "猫",
+        "similar": "描"
+    },
+    {
+        "kanji": "堤",
+        "similar": "提"
+    },
+    {
+        "kanji": "塔",
+        "similar": "搭"
+    },
+    {
+        "kanji": "徹",
+        "similar": "撤"
+    },
+    {
+        "kanji": "販",
+        "similar": "敗"
+    },
+    {
+        "kanji": "斎",
+        "similar": "斉"
+    },
+    {
+        "kanji": "斉",
+        "similar": "斎"
+    },
+    {
+        "kanji": "科",
+        "similar": "料"
+    },
+    {
+        "kanji": "万",
+        "similar": "方"
+    },
+    {
+        "kanji": "族",
+        "similar": "旅"
+    },
+    {
+        "kanji": "旅",
+        "similar": "族"
+    },
+    {
+        "kanji": "且",
+        "similar": "旦"
+    },
+    {
+        "kanji": "冒",
+        "similar": "昌"
+    },
+    {
+        "kanji": "味",
+        "similar": "昧"
+    },
+    {
+        "kanji": "署",
+        "similar": "暑"
+    },
+    {
+        "kanji": "雲",
+        "similar": "曇"
+    },
+    {
+        "kanji": "賛",
+        "similar": "替"
+    },
+    {
+        "kanji": "礼",
+        "similar": "札"
+    },
+    {
+        "kanji": "粋",
+        "similar": "枠"
+    },
+    {
+        "kanji": "裁",
+        "similar": "栽"
+    },
+    {
+        "kanji": "倹",
+        "similar": "検"
+    },
+    {
+        "kanji": "横",
+        "similar": "構"
+    },
+    {
+        "kanji": "構",
+        "similar": "横"
+    },
+    {
+        "kanji": "手",
+        "similar": "毛"
+    },
+    {
+        "kanji": "民",
+        "similar": "氏"
+    },
+    {
+        "kanji": "氏",
+        "similar": "民"
+    },
+    {
+        "kanji": "浩",
+        "similar": "活"
+    },
+    {
+        "kanji": "活",
+        "similar": "浩"
+    },
+    {
+        "kanji": "凍",
+        "similar": "涼"
+    },
+    {
+        "kanji": "原",
+        "similar": "源"
+    },
+    {
+        "kanji": "適",
+        "similar": "滴"
+    },
+    {
+        "kanji": "挟",
+        "similar": "狭"
+    },
+    {
+        "kanji": "描",
+        "similar": "猫"
+    },
+    {
+        "kanji": "埋",
+        "similar": "理"
+    },
+    {
+        "kanji": "壁",
+        "similar": "璧"
+    },
+    {
+        "kanji": "習",
+        "similar": "留"
+    },
+    {
+        "kanji": "血",
+        "similar": "皿"
+    },
+    {
+        "kanji": "眉",
+        "similar": "盾"
+    },
+    {
+        "kanji": "盾",
+        "similar": "眉"
+    },
+    {
+        "kanji": "眼",
+        "similar": "眠"
+    },
+    {
+        "kanji": "眠",
+        "similar": "眼"
+    },
+    {
+        "kanji": "予",
+        "similar": "矛"
+    },
+    {
+        "kanji": "礁",
+        "similar": "確"
+    },
+    {
+        "kanji": "確",
+        "similar": "礁"
+    },
+    {
+        "kanji": "札",
+        "similar": "礼"
+    },
+    {
+        "kanji": "袖",
+        "similar": "神"
+    },
+    {
+        "kanji": "察",
+        "similar": "祭"
+    },
+    {
+        "kanji": "料",
+        "similar": "科"
+    },
+    {
+        "kanji": "奏",
+        "similar": "秦"
+    },
+    {
+        "kanji": "恋",
+        "similar": "窓"
+    },
+    {
+        "kanji": "童",
+        "similar": "章"
+    },
+    {
+        "kanji": "章",
+        "similar": "童"
+    },
+    {
+        "kanji": "薄",
+        "similar": "簿"
+    },
+    {
+        "kanji": "紛",
+        "similar": "粉"
+    },
+    {
+        "kanji": "枠",
+        "similar": "粋"
+    },
+    {
+        "kanji": "粉",
+        "similar": "紛"
+    },
+    {
+        "kanji": "網",
+        "similar": "綱"
+    },
+    {
+        "kanji": "綱",
+        "similar": "網"
+    },
+    {
+        "kanji": "暑",
+        "similar": "署"
+    },
+    {
+        "kanji": "儀",
+        "similar": "義,犠"
+    },
+    {
+        "kanji": "留",
+        "similar": "習"
+    },
+    {
+        "kanji": "巨",
+        "similar": "臣"
+    },
+    {
+        "kanji": "苦",
+        "similar": "若"
+    },
+    {
+        "kanji": "若",
+        "similar": "苦"
+    },
+    {
+        "kanji": "簿",
+        "similar": "薄"
+    },
+    {
+        "kanji": "皿",
+        "similar": "血"
+    },
+    {
+        "kanji": "衡",
+        "similar": "衝"
+    },
+    {
+        "kanji": "衝",
+        "similar": "衡"
+    },
+    {
+        "kanji": "麦",
+        "similar": "表"
+    },
+    {
+        "kanji": "神",
+        "similar": "袖"
+    },
+    {
+        "kanji": "栽",
+        "similar": "裁"
+    },
+    {
+        "kanji": "貝",
+        "similar": "見"
+    },
+    {
+        "kanji": "像",
+        "similar": "象"
+    },
+    {
+        "kanji": "見",
+        "similar": "貝"
+    },
+    {
+        "kanji": "負",
+        "similar": "貞"
+    },
+    {
+        "kanji": "貞",
+        "similar": "負"
+    },
+    {
+        "kanji": "貪",
+        "similar": "貧"
+    },
+    {
+        "kanji": "貸",
+        "similar": "貨"
+    },
+    {
+        "kanji": "敗",
+        "similar": "販"
+    },
+    {
+        "kanji": "貧",
+        "similar": "貪"
+    },
+    {
+        "kanji": "貨",
+        "similar": "貸"
+    },
+    {
+        "kanji": "替",
+        "similar": "賛"
+    },
+    {
+        "kanji": "定",
+        "similar": "足"
+    },
+    {
+        "kanji": "近",
+        "similar": "辺"
+    },
+    {
+        "kanji": "辺",
+        "similar": "近"
+    },
+    {
+        "kanji": "遂",
+        "similar": "逐"
+    },
+    {
+        "kanji": "逐",
+        "similar": "遂"
+    },
+    {
+        "kanji": "遺",
+        "similar": "遣"
+    },
+    {
+        "kanji": "滴",
+        "similar": "適"
+    },
+    {
+        "kanji": "遣",
+        "similar": "遺"
+    },
+    {
+        "kanji": "余",
+        "similar": "金"
+    },
+    {
+        "kanji": "鍋",
+        "similar": "銅"
+    },
+    {
+        "kanji": "銅",
+        "similar": "鍋"
+    },
+    {
+        "kanji": "問",
+        "similar": "間"
+    },
+    {
+        "kanji": "曇",
+        "similar": "雲"
+    },
+    {
+        "kanji": "電",
+        "similar": "雷"
+    },
+    {
+        "kanji": "雷",
+        "similar": "電"
+    },
+    {
+        "kanji": "項",
+        "similar": "頂"
+    },
+    {
+        "kanji": "頂",
+        "similar": "項"
+    },
+    {
+        "kanji": "表",
+        "similar": "麦"
+    },
+    {
+        "kanji": "石",
+        "similar": "右"
+    },
+    {
+        "kanji": "右",
+        "similar": "石"
+    },
+    {
+        "kanji": "古",
+        "similar": "早"
+    },
+    {
+        "kanji": "早",
+        "similar": "古"
+    },
+    {
+        "kanji": "半",
+        "similar": "羊,平"
+    },
+    {
+        "kanji": "羊",
+        "similar": "半,平"
+    },
+    {
+        "kanji": "平",
+        "similar": "羊,半"
+    },
+    {
+        "kanji": "丈",
+        "similar": "才"
+    },
+    {
+        "kanji": "才",
+        "similar": "丈"
+    },
+    {
+        "kanji": "丹",
+        "similar": "凡,舟"
+    },
+    {
+        "kanji": "舟",
+        "similar": "丹,凡"
+    },
+    {
+        "kanji": "凡",
+        "similar": "丹,舟"
+    },
+    {
+        "kanji": "仏",
+        "similar": "払,私"
+    },
+    {
+        "kanji": "私",
+        "similar": "仏,払"
+    },
+    {
+        "kanji": "払",
+        "similar": "仏,私"
+    },
+    {
+        "kanji": "伎",
+        "similar": "技"
+    },
+    {
+        "kanji": "技",
+        "similar": "伎"
+    },
+    {
+        "kanji": "俸",
+        "similar": "棒"
+    },
+    {
+        "kanji": "棒",
+        "similar": "俸"
+    },
+    {
+        "kanji": "傘",
+        "similar": "卒,率"
+    },
+    {
+        "kanji": "率",
+        "similar": "傘,卒"
+    },
+    {
+        "kanji": "卒",
+        "similar": "傘,率"
+    },
+    {
+        "kanji": "僕",
+        "similar": "撲"
+    },
+    {
+        "kanji": "撲",
+        "similar": "僕"
+    },
+    {
+        "kanji": "充",
+        "similar": "去"
+    },
+    {
+        "kanji": "去",
+        "similar": "充"
+    },
+    {
+        "kanji": "光",
+        "similar": "米"
+    },
+    {
+        "kanji": "米",
+        "similar": "光"
+    },
+    {
+        "kanji": "免",
+        "similar": "色"
+    },
+    {
+        "kanji": "色",
+        "similar": "免"
+    },
+    {
+        "kanji": "公",
+        "similar": "分"
+    },
+    {
+        "kanji": "分",
+        "similar": "公"
+    },
+    {
+        "kanji": "具",
+        "similar": "真"
+    },
+    {
+        "kanji": "真",
+        "similar": "具"
+    },
+    {
+        "kanji": "刑",
+        "similar": "列"
+    },
+    {
+        "kanji": "列",
+        "similar": "刑"
+    },
+    {
+        "kanji": "攻",
+        "similar": "功"
+    },
+    {
+        "kanji": "勇",
+        "similar": "男"
+    },
+    {
+        "kanji": "男",
+        "similar": "勇"
+    },
+    {
+        "kanji": "博",
+        "similar": "専"
+    },
+    {
+        "kanji": "専",
+        "similar": "博"
+    },
+    {
+        "kanji": "危",
+        "similar": "厄"
+    },
+    {
+        "kanji": "厄",
+        "similar": "危"
+    },
+    {
+        "kanji": "厘",
+        "similar": "里"
+    },
+    {
+        "kanji": "里",
+        "similar": "厘"
+    },
+    {
+        "kanji": "又",
+        "similar": "文"
+    },
+    {
+        "kanji": "文",
+        "similar": "又"
+    },
+    {
+        "kanji": "双",
+        "similar": "対"
+    },
+    {
+        "kanji": "対",
+        "similar": "双"
+    },
+    {
+        "kanji": "句",
+        "similar": "旬"
+    },
+    {
+        "kanji": "旬",
+        "similar": "句"
+    },
+    {
+        "kanji": "吟",
+        "similar": "含"
+    },
+    {
+        "kanji": "含",
+        "similar": "吟"
+    },
+    {
+        "kanji": "呉",
+        "similar": "県"
+    },
+    {
+        "kanji": "県",
+        "similar": "呉"
+    },
+    {
+        "kanji": "唐",
+        "similar": "康"
+    },
+    {
+        "kanji": "康",
+        "similar": "唐"
+    },
+    {
+        "kanji": "善",
+        "similar": "普"
+    },
+    {
+        "kanji": "堂",
+        "similar": "常"
+    },
+    {
+        "kanji": "塾",
+        "similar": "熟,熱"
+    },
+    {
+        "kanji": "熱",
+        "similar": "塾,熟"
+    },
+    {
+        "kanji": "熟",
+        "similar": "塾,熱"
+    },
+    {
+        "kanji": "壮",
+        "similar": "状"
+    },
+    {
+        "kanji": "状",
+        "similar": "壮"
+    },
+    {
+        "kanji": "売",
+        "similar": "帝"
+    },
+    {
+        "kanji": "帝",
+        "similar": "売"
+    },
+    {
+        "kanji": "変",
+        "similar": "恋"
+    },
+    {
+        "kanji": "奈",
+        "similar": "宗"
+    },
+    {
+        "kanji": "宗",
+        "similar": "奈"
+    },
+    {
+        "kanji": "奉",
+        "similar": "奏"
+    },
+    {
+        "kanji": "奪",
+        "similar": "奮"
+    },
+    {
+        "kanji": "奮",
+        "similar": "奪"
+    },
+    {
+        "kanji": "嫡",
+        "similar": "敵"
+    },
+    {
+        "kanji": "敵",
+        "similar": "嫡"
+    },
+    {
+        "kanji": "履",
+        "similar": "覆"
+    },
+    {
+        "kanji": "覆",
+        "similar": "履"
+    },
+    {
+        "kanji": "弟",
+        "similar": "第"
+    },
+    {
+        "kanji": "第",
+        "similar": "弟"
+    },
+    {
+        "kanji": "復",
+        "similar": "複"
+    },
+    {
+        "kanji": "複",
+        "similar": "復"
+    },
+    {
+        "kanji": "快",
+        "similar": "決"
+    },
+    {
+        "kanji": "決",
+        "similar": "快"
+    },
+    {
+        "kanji": "戻",
+        "similar": "房"
+    },
+    {
+        "kanji": "房",
+        "similar": "戻"
+    },
+    {
+        "kanji": "折",
+        "similar": "析"
+    },
+    {
+        "kanji": "析",
+        "similar": "折"
+    },
+    {
+        "kanji": "捕",
+        "similar": "補"
+    },
+    {
+        "kanji": "補",
+        "similar": "捕"
+    },
+    {
+        "kanji": "探",
+        "similar": "深"
+    },
+    {
+        "kanji": "深",
+        "similar": "探"
+    },
+    {
+        "kanji": "控",
+        "similar": "搾"
+    },
+    {
+        "kanji": "搾",
+        "similar": "控"
+    },
+    {
+        "kanji": "摩",
+        "similar": "磨"
+    },
+    {
+        "kanji": "磨",
+        "similar": "摩"
+    },
+    {
+        "kanji": "新",
+        "similar": "親"
+    },
+    {
+        "kanji": "親",
+        "similar": "新"
+    },
+    {
+        "kanji": "暦",
+        "similar": "歴"
+    },
+    {
+        "kanji": "歴",
+        "similar": "暦"
+    },
+    {
+        "kanji": "枚",
+        "similar": "株"
+    },
+    {
+        "kanji": "株",
+        "similar": "枚"
+    },
+    {
+        "kanji": "栄",
+        "similar": "采"
+    },
+    {
+        "kanji": "采",
+        "similar": "栄"
+    },
+    {
+        "kanji": "業",
+        "similar": "美"
+    },
+    {
+        "kanji": "美",
+        "similar": "業"
+    },
+    {
+        "kanji": "止",
+        "similar": "正"
+    },
+    {
+        "kanji": "正",
+        "similar": "止"
+    },
+    {
+        "kanji": "漠",
+        "similar": "漢"
+    },
+    {
+        "kanji": "漢",
+        "similar": "漠"
+    },
+    {
+        "kanji": "無",
+        "similar": "焦,蕪"
+    },
+    {
+        "kanji": "焦",
+        "similar": "無,蕪"
+    },
+    {
+        "kanji": "蕪",
+        "similar": "無,焦"
+    },
+    {
+        "kanji": "然",
+        "similar": "黙"
+    },
+    {
+        "kanji": "黙",
+        "similar": "然"
+    },
+    {
+        "kanji": "玄",
+        "similar": "系"
+    },
+    {
+        "kanji": "系",
+        "similar": "玄"
+    },
+    {
+        "kanji": "発",
+        "similar": "登"
+    },
+    {
+        "kanji": "登",
+        "similar": "発"
+    },
+    {
+        "kanji": "社",
+        "similar": "祈"
+    },
+    {
+        "kanji": "祈",
+        "similar": "社"
+    },
+    {
+        "kanji": "祖",
+        "similar": "租"
+    },
+    {
+        "kanji": "租",
+        "similar": "祖"
+    },
+    {
+        "kanji": "究",
+        "similar": "空"
+    },
+    {
+        "kanji": "空",
+        "similar": "究"
+    },
+    {
+        "kanji": "精",
+        "similar": "績"
+    },
+    {
+        "kanji": "績",
+        "similar": "精"
+    },
+    {
+        "kanji": "素",
+        "similar": "索"
+    },
+    {
+        "kanji": "索",
+        "similar": "素"
+    },
+    {
+        "kanji": "経",
+        "similar": "絡"
+    },
+    {
+        "kanji": "結",
+        "similar": "緒"
+    },
+    {
+        "kanji": "緒",
+        "similar": "結"
+    },
+    {
+        "kanji": "給",
+        "similar": "絵"
+    },
+    {
+        "kanji": "絵",
+        "similar": "給"
+    },
+    {
+        "kanji": "統",
+        "similar": "続"
+    },
+    {
+        "kanji": "続",
+        "similar": "統"
+    },
+    {
+        "kanji": "鋼",
+        "similar": "綱"
+    },
+    {
+        "kanji": "職",
+        "similar": "識"
+    },
+    {
+        "kanji": "識",
+        "similar": "職"
+    },
+    {
+        "kanji": "肯",
+        "similar": "背"
+    },
+    {
+        "kanji": "背",
+        "similar": "肯"
+    },
+    {
+        "kanji": "般",
+        "similar": "船"
+    },
+    {
+        "kanji": "船",
+        "similar": "般"
+    },
+    {
+        "kanji": "覧",
+        "similar": "賢"
+    },
+    {
+        "kanji": "賢",
+        "similar": "覧"
+    },
+    {
+        "kanji": "角",
+        "similar": "負"
+    },
+    {
+        "kanji": "誌",
+        "similar": "認"
+    },
+    {
+        "kanji": "認",
+        "similar": "誌"
+    },
+    {
+        "kanji": "責",
+        "similar": "青"
+    },
+    {
+        "kanji": "青",
+        "similar": "責"
+    },
+    {
+        "kanji": "貿",
+        "similar": "貸"
+    },
+    {
+        "kanji": "輪",
+        "similar": "輸"
+    },
+    {
+        "kanji": "輸",
+        "similar": "輪"
+    },
+    {
+        "kanji": "追",
+        "similar": "過"
+    },
+    {
+        "kanji": "過",
+        "similar": "追"
+    },
+    {
+        "kanji": "通",
+        "similar": "週"
+    },
+    {
+        "kanji": "週",
+        "similar": "通"
+    },
+    {
+        "kanji": "郎",
+        "similar": "限"
+    },
+    {
+        "kanji": "限",
+        "similar": "郎"
+    },
+    {
+        "kanji": "開",
+        "similar": "関"
+    },
+    {
+        "kanji": "関",
+        "similar": "開"
+    },
+    {
+        "kanji": "降",
+        "similar": "隆"
+    },
+    {
+        "kanji": "隆",
+        "similar": "降"
+    },
+    {
+        "kanji": "隻",
+        "similar": "集"
+    },
+    {
+        "kanji": "集",
+        "similar": "隻"
+    },
+    {
+        "kanji": "雄",
+        "similar": "雌"
+    },
+    {
+        "kanji": "雌",
+        "similar": "雄"
+    },
+    {
+        "kanji": "需",
+        "similar": "雲"
+    },
+    {
+        "kanji": "幻",
+        "similar": "幼"
+    },
+    {
+        "kanji": "幼",
+        "similar": "幻"
+    },
+    {
+        "kanji": "画",
+        "similar": "面"
+    },
+    {
+        "kanji": "面",
+        "similar": "画"
+    }
+]
