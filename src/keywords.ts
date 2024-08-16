@@ -1,18 +1,12 @@
-import type { TKDB_Keyword } from './tkdb_json/tkdb.model';
+import type { Keywords } from './type/tkdb';
 
-export const KEYWORDS: TKDB_Keyword = {
-  lang: {},
+export const KEYWORDS: Keywords = {
   jlpt: {
     n1: 'JLPT N1',
     n2: 'JLPT N2',
     n3: 'JLPT N3',
     n4: 'JLPT N4',
     n5: 'JLPT N5',
-  },
-  kanjiReadingType: {
-    kun: 'Kun',
-    nanori: 'Nanori',
-    on: 'On',
   },
   kanjiGrade: {
     jinmeiyou1: 'Jinmeiyou',
@@ -24,44 +18,6 @@ export const KEYWORDS: TKDB_Keyword = {
     kyouiku4: 'Kyouiku 4th grade',
     kyouiku5: 'Kyouiku 5th grade',
     kyouiku6: 'Kyouiku 6th grade',
-  },
-  kanjiCodepointType: {
-    jis208: 'JIS X 0208',
-    jis212: 'JIS X 0212',
-    jis213: 'JIS X 0213',
-    ucs: 'Unicode',
-  },
-  kanjiDicrefType: {
-    busyPeople: 'Japanese For Busy People by AJLT',
-    crowley: 'The Kanji Way to Japanese Language Power by Dale Crowley',
-    gakken: 'A New Dictionary of Kanji Usage by Gakken',
-    halpernKkd: 'Kodansha Kanji Dictionary by Jack Halpern',
-    halpernKkld: 'Kadonsha Kanji Learners Dictionary by Jack Halpern',
-    halpernKkld2ed: "Kodansha Kanji Learner's Dictionary, 2nd Edition by Jack Halpern",
-    halpernNjecd: 'New Japanese English Character Dictionary by Jack Halpern',
-    heisig: 'Remembering The  Kanji by James Heisig',
-    heisig6: 'Remembering The Kanji, 6th edition by James Heisig',
-    henshall: 'A Guide To Reading and Writing Japanese by Kenneth G. Henshall',
-    henshall3: 'A Guide To Reading and Writing Japanese, 3rd edition by Henshall, Seeley and De Groot',
-    jfCards: 'Japanese Kanji Flashcards by Max Hodges and Tomoko Okazaki',
-    kanjiInContext: 'Kanji in Context by Nishiguchi and Kono',
-    kodanshaCompact: 'Kodansha Compact Kanji Guide',
-    maniette: 'Les Kanjis dans la tete by Yves Maniette',
-    moro: 'Daikanwajiten by Morohashi',
-    nelsonC: "Modern Reader's Japanese-English Character Dictionary by Andrew Nelson",
-    nelsonN: 'The New Nelson Japanese-English Character Dictionary by John Haig',
-    oneillKk: "Essential Kanji by P.G. O'Neill",
-    oneillNames: "Japanese Names by P.G. O'Neill",
-    sakade: 'A Guide To Reading and Writing Japanese by Florence Sakade',
-    shKk: 'Kanji and Kana by Spahn and Hadamitzky',
-    shKk2: 'Kanji and Kana 2nd Edition by Spahn and Hadamitzky',
-    tuttCards: 'Tuttle Kanji Cards by Alexander Kask',
-  },
-  kanjiQuerycodeType: {
-    deroo: '2001 Kanji',
-    fourCorner: 'Four Corner code',
-    shDesc: 'The Kanji Dictionary',
-    skip: 'SKIP',
   },
   wordMeaningDial: {
     bra: 'Brazilian',
