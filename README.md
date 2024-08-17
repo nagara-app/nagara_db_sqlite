@@ -22,9 +22,7 @@ This command includes 3 main steps.
 
 1. Downloading all files from sources
 2. Converting all files to JSON
-3. Processing all files into a single JSON file called `tkdb.json` stored under [output/tkdb.json](./output/tkdb.json).
-
-The repository is missing some source files because they are too large to commit here. Also this project does not intend to redistribute source material. Therefore, you must first download some source files, add them to the repository, and then initiate the database creation process.
+3. Processing all files into a single JSON file under `output/tkdb.json`.
 
 ## Types
 

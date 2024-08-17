@@ -11,7 +11,7 @@ import type {
   JMdictSensMisc,
   JMdictSensPos,
 } from 'src/type/jmdict';
-import type { WordLanguageSource, WordMeaning, WordTranslation } from 'src/type/tkdb';
+import type { WordLanguageSource, WordMeaning } from 'src/type/tkdb';
 
 export default (jmEntry: JMdictEntr): WordMeaning[] => {
   const meanings: WordMeaning[] = [];
@@ -162,33 +162,33 @@ const getLanguageSources = (jmLsources: JMdictSensLSrc[] | undefined): WordLangu
   return languageSources;
 };
 
-const createTranslations = (gloss: Array<string | JMdictSensGloss> | undefined): WordTranslation[] | undefined => {
+const createTranslations = (gloss: Array<string | JMdictSensGloss> | undefined): string[] | undefined => {
   if (gloss === undefined) {
     return undefined;
   }
 
-  const translations: WordTranslation[] = [];
+  const translations: string[] = [];
 
   for (const glossE of gloss) {
     if (typeof glossE === 'string') {
       const text = glossE;
-      translations.push({
-        text,
-      });
-    } else {
-      const text = glossE.value;
-      const type = glossE.g_type;
-      const isNotEnglish = glossE.lang !== undefined;
-
-      if (isNotEnglish) {
-        continue;
-      }
-
-      translations.push({
-        text,
-        type,
-      });
+      translations.push(text);
     }
+
+    // else {
+    //   const text = glossE.value;
+    //   const type = glossE.g_type;
+    //   const isNotEnglish = glossE.lang !== undefined;
+
+    //   if (isNotEnglish) {
+    //     continue;
+    //   }
+
+    //   translations.push({
+    //     text,
+    //     type,
+    //   });
+    // }
   }
 
   if (translations.length < 1) return undefined;

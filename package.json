@@ -7,6 +7,7 @@
     "download": "npx ts-node src/download/index.ts",
     "convert": "npx ts-node src/convert/index.ts",
     "process": "npx ts-node src/process/index.ts",
+    "picker": "npx ts-node src/picker/index.ts",
     "create": "npx ts-node src/index.ts",
     "csv": "npx ts-node src/tkdb_csv/index.ts",
     "json": "npm run download && npm run convert && npm run process",

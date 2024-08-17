@@ -4,7 +4,7 @@ import { toArray, toArrayOrUndefined } from 'src/utils';
 import { fileManager } from 'src/process/fileManager';
 
 import type { JMdictEntr, JMdictKanji, JMdictKanjiInf, JMdictRdng, JMdictRdngInf, JMdictSens } from 'src/type/jmdict';
-import type { JLPT, WordForm } from 'src/type/tkdb';
+import type { JLPT, WordForm, WordFurigana } from 'src/type/tkdb';
 
 export default (jmEntry: JMdictEntr): WordForm[] => {
   const formPairs = createFormPairs(jmEntry);
@@ -116,6 +116,7 @@ const populateForms = (form: WordForm, id: string, jmRele: JMdictRdng, jmKele?: 
   const falseReading = jmInfo.includes('gikun') ? true : undefined;
 
   const jlpt = getJlpt(form, id);
+  const furigana = getFurigana(form);
   const kanjis = extractKanji(jmKeb);
 
   const populatedForm = {
@@ -132,6 +133,7 @@ const populateForms = (form: WordForm, id: string, jmRele: JMdictRdng, jmKele?: 
     falseReading,
     jlpt,
     kanjis,
+    furigana,
   };
 
   return populatedForm;
@@ -179,6 +181,36 @@ const getJlpt = (wordForm: WordForm, id: string): JLPT | undefined => {
   return match.jlpt;
 };
 
+const getFurigana = (wordForm: WordForm): WordFurigana[] | undefined => {
+  const form = wordForm.form;
+  const reading = wordForm.reading;
+
+  if (reading === undefined) {
+    return undefined;
+  }
+
+  const jmdictFurigana = fileManager.getJmdictFurigana();
+
+  const match = jmdictFurigana.find((entry) => {
+    return entry.text === form && entry.reading === reading;
+  });
+
+  if (match === undefined) {
+    return undefined;
+  }
+
+  const furigana: WordFurigana[] = [];
+
+  for (const f of match.furigana) {
+    const ruby = f.ruby;
+    const rt = f.rt;
+
+    furigana.push({ ruby, rt });
+  }
+
+  return furigana;
+};
+
 export const extractKanji = (input: string | undefined): string[] | undefined => {
   if (input === undefined) {
     return undefined;
@@ -200,6 +232,7 @@ export const getFrequency = (priorities?: string[]): number | undefined => {
     return undefined;
   }
 
+  // TODO: what about words that only have ICHI1 for example?
   for (const priority of priorities) {
     if (priority.startsWith('nf')) {
       return extractNfxx(priority);

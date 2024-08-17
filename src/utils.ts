@@ -1,3 +1,5 @@
+import { readFile, writeFile } from 'fs/promises';
+
 export const toArray = <T>(input: T[] | T): T[] => {
   if (Array.isArray(input)) {
     return input;
@@ -14,4 +16,14 @@ export const toArrayOrUndefined = <T>(input: T[] | T | undefined): T[] | undefin
   } else {
     return undefined;
   }
+};
+
+export const readJsonFile = async <T>(filePath: string): Promise<T> => {
+  const fileContent = await readFile(filePath, 'utf8');
+  return JSON.parse(fileContent) as T;
+};
+
+export const writeJsonFile = async (value: any, path: string): Promise<void> => {
+  const data = JSON.stringify(value, null, 2);
+  await writeFile(path, data);
 };
