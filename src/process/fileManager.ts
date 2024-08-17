@@ -1,4 +1,5 @@
-import { readFile } from 'fs/promises';
+import { readJsonFile } from 'src/utils';
+
 import type { Radical } from 'src/type/tkdb';
 import type { JMdict } from 'src/type/jmdict';
 import type { Kanjidic2 } from 'src/type/kanjidic2';
@@ -11,6 +12,7 @@ import type { TanosKanji } from 'src/type/tanos_kanji';
 import type { TanosVocab } from 'src/type/tanos_vocab';
 import type { Wordfreq } from 'src/type/wordfreq_ck';
 import type { KVG } from 'src/type/kanjivg';
+import type { JMdictFurigana } from 'src/type/jmdict_furigana';
 
 class FileManager {
   private tanosVocabs: TanosVocab[] | null = null;
@@ -25,11 +27,7 @@ class FileManager {
   private kradfilex: Kradfilex[] | null = null;
   private tkdbRadicals: Radical[] | null = null;
   private kanjivg: KVG | null = null;
-
-  private async readJsonFile<T>(filePath: string): Promise<T> {
-    const fileContent = await readFile(filePath, 'utf8');
-    return JSON.parse(fileContent) as T;
-  }
+  private jmdictFurigana: JMdictFurigana[] | null = null;
 
   public async loadFiles(): Promise<void> {
     try {
@@ -46,19 +44,21 @@ class FileManager {
         kradfilex,
         tkdbRadicals,
         kanjivg,
+        jmdictFurigana,
       ] = await Promise.all([
-        this.readJsonFile<TanosVocab[]>('input/tanos_vocab.json'),
-        this.readJsonFile<JMdict>('input/converted/jmdict.json'),
-        this.readJsonFile<Wordfreq[]>('input/converted/wordfreq_ck.json'),
-        this.readJsonFile<Kanjidic2>('input/converted/kanjidic2.json'),
-        this.readJsonFile<TanosKanji[]>('input/tanos_kanji.json'),
-        this.readJsonFile<KanjiumAntonym[]>('input/kanjium_antonyms.json'),
-        this.readJsonFile<KanjiumLookalike[]>('input/kanjium_lookalikes.json'),
-        this.readJsonFile<KanjiumSynonym[]>('input/kanjium_synonyms.json'),
-        this.readJsonFile<KanjiumFrequency[]>('input/kanjium_frequency.json'),
-        this.readJsonFile<Kradfilex[]>('input/converted/kradfilex.json'),
-        this.readJsonFile<Radical[]>('input/tkdb_radicals.json'),
-        this.readJsonFile<KVG>('input/converted/kanjivg.json'),
+        readJsonFile<TanosVocab[]>('input/tanos_vocab.json'),
+        readJsonFile<JMdict>('input/converted/jmdict.json'),
+        readJsonFile<Wordfreq[]>('input/converted/wordfreq_ck.json'),
+        readJsonFile<Kanjidic2>('input/converted/kanjidic2.json'),
+        readJsonFile<TanosKanji[]>('input/tanos_kanji.json'),
+        readJsonFile<KanjiumAntonym[]>('input/kanjium_antonyms.json'),
+        readJsonFile<KanjiumLookalike[]>('input/kanjium_lookalikes.json'),
+        readJsonFile<KanjiumSynonym[]>('input/kanjium_synonyms.json'),
+        readJsonFile<KanjiumFrequency[]>('input/kanjium_frequency.json'),
+        readJsonFile<Kradfilex[]>('input/converted/kradfilex.json'),
+        readJsonFile<Radical[]>('input/tkdb_radicals.json'),
+        readJsonFile<KVG>('input/converted/kanjivg.json'),
+        readJsonFile<JMdictFurigana[]>('input/download/jmdict_furigana.json'),
       ]);
 
       this.tanosVocabs = tanosVocabs;
@@ -73,6 +73,7 @@ class FileManager {
       this.kradfilex = kradfilex;
       this.tkdbRadicals = tkdbRadicals;
       this.kanjivg = kanjivg;
+      this.jmdictFurigana = jmdictFurigana;
     } catch (error) {
       throw new Error(`Failed to load files`);
     }
@@ -168,6 +169,13 @@ class FileManager {
       throw new Error('KanjiVG data is not set.');
     }
     return this.kanjivg;
+  }
+
+  public getJmdictFurigana(): JMdictFurigana[] {
+    if (this.jmdictFurigana === null) {
+      throw new Error('JMdict furigana data is not set.');
+    }
+    return this.jmdictFurigana;
   }
 }
 

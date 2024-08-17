@@ -4,7 +4,7 @@ import { fileManager } from 'src/process/fileManager';
 
 import type { KVGKanjiGroup } from 'src/type/kanjivg';
 import type { Kanjidic2CharRdngMngGrpMng, Kanjidic2CharRdngMngGrpRdng, Kanjidic2MiscGrade } from 'src/type/kanjidic2';
-import type { JLPT, Kanji, KanjiComposition, KanjiReading, KanjiStroke } from 'src/type/tkdb';
+import type { JLPT, Kanji, KanjiComposition, KanjiStroke } from 'src/type/tkdb';
 
 export default (): Kanji[] => {
   const kanjidic2 = fileManager.getKanjidic2();
@@ -27,7 +27,8 @@ export default (): Kanji[] => {
     const kd2Grade = kd2El.misc.grade;
 
     const literal = kd2El.literal;
-    const readings = createReadings(kd2Readings, kd2Nanoris);
+    const id = kanjiToHex(literal);
+    const { on, kun, kunOku, nanori } = createReadings(kd2Readings, kd2Nanoris);
     const meanings = createMeanings(kd2Meanings);
     const strokecount = getStrokecount(kd2Strokecount);
     const frequency = getFrequency(kd2Frequency);
@@ -42,9 +43,13 @@ export default (): Kanji[] => {
     const strokes = getStrokes(literal);
 
     kanjis.push({
+      id,
       literal,
       strokecount,
-      readings,
+      on,
+      kun,
+      kunOku,
+      nanori,
       meanings,
       frequency,
       frequency2,
@@ -69,18 +74,28 @@ export default (): Kanji[] => {
 const createReadings = (
   kd2Readings?: Kanjidic2CharRdngMngGrpRdng[],
   kd2Nanoris?: string[],
-): KanjiReading | undefined => {
+): {
+  on: string[] | undefined;
+  kun: string[] | undefined;
+  kunOku: string[] | undefined;
+  nanori: string[] | undefined;
+} => {
   const on = kd2Readings?.filter((r) => r.r_type === 'ja_on').map((r) => r.value) ?? undefined;
-  const kun = kd2Readings?.filter((r) => r.r_type === 'ja_kun').map((r) => r.value) ?? undefined;
-  const nanori = kd2Nanoris ?? undefined;
+  const kunOku = kd2Readings?.filter((r) => r.r_type === 'ja_kun').map((r) => r.value) ?? undefined;
+  const kunWithPotentialDuplicates = kunOku?.map((k) => {
+    let cleaned = k.replace('-', ''); // remove any hyphens
+    cleaned = cleaned.split('.')[0] ?? ''; // remove okurigana
 
-  if (on === undefined && kun === undefined && nanori === undefined) {
-    return undefined;
-  }
+    return cleaned;
+  });
+
+  const kun = [...new Set(kunWithPotentialDuplicates)];
+  const nanori = kd2Nanoris ?? undefined;
 
   return {
     on,
     kun,
+    kunOku,
     nanori,
   };
 };

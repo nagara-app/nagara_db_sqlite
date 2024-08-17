@@ -1,4244 +1,4556 @@
 [
-    {
-        "radical": "一",
-        "kradical": "一",
-        "number": 1,
-        "strokecount": 1,
-        "frequency": 42,
-        "meanings": [
-            "one"
-        ],
-        "readings": [
-            "いち"
-        ]
-    },
-    {
-        "radical": "丨",
-        "kradical": "｜",
-        "number": 2,
-        "strokecount": 1,
-        "frequency": 21,
-        "meanings": [
-            "line",
-            "stick"
-        ],
-        "readings": [
-            "ぼう"
-        ]
-    },
-    {
-        "radical": "丶",
-        "kradical": "丶",
-        "number": 3,
-        "strokecount": 1,
-        "frequency": 10,
-        "meanings": [
-            "dot"
-        ],
-        "readings": [
-            "てん"
-        ]
-    },
-    {
-        "radical": "丿",
-        "kradical": "ノ",
-        "number": 4,
-        "strokecount": 1,
-        "frequency": 33,
-        "meanings": [
-            "bend"
-        ],
-        "readings": [
-            "の"
-        ]
-    },
-    {
-        "radical": "乙",
-        "kradical": "乙",
-        "number": 5,
-        "strokecount": 1,
-        "frequency": 42,
-        "meanings": [
-            "second",
-            "latter"
-        ],
-        "readings": [
-            "おつ"
-        ],
-        "variants": [
-            "乚"
-        ]
-    },
-    {
-        "radical": "乚",
-        "number": 5,
-        "strokecount": 1,
-        "frequency": 42,
-        "meanings": "second",
-        "readings": [
-            "おつ"
-        ],
-        "variantOf": "乙"
-    },
-    {
-        "radical": "亅",
-        "kradical": "亅",
-        "number": 6,
-        "strokecount": 1,
-        "frequency": 19,
-        "meanings": [
-            "hook",
-            "hooked stick"
-        ],
-        "readings": [
-            "はねぼう"
-        ]
-    },
-    {
-        "radical": "二",
-        "kradical": "二",
-        "number": 7,
-        "strokecount": 2,
-        "frequency": 29,
-        "meanings": "two",
-        "readings": [
-            "に"
-        ]
-    },
-    {
-        "radical": "亠",
-        "kradical": "亠",
-        "number": 8,
-        "strokecount": 2,
-        "frequency": 38,
-        "meanings": "pot lid",
-        "readings": [
-            "なべぶた"
-        ]
-    },
-    {
-        "radical": "人",
-        "kradical": "人",
-        "number": 9,
-        "strokecount": 2,
-        "frequency": 794,
-        "top": 25,
-        "meanings": [
-            "human"
-        ],
-        "readings": [
-            "ひと"
-        ],
-        "variants": [
-            "亻",
-            "𠆢"
-        ]
-    },
-    {
-        "radical": "亻",
-        "kradical": "化",
-        "number": 9,
-        "strokecount": 2,
-        "frequency": 794,
-        "top": 25,
-        "meanings": [
-            "human"
-        ],
-        "readings": [
-            "ひと"
-        ],
-        "variantOf": "人"
-    },
-    {
-        "radical": "𠆢",
-        "kradical": "个",
-        "number": 9,
-        "strokecount": 2,
-        "frequency": 794,
-        "top": 25,
-        "meanings": [
-            "human"
-        ],
-        "readings": [
-            "ひと"
-        ],
-        "variantOf": "人"
-    },
-    {
-        "radical": "儿",
-        "kradical": "儿",
-        "number": 10,
-        "strokecount": 2,
-        "frequency": 52,
-        "meanings": [
-            "legs",
-            "human underneath"
-        ],
-        "readings": [
-            "にんにょう"
-        ]
-    },
-    {
-        "radical": "入",
-        "kradical": "入",
-        "number": 11,
-        "strokecount": 2,
-        "frequency": 28,
-        "meanings": [
-            "enter"
-        ],
-        "readings": [
-            "いる"
-        ]
-    },
-    {
-        "radical": "八",
-        "number": 12,
-        "strokecount": 2,
-        "frequency": 44,
-        "meanings": [
-            "eight",
-            "eight-head"
-        ],
-        "readings": [
-            "はちがしら"
-        ],
-        "variants": [
-            "ハ"
-        ]
-    },
-    {
-        "radical": "ハ",
-        "kradical": "ハ",
-        "number": 12,
-        "strokecount": 2,
-        "frequency": 44,
-        "meanings": [
-            "eight",
-            "eight-head"
-        ],
-        "readings": [
-            "はちがしら"
-        ],
-        "variantOf": "八"
-    },
-    {
-        "radical": "冂",
-        "kradical": "冂",
-        "number": 13,
-        "strokecount": 2,
-        "frequency": 50,
-        "meanings": [
-            "inverted box",
-            "window frame"
-        ],
-        "readings": [
-            "まきがまえ"
-        ]
-    },
-    {
-        "radical": "冖",
-        "kradical": "冖",
-        "number": 14,
-        "strokecount": 2,
-        "frequency": 30,
-        "meanings": [
-            "cover",
-            "wa crown"
-        ],
-        "readings": [
-            "わかんむり"
-        ]
-    },
-    {
-        "radical": "冫",
-        "kradical": "冫",
-        "number": 15,
-        "strokecount": 2,
-        "frequency": 115,
-        "meanings": [
-            "ice",
-            "2-stroke water"
-        ],
-        "readings": [
-            "にすい"
-        ]
-    },
-    {
-        "radical": "几",
-        "kradical": "几",
-        "number": 16,
-        "strokecount": 2,
-        "frequency": 38,
-        "meanings": [
-            "desk"
-        ],
-        "readings": [
-            "つくえ"
-        ]
-    },
-    {
-        "radical": "凵",
-        "kradical": "凵",
-        "number": 17,
-        "strokecount": 2,
-        "frequency": 23,
-        "meanings": [
-            "container",
-            "inbox"
-        ],
-        "readings": [
-            "うけばこ"
-        ]
-    },
-    {
-        "radical": "刀",
-        "kradical": "刀",
-        "number": 18,
-        "strokecount": 2,
-        "frequency": 337,
-        "top": 75,
-        "meanings": [
-            "sword"
-        ],
-        "readings": [
-            "かたな"
-        ],
-        "variants": [
-            "刂",
-            "⺈"
-        ]
-    },
-    {
-        "radical": "刂",
-        "kradical": "刈",
-        "number": 18,
-        "strokecount": 2,
-        "frequency": 337,
-        "top": 75,
-        "meanings": [
-            "sword"
-        ],
-        "readings": [
-            "かたな"
-        ],
-        "variantOf": "刀"
-    },
-    {
-        "radical": "⺈",
-        "number": 18,
-        "strokecount": 2,
-        "frequency": 337,
-        "top": 75,
-        "meanings": [
-            "knife"
-        ],
-        "readings": [
-            "かたな"
-        ],
-        "variantOf": "刀"
-    },
-    {
-        "radical": "力",
-        "kradical": "力",
-        "number": 19,
-        "strokecount": 2,
-        "frequency": 163,
-        "top": 75,
-        "meanings": [
-            "power",
-            "force"
-        ],
-        "readings": [
-            "ちから"
-        ]
-    },
-    {
-        "radical": "勹",
-        "kradical": "勹",
-        "number": 20,
-        "strokecount": 2,
-        "frequency": 64,
-        "meanings": [
-            "embrace",
-            "wrap frame"
-        ],
-        "readings": [
-            "つつみがまえ"
-        ]
-    },
-    {
-        "radical": "匕",
-        "kradical": "匕",
-        "number": 21,
-        "strokecount": 2,
-        "frequency": 19,
-        "meanings": [
-            "spoon"
-        ],
-        "readings": [
-            "ひ"
-        ]
-    },
-    {
-        "radical": "匚",
-        "kradical": "匚",
-        "number": 22,
-        "strokecount": 2,
-        "frequency": 64,
-        "meanings": [
-            "box frame"
-        ],
-        "readings": [
-            "はこがまえ"
-        ]
-    },
-    {
-        "radical": "亡",
-        "kradical": "亡",
-        "number": 23,
-        "strokecount": 3,
-        "frequency": 17,
-        "meanings": [
-            "dead",
-            "hiding frame"
-        ],
-        "readings": [
-            "かくしがまえ"
-        ],
-        "variants": [
-            "匸"
-        ]
-    },
-    {
-        "radical": "匸",
-        "number": 23,
-        "strokecount": 2,
-        "frequency": 17,
-        "meanings": [
-            "dead",
-            "hiding frame"
-        ],
-        "readings": [
-            "かくしがまえ"
-        ],
-        "variantOf": "亡"
-    },
-    {
-        "radical": "十",
-        "kradical": "十",
-        "number": 24,
-        "strokecount": 2,
-        "frequency": 55,
-        "top": 75,
-        "meanings": [
-            "ten"
-        ],
-        "readings": [
-            "じゅう"
-        ]
-    },
-    {
-        "radical": "卜",
-        "kradical": "卜",
-        "number": 25,
-        "strokecount": 2,
-        "frequency": 45,
-        "meanings": [
-            "divination to"
-        ],
-        "readings": [
-            "ぼく・ぼくづくり・ぼくのと・と・うらない"
-        ],
-        "variants": [
-            "⺊"
-        ]
-    },
-    {
-        "radical": "⺊",
-        "number": 25,
-        "strokecount": 2,
-        "frequency": 45,
-        "meanings": [
-            "divination to"
-        ],
-        "readings": [
-            "ぼく・ぼくづくり・ぼくのと・と・うらない"
-        ],
-        "variantOf": "卜"
-    },
-    {
-        "radical": "卩",
-        "kradical": "卩",
-        "number": 26,
-        "strokecount": 2,
-        "frequency": 40,
-        "meanings": [
-            "seal"
-        ],
-        "readings": [
-            "ふしづくり"
-        ],
-        "variants": [
-            "㔾"
-        ]
-    },
-    {
-        "radical": "㔾",
-        "number": 26,
-        "strokecount": 2,
-        "frequency": 40,
-        "meanings": [
-            "seal"
-        ],
-        "readings": [
-            "ふしづくり"
-        ],
-        "variantOf": "卩"
-    },
-    {
-        "radical": "厂",
-        "kradical": "厂",
-        "number": 27,
-        "strokecount": 2,
-        "frequency": 129,
-        "meanings": [
-            "cliff"
-        ],
-        "readings": [
-            "がんだれ"
-        ]
-    },
-    {
-        "radical": "厶",
-        "kradical": "厶",
-        "number": 28,
-        "strokecount": 2,
-        "frequency": 40,
-        "meanings": [
-            "private"
-        ],
-        "readings": [
-            "む"
-        ]
-    },
-    {
-        "radical": "又",
-        "kradical": "又",
-        "number": 29,
-        "strokecount": 2,
-        "frequency": 91,
-        "meanings": [
-            "again",
-            "right hand"
-        ],
-        "readings": [
-            "また"
-        ]
-    },
-    {
-        "radical": "口",
-        "kradical": "口",
-        "number": 30,
-        "strokecount": 3,
-        "frequency": 1146,
-        "top": 25,
-        "meanings": [
-            "mouth",
-            "opening"
-        ],
-        "readings": [
-            "くち"
-        ],
-        "variants": [
-            "品"
-        ]
-    },
-    {
-        "radical": "品",
-        "kradical": "品",
-        "number": 30,
-        "strokecount": 9,
-        "frequency": 1146,
-        "top": 25,
-        "meanings": [
-            "mouth",
-            "opening"
-        ],
-        "readings": [
-            "くち"
-        ],
-        "variantOf": "口"
-    },
-    {
-        "radical": "囗",
-        "kradical": "囗",
-        "number": 31,
-        "strokecount": 3,
-        "frequency": 118,
-        "top": 75,
-        "meanings": [
-            "enclosure"
-        ],
-        "readings": [
-            "くにがまえ"
-        ]
-    },
-    {
-        "radical": "土",
-        "kradical": "土",
-        "number": 32,
-        "strokecount": 3,
-        "frequency": 580,
-        "top": 50,
-        "meanings": [
-            "earth"
-        ],
-        "readings": [
-            "つち"
-        ]
-    },
-    {
-        "radical": "士",
-        "kradical": "士",
-        "number": 33,
-        "strokecount": 3,
-        "frequency": 24,
-        "meanings": [
-            "scholar",
-            "bachelor"
-        ],
-        "readings": [
-            "さむらい"
-        ]
-    },
-    {
-        "radical": "夂",
-        "kradical": "夂",
-        "number": 34,
-        "strokecount": 3,
-        "frequency": 34,
-        "meanings": [
-            "winter"
-        ],
-        "readings": [
-            "ふゆがしら"
-        ]
-    },
-    {
-        "radical": "夊",
-        "number": 35,
-        "strokecount": 3,
-        "meanings": [
-            "winter variant"
-        ],
-        "readings": [
-            "すいにょう"
-        ]
-    },
-    {
-        "radical": "夕",
-        "kradical": "夕",
-        "number": 36,
-        "strokecount": 3,
-        "frequency": 34,
-        "meanings": [
-            "evening",
-            "sunset"
-        ],
-        "readings": [
-            "ゆう・ゆうべ・た"
-        ]
-    },
-    {
-        "radical": "大",
-        "kradical": "大",
-        "number": 37,
-        "strokecount": 3,
-        "frequency": 132,
-        "top": 75,
-        "meanings": [
-            "big",
-            "very"
-        ],
-        "readings": [
-            "だい"
-        ]
-    },
-    {
-        "radical": "女",
-        "kradical": "女",
-        "number": 38,
-        "strokecount": 3,
-        "frequency": 681,
-        "top": 50,
-        "meanings": [
-            "woman",
-            "female"
-        ],
-        "readings": [
-            "おんな・おんなへん"
-        ]
-    },
-    {
-        "radical": "子",
-        "kradical": "子",
-        "number": 39,
-        "strokecount": 3,
-        "frequency": 83,
-        "meanings": [
-            "child",
-            "seed"
-        ],
-        "readings": [
-            "こ"
-        ]
-    },
-    {
-        "radical": "宀",
-        "kradical": "宀",
-        "number": 40,
-        "strokecount": 3,
-        "frequency": 246,
-        "top": 50,
-        "meanings": [
-            "roof"
-        ],
-        "readings": [
-            "うかんむり"
-        ]
-    },
-    {
-        "radical": "寸",
-        "kradical": "寸",
-        "number": 41,
-        "strokecount": 3,
-        "frequency": 40,
-        "top": 75,
-        "meanings": [
-            "sun (unit of measurement)"
-        ],
-        "readings": [
-            "すん・すんづくり"
-        ]
-    },
-    {
-        "radical": "小",
-        "kradical": "小",
-        "number": 42,
-        "strokecount": 3,
-        "frequency": 41,
-        "meanings": [
-            "small"
-        ],
-        "readings": [
-            "ちいさい"
-        ],
-        "variants": [
-            "⺌",
-            "⺍"
-        ]
-    },
-    {
-        "radical": "⺌",
-        "kradical": "尚",
-        "number": 42,
-        "strokecount": 3,
-        "frequency": 41,
-        "meanings": [
-            "small"
-        ],
-        "readings": [
-            "ちいさい"
-        ],
-        "variantOf": "小"
-    },
-    {
-        "radical": "⺍",
-        "number": 42,
-        "strokecount": 3,
-        "frequency": 41,
-        "meanings": [
-            "small"
-        ],
-        "readings": [
-            "ちいさい"
-        ],
-        "variantOf": "小"
-    },
-    {
-        "radical": "尢",
-        "kradical": "尢",
-        "number": 43,
-        "strokecount": 3,
-        "frequency": 66,
-        "meanings": [
-            "lame"
-        ],
-        "readings": [
-            "まげあし"
-        ],
-        "variants": [
-            "尤",
-            "尣"
-        ]
-    },
-    {
-        "radical": "尤",
-        "kradical": "尤",
-        "number": 43,
-        "strokecount": 4,
-        "frequency": 66,
-        "meanings": [
-            "lame"
-        ],
-        "readings": [
-            "まげあし"
-        ],
-        "variantOf": "尢"
-    },
-    {
-        "radical": "尣",
-        "number": 43,
-        "strokecount": 4,
-        "frequency": 66,
-        "meanings": [
-            "lame"
-        ],
-        "readings": [
-            "まげあし"
-        ],
-        "variantOf": "尢"
-    },
-    {
-        "radical": "尸",
-        "kradical": "尸",
-        "number": 44,
-        "strokecount": 3,
-        "frequency": 148,
-        "top": 75,
-        "meanings": [
-            "corpse"
-        ],
-        "readings": [
-            "しかばね"
-        ]
-    },
-    {
-        "radical": "屮",
-        "kradical": "屮",
-        "number": 45,
-        "strokecount": 3,
-        "frequency": 38,
-        "meanings": [
-            "sprout"
-        ],
-        "readings": [
-            "てつ"
-        ]
-    },
-    {
-        "radical": "山",
-        "kradical": "山",
-        "number": 46,
-        "strokecount": 3,
-        "frequency": 636,
-        "top": 75,
-        "meanings": [
-            "mountain"
-        ],
-        "readings": [
-            "やま"
-        ]
-    },
-    {
-        "radical": "巛",
-        "kradical": "巛",
-        "number": 47,
-        "strokecount": 3,
-        "frequency": 26,
-        "meanings": [
-            "river"
-        ],
-        "readings": [
-            "かわ"
-        ],
-        "variants": [
-            "川",
-            "巜"
-        ]
-    },
-    {
-        "radical": "川",
-        "kradical": "川",
-        "number": 47,
-        "strokecount": 3,
-        "frequency": 26,
-        "meanings": [
-            "river"
-        ],
-        "readings": [
-            "かわ"
-        ],
-        "variantOf": "巛"
-    },
-    {
-        "radical": "巜",
-        "number": 47,
-        "strokecount": 2,
-        "frequency": 26,
-        "meanings": [
-            "river"
-        ],
-        "readings": [
-            "かわ"
-        ],
-        "variantOf": "巛"
-    },
-    {
-        "radical": "工",
-        "kradical": "工",
-        "number": 48,
-        "strokecount": 3,
-        "frequency": 17,
-        "meanings": [
-            "work"
-        ],
-        "readings": [
-            "たくみ"
-        ]
-    },
-    {
-        "radical": "已",
-        "kradical": "已",
-        "number": 49,
-        "strokecount": 3,
-        "frequency": 20,
-        "meanings": [
-            "oneself"
-        ],
-        "readings": [
-            "おのれ"
-        ],
-        "variants": [
-            "己",
-            "巳"
-        ]
-    },
-    {
-        "radical": "己",
-        "number": 49,
-        "strokecount": 3,
-        "frequency": 20,
-        "meanings": [
-            "oneself"
-        ],
-        "readings": [
-            "おのれ"
-        ],
-        "variantOf": "已"
-    },
-    {
-        "radical": "巳",
-        "number": 49,
-        "strokecount": 3,
-        "frequency": 20,
-        "meanings": [
-            "oneself"
-        ],
-        "readings": [
-            "おのれ"
-        ],
-        "variantOf": "已"
-    },
-    {
-        "radical": "巾",
-        "kradical": "巾",
-        "number": 50,
-        "strokecount": 3,
-        "frequency": 295,
-        "top": 75,
-        "meanings": [
-            "cloth",
-            "turban",
-            "scarf"
-        ],
-        "readings": [
-            "はば"
-        ]
-    },
-    {
-        "radical": "干",
-        "kradical": "干",
-        "number": 51,
-        "strokecount": 3,
-        "frequency": 9,
-        "meanings": [
-            "dry"
-        ],
-        "readings": [
-            "ほし"
-        ]
-    },
-    {
-        "radical": "幺",
-        "kradical": "幺",
-        "number": 52,
-        "strokecount": 3,
-        "frequency": 50,
-        "meanings": [
-            "short thread"
-        ],
-        "readings": [
-            "いとがしら"
-        ]
-    },
-    {
-        "radical": "广",
-        "kradical": "广",
-        "number": 53,
-        "strokecount": 3,
-        "frequency": 15,
-        "meanings": "dotted cliff",
-        "readings": [
-            "まだれ"
-        ]
-    },
-    {
-        "radical": "廴",
-        "kradical": "廴",
-        "number": 54,
-        "strokecount": 3,
-        "frequency": 9,
-        "meanings": [
-            "long stride"
-        ],
-        "readings": [
-            "いんにょう"
-        ]
-    },
-    {
-        "radical": "廾",
-        "kradical": "廾",
-        "number": 55,
-        "strokecount": 3,
-        "frequency": 50,
-        "meanings": [
-            "two hands",
-            "twenty"
-        ],
-        "readings": [
-            "にじゅうあし"
-        ]
-    },
-    {
-        "radical": "弋",
-        "kradical": "弋",
-        "number": 56,
-        "strokecount": 3,
-        "frequency": 15,
-        "meanings": [
-            "ceremony",
-            "shoot",
-            "arrow"
-        ],
-        "readings": [
-            "しきがまえ"
-        ]
-    },
-    {
-        "radical": "弓",
-        "kradical": "弓",
-        "number": 57,
-        "strokecount": 3,
-        "frequency": 165,
-        "top": 75,
-        "meanings": [
-            "bow"
-        ],
-        "readings": [
-            "ゆみ"
-        ]
-    },
-    {
-        "radical": "彐",
-        "kradical": "ヨ",
-        "number": 58,
-        "strokecount": 3,
-        "frequency": 25,
-        "meanings": [
-            "pig's head"
-        ],
-        "readings": [
-            "けいがしら"
-        ],
-        "variants": [
-            "彑"
-        ]
-    },
-    {
-        "radical": "彑",
-        "kradical": "彑",
-        "number": 58,
-        "strokecount": 3,
-        "frequency": 25,
-        "meanings": [
-            "pig's head"
-        ],
-        "readings": [
-            "けいがしら"
-        ],
-        "variantOf": "彐"
-    },
-    {
-        "radical": "彡",
-        "kradical": "彡",
-        "number": 59,
-        "strokecount": 3,
-        "frequency": 62,
-        "meanings": [
-            "hair",
-            "bristle",
-            "stubble",
-            "beard"
-        ],
-        "readings": [
-            "さん・さんづくり"
-        ]
-    },
-    {
-        "radical": "彳",
-        "kradical": "彳",
-        "number": 60,
-        "strokecount": 3,
-        "frequency": 215,
-        "top": 75,
-        "meanings": [
-            "step"
-        ],
-        "readings": [
-            "ぎょうにんべん"
-        ]
-    },
-    {
-        "radical": "心",
-        "kradical": "心",
-        "meanings": [
-            "heart"
-        ],
-        "number": 61,
-        "strokecount": 4,
-        "frequency": 1115,
-        "top": 25,
-        "readings": [
-            "りっしんべん"
-        ],
-        "variants": [
-            "忄",
-            "㣺"
-        ]
-    },
-    {
-        "radical": "忄",
-        "kradical": "忙",
-        "number": 61,
-        "strokecount": 3,
-        "frequency": 1115,
-        "top": 25,
-        "readings": [
-            "りっしんべん"
-        ],
-        "variantOf": "心"
-    },
-    {
-        "radical": "㣺",
-        "number": 61,
-        "strokecount": 4,
-        "frequency": 1115,
-        "top": 25,
-        "readings": [
-            "りっしんべん"
-        ],
-        "variantOf": "心"
-    },
-    {
-        "radical": "戈",
-        "kradical": "戈",
-        "number": 62,
-        "strokecount": 4,
-        "frequency": 116,
-        "meanings": [
-            "spear",
-            "halberd"
-        ],
-        "readings": [
-            "かのほこ"
-        ]
-    },
-    {
-        "radical": "戸",
-        "kradical": "戸",
-        "number": 63,
-        "strokecount": 4,
-        "frequency": 44,
-        "meanings": [
-            "door",
-            "house"
-        ],
-        "readings": [
-            "とびらのと"
-        ],
-        "variants": [
-            "戶",
-            "户"
-        ]
-    },
-    {
-        "radical": "戶",
-        "number": 63,
-        "strokecount": 4,
-        "frequency": 44,
-        "meanings": [
-            "door",
-            "house"
-        ],
-        "readings": [
-            "とびらのと"
-        ],
-        "variantOf": "戸"
-    },
-    {
-        "radical": "户",
-        "number": 63,
-        "strokecount": 4,
-        "frequency": 44,
-        "meanings": [
-            "door",
-            "house"
-        ],
-        "readings": [
-            "とびらのと"
-        ],
-        "variantOf": "戸"
-    },
-    {
-        "radical": "手",
-        "kradical": "手",
-        "number": 64,
-        "strokecount": 4,
-        "frequency": 1203,
-        "top": 25,
-        "meanings": [
-            "hand"
-        ],
-        "readings": [
-            "て"
-        ],
-        "variants": [
-            "扌",
-            "龵"
-        ]
-    },
-    {
-        "radical": "扌",
-        "kradical": "扎",
-        "number": 64,
-        "strokecount": 3,
-        "frequency": 1203,
-        "top": 25,
-        "meanings": [
-            "hand"
-        ],
-        "readings": [
-            "て"
-        ],
-        "variantOf": "手"
-    },
-    {
-        "radical": "龵",
-        "number": 64,
-        "strokecount": 3,
-        "frequency": 1203,
-        "top": 25,
-        "meanings": [
-            "hand"
-        ],
-        "readings": [
-            "て"
-        ],
-        "variantOf": "手"
-    },
-    {
-        "radical": "支",
-        "kradical": "支",
-        "number": 65,
-        "strokecount": 4,
-        "frequency": 26,
-        "meanings": [
-            "branch"
-        ],
-        "readings": [
-            "しにょう"
-        ]
-    },
-    {
-        "radical": "攵",
-        "kradical": "攵",
-        "number": 66,
-        "strokecount": 4,
-        "frequency": 296,
-        "top": 75,
-        "meanings": [
-            "strike",
-            "whip"
-        ],
-        "readings": [
-            "のぶん"
-        ],
-        "variants": [
-            "攴"
-        ]
-    },
-    {
-        "radical": "攴",
-        "number": 66,
-        "strokecount": 4,
-        "frequency": 296,
-        "top": 75,
-        "meanings": [
-            "strike",
-            "whip"
-        ],
-        "readings": [
-            "のぶん"
-        ],
-        "variantOf": "攵"
-    },
-    {
-        "radical": "文",
-        "kradical": "文",
-        "number": 67,
-        "strokecount": 4,
-        "frequency": 26,
-        "top": 75,
-        "meanings": [
-            "script",
-            "literature"
-        ],
-        "readings": [
-            "ぶん"
-        ]
-    },
-    {
-        "radical": "斗",
-        "kradical": "斗",
-        "number": 68,
-        "strokecount": 4,
-        "frequency": 32,
-        "meanings": [
-            "dipper",
-            "measuring scoop"
-        ],
-        "readings": [
-            "とます"
-        ]
-    },
-    {
-        "radical": "斤",
-        "kradical": "斤",
-        "number": 69,
-        "strokecount": 4,
-        "frequency": 55,
-        "meanings": [
-            "axe"
-        ],
-        "readings": [
-            "おの"
-        ]
-    },
-    {
-        "radical": "方",
-        "kradical": "方",
-        "number": 70,
-        "strokecount": 4,
-        "frequency": 55,
-        "meanings": [
-            "way",
-            "square",
-            "raft"
-        ],
-        "readings": [
-            "ほう"
-        ]
-    },
-    {
-        "radical": "无",
-        "kradical": "无",
-        "number": 71,
-        "strokecount": 4,
-        "frequency": 12,
-        "meanings": [
-            "perish"
-        ],
-        "readings": [
-            "むにょう"
-        ],
-        "variants": [
-            "旡"
-        ]
-    },
-    {
-        "radical": "旡",
-        "number": 71,
-        "strokecount": 5,
-        "frequency": 12,
-        "meanings": [
-            "perish"
-        ],
-        "readings": [
-            "むにょう"
-        ],
-        "variantOf": "无"
-    },
-    {
-        "radical": "日",
-        "kradical": "日",
-        "number": 72,
-        "strokecount": 4,
-        "frequency": 453,
-        "top": 50,
-        "meanings": [
-            "sun",
-            "day"
-        ],
-        "readings": [
-            "にち"
-        ]
-    },
-    {
-        "radical": "曰",
-        "kradical": "曰",
-        "number": 73,
-        "strokecount": 4,
-        "frequency": 37,
-        "meanings": [
-            "say"
-        ],
-        "readings": [
-            "いわく"
-        ]
-    },
-    {
-        "radical": "月",
-        "kradical": "月",
-        "number": 74,
-        "strokecount": 4,
-        "frequency": 69,
-        "top": 50,
-        "meanings": [
-            "moon",
-            "month",
-            "body",
-            "flesh"
-        ],
-        "readings": [
-            "つき"
-        ],
-        "variants": [
-            "⺝"
-        ]
-    },
-    {
-        "radical": "⺝",
-        "number": 74,
-        "strokecount": 4,
-        "frequency": 69,
-        "top": 50,
-        "meanings": [
-            "moon",
-            "month",
-            "body",
-            "flesh"
-        ],
-        "readings": [
-            "つき"
-        ],
-        "variantOf": "月"
-    },
-    {
-        "radical": "木",
-        "kradical": "木",
-        "number": 75,
-        "strokecount": 4,
-        "frequency": 1369,
-        "top": 25,
-        "meanings": [
-            "tree"
-        ],
-        "readings": [
-            "き"
-        ]
-    },
-    {
-        "radical": "欠",
-        "kradical": "欠",
-        "number": 76,
-        "strokecount": 4,
-        "frequency": 235,
-        "meanings": [
-            "yawn",
-            "lack"
-        ],
-        "readings": [
-            "あくび"
-        ]
-    },
-    {
-        "radical": "止",
-        "kradical": "止",
-        "number": 77,
-        "strokecount": 4,
-        "frequency": 99,
-        "meanings": [
-            "stop"
-        ],
-        "readings": [
-            "とめる"
-        ]
-    },
-    {
-        "radical": "歹",
-        "kradical": "歹",
-        "number": 78,
-        "strokecount": 4,
-        "frequency": 231,
-        "meanings": [
-            "death",
-            "decay"
-        ],
-        "readings": [
-            "がつへん"
-        ],
-        "variants": [
-            "歺"
-        ]
-    },
-    {
-        "radical": "歺",
-        "number": 78,
-        "strokecount": 4,
-        "frequency": 231,
-        "meanings": [
-            "death",
-            "decay"
-        ],
-        "readings": [
-            "がつへん"
-        ],
-        "variantOf": "歹"
-    },
-    {
-        "radical": "殳",
-        "kradical": "殳",
-        "number": 79,
-        "strokecount": 4,
-        "frequency": 93,
-        "meanings": [
-            "weapon",
-            "lance"
-        ],
-        "readings": [
-            "ほこづくり"
-        ]
-    },
-    {
-        "radical": "毋",
-        "kradical": "毋",
-        "number": 80,
-        "strokecount": 4,
-        "frequency": 16,
-        "meanings": [
-            "do not",
-            "mother"
-        ],
-        "readings": [
-            "なかれ",
-            "はは"
-        ],
-        "variants": [
-            "母"
-        ]
-    },
-    {
-        "radical": "母",
-        "kradical": "母",
-        "number": 80,
-        "strokecount": 5,
-        "frequency": 16,
-        "meanings": [
-            "do not",
-            "mother"
-        ],
-        "readings": [
-            "なかれ",
-            "はは"
-        ],
-        "variantOf": "毋"
-    },
-    {
-        "radical": "比",
-        "kradical": "比",
-        "number": 81,
-        "strokecount": 4,
-        "frequency": 21,
-        "meanings": [
-            "compare",
-            "compete"
-        ],
-        "readings": [
-            "くらべる"
-        ]
-    },
-    {
-        "radical": "毛",
-        "kradical": "毛",
-        "number": 82,
-        "strokecount": 4,
-        "frequency": 211,
-        "meanings": [
-            "fur",
-            "hair"
-        ],
-        "readings": [
-            "け"
-        ]
-    },
-    {
-        "radical": "氏",
-        "kradical": "氏",
-        "number": 83,
-        "strokecount": 4,
-        "frequency": 10,
-        "meanings": [
-            "clan"
-        ],
-        "readings": [
-            "うじ"
-        ]
-    },
-    {
-        "radical": "气",
-        "kradical": "气",
-        "number": 84,
-        "strokecount": 4,
-        "frequency": 17,
-        "meanings": [
-            "steam",
-            "breath"
-        ],
-        "readings": [
-            "きがまえ"
-        ]
-    },
-    {
-        "radical": "水",
-        "kradical": "水",
-        "number": 85,
-        "strokecount": 4,
-        "frequency": 1595,
-        "top": 25,
-        "meanings": "water",
-        "readings": [
-            "みず"
-        ],
-        "variants": [
-            "氵",
-            "氺"
-        ]
-    },
-    {
-        "radical": "氵",
-        "kradical": "汁",
-        "number": 85,
-        "strokecount": 4,
-        "frequency": 1595,
-        "top": 25,
-        "meanings": "water",
-        "readings": [
-            "みず"
-        ],
-        "variantOf": "水"
-    },
-    {
-        "radical": "氺",
-        "number": 85,
-        "strokecount": 5,
-        "frequency": 1595,
-        "top": 25,
-        "meanings": "water",
-        "readings": [
-            "みず"
-        ],
-        "variantOf": "水"
-    },
-    {
-        "radical": "火",
-        "kradical": "火",
-        "number": 86,
-        "strokecount": 4,
-        "frequency": 639,
-        "top": 75,
-        "meanings": [
-            "fire"
-        ],
-        "readings": [
-            "ひ"
-        ],
-        "variants": [
-            "灬"
-        ]
-    },
-    {
-        "radical": "灬",
-        "kradical": "杰",
-        "number": 86,
-        "strokecount": 4,
-        "frequency": 639,
-        "top": 75,
-        "meanings": [
-            "fire"
-        ],
-        "readings": [
-            "ひ"
-        ],
-        "variantOf": "火"
-    },
-    {
-        "radical": "爪",
-        "kradical": "爪",
-        "number": 87,
-        "strokecount": 4,
-        "frequency": 36,
-        "meanings": [
-            "claw",
-            "nail",
-            "talon"
-        ],
-        "readings": [
-            "つめ"
-        ],
-        "variants": [
-            "爫",
-            "爫"
-        ]
-    },
-    {
-        "radical": "爫",
-        "number": 87,
-        "strokecount": 4,
-        "frequency": 36,
-        "meanings": [
-            "claw",
-            "nail",
-            "talon"
-        ],
-        "readings": [
-            "つめ"
-        ],
-        "variantOf": "爪"
-    },
-    {
-        "radical": "爫",
-        "number": 87,
-        "strokecount": 4,
-        "frequency": 36,
-        "meanings": [
-            "claw",
-            "nail",
-            "talon"
-        ],
-        "readings": [
-            "つめ"
-        ],
-        "variantOf": "爪"
-    },
-    {
-        "radical": "父",
-        "kradical": "父",
-        "number": 88,
-        "strokecount": 4,
-        "frequency": 10,
-        "meanings": [
-            "father"
-        ],
-        "readings": [
-            "ちち"
-        ]
-    },
-    {
-        "radical": "爻",
-        "kradical": "爻",
-        "number": 89,
-        "strokecount": 4,
-        "frequency": 16,
-        "meanings": [
-            "mix",
-            "twine",
-            "cross"
-        ],
-        "readings": [
-            "こう"
-        ]
-    },
-    {
-        "radical": "爿",
-        "kradical": "爿",
-        "number": 90,
-        "strokecount": 4,
-        "frequency": 48,
-        "meanings": [
-            "split wood"
-        ],
-        "readings": [
-            "しょうへん"
-        ],
-        "variants": [
-            "丬"
-        ]
-    },
-    {
-        "radical": "丬",
-        "number": 90,
-        "strokecount": 3,
-        "frequency": 48,
-        "meanings": [
-            "split wood"
-        ],
-        "readings": [
-            "しょうへん"
-        ],
-        "variantOf": "爿"
-    },
-    {
-        "radical": "片",
-        "kradical": "片",
-        "number": 91,
-        "strokecount": 4,
-        "frequency": 77,
-        "meanings": [
-            "slice"
-        ],
-        "readings": [
-            "かた"
-        ]
-    },
-    {
-        "radical": "牙",
-        "kradical": "牙",
-        "number": 92,
-        "strokecount": 4,
-        "frequency": 9,
-        "meanings": [
-            "fang"
-        ],
-        "readings": [
-            "きばへん"
-        ]
-    },
-    {
-        "radical": "牛",
-        "kradical": "牛",
-        "number": 93,
-        "strokecount": 4,
-        "frequency": 233,
-        "meanings": [
-            "cow"
-        ],
-        "readings": [
-            "うし"
-        ],
-        "variants": [
-            "牜",
-            "⺧"
-        ]
-    },
-    {
-        "radical": "牜",
-        "number": 93,
-        "strokecount": 4,
-        "frequency": 233,
-        "meanings": [
-            "cow"
-        ],
-        "readings": [
-            "うし"
-        ],
-        "variantOf": "牛"
-    },
-    {
-        "radical": "⺧",
-        "number": 93,
-        "strokecount": 4,
-        "frequency": 233,
-        "meanings": [
-            "cow"
-        ],
-        "readings": [
-            "うし"
-        ],
-        "variantOf": "牛"
-    },
-    {
-        "radical": "犬",
-        "kradical": "犬",
-        "number": 94,
-        "strokecount": 4,
-        "frequency": 444,
-        "top": 75,
-        "meanings": [
-            "dog"
-        ],
-        "readings": [
-            "いぬ"
-        ],
-        "variants": [
-            "犭"
-        ]
-    },
-    {
-        "radical": "犭",
-        "kradical": "犯",
-        "number": 94,
-        "strokecount": 3,
-        "frequency": 444,
-        "top": 75,
-        "meanings": [
-            "dog"
-        ],
-        "readings": [
-            "いぬ"
-        ],
-        "variantOf": "犬"
-    },
-    {
-        "radical": "玄",
-        "kradical": "玄",
-        "number": 95,
-        "strokecount": 4,
-        "frequency": 6,
-        "meanings": [
-            "dark",
-            "profound"
-        ],
-        "readings": [
-            "げん"
-        ]
-    },
-    {
-        "radical": "玉",
-        "number": 96,
-        "strokecount": 4,
-        "frequency": 473,
-        "top": 75,
-        "meanings": [
-            "king",
-            "ball",
-            "jade"
-        ],
-        "readings": [
-            "おう",
-            "たま"
-        ],
-        "variants": [
-            "王",
-            "⺩"
-        ]
-    },
-    {
-        "radical": "王",
-        "kradical": "王",
-        "number": 96,
-        "strokecount": 4,
-        "frequency": 473,
-        "top": 75,
-        "meanings": [
-            "king",
-            "ball",
-            "jade"
-        ],
-        "readings": [
-            "おう",
-            "たま"
-        ],
-        "variantOf": "玉"
-    },
-    {
-        "radical": "⺩",
-        "number": 96,
-        "strokecount": 4,
-        "frequency": 473,
-        "top": 75,
-        "meanings": [
-            "king",
-            "ball",
-            "jade"
-        ],
-        "readings": [
-            "おう",
-            "たま"
-        ],
-        "variantOf": "玉"
-    },
-    {
-        "radical": "瓜",
-        "kradical": "瓜",
-        "number": 97,
-        "strokecount": 5,
-        "frequency": 55,
-        "meanings": [
-            "melon"
-        ],
-        "readings": [
-            "うり"
-        ]
-    },
-    {
-        "radical": "瓦",
-        "kradical": "瓦",
-        "number": 98,
-        "strokecount": 5,
-        "frequency": 174,
-        "meanings": [
-            "tile"
-        ],
-        "readings": [
-            "かわら"
-        ]
-    },
-    {
-        "radical": "甘",
-        "kradical": "甘",
-        "number": 99,
-        "strokecount": 5,
-        "frequency": 22,
-        "meanings": [
-            "sweet"
-        ],
-        "readings": [
-            "あまい"
-        ]
-    },
-    {
-        "radical": "生",
-        "kradical": "生",
-        "number": 100,
-        "strokecount": 5,
-        "frequency": 22,
-        "meanings": [
-            "life"
-        ],
-        "readings": [
-            "うまれる"
-        ]
-    },
-    {
-        "radical": "用",
-        "kradical": "用",
-        "number": 101,
-        "strokecount": 5,
-        "frequency": 10,
-        "meanings": [
-            "use"
-        ],
-        "readings": [
-            "もちいる・よう"
-        ]
-    },
-    {
-        "radical": "田",
-        "kradical": "田",
-        "number": 102,
-        "strokecount": 5,
-        "frequency": 192,
-        "top": 75,
-        "meanings": [
-            "field"
-        ],
-        "readings": [
-            "た"
-        ]
-    },
-    {
-        "radical": "疋",
-        "kradical": "疋",
-        "number": 103,
-        "strokecount": 5,
-        "frequency": 15,
-        "meanings": [
-            "bolt of cloth"
-        ],
-        "readings": [
-            "ひき"
-        ],
-        "variants": [
-            "𤴔"
-        ]
-    },
-    {
-        "radical": "𤴔",
-        "number": 103,
-        "strokecount": 5,
-        "frequency": 15,
-        "meanings": [
-            "bolt of cloth"
-        ],
-        "readings": [
-            "ひき"
-        ],
-        "variantOf": "疋"
-    },
-    {
-        "radical": "疒",
-        "kradical": "疔",
-        "number": 104,
-        "strokecount": 5,
-        "frequency": 526,
-        "top": 75,
-        "meanings": [
-            "sickness"
-        ],
-        "readings": [
-            "やまいだれ"
-        ]
-    },
-    {
-        "radical": "癶",
-        "kradical": "癶",
-        "number": 105,
-        "strokecount": 5,
-        "frequency": 15,
-        "meanings": [
-            "footsteps"
-        ],
-        "readings": [
-            "はつがしら"
-        ]
-    },
-    {
-        "radical": "白",
-        "kradical": "白",
-        "number": 106,
-        "strokecount": 5,
-        "frequency": 109,
-        "meanings": [
-            "white"
-        ],
-        "readings": [
-            "しろ"
-        ]
-    },
-    {
-        "radical": "皮",
-        "kradical": "皮",
-        "number": 107,
-        "strokecount": 5,
-        "frequency": 94,
-        "meanings": [
-            "skin"
-        ],
-        "readings": [
-            "けがわ"
-        ]
-    },
-    {
-        "radical": "皿",
-        "kradical": "皿",
-        "number": 108,
-        "strokecount": 5,
-        "frequency": 129,
-        "meanings": [
-            "dish"
-        ],
-        "readings": [
-            "さら"
-        ]
-    },
-    {
-        "radical": "目",
-        "kradical": "目",
-        "number": 109,
-        "strokecount": 5,
-        "frequency": 647,
-        "meanings": [
-            "eye"
-        ],
-        "readings": [
-            "め"
-        ]
-    },
-    {
-        "radical": "矛",
-        "kradical": "矛",
-        "number": 110,
-        "strokecount": 5,
-        "frequency": 65,
-        "meanings": [
-            "spear",
-            "pike"
-        ],
-        "readings": [
-            "むのほこ"
-        ]
-    },
-    {
-        "radical": "矢",
-        "kradical": "矢",
-        "strokecount": 5,
-        "number": 111,
-        "frequency": 64,
-        "meanings": [
-            "arrow"
-        ],
-        "readings": [
-            "や"
-        ]
-    },
-    {
-        "radical": "石",
-        "kradical": "石",
-        "number": 112,
-        "strokecount": 5,
-        "frequency": 499,
-        "top": 75,
-        "meanings": [
-            "stone"
-        ],
-        "readings": [
-            "いし"
-        ]
-    },
-    {
-        "radical": "示",
-        "kradical": "示",
-        "number": 113,
-        "strokecount": 5,
-        "frequency": 213,
-        "top": 75,
-        "meanings": [
-            "altar",
-            "display"
-        ],
-        "readings": [
-            "しめす"
-        ],
-        "variants": [
-            "礻"
-        ]
-    },
-    {
-        "radical": "礻",
-        "kradical": "礼",
-        "number": 113,
-        "strokecount": 4,
-        "frequency": 213,
-        "top": 75,
-        "meanings": [
-            "altar",
-            "display"
-        ],
-        "readings": [
-            "しめす"
-        ],
-        "variantOf": "示"
-    },
-    {
-        "radical": "禸",
-        "kradical": "禹",
-        "number": 114,
-        "strokecount": 5,
-        "frequency": 12,
-        "meanings": [
-            "track"
-        ],
-        "readings": [
-            "ぐうのあし"
-        ]
-    },
-    {
-        "radical": "禾",
-        "kradical": "禾",
-        "number": 115,
-        "strokecount": 5,
-        "frequency": 431,
-        "meanings": [
-            "two-branch tree"
-        ],
-        "readings": [
-            "のぎ"
-        ]
-    },
-    {
-        "radical": "穴",
-        "kradical": "穴",
-        "number": 116,
-        "strokecount": 5,
-        "frequency": 298,
-        "meanings": [
-            "cave"
-        ],
-        "readings": [
-            "あな"
-        ]
-    },
-    {
-        "radical": "立",
-        "kradical": "立",
-        "number": 117,
-        "strokecount": 5,
-        "frequency": 101,
-        "meanings": [
-            "stand",
-            "erect"
-        ],
-        "readings": [
-            "たつ"
-        ]
-    },
-    {
-        "radical": "竹",
-        "kradical": "竹",
-        "number": 118,
-        "strokecount": 6,
-        "frequency": 953,
-        "top": 75,
-        "meanings": [
-            "bamboo"
-        ],
-        "readings": [
-            "たけ"
-        ],
-        "variants": [
-            "⺮"
-        ]
-    },
-    {
-        "radical": "⺮",
-        "number": 118,
-        "strokecount": 6,
-        "top": 75,
-        "meanings": [
-            "bamboo"
-        ],
-        "readings": [
-            "たけ"
-        ],
-        "variantOf": "竹"
-    },
-    {
-        "radical": "米",
-        "kradical": "米",
-        "number": 119,
-        "strokecount": 6,
-        "frequency": 318,
-        "meanings": [
-            "rice"
-        ],
-        "readings": [
-            "こめ"
-        ]
-    },
-    {
-        "radical": "糸",
-        "kradical": "糸",
-        "number": 120,
-        "strokecount": 6,
-        "frequency": 832,
-        "top": 50,
-        "meanings": [
-            "thread",
-            "string"
-        ],
-        "readings": [
-            "いと"
-        ],
-        "variants": [
-            "糹"
-        ]
-    },
-    {
-        "radical": "糹",
-        "number": 120,
-        "strokecount": 6,
-        "frequency": 832,
-        "top": 50,
-        "meanings": [
-            "thread",
-            "string"
-        ],
-        "readings": [
-            "いと"
-        ],
-        "variantOf": "糸"
-    },
-    {
-        "radical": "缶",
-        "kradical": "缶",
-        "number": 121,
-        "strokecount": 6,
-        "frequency": 77,
-        "meanings": [
-            "can",
-            "earthenware jar"
-        ],
-        "readings": [
-            "かん"
-        ]
-    },
-    {
-        "radical": "罒",
-        "kradical": "買",
-        "number": 122,
-        "strokecount": 6,
-        "frequency": 163,
-        "meanings": [
-            "net"
-        ],
-        "readings": [
-            "あみがしら"
-        ],
-        "variants": [
-            "网"
-        ]
-    },
-    {
-        "radical": "网",
-        "number": 122,
-        "strokecount": 5,
-        "frequency": 163,
-        "meanings": [
-            "net"
-        ],
-        "readings": [
-            "あみがしら"
-        ],
-        "variantOf": "罒"
-    },
-    {
-        "radical": "羊",
-        "kradical": "羊",
-        "number": 123,
-        "strokecount": 6,
-        "frequency": 156,
-        "meanings": [
-            "sheep"
-        ],
-        "readings": [
-            "ひつじ"
-        ],
-        "variants": [
-            "𦍌",
-            "⺶"
-        ]
-    },
-    {
-        "radical": "𦍌",
-        "number": 123,
-        "strokecount": 6,
-        "frequency": 156,
-        "meanings": [
-            "sheep"
-        ],
-        "readings": [
-            "ひつじ"
-        ],
-        "variantOf": "羊"
-    },
-    {
-        "radical": "⺶",
-        "number": 123,
-        "strokecount": 6,
-        "frequency": 156,
-        "meanings": [
-            "sheep"
-        ],
-        "readings": [
-            "ひつじ"
-        ],
-        "variantOf": "羊"
-    },
-    {
-        "radical": "羽",
-        "kradical": "羽",
-        "number": 124,
-        "strokecount": 6,
-        "frequency": 220,
-        "meanings": [
-            "feather",
-            "wing"
-        ],
-        "readings": [
-            "はね"
-        ]
-    },
-    {
-        "radical": "耂",
-        "number": 125,
-        "strokecount": 6,
-        "frequency": 22,
-        "meanings": [
-            "old"
-        ],
-        "readings": [
-            "ろう"
-        ],
-        "variants": [
-            "老"
-        ]
-    },
-    {
-        "radical": "老",
-        "kradical": "老",
-        "number": 125,
-        "strokecount": 4,
-        "frequency": 22,
-        "meanings": [
-            "old"
-        ],
-        "readings": [
-            "ろう"
-        ],
-        "variantOf": "耂"
-    },
-    {
-        "radical": "而",
-        "kradical": "而",
-        "number": 126,
-        "strokecount": 6,
-        "frequency": 22,
-        "meanings": [
-            "rake",
-            "beard"
-        ],
-        "readings": [
-            "しかして"
-        ]
-    },
-    {
-        "radical": "耒",
-        "kradical": "耒",
-        "number": 127,
-        "strokecount": 6,
-        "frequency": 84,
-        "meanings": [
-            "plow"
-        ],
-        "readings": [
-            "らいすき"
-        ]
-    },
-    {
-        "radical": "耳",
-        "kradical": "耳",
-        "number": 128,
-        "strokecount": 6,
-        "frequency": 172,
-        "meanings": [
-            "ear"
-        ],
-        "readings": [
-            "みみ"
-        ]
-    },
-    {
-        "radical": "聿",
-        "kradical": "聿",
-        "number": 129,
-        "strokecount": 6,
-        "frequency": 19,
-        "meanings": [
-            "brush"
-        ],
-        "readings": [
-            "ふでづくり"
-        ],
-        "variants": [
-            "⺻"
-        ]
-    },
-    {
-        "radical": "⺻",
-        "number": 129,
-        "strokecount": 5,
-        "frequency": 19,
-        "meanings": [
-            "brush"
-        ],
-        "readings": [
-            "ふでづくり"
-        ],
-        "variantOf": "聿"
-    },
-    {
-        "radical": "肉",
-        "kradical": "肉",
-        "number": 130,
-        "strokecount": 6,
-        "frequency": 674,
-        "top": 50,
-        "meanings": [
-            "meat"
-        ],
-        "readings": [
-            "にく"
-        ],
-        "variants": [
-            "⺼"
-        ]
-    },
-    {
-        "radical": "⺼",
-        "number": 130,
-        "strokecount": 4,
-        "frequency": 674,
-        "top": 50,
-        "meanings": [
-            "meat"
-        ],
-        "readings": [
-            "にく"
-        ],
-        "variantOf": "肉"
-    },
-    {
-        "radical": "臣",
-        "kradical": "臣",
-        "number": 131,
-        "strokecount": 7,
-        "frequency": 16,
-        "meanings": [
-            "minster",
-            "official"
-        ],
-        "readings": [
-            "しん"
-        ]
-    },
-    {
-        "radical": "自",
-        "kradical": "自",
-        "number": 132,
-        "strokecount": 6,
-        "frequency": 34,
-        "meanings": [
-            "oneself"
-        ],
-        "readings": [
-            "みずから"
-        ]
-    },
-    {
-        "radical": "至",
-        "kradical": "至",
-        "number": 133,
-        "strokecount": 6,
-        "frequency": 24,
-        "meanings": [
-            "arrive"
-        ],
-        "readings": [
-            "いたる"
-        ]
-    },
-    {
-        "radical": "臼",
-        "kradical": "臼",
-        "number": 134,
-        "strokecount": 6,
-        "frequency": 71,
-        "meanings": [
-            "mortar"
-        ],
-        "readings": [
-            "うす"
-        ]
-    },
-    {
-        "radical": "舌",
-        "kradical": "舌",
-        "number": 135,
-        "strokecount": 6,
-        "frequency": 31,
-        "meanings": [
-            "tongue"
-        ],
-        "readings": [
-            "した"
-        ]
-    },
-    {
-        "radical": "舛",
-        "kradical": "舛",
-        "number": 136,
-        "strokecount": 7,
-        "frequency": 10,
-        "meanings": [
-            "opposite"
-        ],
-        "readings": [
-            "ます"
-        ]
-    },
-    {
-        "radical": "舟",
-        "kradical": "舟",
-        "number": 137,
-        "strokecount": 6,
-        "frequency": 197,
-        "meanings": [
-            "boat"
-        ],
-        "readings": [
-            "ふね"
-        ]
-    },
-    {
-        "radical": "艮",
-        "kradical": "艮",
-        "number": 138,
-        "strokecount": 6,
-        "frequency": 5,
-        "meanings": [
-            "stopping"
-        ],
-        "readings": [
-            "うしとら"
-        ]
-    },
-    {
-        "radical": "色",
-        "kradical": "色",
-        "number": 139,
-        "strokecount": 6,
-        "frequency": 21,
-        "meanings": [
-            "colour",
-            "pretiness"
-        ],
-        "readings": [
-            "いろ"
-        ]
-    },
-    {
-        "radical": "艹",
-        "kradical": "艾",
-        "number": 140,
-        "strokecount": 3,
-        "frequency": 1902,
-        "top": 50,
-        "meanings": [
-            "grass",
-            "vegetation"
-        ],
-        "readings": [
-            "くさ"
-        ],
-        "variants": [
-            "艸",
-            "䒑"
-        ]
-    },
-    {
-        "radical": "艸",
-        "number": 140,
-        "strokecount": 6,
-        "frequency": 1902,
-        "top": 50,
-        "meanings": [
-            "grass"
-        ],
-        "readings": [
-            "くさ"
-        ],
-        "variantOf": "艹"
-    },
-    {
-        "radical": "䒑",
-        "kradical": "并",
-        "number": 140,
-        "strokecount": 3,
-        "frequency": 1902,
-        "top": 50,
-        "meanings": [
-            "grass"
-        ],
-        "readings": [
-            "くさ"
-        ],
-        "variantOf": "艹"
-    },
-    {
-        "radical": "虍",
-        "kradical": "虍",
-        "number": 141,
-        "strokecount": 6,
-        "frequency": 114,
-        "meanings": [
-            "tiger stripes"
-        ],
-        "readings": [
-            "とらかんむり"
-        ]
-    },
-    {
-        "radical": "虫",
-        "kradical": "虫",
-        "number": 142,
-        "strokecount": 6,
-        "frequency": 1067,
-        "meanings": [
-            "insect"
-        ],
-        "readings": [
-            "むし"
-        ]
-    },
-    {
-        "radical": "血",
-        "kradical": "血",
-        "number": 143,
-        "strokecount": 6,
-        "frequency": 60,
-        "meanings": [
-            "blood"
-        ],
-        "readings": [
-            "ち"
-        ]
-    },
-    {
-        "radical": "行",
-        "kradical": "行",
-        "number": 144,
-        "strokecount": 6,
-        "frequency": 53,
-        "meanings": [
-            "go",
-            "do"
-        ],
-        "readings": [
-            "ぎょう"
-        ]
-    },
-    {
-        "radical": "衣",
-        "kradical": "衣",
-        "number": 145,
-        "strokecount": 6,
-        "frequency": 607,
-        "meanings": [
-            "clothes"
-        ],
-        "readings": [
-            "ころも"
-        ],
-        "variants": [
-            "衤"
-        ]
-    },
-    {
-        "radical": "衤",
-        "kradical": "初",
-        "number": 145,
-        "strokecount": 5,
-        "frequency": 607,
-        "meanings": [
-            "clothes"
-        ],
-        "readings": [
-            "ころも"
-        ],
-        "variantOf": "衣"
-    },
-    {
-        "radical": "西",
-        "kradical": "西",
-        "number": 146,
-        "strokecount": 6,
-        "frequency": 29,
-        "meanings": [
-            "west"
-        ],
-        "readings": [
-            "にし"
-        ],
-        "variants": [
-            "覀",
-            "襾"
-        ]
-    },
-    {
-        "radical": "覀",
-        "number": 146,
-        "strokecount": 6,
-        "frequency": 29,
-        "meanings": [
-            "west"
-        ],
-        "readings": [
-            "にし"
-        ],
-        "variantOf": "西"
-    },
-    {
-        "radical": "襾",
-        "number": 146,
-        "strokecount": 6,
-        "frequency": 29,
-        "meanings": [
-            "west"
-        ],
-        "readings": [
-            "にし"
-        ],
-        "variantOf": "西"
-    },
-    {
-        "radical": "見",
-        "kradical": "見",
-        "number": 147,
-        "strokecount": 7,
-        "frequency": 161,
-        "meanings": [
-            "see"
-        ],
-        "readings": [
-            "みる"
-        ]
-    },
-    {
-        "radical": "角",
-        "kradical": "角",
-        "number": 148,
-        "strokecount": 7,
-        "frequency": 158,
-        "meanings": [
-            "horn"
-        ],
-        "readings": [
-            "つの"
-        ]
-    },
-    {
-        "radical": "言",
-        "kradical": "言",
-        "number": 149,
-        "strokecount": 7,
-        "frequency": 861,
-        "top": 50,
-        "meanings": [
-            "speech"
-        ],
-        "readings": [
-            "こと"
-        ],
-        "variants": [
-            "訁"
-        ]
-    },
-    {
-        "radical": "訁",
-        "number": 149,
-        "strokecount": 7,
-        "frequency": 861,
-        "top": 50,
-        "meanings": [
-            "speech"
-        ],
-        "readings": [
-            "こと"
-        ],
-        "variantOf": "言"
-    },
-    {
-        "radical": "谷",
-        "kradical": "谷",
-        "number": 150,
-        "strokecount": 7,
-        "frequency": 54,
-        "meanings": [
-            "valley"
-        ],
-        "readings": [
-            "たに"
-        ]
-    },
-    {
-        "radical": "豆",
-        "kradical": "豆",
-        "number": 151,
-        "strokecount": 7,
-        "frequency": 68,
-        "meanings": [
-            "bean"
-        ],
-        "readings": [
-            "まめ"
-        ]
-    },
-    {
-        "radical": "豕",
-        "kradical": "豕",
-        "number": 152,
-        "strokecount": 7,
-        "frequency": 148,
-        "meanings": [
-            "pig"
-        ],
-        "readings": [
-            "いのこ"
-        ]
-    },
-    {
-        "radical": "豸",
-        "kradical": "豸",
-        "number": 153,
-        "strokecount": 7,
-        "frequency": 140,
-        "meanings": [
-            "cat",
-            "badger"
-        ],
-        "readings": [
-            "むじな"
-        ]
-    },
-    {
-        "radical": "貝",
-        "kradical": "貝",
-        "number": 154,
-        "strokecount": 7,
-        "frequency": 277,
-        "top": 50,
-        "meanings": [
-            "shell"
-        ],
-        "readings": [
-            "かい"
-        ]
-    },
-    {
-        "radical": "赤",
-        "kradical": "赤",
-        "number": 155,
-        "strokecount": 7,
-        "frequency": 31,
-        "meanings": [
-            "red",
-            "bare"
-        ],
-        "readings": [
-            "あか"
-        ]
-    },
-    {
-        "radical": "走",
-        "kradical": "走",
-        "number": 156,
-        "strokecount": 7,
-        "frequency": 285,
-        "meanings": [
-            "run"
-        ],
-        "readings": [
-            "はしる"
-        ]
-    },
-    {
-        "radical": "足",
-        "kradical": "足",
-        "number": 157,
-        "strokecount": 7,
-        "frequency": 580,
-        "meanings": [
-            "foot"
-        ],
-        "readings": [
-            "あし"
-        ],
-        "variants": [
-            "𧾷"
-        ]
-    },
-    {
-        "radical": "𧾷",
-        "number": 157,
-        "strokecount": 7,
-        "frequency": 580,
-        "meanings": [
-            "foot"
-        ],
-        "readings": [
-            "あし"
-        ],
-        "variantOf": "足"
-    },
-    {
-        "radical": "身",
-        "kradical": "身",
-        "number": 158,
-        "strokecount": 7,
-        "frequency": 97,
-        "meanings": [
-            "body"
-        ],
-        "readings": [
-            "み"
-        ]
-    },
-    {
-        "radical": "車",
-        "kradical": "車",
-        "number": 159,
-        "strokecount": 7,
-        "frequency": 361,
-        "meanings": [
-            "cart",
-            "car"
-        ],
-        "readings": [
-            "くるま"
-        ]
-    },
-    {
-        "radical": "辛",
-        "kradical": "辛",
-        "number": 160,
-        "strokecount": 7,
-        "frequency": 36,
-        "meanings": [
-            "spicy",
-            "bitter"
-        ],
-        "readings": [
-            "からい"
-        ]
-    },
-    {
-        "radical": "辰",
-        "kradical": "辰",
-        "number": 161,
-        "strokecount": 7,
-        "meanings": "morning",
-        "readings": [
-            "たつ・しんのたつ"
-        ]
-    },
-    {
-        "radical": "⻌",
-        "kradical": "込",
-        "number": 162,
-        "strokecount": 3,
-        "frequency": 381,
-        "top": 50,
-        "meanings": [
-            "walk"
-        ],
-        "readings": [
-            "しんにょう"
-        ],
-        "variants": [
-            "辵",
-            "辶"
-        ]
-    },
-    {
-        "radical": "辵",
-        "number": 162,
-        "strokecount": 7,
-        "frequency": 381,
-        "top": 50,
-        "meanings": [
-            "walk"
-        ],
-        "readings": [
-            "しんにょう"
-        ],
-        "variantOf": "⻌"
-    },
-    {
-        "radical": "辶",
-        "number": 162,
-        "strokecount": 4,
-        "frequency": 381,
-        "top": 50,
-        "meanings": [
-            "walk"
-        ],
-        "readings": [
-            "しんにょう"
-        ],
-        "variantOf": "⻌"
-    },
-    {
-        "radical": "邑",
-        "kradical": "邑",
-        "number": 163,
-        "strokecount": 7,
-        "frequency": 350,
-        "top": 50,
-        "meanings": [
-            "town (阝 right)"
-        ],
-        "readings": [
-            "むら"
-        ],
-        "variants": [
-            "⻏"
-        ]
-    },
-    {
-        "radical": "⻏",
-        "kradical": "邦",
-        "number": 163,
-        "strokecount": 3,
-        "frequency": 350,
-        "top": 50,
-        "meanings": [
-            "town (阝 right)"
-        ],
-        "readings": [
-            "むら"
-        ],
-        "variantOf": "邑"
-    },
-    {
-        "radical": "酉",
-        "kradical": "酉",
-        "number": 164,
-        "strokecount": 7,
-        "frequency": 290,
-        "top": 75,
-        "meanings": "sake",
-        "readings": [
-            "とり"
-        ]
-    },
-    {
-        "radical": "釆",
-        "kradical": "釆",
-        "number": 165,
-        "strokecount": 7,
-        "frequency": 14,
-        "meanings": [
-            "divide",
-            "distinguish",
-            "choose"
-        ],
-        "readings": [
-            "のごめ"
-        ]
-    },
-    {
-        "radical": "里",
-        "kradical": "里",
-        "number": 166,
-        "strokecount": 7,
-        "frequency": 14,
-        "meanings": [
-            "village",
-            "mile"
-        ],
-        "readings": [
-            "さと"
-        ]
-    },
-    {
-        "radical": "金",
-        "kradical": "金",
-        "number": 167,
-        "strokecount": 8,
-        "frequency": 806,
-        "top": 50,
-        "meanings": [
-            "metal",
-            "gold"
-        ],
-        "readings": [
-            "かね"
-        ],
-        "variants": [
-            "釒"
-        ]
-    },
-    {
-        "radical": "釒",
-        "number": 167,
-        "strokecount": 8,
-        "frequency": 806,
-        "top": 50,
-        "meanings": [
-            "metal",
-            "gold"
-        ],
-        "readings": [
-            "かね"
-        ],
-        "variantOf": "金"
-    },
-    {
-        "radical": "長",
-        "kradical": "長",
-        "number": 168,
-        "strokecount": 8,
-        "frequency": 55,
-        "meanings": [
-            "long",
-            "grow",
-            "leader"
-        ],
-        "readings": [
-            "ながい",
-            "ちょう"
-        ],
-        "variants": [
-            "镸"
-        ]
-    },
-    {
-        "radical": "镸",
-        "number": 168,
-        "strokecount": 7,
-        "frequency": 55,
-        "meanings": [
-            "long",
-            "grow",
-            "leader"
-        ],
-        "readings": [
-            "ながい",
-            "ちょう"
-        ],
-        "variantOf": "長"
-    },
-    {
-        "radical": "門",
-        "kradical": "門",
-        "number": 169,
-        "strokecount": 8,
-        "frequency": 246,
-        "meanings": [
-            "gate"
-        ],
-        "readings": [
-            "もん"
-        ]
-    },
-    {
-        "radical": "阜",
-        "number": 170,
-        "strokecount": 8,
-        "frequency": 348,
-        "top": 50,
-        "meanings": [
-            "mound",
-            "dam (阝 left)"
-        ],
-        "readings": [
-            "ぎふのふ"
-        ],
-        "variants": [
-            "⻖"
-        ]
-    },
-    {
-        "radical": "⻖",
-        "kradical": "阡",
-        "number": 170,
-        "strokecount": 3,
-        "top": 50,
-        "meanings": [
-            "mound",
-            "dam (阝 left)"
-        ],
-        "readings": [
-            "ぎふのふ"
-        ],
-        "variantOf": "阜"
-    },
-    {
-        "radical": "隶",
-        "kradical": "隶",
-        "number": 171,
-        "strokecount": 8,
-        "frequency": 12,
-        "meanings": [
-            "slave",
-            "capture"
-        ],
-        "readings": [
-            "れいづくり"
-        ]
-    },
-    {
-        "radical": "隹",
-        "kradical": "隹",
-        "number": 172,
-        "strokecount": 8,
-        "frequency": 233,
-        "meanings": "old bird",
-        "readings": [
-            "ふるとり"
-        ]
-    },
-    {
-        "radical": "雨",
-        "kradical": "雨",
-        "number": 173,
-        "strokecount": 8,
-        "frequency": 298,
-        "top": 75,
-        "meanings": [
-            "rain"
-        ],
-        "readings": [
-            "あめ"
-        ],
-        "variants": [
-            "⻗"
-        ]
-    },
-    {
-        "radical": "⻗",
-        "number": 173,
-        "strokecount": 8,
-        "frequency": 298,
-        "top": 75,
-        "meanings": [
-            "rain"
-        ],
-        "readings": [
-            "あめ"
-        ],
-        "variantOf": "雨"
-    },
-    {
-        "radical": "青",
-        "kradical": "青",
-        "number": 174,
-        "strokecount": 8,
-        "frequency": 17,
-        "meanings": [
-            "green",
-            "blue"
-        ],
-        "readings": [
-            "あお"
-        ],
-        "variants": [
-            "靑"
-        ]
-    },
-    {
-        "radical": "靑",
-        "number": 174,
-        "strokecount": 8,
-        "frequency": 17,
-        "meanings": [
-            "green",
-            "blue"
-        ],
-        "readings": [
-            "あお"
-        ],
-        "variantOf": "青"
-    },
-    {
-        "radical": "非",
-        "kradical": "非",
-        "number": 175,
-        "strokecount": 8,
-        "frequency": 25,
-        "meanings": [
-            "wrong"
-        ],
-        "readings": [
-            "あらず"
-        ]
-    },
-    {
-        "radical": "面",
-        "kradical": "面",
-        "number": 176,
-        "strokecount": 9,
-        "frequency": 66,
-        "meanings": [
-            "face"
-        ],
-        "readings": [
-            "めん"
-        ]
-    },
-    {
-        "radical": "革",
-        "kradical": "革",
-        "number": 177,
-        "strokecount": 9,
-        "frequency": 305,
-        "meanings": [
-            "leather",
-            "rawhide"
-        ],
-        "readings": [
-            "かくのかわ"
-        ]
-    },
-    {
-        "radical": "韋",
-        "kradical": "韋",
-        "number": 178,
-        "strokecount": 10,
-        "frequency": 100,
-        "meanings": [
-            "tanned leather"
-        ],
-        "readings": [
-            "なめしがわ"
-        ]
-    },
-    {
-        "radical": "韭",
-        "kradical": "韭",
-        "number": 179,
-        "strokecount": 9,
-        "frequency": 20,
-        "meanings": [
-            "leek"
-        ],
-        "readings": [
-            "にら"
-        ]
-    },
-    {
-        "radical": "音",
-        "kradical": "音",
-        "number": 180,
-        "strokecount": 9,
-        "frequency": 43,
-        "meanings": [
-            "sound"
-        ],
-        "readings": [
-            "おと"
-        ]
-    },
-    {
-        "radical": "頁",
-        "kradical": "頁",
-        "number": 181,
-        "strokecount": 9,
-        "frequency": 372,
-        "meanings": [
-            "big shell"
-        ],
-        "readings": [
-            "おおがい"
-        ]
-    },
-    {
-        "radical": "風",
-        "kradical": "風",
-        "number": 182,
-        "strokecount": 9,
-        "frequency": 182,
-        "meanings": "wind",
-        "readings": [
-            "かぜ"
-        ],
-        "variants": [
-            "𠘨"
-        ]
-    },
-    {
-        "radical": "𠘨",
-        "number": 182,
-        "strokecount": 2,
-        "frequency": 182,
-        "meanings": "wind",
-        "readings": [
-            "かぜ"
-        ],
-        "variantOf": "風"
-    },
-    {
-        "radical": "飛",
-        "kradical": "飛",
-        "number": 183,
-        "strokecount": 9,
-        "frequency": 92,
-        "meanings": [
-            "fly"
-        ],
-        "readings": [
-            "とぶ"
-        ]
-    },
-    {
-        "radical": "食",
-        "kradical": "食",
-        "number": 184,
-        "strokecount": 9,
-        "frequency": 403,
-        "meanings": [
-            "eat",
-            "food"
-        ],
-        "readings": [
-            "しょく"
-        ],
-        "variants": [
-            "飠",
-            "𩙿"
-        ]
-    },
-    {
-        "radical": "飠",
-        "number": 184,
-        "strokecount": 8,
-        "frequency": 403,
-        "meanings": [
-            "eat",
-            "food"
-        ],
-        "readings": [
-            "しょく"
-        ],
-        "variantOf": "食"
-    },
-    {
-        "radical": "𩙿",
-        "number": 184,
-        "strokecount": 9,
-        "frequency": 403,
-        "meanings": [
-            "eat",
-            "food"
-        ],
-        "readings": [
-            "しょく"
-        ],
-        "variantOf": "食"
-    },
-    {
-        "radical": "首",
-        "kradical": "首",
-        "number": 185,
-        "strokecount": 9,
-        "frequency": 20,
-        "meanings": [
-            "neck",
-            "head"
-        ],
-        "readings": [
-            "くび"
-        ]
-    },
-    {
-        "radical": "香",
-        "kradical": "香",
-        "number": 186,
-        "strokecount": 9,
-        "frequency": 37,
-        "meanings": [
-            "fragrant"
-        ],
-        "readings": [
-            "においこう"
-        ]
-    },
-    {
-        "radical": "馬",
-        "kradical": "馬",
-        "number": 187,
-        "strokecount": 10,
-        "frequency": 472,
-        "meanings": [
-            "horse"
-        ],
-        "readings": [
-            "うま"
-        ]
-    },
-    {
-        "radical": "骨",
-        "kradical": "骨",
-        "number": 188,
-        "strokecount": 10,
-        "frequency": 185,
-        "meanings": [
-            "bone"
-        ],
-        "readings": [
-            "ほね"
-        ]
-    },
-    {
-        "radical": "高",
-        "kradical": "高",
-        "number": 189,
-        "strokecount": 10,
-        "frequency": 34,
-        "meanings": [
-            "tall",
-            "high"
-        ],
-        "readings": [
-            "たかい"
-        ]
-    },
-    {
-        "radical": "髟",
-        "kradical": "髟",
-        "number": 190,
-        "strokecount": 10,
-        "frequency": 243,
-        "meanings": [
-            "hair"
-        ],
-        "readings": [
-            "かみがしら"
-        ]
-    },
-    {
-        "radical": "鬥",
-        "kradical": "鬥",
-        "number": 191,
-        "strokecount": 10,
-        "frequency": 23,
-        "meanings": [
-            "fight"
-        ],
-        "readings": [
-            "とうがまえ"
-        ]
-    },
-    {
-        "radical": "鬯",
-        "kradical": "鬯",
-        "number": 192,
-        "strokecount": 10,
-        "frequency": 8,
-        "meanings": [
-            "herbs",
-            "sacrificial wine"
-        ],
-        "readings": [
-            "ちょう"
-        ]
-    },
-    {
-        "radical": "鬲",
-        "kradical": "鬲",
-        "number": 193,
-        "strokecount": 10,
-        "frequency": 73,
-        "meanings": [
-            "tripod",
-            "cauldron"
-        ],
-        "readings": [
-            "かなえ"
-        ]
-    },
-    {
-        "radical": "鬼",
-        "kradical": "鬼",
-        "number": 194,
-        "strokecount": 10,
-        "frequency": 141,
-        "meanings": [
-            "ghost",
-            "demon"
-        ],
-        "readings": [
-            "おに"
-        ]
-    },
-    {
-        "radical": "魚",
-        "kradical": "魚",
-        "number": 195,
-        "strokecount": 11,
-        "frequency": 571,
-        "meanings": [
-            "fish"
-        ],
-        "readings": [
-            "うお"
-        ]
-    },
-    {
-        "radical": "鳥",
-        "kradical": "鳥",
-        "number": 196,
-        "strokecount": 11,
-        "frequency": 750,
-        "meanings": [
-            "bird"
-        ],
-        "readings": [
-            "とり"
-        ]
-    },
-    {
-        "radical": "鹵",
-        "kradical": "鹵",
-        "number": 197,
-        "strokecount": 11,
-        "frequency": 44,
-        "meanings": [
-            "salt"
-        ],
-        "readings": [
-            "ろ"
-        ]
-    },
-    {
-        "radical": "鹿",
-        "kradical": "鹿",
-        "number": 198,
-        "strokecount": 11,
-        "frequency": 104,
-        "meanings": [
-            "deer"
-        ],
-        "readings": [
-            "しか"
-        ]
-    },
-    {
-        "radical": "麦",
-        "kradical": "麦",
-        "number": 199,
-        "strokecount": 7,
-        "frequency": 131,
-        "meanings": [
-            "wheat"
-        ],
-        "readings": [
-            "むぎ"
-        ],
-        "variants": [
-            "麥"
-        ]
-    },
-    {
-        "radical": "麥",
-        "number": 199,
-        "strokecount": 11,
-        "frequency": 131,
-        "meanings": [
-            "wheat"
-        ],
-        "readings": [
-            "むぎ"
-        ],
-        "variantOf": "麦"
-    },
-    {
-        "radical": "麻",
-        "kradical": "麻",
-        "number": 200,
-        "strokecount": 11,
-        "frequency": 34,
-        "meanings": [
-            "hemp",
-            "flax"
-        ],
-        "readings": [
-            "あさ"
-        ]
-    },
-    {
-        "radical": "黄",
-        "kradical": "黄",
-        "number": 201,
-        "strokecount": 11,
-        "frequency": 42,
-        "meanings": [
-            "yellow"
-        ],
-        "readings": [
-            "きいろ"
-        ],
-        "variants": [
-            "黃"
-        ]
-    },
-    {
-        "radical": "黃",
-        "number": 201,
-        "strokecount": 12,
-        "frequency": 42,
-        "meanings": [
-            "yellow"
-        ],
-        "readings": [
-            "きいろ"
-        ],
-        "variantOf": "黄"
-    },
-    {
-        "radical": "黍",
-        "kradical": "黍",
-        "number": 202,
-        "strokecount": 12,
-        "frequency": 46,
-        "meanings": [
-            "millet"
-        ],
-        "readings": [
-            "きび"
-        ]
-    },
-    {
-        "radical": "黒",
-        "kradical": "黒",
-        "number": 203,
-        "strokecount": 11,
-        "frequency": 172,
-        "meanings": [
-            "black"
-        ],
-        "readings": [
-            "くろ"
-        ],
-        "variants": [
-            "黑"
-        ]
-    },
-    {
-        "radical": "黑",
-        "number": 203,
-        "strokecount": 12,
-        "frequency": 172,
-        "meanings": [
-            "black"
-        ],
-        "readings": [
-            "くろ"
-        ],
-        "variantOf": "黒"
-    },
-    {
-        "radical": "黹",
-        "kradical": "黹",
-        "number": 204,
-        "strokecount": 12,
-        "frequency": 8,
-        "meanings": [
-            "embroidery",
-            "needlework"
-        ],
-        "readings": [
-            "ふつ"
-        ]
-    },
-    {
-        "radical": "黽",
-        "kradical": "黽",
-        "number": 205,
-        "strokecount": 13,
-        "frequency": 40,
-        "meanings": [
-            "frog",
-            "amphibian"
-        ],
-        "readings": [
-            "べん"
-        ]
-    },
-    {
-        "radical": "鼎",
-        "kradical": "鼎",
-        "number": 206,
-        "strokecount": 13,
-        "frequency": 14,
-        "meanings": [
-            "sacrificial tripod"
-        ],
-        "readings": [
-            "かなえ"
-        ]
-    },
-    {
-        "radical": "鼓",
-        "kradical": "鼓",
-        "number": 207,
-        "strokecount": 13,
-        "frequency": 46,
-        "meanings": [
-            "drum"
-        ],
-        "readings": [
-            "つづみ"
-        ]
-    },
-    {
-        "radical": "鼠",
-        "kradical": "鼠",
-        "number": 208,
-        "strokecount": 13,
-        "frequency": 92,
-        "meanings": [
-            "rat",
-            "mouse"
-        ],
-        "readings": [
-            "ねずみ"
-        ]
-    },
-    {
-        "radical": "鼻",
-        "kradical": "鼻",
-        "number": 209,
-        "strokecount": 14,
-        "frequency": 49,
-        "meanings": [
-            "nose"
-        ],
-        "readings": [
-            "はな"
-        ]
-    },
-    {
-        "radical": "齊",
-        "kradical": "齊",
-        "number": 210,
-        "strokecount": 14,
-        "frequency": 18,
-        "meanings": [
-            "even",
-            "uniformly"
-        ],
-        "readings": [
-            "せい"
-        ]
-    },
-    {
-        "radical": "歯",
-        "kradical": "歯",
-        "number": 211,
-        "strokecount": 12,
-        "frequency": 162,
-        "meanings": [
-            "tooth",
-            "molar"
-        ],
-        "readings": [
-            "は"
-        ],
-        "variants": [
-            "齒"
-        ]
-    },
-    {
-        "radical": "齒",
-        "number": 211,
-        "strokecount": 15,
-        "frequency": 162,
-        "meanings": [
-            "tooth",
-            "molar"
-        ],
-        "readings": [
-            "は"
-        ],
-        "variantOf": "歯"
-    },
-    {
-        "radical": "竜",
-        "kradical": "竜",
-        "number": 212,
-        "strokecount": 10,
-        "frequency": 14,
-        "meanings": [
-            "dragon"
-        ],
-        "readings": [
-            "りゅう"
-        ],
-        "variants": [
-            "龍"
-        ]
-    },
-    {
-        "radical": "龍",
-        "number": 212,
-        "strokecount": 16,
-        "frequency": 14,
-        "meanings": [
-            "dragon"
-        ],
-        "readings": [
-            "りゅう"
-        ],
-        "variantOf": "竜"
-    },
-    {
-        "radical": "亀",
-        "kradical": "亀",
-        "number": 213,
-        "strokecount": 11,
-        "meanings": [
-            "turtle",
-            "tortoise"
-        ],
-        "readings": [
-            "かめ"
-        ],
-        "variants": [
-            "龜"
-        ]
-    },
-    {
-        "radical": "龜",
-        "number": 213,
-        "strokecount": 16,
-        "meanings": [
-            "turtle",
-            "tortoise"
-        ],
-        "readings": [
-            "かめ"
-        ],
-        "variantOf": "亀"
-    },
-    {
-        "radical": "龠",
-        "kradical": "龠",
-        "number": 214,
-        "strokecount": 17,
-        "frequency": 19,
-        "meanings": [
-            "flute"
-        ],
-        "readings": [
-            "やく"
-        ]
-    },
-    {
-        "radical": "マ",
-        "kradical": "マ",
-        "strokecount": 2
-    },
-    {
-        "radical": "九",
-        "kradical": "九",
-        "strokecount": 2
-    },
-    {
-        "radical": "ユ",
-        "kradical": "ユ",
-        "strokecount": 2
-    },
-    {
-        "radical": "乃",
-        "kradical": "乃",
-        "strokecount": 2
-    },
-    {
-        "radical": "也",
-        "kradical": "也",
-        "strokecount": 3
-    },
-    {
-        "radical": "及",
-        "kradical": "及",
-        "strokecount": 3
-    },
-    {
-        "radical": "久",
-        "kradical": "久",
-        "strokecount": 3
-    },
-    {
-        "radical": "元",
-        "kradical": "元",
-        "strokecount": 4
-    },
-    {
-        "radical": "井",
-        "kradical": "井",
-        "strokecount": 4
-    },
-    {
-        "radical": "勿",
-        "kradical": "勿",
-        "strokecount": 4
-    },
-    {
-        "radical": "五",
-        "kradical": "五",
-        "strokecount": 4
-    },
-    {
-        "radical": "屯",
-        "kradical": "屯",
-        "strokecount": 4
-    },
-    {
-        "radical": "巴",
-        "kradical": "巴",
-        "strokecount": 4
-    },
-    {
-        "radical": "世",
-        "kradical": "世",
-        "strokecount": 5
-    },
-    {
-        "radical": "巨",
-        "kradical": "巨",
-        "strokecount": 5
-    },
-    {
-        "radical": "冊",
-        "kradical": "冊",
-        "strokecount": 5
-    },
-    {
-        "radical": "奄",
-        "kradical": "奄",
-        "strokecount": 8
-    },
-    {
-        "radical": "岡",
-        "kradical": "岡",
-        "strokecount": 8
-    },
-    {
-        "radical": "免",
-        "kradical": "免",
-        "strokecount": 8
-    },
-    {
-        "radical": "斉",
-        "kradical": "斉",
-        "strokecount": 8
-    },
-    {
-        "radical": "品",
-        "kradical": "品",
-        "strokecount": 9
-    },
-    {
-        "radical": "啇",
-        "kradical": "滴",
-        "strokecount": 11
-    },
-    {
-        "radical": "無",
-        "kradical": "無",
-        "strokecount": 12
-    }
+  {
+    "id": "04e00",
+    "radical": "一",
+    "kradical": "一",
+    "number": 1,
+    "strokecount": 1,
+    "frequency": 42,
+    "meanings": [
+      "one"
+    ],
+    "readings": [
+      "いち"
+    ]
+  },
+  {
+    "id": "04e28",
+    "radical": "丨",
+    "kradical": "｜",
+    "number": 2,
+    "strokecount": 1,
+    "frequency": 21,
+    "meanings": [
+      "line",
+      "stick"
+    ],
+    "readings": [
+      "ぼう"
+    ]
+  },
+  {
+    "id": "04e36",
+    "radical": "丶",
+    "kradical": "丶",
+    "number": 3,
+    "strokecount": 1,
+    "frequency": 10,
+    "meanings": [
+      "dot"
+    ],
+    "readings": [
+      "てん"
+    ]
+  },
+  {
+    "id": "04e3f",
+    "radical": "丿",
+    "kradical": "ノ",
+    "number": 4,
+    "strokecount": 1,
+    "frequency": 33,
+    "meanings": [
+      "bend"
+    ],
+    "readings": [
+      "の"
+    ]
+  },
+  {
+    "id": "04e59",
+    "radical": "乙",
+    "kradical": "乙",
+    "number": 5,
+    "strokecount": 1,
+    "frequency": 42,
+    "meanings": [
+      "second",
+      "latter"
+    ],
+    "readings": [
+      "おつ"
+    ],
+    "variants": [
+      "乚"
+    ]
+  },
+  {
+    "id": "04e5a",
+    "radical": "乚",
+    "number": 5,
+    "strokecount": 1,
+    "frequency": 42,
+    "meanings": "second",
+    "readings": [
+      "おつ"
+    ],
+    "variantOf": "乙"
+  },
+  {
+    "id": "04e85",
+    "radical": "亅",
+    "kradical": "亅",
+    "number": 6,
+    "strokecount": 1,
+    "frequency": 19,
+    "meanings": [
+      "hook",
+      "hooked stick"
+    ],
+    "readings": [
+      "はねぼう"
+    ]
+  },
+  {
+    "id": "04e8c",
+    "radical": "二",
+    "kradical": "二",
+    "number": 7,
+    "strokecount": 2,
+    "frequency": 29,
+    "meanings": "two",
+    "readings": [
+      "に"
+    ]
+  },
+  {
+    "id": "04ea0",
+    "radical": "亠",
+    "kradical": "亠",
+    "number": 8,
+    "strokecount": 2,
+    "frequency": 38,
+    "meanings": "pot lid",
+    "readings": [
+      "なべぶた"
+    ]
+  },
+  {
+    "id": "04eba",
+    "radical": "人",
+    "kradical": "人",
+    "number": 9,
+    "strokecount": 2,
+    "frequency": 794,
+    "top": 25,
+    "meanings": [
+      "human"
+    ],
+    "readings": [
+      "ひと"
+    ],
+    "variants": [
+      "亻",
+      "𠆢"
+    ]
+  },
+  {
+    "id": "04ebb",
+    "radical": "亻",
+    "kradical": "化",
+    "number": 9,
+    "strokecount": 2,
+    "frequency": 794,
+    "top": 25,
+    "meanings": [
+      "human"
+    ],
+    "readings": [
+      "ひと"
+    ],
+    "variantOf": "人"
+  },
+  {
+    "id": "201a2",
+    "radical": "𠆢",
+    "kradical": "个",
+    "number": 9,
+    "strokecount": 2,
+    "frequency": 794,
+    "top": 25,
+    "meanings": [
+      "human"
+    ],
+    "readings": [
+      "ひと"
+    ],
+    "variantOf": "人"
+  },
+  {
+    "id": "0513f",
+    "radical": "儿",
+    "kradical": "儿",
+    "number": 10,
+    "strokecount": 2,
+    "frequency": 52,
+    "meanings": [
+      "legs",
+      "human underneath"
+    ],
+    "readings": [
+      "にんにょう"
+    ]
+  },
+  {
+    "id": "05165",
+    "radical": "入",
+    "kradical": "入",
+    "number": 11,
+    "strokecount": 2,
+    "frequency": 28,
+    "meanings": [
+      "enter"
+    ],
+    "readings": [
+      "いる"
+    ]
+  },
+  {
+    "id": "0516b",
+    "radical": "八",
+    "number": 12,
+    "strokecount": 2,
+    "frequency": 44,
+    "meanings": [
+      "eight",
+      "eight-head"
+    ],
+    "readings": [
+      "はちがしら"
+    ],
+    "variants": [
+      "ハ"
+    ]
+  },
+  {
+    "id": "030cf",
+    "radical": "ハ",
+    "kradical": "ハ",
+    "number": 12,
+    "strokecount": 2,
+    "frequency": 44,
+    "meanings": [
+      "eight",
+      "eight-head"
+    ],
+    "readings": [
+      "はちがしら"
+    ],
+    "variantOf": "八"
+  },
+  {
+    "id": "05182",
+    "radical": "冂",
+    "kradical": "冂",
+    "number": 13,
+    "strokecount": 2,
+    "frequency": 50,
+    "meanings": [
+      "inverted box",
+      "window frame"
+    ],
+    "readings": [
+      "まきがまえ"
+    ]
+  },
+  {
+    "id": "05196",
+    "radical": "冖",
+    "kradical": "冖",
+    "number": 14,
+    "strokecount": 2,
+    "frequency": 30,
+    "meanings": [
+      "cover",
+      "wa crown"
+    ],
+    "readings": [
+      "わかんむり"
+    ]
+  },
+  {
+    "id": "051ab",
+    "radical": "冫",
+    "kradical": "冫",
+    "number": 15,
+    "strokecount": 2,
+    "frequency": 115,
+    "meanings": [
+      "ice",
+      "2-stroke water"
+    ],
+    "readings": [
+      "にすい"
+    ]
+  },
+  {
+    "id": "051e0",
+    "radical": "几",
+    "kradical": "几",
+    "number": 16,
+    "strokecount": 2,
+    "frequency": 38,
+    "meanings": [
+      "desk"
+    ],
+    "readings": [
+      "つくえ"
+    ]
+  },
+  {
+    "id": "051f5",
+    "radical": "凵",
+    "kradical": "凵",
+    "number": 17,
+    "strokecount": 2,
+    "frequency": 23,
+    "meanings": [
+      "container",
+      "inbox"
+    ],
+    "readings": [
+      "うけばこ"
+    ]
+  },
+  {
+    "id": "05200",
+    "radical": "刀",
+    "kradical": "刀",
+    "number": 18,
+    "strokecount": 2,
+    "frequency": 337,
+    "top": 75,
+    "meanings": [
+      "sword"
+    ],
+    "readings": [
+      "かたな"
+    ],
+    "variants": [
+      "刂",
+      "⺈"
+    ]
+  },
+  {
+    "id": "05202",
+    "radical": "刂",
+    "kradical": "刈",
+    "number": 18,
+    "strokecount": 2,
+    "frequency": 337,
+    "top": 75,
+    "meanings": [
+      "sword"
+    ],
+    "readings": [
+      "かたな"
+    ],
+    "variantOf": "刀"
+  },
+  {
+    "id": "02e88",
+    "radical": "⺈",
+    "number": 18,
+    "strokecount": 2,
+    "frequency": 337,
+    "top": 75,
+    "meanings": [
+      "knife"
+    ],
+    "readings": [
+      "かたな"
+    ],
+    "variantOf": "刀"
+  },
+  {
+    "id": "0529b",
+    "radical": "力",
+    "kradical": "力",
+    "number": 19,
+    "strokecount": 2,
+    "frequency": 163,
+    "top": 75,
+    "meanings": [
+      "power",
+      "force"
+    ],
+    "readings": [
+      "ちから"
+    ]
+  },
+  {
+    "id": "052f9",
+    "radical": "勹",
+    "kradical": "勹",
+    "number": 20,
+    "strokecount": 2,
+    "frequency": 64,
+    "meanings": [
+      "embrace",
+      "wrap frame"
+    ],
+    "readings": [
+      "つつみがまえ"
+    ]
+  },
+  {
+    "id": "05315",
+    "radical": "匕",
+    "kradical": "匕",
+    "number": 21,
+    "strokecount": 2,
+    "frequency": 19,
+    "meanings": [
+      "spoon"
+    ],
+    "readings": [
+      "ひ"
+    ]
+  },
+  {
+    "id": "0531a",
+    "radical": "匚",
+    "kradical": "匚",
+    "number": 22,
+    "strokecount": 2,
+    "frequency": 64,
+    "meanings": [
+      "box frame"
+    ],
+    "readings": [
+      "はこがまえ"
+    ]
+  },
+  {
+    "id": "04ea1",
+    "radical": "亡",
+    "kradical": "亡",
+    "number": 23,
+    "strokecount": 3,
+    "frequency": 17,
+    "meanings": [
+      "dead",
+      "hiding frame"
+    ],
+    "readings": [
+      "かくしがまえ"
+    ],
+    "variants": [
+      "匸"
+    ]
+  },
+  {
+    "id": "05338",
+    "radical": "匸",
+    "number": 23,
+    "strokecount": 2,
+    "frequency": 17,
+    "meanings": [
+      "dead",
+      "hiding frame"
+    ],
+    "readings": [
+      "かくしがまえ"
+    ],
+    "variantOf": "亡"
+  },
+  {
+    "id": "05341",
+    "radical": "十",
+    "kradical": "十",
+    "number": 24,
+    "strokecount": 2,
+    "frequency": 55,
+    "top": 75,
+    "meanings": [
+      "ten"
+    ],
+    "readings": [
+      "じゅう"
+    ]
+  },
+  {
+    "id": "0535c",
+    "radical": "卜",
+    "kradical": "卜",
+    "number": 25,
+    "strokecount": 2,
+    "frequency": 45,
+    "meanings": [
+      "divination to"
+    ],
+    "readings": [
+      "ぼく・ぼくづくり・ぼくのと・と・うらない"
+    ],
+    "variants": [
+      "⺊"
+    ]
+  },
+  {
+    "id": "02e8a",
+    "radical": "⺊",
+    "number": 25,
+    "strokecount": 2,
+    "frequency": 45,
+    "meanings": [
+      "divination to"
+    ],
+    "readings": [
+      "ぼく・ぼくづくり・ぼくのと・と・うらない"
+    ],
+    "variantOf": "卜"
+  },
+  {
+    "id": "05369",
+    "radical": "卩",
+    "kradical": "卩",
+    "number": 26,
+    "strokecount": 2,
+    "frequency": 40,
+    "meanings": [
+      "seal"
+    ],
+    "readings": [
+      "ふしづくり"
+    ],
+    "variants": [
+      "㔾"
+    ]
+  },
+  {
+    "id": "0353e",
+    "radical": "㔾",
+    "number": 26,
+    "strokecount": 2,
+    "frequency": 40,
+    "meanings": [
+      "seal"
+    ],
+    "readings": [
+      "ふしづくり"
+    ],
+    "variantOf": "卩"
+  },
+  {
+    "id": "05382",
+    "radical": "厂",
+    "kradical": "厂",
+    "number": 27,
+    "strokecount": 2,
+    "frequency": 129,
+    "meanings": [
+      "cliff"
+    ],
+    "readings": [
+      "がんだれ"
+    ]
+  },
+  {
+    "id": "053b6",
+    "radical": "厶",
+    "kradical": "厶",
+    "number": 28,
+    "strokecount": 2,
+    "frequency": 40,
+    "meanings": [
+      "private"
+    ],
+    "readings": [
+      "む"
+    ]
+  },
+  {
+    "id": "053c8",
+    "radical": "又",
+    "kradical": "又",
+    "number": 29,
+    "strokecount": 2,
+    "frequency": 91,
+    "meanings": [
+      "again",
+      "right hand"
+    ],
+    "readings": [
+      "また"
+    ]
+  },
+  {
+    "id": "053e3",
+    "radical": "口",
+    "kradical": "口",
+    "number": 30,
+    "strokecount": 3,
+    "frequency": 1146,
+    "top": 25,
+    "meanings": [
+      "mouth",
+      "opening"
+    ],
+    "readings": [
+      "くち"
+    ],
+    "variants": [
+      "品"
+    ]
+  },
+  {
+    "id": "054c1",
+    "radical": "品",
+    "kradical": "品",
+    "number": 30,
+    "strokecount": 9,
+    "frequency": 1146,
+    "top": 25,
+    "meanings": [
+      "mouth",
+      "opening"
+    ],
+    "readings": [
+      "くち"
+    ],
+    "variantOf": "口"
+  },
+  {
+    "id": "056d7",
+    "radical": "囗",
+    "kradical": "囗",
+    "number": 31,
+    "strokecount": 3,
+    "frequency": 118,
+    "top": 75,
+    "meanings": [
+      "enclosure"
+    ],
+    "readings": [
+      "くにがまえ"
+    ]
+  },
+  {
+    "id": "0571f",
+    "radical": "土",
+    "kradical": "土",
+    "number": 32,
+    "strokecount": 3,
+    "frequency": 580,
+    "top": 50,
+    "meanings": [
+      "earth"
+    ],
+    "readings": [
+      "つち"
+    ]
+  },
+  {
+    "id": "058eb",
+    "radical": "士",
+    "kradical": "士",
+    "number": 33,
+    "strokecount": 3,
+    "frequency": 24,
+    "meanings": [
+      "scholar",
+      "bachelor"
+    ],
+    "readings": [
+      "さむらい"
+    ]
+  },
+  {
+    "id": "05902",
+    "radical": "夂",
+    "kradical": "夂",
+    "number": 34,
+    "strokecount": 3,
+    "frequency": 34,
+    "meanings": [
+      "winter"
+    ],
+    "readings": [
+      "ふゆがしら"
+    ]
+  },
+  {
+    "id": "0590a",
+    "radical": "夊",
+    "number": 35,
+    "strokecount": 3,
+    "meanings": [
+      "winter variant"
+    ],
+    "readings": [
+      "すいにょう"
+    ]
+  },
+  {
+    "id": "05915",
+    "radical": "夕",
+    "kradical": "夕",
+    "number": 36,
+    "strokecount": 3,
+    "frequency": 34,
+    "meanings": [
+      "evening",
+      "sunset"
+    ],
+    "readings": [
+      "ゆう・ゆうべ・た"
+    ]
+  },
+  {
+    "id": "05927",
+    "radical": "大",
+    "kradical": "大",
+    "number": 37,
+    "strokecount": 3,
+    "frequency": 132,
+    "top": 75,
+    "meanings": [
+      "big",
+      "very"
+    ],
+    "readings": [
+      "だい"
+    ]
+  },
+  {
+    "id": "05973",
+    "radical": "女",
+    "kradical": "女",
+    "number": 38,
+    "strokecount": 3,
+    "frequency": 681,
+    "top": 50,
+    "meanings": [
+      "woman",
+      "female"
+    ],
+    "readings": [
+      "おんな・おんなへん"
+    ]
+  },
+  {
+    "id": "05b50",
+    "radical": "子",
+    "kradical": "子",
+    "number": 39,
+    "strokecount": 3,
+    "frequency": 83,
+    "meanings": [
+      "child",
+      "seed"
+    ],
+    "readings": [
+      "こ"
+    ]
+  },
+  {
+    "id": "05b80",
+    "radical": "宀",
+    "kradical": "宀",
+    "number": 40,
+    "strokecount": 3,
+    "frequency": 246,
+    "top": 50,
+    "meanings": [
+      "roof"
+    ],
+    "readings": [
+      "うかんむり"
+    ]
+  },
+  {
+    "id": "05bf8",
+    "radical": "寸",
+    "kradical": "寸",
+    "number": 41,
+    "strokecount": 3,
+    "frequency": 40,
+    "top": 75,
+    "meanings": [
+      "sun (unit of measurement)"
+    ],
+    "readings": [
+      "すん・すんづくり"
+    ]
+  },
+  {
+    "id": "05c0f",
+    "radical": "小",
+    "kradical": "小",
+    "number": 42,
+    "strokecount": 3,
+    "frequency": 41,
+    "meanings": [
+      "small"
+    ],
+    "readings": [
+      "ちいさい"
+    ],
+    "variants": [
+      "⺌",
+      "⺍"
+    ]
+  },
+  {
+    "id": "02e8c",
+    "radical": "⺌",
+    "kradical": "尚",
+    "number": 42,
+    "strokecount": 3,
+    "frequency": 41,
+    "meanings": [
+      "small"
+    ],
+    "readings": [
+      "ちいさい"
+    ],
+    "variantOf": "小"
+  },
+  {
+    "id": "02e8d",
+    "radical": "⺍",
+    "number": 42,
+    "strokecount": 3,
+    "frequency": 41,
+    "meanings": [
+      "small"
+    ],
+    "readings": [
+      "ちいさい"
+    ],
+    "variantOf": "小"
+  },
+  {
+    "id": "05c22",
+    "radical": "尢",
+    "kradical": "尢",
+    "number": 43,
+    "strokecount": 3,
+    "frequency": 66,
+    "meanings": [
+      "lame"
+    ],
+    "readings": [
+      "まげあし"
+    ],
+    "variants": [
+      "尤",
+      "尣"
+    ]
+  },
+  {
+    "id": "05c24",
+    "radical": "尤",
+    "kradical": "尤",
+    "number": 43,
+    "strokecount": 4,
+    "frequency": 66,
+    "meanings": [
+      "lame"
+    ],
+    "readings": [
+      "まげあし"
+    ],
+    "variantOf": "尢"
+  },
+  {
+    "id": "05c23",
+    "radical": "尣",
+    "number": 43,
+    "strokecount": 4,
+    "frequency": 66,
+    "meanings": [
+      "lame"
+    ],
+    "readings": [
+      "まげあし"
+    ],
+    "variantOf": "尢"
+  },
+  {
+    "id": "05c38",
+    "radical": "尸",
+    "kradical": "尸",
+    "number": 44,
+    "strokecount": 3,
+    "frequency": 148,
+    "top": 75,
+    "meanings": [
+      "corpse"
+    ],
+    "readings": [
+      "しかばね"
+    ]
+  },
+  {
+    "id": "05c6e",
+    "radical": "屮",
+    "kradical": "屮",
+    "number": 45,
+    "strokecount": 3,
+    "frequency": 38,
+    "meanings": [
+      "sprout"
+    ],
+    "readings": [
+      "てつ"
+    ]
+  },
+  {
+    "id": "05c71",
+    "radical": "山",
+    "kradical": "山",
+    "number": 46,
+    "strokecount": 3,
+    "frequency": 636,
+    "top": 75,
+    "meanings": [
+      "mountain"
+    ],
+    "readings": [
+      "やま"
+    ]
+  },
+  {
+    "id": "05ddb",
+    "radical": "巛",
+    "kradical": "巛",
+    "number": 47,
+    "strokecount": 3,
+    "frequency": 26,
+    "meanings": [
+      "river"
+    ],
+    "readings": [
+      "かわ"
+    ],
+    "variants": [
+      "川",
+      "巜"
+    ]
+  },
+  {
+    "id": "05ddd",
+    "radical": "川",
+    "kradical": "川",
+    "number": 47,
+    "strokecount": 3,
+    "frequency": 26,
+    "meanings": [
+      "river"
+    ],
+    "readings": [
+      "かわ"
+    ],
+    "variantOf": "巛"
+  },
+  {
+    "id": "05ddc",
+    "radical": "巜",
+    "number": 47,
+    "strokecount": 2,
+    "frequency": 26,
+    "meanings": [
+      "river"
+    ],
+    "readings": [
+      "かわ"
+    ],
+    "variantOf": "巛"
+  },
+  {
+    "id": "05de5",
+    "radical": "工",
+    "kradical": "工",
+    "number": 48,
+    "strokecount": 3,
+    "frequency": 17,
+    "meanings": [
+      "work"
+    ],
+    "readings": [
+      "たくみ"
+    ]
+  },
+  {
+    "id": "05df2",
+    "radical": "已",
+    "kradical": "已",
+    "number": 49,
+    "strokecount": 3,
+    "frequency": 20,
+    "meanings": [
+      "oneself"
+    ],
+    "readings": [
+      "おのれ"
+    ],
+    "variants": [
+      "己",
+      "巳"
+    ]
+  },
+  {
+    "id": "05df1",
+    "radical": "己",
+    "number": 49,
+    "strokecount": 3,
+    "frequency": 20,
+    "meanings": [
+      "oneself"
+    ],
+    "readings": [
+      "おのれ"
+    ],
+    "variantOf": "已"
+  },
+  {
+    "id": "05df3",
+    "radical": "巳",
+    "number": 49,
+    "strokecount": 3,
+    "frequency": 20,
+    "meanings": [
+      "oneself"
+    ],
+    "readings": [
+      "おのれ"
+    ],
+    "variantOf": "已"
+  },
+  {
+    "id": "05dfe",
+    "radical": "巾",
+    "kradical": "巾",
+    "number": 50,
+    "strokecount": 3,
+    "frequency": 295,
+    "top": 75,
+    "meanings": [
+      "cloth",
+      "turban",
+      "scarf"
+    ],
+    "readings": [
+      "はば"
+    ]
+  },
+  {
+    "id": "05e72",
+    "radical": "干",
+    "kradical": "干",
+    "number": 51,
+    "strokecount": 3,
+    "frequency": 9,
+    "meanings": [
+      "dry"
+    ],
+    "readings": [
+      "ほし"
+    ]
+  },
+  {
+    "id": "05e7a",
+    "radical": "幺",
+    "kradical": "幺",
+    "number": 52,
+    "strokecount": 3,
+    "frequency": 50,
+    "meanings": [
+      "short thread"
+    ],
+    "readings": [
+      "いとがしら"
+    ]
+  },
+  {
+    "id": "05e7f",
+    "radical": "广",
+    "kradical": "广",
+    "number": 53,
+    "strokecount": 3,
+    "frequency": 15,
+    "meanings": "dotted cliff",
+    "readings": [
+      "まだれ"
+    ]
+  },
+  {
+    "id": "05ef4",
+    "radical": "廴",
+    "kradical": "廴",
+    "number": 54,
+    "strokecount": 3,
+    "frequency": 9,
+    "meanings": [
+      "long stride"
+    ],
+    "readings": [
+      "いんにょう"
+    ]
+  },
+  {
+    "id": "05efe",
+    "radical": "廾",
+    "kradical": "廾",
+    "number": 55,
+    "strokecount": 3,
+    "frequency": 50,
+    "meanings": [
+      "two hands",
+      "twenty"
+    ],
+    "readings": [
+      "にじゅうあし"
+    ]
+  },
+  {
+    "id": "05f0b",
+    "radical": "弋",
+    "kradical": "弋",
+    "number": 56,
+    "strokecount": 3,
+    "frequency": 15,
+    "meanings": [
+      "ceremony",
+      "shoot",
+      "arrow"
+    ],
+    "readings": [
+      "しきがまえ"
+    ]
+  },
+  {
+    "id": "05f13",
+    "radical": "弓",
+    "kradical": "弓",
+    "number": 57,
+    "strokecount": 3,
+    "frequency": 165,
+    "top": 75,
+    "meanings": [
+      "bow"
+    ],
+    "readings": [
+      "ゆみ"
+    ]
+  },
+  {
+    "id": "05f50",
+    "radical": "彐",
+    "kradical": "ヨ",
+    "number": 58,
+    "strokecount": 3,
+    "frequency": 25,
+    "meanings": [
+      "pig's head"
+    ],
+    "readings": [
+      "けいがしら"
+    ],
+    "variants": [
+      "彑"
+    ]
+  },
+  {
+    "id": "05f51",
+    "radical": "彑",
+    "kradical": "彑",
+    "number": 58,
+    "strokecount": 3,
+    "frequency": 25,
+    "meanings": [
+      "pig's head"
+    ],
+    "readings": [
+      "けいがしら"
+    ],
+    "variantOf": "彐"
+  },
+  {
+    "id": "05f61",
+    "radical": "彡",
+    "kradical": "彡",
+    "number": 59,
+    "strokecount": 3,
+    "frequency": 62,
+    "meanings": [
+      "hair",
+      "bristle",
+      "stubble",
+      "beard"
+    ],
+    "readings": [
+      "さん・さんづくり"
+    ]
+  },
+  {
+    "id": "05f73",
+    "radical": "彳",
+    "kradical": "彳",
+    "number": 60,
+    "strokecount": 3,
+    "frequency": 215,
+    "top": 75,
+    "meanings": [
+      "step"
+    ],
+    "readings": [
+      "ぎょうにんべん"
+    ]
+  },
+  {
+    "id": "05fc3",
+    "radical": "心",
+    "kradical": "心",
+    "meanings": [
+      "heart"
+    ],
+    "number": 61,
+    "strokecount": 4,
+    "frequency": 1115,
+    "top": 25,
+    "readings": [
+      "りっしんべん"
+    ],
+    "variants": [
+      "忄",
+      "㣺"
+    ]
+  },
+  {
+    "id": "05fc4",
+    "radical": "忄",
+    "kradical": "忙",
+    "number": 61,
+    "strokecount": 3,
+    "frequency": 1115,
+    "top": 25,
+    "readings": [
+      "りっしんべん"
+    ],
+    "variantOf": "心"
+  },
+  {
+    "id": "038fa",
+    "radical": "㣺",
+    "number": 61,
+    "strokecount": 4,
+    "frequency": 1115,
+    "top": 25,
+    "readings": [
+      "りっしんべん"
+    ],
+    "variantOf": "心"
+  },
+  {
+    "id": "06208",
+    "radical": "戈",
+    "kradical": "戈",
+    "number": 62,
+    "strokecount": 4,
+    "frequency": 116,
+    "meanings": [
+      "spear",
+      "halberd"
+    ],
+    "readings": [
+      "かのほこ"
+    ]
+  },
+  {
+    "id": "06238",
+    "radical": "戸",
+    "kradical": "戸",
+    "number": 63,
+    "strokecount": 4,
+    "frequency": 44,
+    "meanings": [
+      "door",
+      "house"
+    ],
+    "readings": [
+      "とびらのと"
+    ],
+    "variants": [
+      "戶",
+      "户"
+    ]
+  },
+  {
+    "id": "06236",
+    "radical": "戶",
+    "number": 63,
+    "strokecount": 4,
+    "frequency": 44,
+    "meanings": [
+      "door",
+      "house"
+    ],
+    "readings": [
+      "とびらのと"
+    ],
+    "variantOf": "戸"
+  },
+  {
+    "id": "06237",
+    "radical": "户",
+    "number": 63,
+    "strokecount": 4,
+    "frequency": 44,
+    "meanings": [
+      "door",
+      "house"
+    ],
+    "readings": [
+      "とびらのと"
+    ],
+    "variantOf": "戸"
+  },
+  {
+    "id": "0624b",
+    "radical": "手",
+    "kradical": "手",
+    "number": 64,
+    "strokecount": 4,
+    "frequency": 1203,
+    "top": 25,
+    "meanings": [
+      "hand"
+    ],
+    "readings": [
+      "て"
+    ],
+    "variants": [
+      "扌",
+      "龵"
+    ]
+  },
+  {
+    "id": "0624c",
+    "radical": "扌",
+    "kradical": "扎",
+    "number": 64,
+    "strokecount": 3,
+    "frequency": 1203,
+    "top": 25,
+    "meanings": [
+      "hand"
+    ],
+    "readings": [
+      "て"
+    ],
+    "variantOf": "手"
+  },
+  {
+    "id": "09fb5",
+    "radical": "龵",
+    "number": 64,
+    "strokecount": 3,
+    "frequency": 1203,
+    "top": 25,
+    "meanings": [
+      "hand"
+    ],
+    "readings": [
+      "て"
+    ],
+    "variantOf": "手"
+  },
+  {
+    "id": "0652f",
+    "radical": "支",
+    "kradical": "支",
+    "number": 65,
+    "strokecount": 4,
+    "frequency": 26,
+    "meanings": [
+      "branch"
+    ],
+    "readings": [
+      "しにょう"
+    ]
+  },
+  {
+    "id": "06535",
+    "radical": "攵",
+    "kradical": "攵",
+    "number": 66,
+    "strokecount": 4,
+    "frequency": 296,
+    "top": 75,
+    "meanings": [
+      "strike",
+      "whip"
+    ],
+    "readings": [
+      "のぶん"
+    ],
+    "variants": [
+      "攴"
+    ]
+  },
+  {
+    "id": "06534",
+    "radical": "攴",
+    "number": 66,
+    "strokecount": 4,
+    "frequency": 296,
+    "top": 75,
+    "meanings": [
+      "strike",
+      "whip"
+    ],
+    "readings": [
+      "のぶん"
+    ],
+    "variantOf": "攵"
+  },
+  {
+    "id": "06587",
+    "radical": "文",
+    "kradical": "文",
+    "number": 67,
+    "strokecount": 4,
+    "frequency": 26,
+    "top": 75,
+    "meanings": [
+      "script",
+      "literature"
+    ],
+    "readings": [
+      "ぶん"
+    ]
+  },
+  {
+    "id": "06597",
+    "radical": "斗",
+    "kradical": "斗",
+    "number": 68,
+    "strokecount": 4,
+    "frequency": 32,
+    "meanings": [
+      "dipper",
+      "measuring scoop"
+    ],
+    "readings": [
+      "とます"
+    ]
+  },
+  {
+    "id": "065a4",
+    "radical": "斤",
+    "kradical": "斤",
+    "number": 69,
+    "strokecount": 4,
+    "frequency": 55,
+    "meanings": [
+      "axe"
+    ],
+    "readings": [
+      "おの"
+    ]
+  },
+  {
+    "id": "065b9",
+    "radical": "方",
+    "kradical": "方",
+    "number": 70,
+    "strokecount": 4,
+    "frequency": 55,
+    "meanings": [
+      "way",
+      "square",
+      "raft"
+    ],
+    "readings": [
+      "ほう"
+    ]
+  },
+  {
+    "id": "065e0",
+    "radical": "无",
+    "kradical": "无",
+    "number": 71,
+    "strokecount": 4,
+    "frequency": 12,
+    "meanings": [
+      "perish"
+    ],
+    "readings": [
+      "むにょう"
+    ],
+    "variants": [
+      "旡"
+    ]
+  },
+  {
+    "id": "065e1",
+    "radical": "旡",
+    "number": 71,
+    "strokecount": 5,
+    "frequency": 12,
+    "meanings": [
+      "perish"
+    ],
+    "readings": [
+      "むにょう"
+    ],
+    "variantOf": "无"
+  },
+  {
+    "id": "065e5",
+    "radical": "日",
+    "kradical": "日",
+    "number": 72,
+    "strokecount": 4,
+    "frequency": 453,
+    "top": 50,
+    "meanings": [
+      "sun",
+      "day"
+    ],
+    "readings": [
+      "にち"
+    ]
+  },
+  {
+    "id": "066f0",
+    "radical": "曰",
+    "kradical": "曰",
+    "number": 73,
+    "strokecount": 4,
+    "frequency": 37,
+    "meanings": [
+      "say"
+    ],
+    "readings": [
+      "いわく"
+    ]
+  },
+  {
+    "id": "06708",
+    "radical": "月",
+    "kradical": "月",
+    "number": 74,
+    "strokecount": 4,
+    "frequency": 69,
+    "top": 50,
+    "meanings": [
+      "moon",
+      "month",
+      "body",
+      "flesh"
+    ],
+    "readings": [
+      "つき"
+    ],
+    "variants": [
+      "⺝"
+    ]
+  },
+  {
+    "id": "02e9d",
+    "radical": "⺝",
+    "number": 74,
+    "strokecount": 4,
+    "frequency": 69,
+    "top": 50,
+    "meanings": [
+      "moon",
+      "month",
+      "body",
+      "flesh"
+    ],
+    "readings": [
+      "つき"
+    ],
+    "variantOf": "月"
+  },
+  {
+    "id": "06728",
+    "radical": "木",
+    "kradical": "木",
+    "number": 75,
+    "strokecount": 4,
+    "frequency": 1369,
+    "top": 25,
+    "meanings": [
+      "tree"
+    ],
+    "readings": [
+      "き"
+    ]
+  },
+  {
+    "id": "06b20",
+    "radical": "欠",
+    "kradical": "欠",
+    "number": 76,
+    "strokecount": 4,
+    "frequency": 235,
+    "meanings": [
+      "yawn",
+      "lack"
+    ],
+    "readings": [
+      "あくび"
+    ]
+  },
+  {
+    "id": "06b62",
+    "radical": "止",
+    "kradical": "止",
+    "number": 77,
+    "strokecount": 4,
+    "frequency": 99,
+    "meanings": [
+      "stop"
+    ],
+    "readings": [
+      "とめる"
+    ]
+  },
+  {
+    "id": "06b79",
+    "radical": "歹",
+    "kradical": "歹",
+    "number": 78,
+    "strokecount": 4,
+    "frequency": 231,
+    "meanings": [
+      "death",
+      "decay"
+    ],
+    "readings": [
+      "がつへん"
+    ],
+    "variants": [
+      "歺"
+    ]
+  },
+  {
+    "id": "06b7a",
+    "radical": "歺",
+    "number": 78,
+    "strokecount": 4,
+    "frequency": 231,
+    "meanings": [
+      "death",
+      "decay"
+    ],
+    "readings": [
+      "がつへん"
+    ],
+    "variantOf": "歹"
+  },
+  {
+    "id": "06bb3",
+    "radical": "殳",
+    "kradical": "殳",
+    "number": 79,
+    "strokecount": 4,
+    "frequency": 93,
+    "meanings": [
+      "weapon",
+      "lance"
+    ],
+    "readings": [
+      "ほこづくり"
+    ]
+  },
+  {
+    "id": "06bcb",
+    "radical": "毋",
+    "kradical": "毋",
+    "number": 80,
+    "strokecount": 4,
+    "frequency": 16,
+    "meanings": [
+      "do not",
+      "mother"
+    ],
+    "readings": [
+      "なかれ",
+      "はは"
+    ],
+    "variants": [
+      "母"
+    ]
+  },
+  {
+    "id": "06bcd",
+    "radical": "母",
+    "kradical": "母",
+    "number": 80,
+    "strokecount": 5,
+    "frequency": 16,
+    "meanings": [
+      "do not",
+      "mother"
+    ],
+    "readings": [
+      "なかれ",
+      "はは"
+    ],
+    "variantOf": "毋"
+  },
+  {
+    "id": "06bd4",
+    "radical": "比",
+    "kradical": "比",
+    "number": 81,
+    "strokecount": 4,
+    "frequency": 21,
+    "meanings": [
+      "compare",
+      "compete"
+    ],
+    "readings": [
+      "くらべる"
+    ]
+  },
+  {
+    "id": "06bdb",
+    "radical": "毛",
+    "kradical": "毛",
+    "number": 82,
+    "strokecount": 4,
+    "frequency": 211,
+    "meanings": [
+      "fur",
+      "hair"
+    ],
+    "readings": [
+      "け"
+    ]
+  },
+  {
+    "id": "06c0f",
+    "radical": "氏",
+    "kradical": "氏",
+    "number": 83,
+    "strokecount": 4,
+    "frequency": 10,
+    "meanings": [
+      "clan"
+    ],
+    "readings": [
+      "うじ"
+    ]
+  },
+  {
+    "id": "06c14",
+    "radical": "气",
+    "kradical": "气",
+    "number": 84,
+    "strokecount": 4,
+    "frequency": 17,
+    "meanings": [
+      "steam",
+      "breath"
+    ],
+    "readings": [
+      "きがまえ"
+    ]
+  },
+  {
+    "id": "06c34",
+    "radical": "水",
+    "kradical": "水",
+    "number": 85,
+    "strokecount": 4,
+    "frequency": 1595,
+    "top": 25,
+    "meanings": "water",
+    "readings": [
+      "みず"
+    ],
+    "variants": [
+      "氵",
+      "氺"
+    ]
+  },
+  {
+    "id": "06c35",
+    "radical": "氵",
+    "kradical": "汁",
+    "number": 85,
+    "strokecount": 4,
+    "frequency": 1595,
+    "top": 25,
+    "meanings": "water",
+    "readings": [
+      "みず"
+    ],
+    "variantOf": "水"
+  },
+  {
+    "id": "06c3a",
+    "radical": "氺",
+    "number": 85,
+    "strokecount": 5,
+    "frequency": 1595,
+    "top": 25,
+    "meanings": "water",
+    "readings": [
+      "みず"
+    ],
+    "variantOf": "水"
+  },
+  {
+    "id": "0706b",
+    "radical": "火",
+    "kradical": "火",
+    "number": 86,
+    "strokecount": 4,
+    "frequency": 639,
+    "top": 75,
+    "meanings": [
+      "fire"
+    ],
+    "readings": [
+      "ひ"
+    ],
+    "variants": [
+      "灬"
+    ]
+  },
+  {
+    "id": "0706c",
+    "radical": "灬",
+    "kradical": "杰",
+    "number": 86,
+    "strokecount": 4,
+    "frequency": 639,
+    "top": 75,
+    "meanings": [
+      "fire"
+    ],
+    "readings": [
+      "ひ"
+    ],
+    "variantOf": "火"
+  },
+  {
+    "id": "0722a",
+    "radical": "爪",
+    "kradical": "爪",
+    "number": 87,
+    "strokecount": 4,
+    "frequency": 36,
+    "meanings": [
+      "claw",
+      "nail",
+      "talon"
+    ],
+    "readings": [
+      "つめ"
+    ],
+    "variants": [
+      "爫",
+      "爫"
+    ]
+  },
+  {
+    "id": "0722b",
+    "radical": "爫",
+    "number": 87,
+    "strokecount": 4,
+    "frequency": 36,
+    "meanings": [
+      "claw",
+      "nail",
+      "talon"
+    ],
+    "readings": [
+      "つめ"
+    ],
+    "variantOf": "爪"
+  },
+  {
+    "id": "0fa49",
+    "radical": "爫",
+    "number": 87,
+    "strokecount": 4,
+    "frequency": 36,
+    "meanings": [
+      "claw",
+      "nail",
+      "talon"
+    ],
+    "readings": [
+      "つめ"
+    ],
+    "variantOf": "爪"
+  },
+  {
+    "id": "07236",
+    "radical": "父",
+    "kradical": "父",
+    "number": 88,
+    "strokecount": 4,
+    "frequency": 10,
+    "meanings": [
+      "father"
+    ],
+    "readings": [
+      "ちち"
+    ]
+  },
+  {
+    "id": "0723b",
+    "radical": "爻",
+    "kradical": "爻",
+    "number": 89,
+    "strokecount": 4,
+    "frequency": 16,
+    "meanings": [
+      "mix",
+      "twine",
+      "cross"
+    ],
+    "readings": [
+      "こう"
+    ]
+  },
+  {
+    "id": "0723f",
+    "radical": "爿",
+    "kradical": "爿",
+    "number": 90,
+    "strokecount": 4,
+    "frequency": 48,
+    "meanings": [
+      "split wood"
+    ],
+    "readings": [
+      "しょうへん"
+    ],
+    "variants": [
+      "丬"
+    ]
+  },
+  {
+    "id": "04e2c",
+    "radical": "丬",
+    "number": 90,
+    "strokecount": 3,
+    "frequency": 48,
+    "meanings": [
+      "split wood"
+    ],
+    "readings": [
+      "しょうへん"
+    ],
+    "variantOf": "爿"
+  },
+  {
+    "id": "07247",
+    "radical": "片",
+    "kradical": "片",
+    "number": 91,
+    "strokecount": 4,
+    "frequency": 77,
+    "meanings": [
+      "slice"
+    ],
+    "readings": [
+      "かた"
+    ]
+  },
+  {
+    "id": "07259",
+    "radical": "牙",
+    "kradical": "牙",
+    "number": 92,
+    "strokecount": 4,
+    "frequency": 9,
+    "meanings": [
+      "fang"
+    ],
+    "readings": [
+      "きばへん"
+    ]
+  },
+  {
+    "id": "0725b",
+    "radical": "牛",
+    "kradical": "牛",
+    "number": 93,
+    "strokecount": 4,
+    "frequency": 233,
+    "meanings": [
+      "cow"
+    ],
+    "readings": [
+      "うし"
+    ],
+    "variants": [
+      "牜",
+      "⺧"
+    ]
+  },
+  {
+    "id": "0725c",
+    "radical": "牜",
+    "number": 93,
+    "strokecount": 4,
+    "frequency": 233,
+    "meanings": [
+      "cow"
+    ],
+    "readings": [
+      "うし"
+    ],
+    "variantOf": "牛"
+  },
+  {
+    "id": "02ea7",
+    "radical": "⺧",
+    "number": 93,
+    "strokecount": 4,
+    "frequency": 233,
+    "meanings": [
+      "cow"
+    ],
+    "readings": [
+      "うし"
+    ],
+    "variantOf": "牛"
+  },
+  {
+    "id": "072ac",
+    "radical": "犬",
+    "kradical": "犬",
+    "number": 94,
+    "strokecount": 4,
+    "frequency": 444,
+    "top": 75,
+    "meanings": [
+      "dog"
+    ],
+    "readings": [
+      "いぬ"
+    ],
+    "variants": [
+      "犭"
+    ]
+  },
+  {
+    "id": "072ad",
+    "radical": "犭",
+    "kradical": "犯",
+    "number": 94,
+    "strokecount": 3,
+    "frequency": 444,
+    "top": 75,
+    "meanings": [
+      "dog"
+    ],
+    "readings": [
+      "いぬ"
+    ],
+    "variantOf": "犬"
+  },
+  {
+    "id": "07384",
+    "radical": "玄",
+    "kradical": "玄",
+    "number": 95,
+    "strokecount": 4,
+    "frequency": 6,
+    "meanings": [
+      "dark",
+      "profound"
+    ],
+    "readings": [
+      "げん"
+    ]
+  },
+  {
+    "id": "07389",
+    "radical": "玉",
+    "number": 96,
+    "strokecount": 4,
+    "frequency": 473,
+    "top": 75,
+    "meanings": [
+      "king",
+      "ball",
+      "jade"
+    ],
+    "readings": [
+      "おう",
+      "たま"
+    ],
+    "variants": [
+      "王",
+      "⺩"
+    ]
+  },
+  {
+    "id": "0738b",
+    "radical": "王",
+    "kradical": "王",
+    "number": 96,
+    "strokecount": 4,
+    "frequency": 473,
+    "top": 75,
+    "meanings": [
+      "king",
+      "ball",
+      "jade"
+    ],
+    "readings": [
+      "おう",
+      "たま"
+    ],
+    "variantOf": "玉"
+  },
+  {
+    "id": "02ea9",
+    "radical": "⺩",
+    "number": 96,
+    "strokecount": 4,
+    "frequency": 473,
+    "top": 75,
+    "meanings": [
+      "king",
+      "ball",
+      "jade"
+    ],
+    "readings": [
+      "おう",
+      "たま"
+    ],
+    "variantOf": "玉"
+  },
+  {
+    "id": "074dc",
+    "radical": "瓜",
+    "kradical": "瓜",
+    "number": 97,
+    "strokecount": 5,
+    "frequency": 55,
+    "meanings": [
+      "melon"
+    ],
+    "readings": [
+      "うり"
+    ]
+  },
+  {
+    "id": "074e6",
+    "radical": "瓦",
+    "kradical": "瓦",
+    "number": 98,
+    "strokecount": 5,
+    "frequency": 174,
+    "meanings": [
+      "tile"
+    ],
+    "readings": [
+      "かわら"
+    ]
+  },
+  {
+    "id": "07518",
+    "radical": "甘",
+    "kradical": "甘",
+    "number": 99,
+    "strokecount": 5,
+    "frequency": 22,
+    "meanings": [
+      "sweet"
+    ],
+    "readings": [
+      "あまい"
+    ]
+  },
+  {
+    "id": "0751f",
+    "radical": "生",
+    "kradical": "生",
+    "number": 100,
+    "strokecount": 5,
+    "frequency": 22,
+    "meanings": [
+      "life"
+    ],
+    "readings": [
+      "うまれる"
+    ]
+  },
+  {
+    "id": "07528",
+    "radical": "用",
+    "kradical": "用",
+    "number": 101,
+    "strokecount": 5,
+    "frequency": 10,
+    "meanings": [
+      "use"
+    ],
+    "readings": [
+      "もちいる・よう"
+    ]
+  },
+  {
+    "id": "07530",
+    "radical": "田",
+    "kradical": "田",
+    "number": 102,
+    "strokecount": 5,
+    "frequency": 192,
+    "top": 75,
+    "meanings": [
+      "field"
+    ],
+    "readings": [
+      "た"
+    ]
+  },
+  {
+    "id": "0758b",
+    "radical": "疋",
+    "kradical": "疋",
+    "number": 103,
+    "strokecount": 5,
+    "frequency": 15,
+    "meanings": [
+      "bolt of cloth"
+    ],
+    "readings": [
+      "ひき"
+    ],
+    "variants": [
+      "𤴔"
+    ]
+  },
+  {
+    "id": "24d14",
+    "radical": "𤴔",
+    "number": 103,
+    "strokecount": 5,
+    "frequency": 15,
+    "meanings": [
+      "bolt of cloth"
+    ],
+    "readings": [
+      "ひき"
+    ],
+    "variantOf": "疋"
+  },
+  {
+    "id": "07592",
+    "radical": "疒",
+    "kradical": "疔",
+    "number": 104,
+    "strokecount": 5,
+    "frequency": 526,
+    "top": 75,
+    "meanings": [
+      "sickness"
+    ],
+    "readings": [
+      "やまいだれ"
+    ]
+  },
+  {
+    "id": "07676",
+    "radical": "癶",
+    "kradical": "癶",
+    "number": 105,
+    "strokecount": 5,
+    "frequency": 15,
+    "meanings": [
+      "footsteps"
+    ],
+    "readings": [
+      "はつがしら"
+    ]
+  },
+  {
+    "id": "0767d",
+    "radical": "白",
+    "kradical": "白",
+    "number": 106,
+    "strokecount": 5,
+    "frequency": 109,
+    "meanings": [
+      "white"
+    ],
+    "readings": [
+      "しろ"
+    ]
+  },
+  {
+    "id": "076ae",
+    "radical": "皮",
+    "kradical": "皮",
+    "number": 107,
+    "strokecount": 5,
+    "frequency": 94,
+    "meanings": [
+      "skin"
+    ],
+    "readings": [
+      "けがわ"
+    ]
+  },
+  {
+    "id": "076bf",
+    "radical": "皿",
+    "kradical": "皿",
+    "number": 108,
+    "strokecount": 5,
+    "frequency": 129,
+    "meanings": [
+      "dish"
+    ],
+    "readings": [
+      "さら"
+    ]
+  },
+  {
+    "id": "076ee",
+    "radical": "目",
+    "kradical": "目",
+    "number": 109,
+    "strokecount": 5,
+    "frequency": 647,
+    "meanings": [
+      "eye"
+    ],
+    "readings": [
+      "め"
+    ]
+  },
+  {
+    "id": "077db",
+    "radical": "矛",
+    "kradical": "矛",
+    "number": 110,
+    "strokecount": 5,
+    "frequency": 65,
+    "meanings": [
+      "spear",
+      "pike"
+    ],
+    "readings": [
+      "むのほこ"
+    ]
+  },
+  {
+    "id": "077e2",
+    "radical": "矢",
+    "kradical": "矢",
+    "strokecount": 5,
+    "number": 111,
+    "frequency": 64,
+    "meanings": [
+      "arrow"
+    ],
+    "readings": [
+      "や"
+    ]
+  },
+  {
+    "id": "077f3",
+    "radical": "石",
+    "kradical": "石",
+    "number": 112,
+    "strokecount": 5,
+    "frequency": 499,
+    "top": 75,
+    "meanings": [
+      "stone"
+    ],
+    "readings": [
+      "いし"
+    ]
+  },
+  {
+    "id": "0793a",
+    "radical": "示",
+    "kradical": "示",
+    "number": 113,
+    "strokecount": 5,
+    "frequency": 213,
+    "top": 75,
+    "meanings": [
+      "altar",
+      "display"
+    ],
+    "readings": [
+      "しめす"
+    ],
+    "variants": [
+      "礻"
+    ]
+  },
+  {
+    "id": "0793b",
+    "radical": "礻",
+    "kradical": "礼",
+    "number": 113,
+    "strokecount": 4,
+    "frequency": 213,
+    "top": 75,
+    "meanings": [
+      "altar",
+      "display"
+    ],
+    "readings": [
+      "しめす"
+    ],
+    "variantOf": "示"
+  },
+  {
+    "id": "079b8",
+    "radical": "禸",
+    "kradical": "禹",
+    "number": 114,
+    "strokecount": 5,
+    "frequency": 12,
+    "meanings": [
+      "track"
+    ],
+    "readings": [
+      "ぐうのあし"
+    ]
+  },
+  {
+    "id": "079be",
+    "radical": "禾",
+    "kradical": "禾",
+    "number": 115,
+    "strokecount": 5,
+    "frequency": 431,
+    "meanings": [
+      "two-branch tree"
+    ],
+    "readings": [
+      "のぎ"
+    ]
+  },
+  {
+    "id": "07a74",
+    "radical": "穴",
+    "kradical": "穴",
+    "number": 116,
+    "strokecount": 5,
+    "frequency": 298,
+    "meanings": [
+      "cave"
+    ],
+    "readings": [
+      "あな"
+    ]
+  },
+  {
+    "id": "07acb",
+    "radical": "立",
+    "kradical": "立",
+    "number": 117,
+    "strokecount": 5,
+    "frequency": 101,
+    "meanings": [
+      "stand",
+      "erect"
+    ],
+    "readings": [
+      "たつ"
+    ]
+  },
+  {
+    "id": "07af9",
+    "radical": "竹",
+    "kradical": "竹",
+    "number": 118,
+    "strokecount": 6,
+    "frequency": 953,
+    "top": 75,
+    "meanings": [
+      "bamboo"
+    ],
+    "readings": [
+      "たけ"
+    ],
+    "variants": [
+      "⺮"
+    ]
+  },
+  {
+    "id": "02eae",
+    "radical": "⺮",
+    "number": 118,
+    "strokecount": 6,
+    "top": 75,
+    "meanings": [
+      "bamboo"
+    ],
+    "readings": [
+      "たけ"
+    ],
+    "variantOf": "竹"
+  },
+  {
+    "id": "07c73",
+    "radical": "米",
+    "kradical": "米",
+    "number": 119,
+    "strokecount": 6,
+    "frequency": 318,
+    "meanings": [
+      "rice"
+    ],
+    "readings": [
+      "こめ"
+    ]
+  },
+  {
+    "id": "07cf8",
+    "radical": "糸",
+    "kradical": "糸",
+    "number": 120,
+    "strokecount": 6,
+    "frequency": 832,
+    "top": 50,
+    "meanings": [
+      "thread",
+      "string"
+    ],
+    "readings": [
+      "いと"
+    ],
+    "variants": [
+      "糹"
+    ]
+  },
+  {
+    "id": "07cf9",
+    "radical": "糹",
+    "number": 120,
+    "strokecount": 6,
+    "frequency": 832,
+    "top": 50,
+    "meanings": [
+      "thread",
+      "string"
+    ],
+    "readings": [
+      "いと"
+    ],
+    "variantOf": "糸"
+  },
+  {
+    "id": "07f36",
+    "radical": "缶",
+    "kradical": "缶",
+    "number": 121,
+    "strokecount": 6,
+    "frequency": 77,
+    "meanings": [
+      "can",
+      "earthenware jar"
+    ],
+    "readings": [
+      "かん"
+    ]
+  },
+  {
+    "id": "07f52",
+    "radical": "罒",
+    "kradical": "買",
+    "number": 122,
+    "strokecount": 6,
+    "frequency": 163,
+    "meanings": [
+      "net"
+    ],
+    "readings": [
+      "あみがしら"
+    ],
+    "variants": [
+      "网"
+    ]
+  },
+  {
+    "id": "07f51",
+    "radical": "网",
+    "number": 122,
+    "strokecount": 5,
+    "frequency": 163,
+    "meanings": [
+      "net"
+    ],
+    "readings": [
+      "あみがしら"
+    ],
+    "variantOf": "罒"
+  },
+  {
+    "id": "07f8a",
+    "radical": "羊",
+    "kradical": "羊",
+    "number": 123,
+    "strokecount": 6,
+    "frequency": 156,
+    "meanings": [
+      "sheep"
+    ],
+    "readings": [
+      "ひつじ"
+    ],
+    "variants": [
+      "𦍌",
+      "⺶"
+    ]
+  },
+  {
+    "id": "2634c",
+    "radical": "𦍌",
+    "number": 123,
+    "strokecount": 6,
+    "frequency": 156,
+    "meanings": [
+      "sheep"
+    ],
+    "readings": [
+      "ひつじ"
+    ],
+    "variantOf": "羊"
+  },
+  {
+    "id": "02eb6",
+    "radical": "⺶",
+    "number": 123,
+    "strokecount": 6,
+    "frequency": 156,
+    "meanings": [
+      "sheep"
+    ],
+    "readings": [
+      "ひつじ"
+    ],
+    "variantOf": "羊"
+  },
+  {
+    "id": "07fbd",
+    "radical": "羽",
+    "kradical": "羽",
+    "number": 124,
+    "strokecount": 6,
+    "frequency": 220,
+    "meanings": [
+      "feather",
+      "wing"
+    ],
+    "readings": [
+      "はね"
+    ]
+  },
+  {
+    "id": "08002",
+    "radical": "耂",
+    "number": 125,
+    "strokecount": 6,
+    "frequency": 22,
+    "meanings": [
+      "old"
+    ],
+    "readings": [
+      "ろう"
+    ],
+    "variants": [
+      "老"
+    ]
+  },
+  {
+    "id": "08001",
+    "radical": "老",
+    "kradical": "老",
+    "number": 125,
+    "strokecount": 4,
+    "frequency": 22,
+    "meanings": [
+      "old"
+    ],
+    "readings": [
+      "ろう"
+    ],
+    "variantOf": "耂"
+  },
+  {
+    "id": "0800c",
+    "radical": "而",
+    "kradical": "而",
+    "number": 126,
+    "strokecount": 6,
+    "frequency": 22,
+    "meanings": [
+      "rake",
+      "beard"
+    ],
+    "readings": [
+      "しかして"
+    ]
+  },
+  {
+    "id": "08012",
+    "radical": "耒",
+    "kradical": "耒",
+    "number": 127,
+    "strokecount": 6,
+    "frequency": 84,
+    "meanings": [
+      "plow"
+    ],
+    "readings": [
+      "らいすき"
+    ]
+  },
+  {
+    "id": "08033",
+    "radical": "耳",
+    "kradical": "耳",
+    "number": 128,
+    "strokecount": 6,
+    "frequency": 172,
+    "meanings": [
+      "ear"
+    ],
+    "readings": [
+      "みみ"
+    ]
+  },
+  {
+    "id": "0807f",
+    "radical": "聿",
+    "kradical": "聿",
+    "number": 129,
+    "strokecount": 6,
+    "frequency": 19,
+    "meanings": [
+      "brush"
+    ],
+    "readings": [
+      "ふでづくり"
+    ],
+    "variants": [
+      "⺻"
+    ]
+  },
+  {
+    "id": "02ebb",
+    "radical": "⺻",
+    "number": 129,
+    "strokecount": 5,
+    "frequency": 19,
+    "meanings": [
+      "brush"
+    ],
+    "readings": [
+      "ふでづくり"
+    ],
+    "variantOf": "聿"
+  },
+  {
+    "id": "08089",
+    "radical": "肉",
+    "kradical": "肉",
+    "number": 130,
+    "strokecount": 6,
+    "frequency": 674,
+    "top": 50,
+    "meanings": [
+      "meat"
+    ],
+    "readings": [
+      "にく"
+    ],
+    "variants": [
+      "⺼"
+    ]
+  },
+  {
+    "id": "02ebc",
+    "radical": "⺼",
+    "number": 130,
+    "strokecount": 4,
+    "frequency": 674,
+    "top": 50,
+    "meanings": [
+      "meat"
+    ],
+    "readings": [
+      "にく"
+    ],
+    "variantOf": "肉"
+  },
+  {
+    "id": "081e3",
+    "radical": "臣",
+    "kradical": "臣",
+    "number": 131,
+    "strokecount": 7,
+    "frequency": 16,
+    "meanings": [
+      "minster",
+      "official"
+    ],
+    "readings": [
+      "しん"
+    ]
+  },
+  {
+    "id": "081ea",
+    "radical": "自",
+    "kradical": "自",
+    "number": 132,
+    "strokecount": 6,
+    "frequency": 34,
+    "meanings": [
+      "oneself"
+    ],
+    "readings": [
+      "みずから"
+    ]
+  },
+  {
+    "id": "081f3",
+    "radical": "至",
+    "kradical": "至",
+    "number": 133,
+    "strokecount": 6,
+    "frequency": 24,
+    "meanings": [
+      "arrive"
+    ],
+    "readings": [
+      "いたる"
+    ]
+  },
+  {
+    "id": "081fc",
+    "radical": "臼",
+    "kradical": "臼",
+    "number": 134,
+    "strokecount": 6,
+    "frequency": 71,
+    "meanings": [
+      "mortar"
+    ],
+    "readings": [
+      "うす"
+    ]
+  },
+  {
+    "id": "0820c",
+    "radical": "舌",
+    "kradical": "舌",
+    "number": 135,
+    "strokecount": 6,
+    "frequency": 31,
+    "meanings": [
+      "tongue"
+    ],
+    "readings": [
+      "した"
+    ]
+  },
+  {
+    "id": "0821b",
+    "radical": "舛",
+    "kradical": "舛",
+    "number": 136,
+    "strokecount": 7,
+    "frequency": 10,
+    "meanings": [
+      "opposite"
+    ],
+    "readings": [
+      "ます"
+    ]
+  },
+  {
+    "id": "0821f",
+    "radical": "舟",
+    "kradical": "舟",
+    "number": 137,
+    "strokecount": 6,
+    "frequency": 197,
+    "meanings": [
+      "boat"
+    ],
+    "readings": [
+      "ふね"
+    ]
+  },
+  {
+    "id": "0826e",
+    "radical": "艮",
+    "kradical": "艮",
+    "number": 138,
+    "strokecount": 6,
+    "frequency": 5,
+    "meanings": [
+      "stopping"
+    ],
+    "readings": [
+      "うしとら"
+    ]
+  },
+  {
+    "id": "08272",
+    "radical": "色",
+    "kradical": "色",
+    "number": 139,
+    "strokecount": 6,
+    "frequency": 21,
+    "meanings": [
+      "colour",
+      "pretiness"
+    ],
+    "readings": [
+      "いろ"
+    ]
+  },
+  {
+    "id": "08279",
+    "radical": "艹",
+    "kradical": "艾",
+    "number": 140,
+    "strokecount": 3,
+    "frequency": 1902,
+    "top": 50,
+    "meanings": [
+      "grass",
+      "vegetation"
+    ],
+    "readings": [
+      "くさ"
+    ],
+    "variants": [
+      "艸",
+      "䒑"
+    ]
+  },
+  {
+    "id": "08278",
+    "radical": "艸",
+    "number": 140,
+    "strokecount": 6,
+    "frequency": 1902,
+    "top": 50,
+    "meanings": [
+      "grass"
+    ],
+    "readings": [
+      "くさ"
+    ],
+    "variantOf": "艹"
+  },
+  {
+    "id": "04491",
+    "radical": "䒑",
+    "kradical": "并",
+    "number": 140,
+    "strokecount": 3,
+    "frequency": 1902,
+    "top": 50,
+    "meanings": [
+      "grass"
+    ],
+    "readings": [
+      "くさ"
+    ],
+    "variantOf": "艹"
+  },
+  {
+    "id": "0864d",
+    "radical": "虍",
+    "kradical": "虍",
+    "number": 141,
+    "strokecount": 6,
+    "frequency": 114,
+    "meanings": [
+      "tiger stripes"
+    ],
+    "readings": [
+      "とらかんむり"
+    ]
+  },
+  {
+    "id": "0866b",
+    "radical": "虫",
+    "kradical": "虫",
+    "number": 142,
+    "strokecount": 6,
+    "frequency": 1067,
+    "meanings": [
+      "insect"
+    ],
+    "readings": [
+      "むし"
+    ]
+  },
+  {
+    "id": "08840",
+    "radical": "血",
+    "kradical": "血",
+    "number": 143,
+    "strokecount": 6,
+    "frequency": 60,
+    "meanings": [
+      "blood"
+    ],
+    "readings": [
+      "ち"
+    ]
+  },
+  {
+    "id": "0884c",
+    "radical": "行",
+    "kradical": "行",
+    "number": 144,
+    "strokecount": 6,
+    "frequency": 53,
+    "meanings": [
+      "go",
+      "do"
+    ],
+    "readings": [
+      "ぎょう"
+    ]
+  },
+  {
+    "id": "08863",
+    "radical": "衣",
+    "kradical": "衣",
+    "number": 145,
+    "strokecount": 6,
+    "frequency": 607,
+    "meanings": [
+      "clothes"
+    ],
+    "readings": [
+      "ころも"
+    ],
+    "variants": [
+      "衤"
+    ]
+  },
+  {
+    "id": "08864",
+    "radical": "衤",
+    "kradical": "初",
+    "number": 145,
+    "strokecount": 5,
+    "frequency": 607,
+    "meanings": [
+      "clothes"
+    ],
+    "readings": [
+      "ころも"
+    ],
+    "variantOf": "衣"
+  },
+  {
+    "id": "0897f",
+    "radical": "西",
+    "kradical": "西",
+    "number": 146,
+    "strokecount": 6,
+    "frequency": 29,
+    "meanings": [
+      "west"
+    ],
+    "readings": [
+      "にし"
+    ],
+    "variants": [
+      "覀",
+      "襾"
+    ]
+  },
+  {
+    "id": "08980",
+    "radical": "覀",
+    "number": 146,
+    "strokecount": 6,
+    "frequency": 29,
+    "meanings": [
+      "west"
+    ],
+    "readings": [
+      "にし"
+    ],
+    "variantOf": "西"
+  },
+  {
+    "id": "0897e",
+    "radical": "襾",
+    "number": 146,
+    "strokecount": 6,
+    "frequency": 29,
+    "meanings": [
+      "west"
+    ],
+    "readings": [
+      "にし"
+    ],
+    "variantOf": "西"
+  },
+  {
+    "id": "0898b",
+    "radical": "見",
+    "kradical": "見",
+    "number": 147,
+    "strokecount": 7,
+    "frequency": 161,
+    "meanings": [
+      "see"
+    ],
+    "readings": [
+      "みる"
+    ]
+  },
+  {
+    "id": "089d2",
+    "radical": "角",
+    "kradical": "角",
+    "number": 148,
+    "strokecount": 7,
+    "frequency": 158,
+    "meanings": [
+      "horn"
+    ],
+    "readings": [
+      "つの"
+    ]
+  },
+  {
+    "id": "08a00",
+    "radical": "言",
+    "kradical": "言",
+    "number": 149,
+    "strokecount": 7,
+    "frequency": 861,
+    "top": 50,
+    "meanings": [
+      "speech"
+    ],
+    "readings": [
+      "こと"
+    ],
+    "variants": [
+      "訁"
+    ]
+  },
+  {
+    "id": "08a01",
+    "radical": "訁",
+    "number": 149,
+    "strokecount": 7,
+    "frequency": 861,
+    "top": 50,
+    "meanings": [
+      "speech"
+    ],
+    "readings": [
+      "こと"
+    ],
+    "variantOf": "言"
+  },
+  {
+    "id": "08c37",
+    "radical": "谷",
+    "kradical": "谷",
+    "number": 150,
+    "strokecount": 7,
+    "frequency": 54,
+    "meanings": [
+      "valley"
+    ],
+    "readings": [
+      "たに"
+    ]
+  },
+  {
+    "id": "08c46",
+    "radical": "豆",
+    "kradical": "豆",
+    "number": 151,
+    "strokecount": 7,
+    "frequency": 68,
+    "meanings": [
+      "bean"
+    ],
+    "readings": [
+      "まめ"
+    ]
+  },
+  {
+    "id": "08c55",
+    "radical": "豕",
+    "kradical": "豕",
+    "number": 152,
+    "strokecount": 7,
+    "frequency": 148,
+    "meanings": [
+      "pig"
+    ],
+    "readings": [
+      "いのこ"
+    ]
+  },
+  {
+    "id": "08c78",
+    "radical": "豸",
+    "kradical": "豸",
+    "number": 153,
+    "strokecount": 7,
+    "frequency": 140,
+    "meanings": [
+      "cat",
+      "badger"
+    ],
+    "readings": [
+      "むじな"
+    ]
+  },
+  {
+    "id": "08c9d",
+    "radical": "貝",
+    "kradical": "貝",
+    "number": 154,
+    "strokecount": 7,
+    "frequency": 277,
+    "top": 50,
+    "meanings": [
+      "shell"
+    ],
+    "readings": [
+      "かい"
+    ]
+  },
+  {
+    "id": "08d64",
+    "radical": "赤",
+    "kradical": "赤",
+    "number": 155,
+    "strokecount": 7,
+    "frequency": 31,
+    "meanings": [
+      "red",
+      "bare"
+    ],
+    "readings": [
+      "あか"
+    ]
+  },
+  {
+    "id": "08d70",
+    "radical": "走",
+    "kradical": "走",
+    "number": 156,
+    "strokecount": 7,
+    "frequency": 285,
+    "meanings": [
+      "run"
+    ],
+    "readings": [
+      "はしる"
+    ]
+  },
+  {
+    "id": "08db3",
+    "radical": "足",
+    "kradical": "足",
+    "number": 157,
+    "strokecount": 7,
+    "frequency": 580,
+    "meanings": [
+      "foot"
+    ],
+    "readings": [
+      "あし"
+    ],
+    "variants": [
+      "𧾷"
+    ]
+  },
+  {
+    "id": "27fb7",
+    "radical": "𧾷",
+    "number": 157,
+    "strokecount": 7,
+    "frequency": 580,
+    "meanings": [
+      "foot"
+    ],
+    "readings": [
+      "あし"
+    ],
+    "variantOf": "足"
+  },
+  {
+    "id": "08eab",
+    "radical": "身",
+    "kradical": "身",
+    "number": 158,
+    "strokecount": 7,
+    "frequency": 97,
+    "meanings": [
+      "body"
+    ],
+    "readings": [
+      "み"
+    ]
+  },
+  {
+    "id": "08eca",
+    "radical": "車",
+    "kradical": "車",
+    "number": 159,
+    "strokecount": 7,
+    "frequency": 361,
+    "meanings": [
+      "cart",
+      "car"
+    ],
+    "readings": [
+      "くるま"
+    ]
+  },
+  {
+    "id": "08f9b",
+    "radical": "辛",
+    "kradical": "辛",
+    "number": 160,
+    "strokecount": 7,
+    "frequency": 36,
+    "meanings": [
+      "spicy",
+      "bitter"
+    ],
+    "readings": [
+      "からい"
+    ]
+  },
+  {
+    "id": "08fb0",
+    "radical": "辰",
+    "kradical": "辰",
+    "number": 161,
+    "strokecount": 7,
+    "meanings": "morning",
+    "readings": [
+      "たつ・しんのたつ"
+    ]
+  },
+  {
+    "id": "02ecc",
+    "radical": "⻌",
+    "kradical": "込",
+    "number": 162,
+    "strokecount": 3,
+    "frequency": 381,
+    "top": 50,
+    "meanings": [
+      "walk"
+    ],
+    "readings": [
+      "しんにょう"
+    ],
+    "variants": [
+      "辵",
+      "辶"
+    ]
+  },
+  {
+    "id": "08fb5",
+    "radical": "辵",
+    "number": 162,
+    "strokecount": 7,
+    "frequency": 381,
+    "top": 50,
+    "meanings": [
+      "walk"
+    ],
+    "readings": [
+      "しんにょう"
+    ],
+    "variantOf": "⻌"
+  },
+  {
+    "id": "08fb6",
+    "radical": "辶",
+    "number": 162,
+    "strokecount": 4,
+    "frequency": 381,
+    "top": 50,
+    "meanings": [
+      "walk"
+    ],
+    "readings": [
+      "しんにょう"
+    ],
+    "variantOf": "⻌"
+  },
+  {
+    "id": "09091",
+    "radical": "邑",
+    "kradical": "邑",
+    "number": 163,
+    "strokecount": 7,
+    "frequency": 350,
+    "top": 50,
+    "meanings": [
+      "town (阝 right)"
+    ],
+    "readings": [
+      "むら"
+    ],
+    "variants": [
+      "⻏"
+    ]
+  },
+  {
+    "id": "02ecf",
+    "radical": "⻏",
+    "kradical": "邦",
+    "number": 163,
+    "strokecount": 3,
+    "frequency": 350,
+    "top": 50,
+    "meanings": [
+      "town (阝 right)"
+    ],
+    "readings": [
+      "むら"
+    ],
+    "variantOf": "邑"
+  },
+  {
+    "id": "09149",
+    "radical": "酉",
+    "kradical": "酉",
+    "number": 164,
+    "strokecount": 7,
+    "frequency": 290,
+    "top": 75,
+    "meanings": "sake",
+    "readings": [
+      "とり"
+    ]
+  },
+  {
+    "id": "091c6",
+    "radical": "釆",
+    "kradical": "釆",
+    "number": 165,
+    "strokecount": 7,
+    "frequency": 14,
+    "meanings": [
+      "divide",
+      "distinguish",
+      "choose"
+    ],
+    "readings": [
+      "のごめ"
+    ]
+  },
+  {
+    "id": "091cc",
+    "radical": "里",
+    "kradical": "里",
+    "number": 166,
+    "strokecount": 7,
+    "frequency": 14,
+    "meanings": [
+      "village",
+      "mile"
+    ],
+    "readings": [
+      "さと"
+    ]
+  },
+  {
+    "id": "091d1",
+    "radical": "金",
+    "kradical": "金",
+    "number": 167,
+    "strokecount": 8,
+    "frequency": 806,
+    "top": 50,
+    "meanings": [
+      "metal",
+      "gold"
+    ],
+    "readings": [
+      "かね"
+    ],
+    "variants": [
+      "釒"
+    ]
+  },
+  {
+    "id": "091d2",
+    "radical": "釒",
+    "number": 167,
+    "strokecount": 8,
+    "frequency": 806,
+    "top": 50,
+    "meanings": [
+      "metal",
+      "gold"
+    ],
+    "readings": [
+      "かね"
+    ],
+    "variantOf": "金"
+  },
+  {
+    "id": "09577",
+    "radical": "長",
+    "kradical": "長",
+    "number": 168,
+    "strokecount": 8,
+    "frequency": 55,
+    "meanings": [
+      "long",
+      "grow",
+      "leader"
+    ],
+    "readings": [
+      "ながい",
+      "ちょう"
+    ],
+    "variants": [
+      "镸"
+    ]
+  },
+  {
+    "id": "09578",
+    "radical": "镸",
+    "number": 168,
+    "strokecount": 7,
+    "frequency": 55,
+    "meanings": [
+      "long",
+      "grow",
+      "leader"
+    ],
+    "readings": [
+      "ながい",
+      "ちょう"
+    ],
+    "variantOf": "長"
+  },
+  {
+    "id": "09580",
+    "radical": "門",
+    "kradical": "門",
+    "number": 169,
+    "strokecount": 8,
+    "frequency": 246,
+    "meanings": [
+      "gate"
+    ],
+    "readings": [
+      "もん"
+    ]
+  },
+  {
+    "id": "0961c",
+    "radical": "阜",
+    "number": 170,
+    "strokecount": 8,
+    "frequency": 348,
+    "top": 50,
+    "meanings": [
+      "mound",
+      "dam (阝 left)"
+    ],
+    "readings": [
+      "ぎふのふ"
+    ],
+    "variants": [
+      "⻖"
+    ]
+  },
+  {
+    "id": "02ed6",
+    "radical": "⻖",
+    "kradical": "阡",
+    "number": 170,
+    "strokecount": 3,
+    "top": 50,
+    "meanings": [
+      "mound",
+      "dam (阝 left)"
+    ],
+    "readings": [
+      "ぎふのふ"
+    ],
+    "variantOf": "阜"
+  },
+  {
+    "id": "096b6",
+    "radical": "隶",
+    "kradical": "隶",
+    "number": 171,
+    "strokecount": 8,
+    "frequency": 12,
+    "meanings": [
+      "slave",
+      "capture"
+    ],
+    "readings": [
+      "れいづくり"
+    ]
+  },
+  {
+    "id": "096b9",
+    "radical": "隹",
+    "kradical": "隹",
+    "number": 172,
+    "strokecount": 8,
+    "frequency": 233,
+    "meanings": "old bird",
+    "readings": [
+      "ふるとり"
+    ]
+  },
+  {
+    "id": "096e8",
+    "radical": "雨",
+    "kradical": "雨",
+    "number": 173,
+    "strokecount": 8,
+    "frequency": 298,
+    "top": 75,
+    "meanings": [
+      "rain"
+    ],
+    "readings": [
+      "あめ"
+    ],
+    "variants": [
+      "⻗"
+    ]
+  },
+  {
+    "id": "02ed7",
+    "radical": "⻗",
+    "number": 173,
+    "strokecount": 8,
+    "frequency": 298,
+    "top": 75,
+    "meanings": [
+      "rain"
+    ],
+    "readings": [
+      "あめ"
+    ],
+    "variantOf": "雨"
+  },
+  {
+    "id": "09752",
+    "radical": "青",
+    "kradical": "青",
+    "number": 174,
+    "strokecount": 8,
+    "frequency": 17,
+    "meanings": [
+      "green",
+      "blue"
+    ],
+    "readings": [
+      "あお"
+    ],
+    "variants": [
+      "靑"
+    ]
+  },
+  {
+    "id": "09751",
+    "radical": "靑",
+    "number": 174,
+    "strokecount": 8,
+    "frequency": 17,
+    "meanings": [
+      "green",
+      "blue"
+    ],
+    "readings": [
+      "あお"
+    ],
+    "variantOf": "青"
+  },
+  {
+    "id": "0975e",
+    "radical": "非",
+    "kradical": "非",
+    "number": 175,
+    "strokecount": 8,
+    "frequency": 25,
+    "meanings": [
+      "wrong"
+    ],
+    "readings": [
+      "あらず"
+    ]
+  },
+  {
+    "id": "09762",
+    "radical": "面",
+    "kradical": "面",
+    "number": 176,
+    "strokecount": 9,
+    "frequency": 66,
+    "meanings": [
+      "face"
+    ],
+    "readings": [
+      "めん"
+    ]
+  },
+  {
+    "id": "09769",
+    "radical": "革",
+    "kradical": "革",
+    "number": 177,
+    "strokecount": 9,
+    "frequency": 305,
+    "meanings": [
+      "leather",
+      "rawhide"
+    ],
+    "readings": [
+      "かくのかわ"
+    ]
+  },
+  {
+    "id": "097cb",
+    "radical": "韋",
+    "kradical": "韋",
+    "number": 178,
+    "strokecount": 10,
+    "frequency": 100,
+    "meanings": [
+      "tanned leather"
+    ],
+    "readings": [
+      "なめしがわ"
+    ]
+  },
+  {
+    "id": "097ed",
+    "radical": "韭",
+    "kradical": "韭",
+    "number": 179,
+    "strokecount": 9,
+    "frequency": 20,
+    "meanings": [
+      "leek"
+    ],
+    "readings": [
+      "にら"
+    ]
+  },
+  {
+    "id": "097f3",
+    "radical": "音",
+    "kradical": "音",
+    "number": 180,
+    "strokecount": 9,
+    "frequency": 43,
+    "meanings": [
+      "sound"
+    ],
+    "readings": [
+      "おと"
+    ]
+  },
+  {
+    "id": "09801",
+    "radical": "頁",
+    "kradical": "頁",
+    "number": 181,
+    "strokecount": 9,
+    "frequency": 372,
+    "meanings": [
+      "big shell"
+    ],
+    "readings": [
+      "おおがい"
+    ]
+  },
+  {
+    "id": "098a8",
+    "radical": "風",
+    "kradical": "風",
+    "number": 182,
+    "strokecount": 9,
+    "frequency": 182,
+    "meanings": "wind",
+    "readings": [
+      "かぜ"
+    ],
+    "variants": [
+      "𠘨"
+    ]
+  },
+  {
+    "id": "20628",
+    "radical": "𠘨",
+    "number": 182,
+    "strokecount": 2,
+    "frequency": 182,
+    "meanings": "wind",
+    "readings": [
+      "かぜ"
+    ],
+    "variantOf": "風"
+  },
+  {
+    "id": "098db",
+    "radical": "飛",
+    "kradical": "飛",
+    "number": 183,
+    "strokecount": 9,
+    "frequency": 92,
+    "meanings": [
+      "fly"
+    ],
+    "readings": [
+      "とぶ"
+    ]
+  },
+  {
+    "id": "098df",
+    "radical": "食",
+    "kradical": "食",
+    "number": 184,
+    "strokecount": 9,
+    "frequency": 403,
+    "meanings": [
+      "eat",
+      "food"
+    ],
+    "readings": [
+      "しょく"
+    ],
+    "variants": [
+      "飠",
+      "𩙿"
+    ]
+  },
+  {
+    "id": "098e0",
+    "radical": "飠",
+    "number": 184,
+    "strokecount": 8,
+    "frequency": 403,
+    "meanings": [
+      "eat",
+      "food"
+    ],
+    "readings": [
+      "しょく"
+    ],
+    "variantOf": "食"
+  },
+  {
+    "id": "2967f",
+    "radical": "𩙿",
+    "number": 184,
+    "strokecount": 9,
+    "frequency": 403,
+    "meanings": [
+      "eat",
+      "food"
+    ],
+    "readings": [
+      "しょく"
+    ],
+    "variantOf": "食"
+  },
+  {
+    "id": "09996",
+    "radical": "首",
+    "kradical": "首",
+    "number": 185,
+    "strokecount": 9,
+    "frequency": 20,
+    "meanings": [
+      "neck",
+      "head"
+    ],
+    "readings": [
+      "くび"
+    ]
+  },
+  {
+    "id": "09999",
+    "radical": "香",
+    "kradical": "香",
+    "number": 186,
+    "strokecount": 9,
+    "frequency": 37,
+    "meanings": [
+      "fragrant"
+    ],
+    "readings": [
+      "においこう"
+    ]
+  },
+  {
+    "id": "099ac",
+    "radical": "馬",
+    "kradical": "馬",
+    "number": 187,
+    "strokecount": 10,
+    "frequency": 472,
+    "meanings": [
+      "horse"
+    ],
+    "readings": [
+      "うま"
+    ]
+  },
+  {
+    "id": "09aa8",
+    "radical": "骨",
+    "kradical": "骨",
+    "number": 188,
+    "strokecount": 10,
+    "frequency": 185,
+    "meanings": [
+      "bone"
+    ],
+    "readings": [
+      "ほね"
+    ]
+  },
+  {
+    "id": "09ad8",
+    "radical": "高",
+    "kradical": "高",
+    "number": 189,
+    "strokecount": 10,
+    "frequency": 34,
+    "meanings": [
+      "tall",
+      "high"
+    ],
+    "readings": [
+      "たかい"
+    ]
+  },
+  {
+    "id": "09adf",
+    "radical": "髟",
+    "kradical": "髟",
+    "number": 190,
+    "strokecount": 10,
+    "frequency": 243,
+    "meanings": [
+      "hair"
+    ],
+    "readings": [
+      "かみがしら"
+    ]
+  },
+  {
+    "id": "09b25",
+    "radical": "鬥",
+    "kradical": "鬥",
+    "number": 191,
+    "strokecount": 10,
+    "frequency": 23,
+    "meanings": [
+      "fight"
+    ],
+    "readings": [
+      "とうがまえ"
+    ]
+  },
+  {
+    "id": "09b2f",
+    "radical": "鬯",
+    "kradical": "鬯",
+    "number": 192,
+    "strokecount": 10,
+    "frequency": 8,
+    "meanings": [
+      "herbs",
+      "sacrificial wine"
+    ],
+    "readings": [
+      "ちょう"
+    ]
+  },
+  {
+    "id": "09b32",
+    "radical": "鬲",
+    "kradical": "鬲",
+    "number": 193,
+    "strokecount": 10,
+    "frequency": 73,
+    "meanings": [
+      "tripod",
+      "cauldron"
+    ],
+    "readings": [
+      "かなえ"
+    ]
+  },
+  {
+    "id": "09b3c",
+    "radical": "鬼",
+    "kradical": "鬼",
+    "number": 194,
+    "strokecount": 10,
+    "frequency": 141,
+    "meanings": [
+      "ghost",
+      "demon"
+    ],
+    "readings": [
+      "おに"
+    ]
+  },
+  {
+    "id": "09b5a",
+    "radical": "魚",
+    "kradical": "魚",
+    "number": 195,
+    "strokecount": 11,
+    "frequency": 571,
+    "meanings": [
+      "fish"
+    ],
+    "readings": [
+      "うお"
+    ]
+  },
+  {
+    "id": "09ce5",
+    "radical": "鳥",
+    "kradical": "鳥",
+    "number": 196,
+    "strokecount": 11,
+    "frequency": 750,
+    "meanings": [
+      "bird"
+    ],
+    "readings": [
+      "とり"
+    ]
+  },
+  {
+    "id": "09e75",
+    "radical": "鹵",
+    "kradical": "鹵",
+    "number": 197,
+    "strokecount": 11,
+    "frequency": 44,
+    "meanings": [
+      "salt"
+    ],
+    "readings": [
+      "ろ"
+    ]
+  },
+  {
+    "id": "09e7f",
+    "radical": "鹿",
+    "kradical": "鹿",
+    "number": 198,
+    "strokecount": 11,
+    "frequency": 104,
+    "meanings": [
+      "deer"
+    ],
+    "readings": [
+      "しか"
+    ]
+  },
+  {
+    "id": "09ea6",
+    "radical": "麦",
+    "kradical": "麦",
+    "number": 199,
+    "strokecount": 7,
+    "frequency": 131,
+    "meanings": [
+      "wheat"
+    ],
+    "readings": [
+      "むぎ"
+    ],
+    "variants": [
+      "麥"
+    ]
+  },
+  {
+    "id": "09ea5",
+    "radical": "麥",
+    "number": 199,
+    "strokecount": 11,
+    "frequency": 131,
+    "meanings": [
+      "wheat"
+    ],
+    "readings": [
+      "むぎ"
+    ],
+    "variantOf": "麦"
+  },
+  {
+    "id": "09ebb",
+    "radical": "麻",
+    "kradical": "麻",
+    "number": 200,
+    "strokecount": 11,
+    "frequency": 34,
+    "meanings": [
+      "hemp",
+      "flax"
+    ],
+    "readings": [
+      "あさ"
+    ]
+  },
+  {
+    "id": "09ec4",
+    "radical": "黄",
+    "kradical": "黄",
+    "number": 201,
+    "strokecount": 11,
+    "frequency": 42,
+    "meanings": [
+      "yellow"
+    ],
+    "readings": [
+      "きいろ"
+    ],
+    "variants": [
+      "黃"
+    ]
+  },
+  {
+    "id": "09ec3",
+    "radical": "黃",
+    "number": 201,
+    "strokecount": 12,
+    "frequency": 42,
+    "meanings": [
+      "yellow"
+    ],
+    "readings": [
+      "きいろ"
+    ],
+    "variantOf": "黄"
+  },
+  {
+    "id": "09ecd",
+    "radical": "黍",
+    "kradical": "黍",
+    "number": 202,
+    "strokecount": 12,
+    "frequency": 46,
+    "meanings": [
+      "millet"
+    ],
+    "readings": [
+      "きび"
+    ]
+  },
+  {
+    "id": "09ed2",
+    "radical": "黒",
+    "kradical": "黒",
+    "number": 203,
+    "strokecount": 11,
+    "frequency": 172,
+    "meanings": [
+      "black"
+    ],
+    "readings": [
+      "くろ"
+    ],
+    "variants": [
+      "黑"
+    ]
+  },
+  {
+    "id": "09ed1",
+    "radical": "黑",
+    "number": 203,
+    "strokecount": 12,
+    "frequency": 172,
+    "meanings": [
+      "black"
+    ],
+    "readings": [
+      "くろ"
+    ],
+    "variantOf": "黒"
+  },
+  {
+    "id": "09ef9",
+    "radical": "黹",
+    "kradical": "黹",
+    "number": 204,
+    "strokecount": 12,
+    "frequency": 8,
+    "meanings": [
+      "embroidery",
+      "needlework"
+    ],
+    "readings": [
+      "ふつ"
+    ]
+  },
+  {
+    "id": "09efd",
+    "radical": "黽",
+    "kradical": "黽",
+    "number": 205,
+    "strokecount": 13,
+    "frequency": 40,
+    "meanings": [
+      "frog",
+      "amphibian"
+    ],
+    "readings": [
+      "べん"
+    ]
+  },
+  {
+    "id": "09f0e",
+    "radical": "鼎",
+    "kradical": "鼎",
+    "number": 206,
+    "strokecount": 13,
+    "frequency": 14,
+    "meanings": [
+      "sacrificial tripod"
+    ],
+    "readings": [
+      "かなえ"
+    ]
+  },
+  {
+    "id": "09f13",
+    "radical": "鼓",
+    "kradical": "鼓",
+    "number": 207,
+    "strokecount": 13,
+    "frequency": 46,
+    "meanings": [
+      "drum"
+    ],
+    "readings": [
+      "つづみ"
+    ]
+  },
+  {
+    "id": "09f20",
+    "radical": "鼠",
+    "kradical": "鼠",
+    "number": 208,
+    "strokecount": 13,
+    "frequency": 92,
+    "meanings": [
+      "rat",
+      "mouse"
+    ],
+    "readings": [
+      "ねずみ"
+    ]
+  },
+  {
+    "id": "09f3b",
+    "radical": "鼻",
+    "kradical": "鼻",
+    "number": 209,
+    "strokecount": 14,
+    "frequency": 49,
+    "meanings": [
+      "nose"
+    ],
+    "readings": [
+      "はな"
+    ]
+  },
+  {
+    "id": "09f4a",
+    "radical": "齊",
+    "kradical": "齊",
+    "number": 210,
+    "strokecount": 14,
+    "frequency": 18,
+    "meanings": [
+      "even",
+      "uniformly"
+    ],
+    "readings": [
+      "せい"
+    ]
+  },
+  {
+    "id": "06b6f",
+    "radical": "歯",
+    "kradical": "歯",
+    "number": 211,
+    "strokecount": 12,
+    "frequency": 162,
+    "meanings": [
+      "tooth",
+      "molar"
+    ],
+    "readings": [
+      "は"
+    ],
+    "variants": [
+      "齒"
+    ]
+  },
+  {
+    "id": "09f52",
+    "radical": "齒",
+    "number": 211,
+    "strokecount": 15,
+    "frequency": 162,
+    "meanings": [
+      "tooth",
+      "molar"
+    ],
+    "readings": [
+      "は"
+    ],
+    "variantOf": "歯"
+  },
+  {
+    "id": "07adc",
+    "radical": "竜",
+    "kradical": "竜",
+    "number": 212,
+    "strokecount": 10,
+    "frequency": 14,
+    "meanings": [
+      "dragon"
+    ],
+    "readings": [
+      "りゅう"
+    ],
+    "variants": [
+      "龍"
+    ]
+  },
+  {
+    "id": "09f8d",
+    "radical": "龍",
+    "number": 212,
+    "strokecount": 16,
+    "frequency": 14,
+    "meanings": [
+      "dragon"
+    ],
+    "readings": [
+      "りゅう"
+    ],
+    "variantOf": "竜"
+  },
+  {
+    "id": "04e80",
+    "radical": "亀",
+    "kradical": "亀",
+    "number": 213,
+    "strokecount": 11,
+    "meanings": [
+      "turtle",
+      "tortoise"
+    ],
+    "readings": [
+      "かめ"
+    ],
+    "variants": [
+      "龜"
+    ]
+  },
+  {
+    "id": "09f9c",
+    "radical": "龜",
+    "number": 213,
+    "strokecount": 16,
+    "meanings": [
+      "turtle",
+      "tortoise"
+    ],
+    "readings": [
+      "かめ"
+    ],
+    "variantOf": "亀"
+  },
+  {
+    "id": "09fa0",
+    "radical": "龠",
+    "kradical": "龠",
+    "number": 214,
+    "strokecount": 17,
+    "frequency": 19,
+    "meanings": [
+      "flute"
+    ],
+    "readings": [
+      "やく"
+    ]
+  },
+  {
+    "id": "030de",
+    "radical": "マ",
+    "kradical": "マ",
+    "strokecount": 2
+  },
+  {
+    "id": "04e5d",
+    "radical": "九",
+    "kradical": "九",
+    "strokecount": 2
+  },
+  {
+    "id": "030e6",
+    "radical": "ユ",
+    "kradical": "ユ",
+    "strokecount": 2
+  },
+  {
+    "id": "04e43",
+    "radical": "乃",
+    "kradical": "乃",
+    "strokecount": 2
+  },
+  {
+    "id": "04e5f",
+    "radical": "也",
+    "kradical": "也",
+    "strokecount": 3
+  },
+  {
+    "id": "053ca",
+    "radical": "及",
+    "kradical": "及",
+    "strokecount": 3
+  },
+  {
+    "id": "04e45",
+    "radical": "久",
+    "kradical": "久",
+    "strokecount": 3
+  },
+  {
+    "id": "05143",
+    "radical": "元",
+    "kradical": "元",
+    "strokecount": 4
+  },
+  {
+    "id": "04e95",
+    "radical": "井",
+    "kradical": "井",
+    "strokecount": 4
+  },
+  {
+    "id": "052ff",
+    "radical": "勿",
+    "kradical": "勿",
+    "strokecount": 4
+  },
+  {
+    "id": "04e94",
+    "radical": "五",
+    "kradical": "五",
+    "strokecount": 4
+  },
+  {
+    "id": "05c6f",
+    "radical": "屯",
+    "kradical": "屯",
+    "strokecount": 4
+  },
+  {
+    "id": "05df4",
+    "radical": "巴",
+    "kradical": "巴",
+    "strokecount": 4
+  },
+  {
+    "id": "04e16",
+    "radical": "世",
+    "kradical": "世",
+    "strokecount": 5
+  },
+  {
+    "id": "05de8",
+    "radical": "巨",
+    "kradical": "巨",
+    "strokecount": 5
+  },
+  {
+    "id": "0518a",
+    "radical": "冊",
+    "kradical": "冊",
+    "strokecount": 5
+  },
+  {
+    "id": "05944",
+    "radical": "奄",
+    "kradical": "奄",
+    "strokecount": 8
+  },
+  {
+    "id": "05ca1",
+    "radical": "岡",
+    "kradical": "岡",
+    "strokecount": 8
+  },
+  {
+    "id": "0514d",
+    "radical": "免",
+    "kradical": "免",
+    "strokecount": 8
+  },
+  {
+    "id": "06589",
+    "radical": "斉",
+    "kradical": "斉",
+    "strokecount": 8
+  },
+  {
+    "id": "054c1",
+    "radical": "品",
+    "kradical": "品",
+    "strokecount": 9
+  },
+  {
+    "id": "05547",
+    "radical": "啇",
+    "kradical": "滴",
+    "strokecount": 11
+  },
+  {
+    "id": "07121",
+    "radical": "無",
+    "kradical": "無",
+    "strokecount": 12
+  }
 ]

@@ -28,6 +28,7 @@ export interface Keywords {
 // Radical
 
 export interface Radical {
+  id: string;
   radical: string;
   kradical?: string | undefined;
   strokecount: number;
@@ -41,11 +42,15 @@ export interface Radical {
 // Kanji
 
 export interface Kanji {
+  id: string;
   literal: string;
   strokecount: number;
   strokes?: KanjiStroke[] | undefined;
   composition?: KanjiComposition[] | undefined;
-  readings?: KanjiReading | undefined;
+  on?: string[] | undefined;
+  kun?: string[] | undefined;
+  kunOku?: string[] | undefined; // includes okurigana
+  nanori?: string[] | undefined;
   meanings?: string[] | undefined;
   frequency?: number | undefined; // frequency from kanjidic2
   frequency2?: number | undefined; // frequency from kanjium
@@ -70,24 +75,21 @@ export interface KanjiComposition {
   composition?: KanjiComposition[] | undefined;
 }
 
-export interface KanjiReading {
-  on?: string[] | undefined;
-  kun?: string[] | undefined;
-  nanori?: string[] | undefined;
-}
-
 // Word
 
 export interface Word {
   id: string;
   forms: WordForm[];
   meanings: WordMeaning[];
+  jlpt?: JLPT | undefined;
+  common?: boolean | undefined;
+  frequency?: number | undefined;
 }
 
 export interface WordForm {
   form: string;
   reading?: string;
-  furigana?: any;
+  furigana?: WordFurigana[] | undefined;
   kanji?: string[];
   jlpt?: JLPT | undefined;
   common?: boolean | undefined;
@@ -102,8 +104,13 @@ export interface WordForm {
   ateji?: boolean | undefined;
 }
 
+export interface WordFurigana {
+  ruby: string;
+  rt?: string | undefined;
+}
+
 export interface WordMeaning {
-  translations?: WordTranslation[] | undefined;
+  translations?: string[] | undefined;
   wordClasses?: string[] | undefined;
   fieldCategories?: string[] | undefined;
   dialectCategories?: string[] | undefined;
@@ -111,11 +118,6 @@ export interface WordMeaning {
   informations?: string[] | undefined;
   formRestricions?: string[] | undefined;
   languageSources?: WordLanguageSource[] | undefined;
-}
-
-export interface WordTranslation {
-  text: string;
-  type?: string | undefined;
 }
 
 export interface WordLanguageSource {

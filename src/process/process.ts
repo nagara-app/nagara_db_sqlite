@@ -1,6 +1,6 @@
-import { writeFile } from 'fs/promises';
 import chalk from 'chalk';
 
+import { writeJsonFile } from 'src/utils';
 import { fileManager } from 'src/process/fileManager';
 import createKanjis from 'src/process/kanji/createKanjis';
 import createWords from 'src/process/word/createWords';
@@ -32,8 +32,7 @@ export default async (): Promise<void> => {
     words,
   };
 
-  const data = JSON.stringify(tkdb, null, 2);
-  await writeFile('output/tkdb.json', data);
+  await writeJsonFile(tkdb, 'output/tkdb.json');
 
   console.log(chalk.green('All files processed'));
 };
