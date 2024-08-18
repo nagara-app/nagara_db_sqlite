@@ -24,26 +24,20 @@ export const sortMeaningsByCategories = (meanings: WordMeaning[]): MeaningsByCat
       ...(meaning.miscCategories ?? []),
     ];
 
-    const meaningEntry: WordMeaning = {};
-    if (meaning.translations !== undefined) {
-      meaningEntry.translations = meaning.translations;
-    }
-    if (meaning.informations !== undefined) {
-      meaningEntry.informations = meaning.informations;
-    }
-    if (meaning.languageSources !== undefined) {
-      meaningEntry.languageSources = meaning.languageSources;
-    }
+    delete meaning.wordClasses;
+    delete meaning.dialectCategories;
+    delete meaning.fieldCategories;
+    delete meaning.miscCategories;
 
     if (currentCategories === undefined) {
       currentCategories = categories;
-      currentMeanings = [meaningEntry];
+      currentMeanings = [meaning];
     } else if (areCategoriesEqual(currentCategories, categories)) {
-      currentMeanings.push(meaningEntry);
+      currentMeanings.push(meaning);
     } else {
       meaningsByCategories.push({ categories: currentCategories, meanings: currentMeanings });
       currentCategories = categories;
-      currentMeanings = [meaningEntry];
+      currentMeanings = [meaning];
     }
   }
 
