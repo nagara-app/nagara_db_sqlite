@@ -20,18 +20,18 @@ export const KEYWORDS: Keywords = {
     kyouiku6: 'Kyouiku 6th grade',
   },
   wordMeaningDial: {
-    bra: 'Brazilian',
-    hob: 'Hokkaido-ben',
-    ksb: 'Kansai-ben',
-    ktb: 'Kantou-ben',
-    kyb: 'Kyoto-ben',
-    kyu: 'Kyuushuu-ben',
-    nab: 'Nagano-ben',
-    osb: 'Osaka-ben',
-    rkb: 'Ryuukyuu-ben',
-    thb: 'Touhoku-ben',
-    tsb: 'Tosa-ben',
-    tsug: 'Tsugaru-ben',
+    bra: 'Brazilian', // Brazilian
+    hob: 'Hokkaido-ben', // Hokkaido-ben
+    ksb: 'Kansai-ben', // Kansai-ben
+    ktb: 'Kantō-ben', // Kantou-ben
+    kyb: 'Kyoto-ben', // Kyoto-ben
+    kyu: 'Kyūshū-ben', // Kyuushuu-ben
+    nab: 'Nagano-ben', // Nagano-ben
+    osb: 'Ōsaka-ben', // Osaka-ben
+    rkb: 'Ryūkyū-ben', // Ryuukyuu-ben
+    thb: 'Tōhoku-ben', // Touhoku-ben
+    tsb: 'Tosa-ben', // Tosa-ben
+    tsug: 'Tsugaru-ben', // Tsugaru-ben
   },
   wordMeaningField: {
     agric: 'agriculture',
@@ -111,145 +111,145 @@ export const KEYWORDS: Keywords = {
     zool: 'zoology',
   },
   wordMeaningGlossType: {
-    expl: 'explanatory',
-    fig: 'figuratively',
-    lit: 'literal',
-    tm: 'literally',
+    expl: 'Explanatory',
+    fig: 'Figuratively',
+    lit: 'Literal',
+    tm: 'Literally',
   },
   wordMeaningMisc: {
     mSl: 'manga slang',
     netSl: 'internet slang',
-    onMim: 'onomatopoeic or mimetic word',
+    onMim: 'onomatopoeic', // , onomatopoeic or mimetic word
     abbr: 'abbreviation',
     arch: 'archaic',
     chn: "children's language",
     col: 'colloquialism',
-    dated: 'dated term',
+    dated: 'dated', // dated term
     derog: 'derogatory',
     euph: 'euphemistic',
     fam: 'familiar language',
-    fem: 'female term or language',
-    form: 'formal or literary term',
-    hist: 'historical term',
-    hon: 'honorific or respectful (sonkeigo) language',
-    hum: 'humble (kenjougo) language',
-    id: 'idiomatic expression',
-    joc: 'jocular, humorous term',
+    fem: 'female', // female term or language
+    form: 'formal', // formal or literary term
+    hist: 'historical', // historical term
+    hon: 'honorific', // honorific or respectful (sonkeigo) language
+    hum: 'humble', // humble (kenjougo) language
+    id: 'idiom', // idiomatic expression
+    joc: 'humorous', // jocular, humorous term
     leg: 'legend',
-    male: 'male term or language',
-    obs: 'obsolete term',
-    person: 'name of a particular person',
+    male: 'male', // male term or language
+    obs: 'obsolute', // obsolete term
+    person: 'person name', // name of a particular person
     place: 'place name',
     poet: 'poetical',
-    pol: 'polite (teineigo) language',
+    pol: 'polite', // polite (teineigo) language
     proverb: 'proverb',
     quote: 'quotation',
     rare: 'rare',
     sens: 'sensitive',
     sl: 'slang',
-    uk: 'word usually written using kana alone',
-    vulg: 'vulgar expression or word',
-    work: 'work of art, literature, music, etc. name',
+    uk: 'usually written in kana', // word usually written using kana alone
+    vulg: 'vulgar', // vulgar expression or word
+    work: 'work', // work of art, literature, music, etc. name
     yoji: 'yojijukugo',
   },
   wordMeaningPos: {
-    adjF: 'noun or verb acting prenominally',
-    adjI: 'adjective (keiyoushi)',
-    adjIx: 'adjective (keiyoushi) - yoi/ii class',
-    adjKu: '"ku" adjective (archaic)',
-    adjNa: 'adjectival nouns or quasi-adjectives (keiyodoshi)',
-    adjNari: 'archaic/formal form of na-adjective',
-    adjNo: 'nouns which may take the genitive case particle "no"',
-    adjPn: 'pre-noun adjectival (rentaishi)',
-    adjShiku: '"shiku" adjective (archaic)',
-    adjT: '"taru" adjective',
-    adv: 'adverb (fukushi)',
-    advTo: 'adverb taking the "to" particle',
-    aux: 'auxiliary',
-    auxAdj: 'auxiliary adjective',
-    auxV: 'auxiliary verb',
-    conj: 'conjunction',
-    cop: 'copula',
-    ctr: 'counter',
-    exp: 'expressions',
-    int: 'interjection (kandoushi)',
-    n: 'noun (common) (futsuumeishi)',
-    nPref: 'noun, used as a prefix',
-    nSuf: 'noun, used as a suffix',
-    num: 'numeric',
-    pn: 'pronoun',
-    pref: 'prefix',
-    prt: 'particle',
-    suf: 'suffix',
-    unc: 'unclassified',
-    v1: 'ichidan verb',
-    v1S: 'ichidan verb - kureru special class',
-    v2aS: 'nidan verb with "u" ending (archaic)',
-    v2bK: 'nidan verb (upper class) with "bu" ending (archaic)',
-    v2dS: 'nidan verb (lower class) with "dzu" ending (archaic)',
-    v2gK: 'nidan verb (upper class) with "gu" ending (archaic)',
-    v2gS: 'nidan verb (lower class) with "gu" ending (archaic)',
-    v2hK: 'nidan verb (upper class) with "hu/fu" ending (archaic)',
-    v2hS: 'nidan verb (lower class) with "hu/fu" ending (archaic)',
-    v2kK: 'nidan verb (upper class) with "ku" ending (archaic)',
-    v2kS: 'nidan verb (lower class) with "ku" ending (archaic)',
-    v2mS: 'nidan verb (lower class) with "mu" ending (archaic)',
-    v2nS: 'nidan verb (lower class) with "nu" ending (archaic)',
-    v2rK: 'nidan verb (upper class) with "ru" ending (archaic)',
-    v2rS: 'nidan verb (lower class) with "ru" ending (archaic)',
-    v2sS: 'nidan verb (lower class) with "su" ending (archaic)',
-    v2tK: 'nidan verb (upper class) with "tsu" ending (archaic)',
-    v2tS: 'nidan verb (lower class) with "tsu" ending (archaic)',
-    v2wS: 'nidan verb (lower class) with "u" ending and "we" conjugation (archaic)',
-    v2yK: 'nidan verb (upper class) with "yu" ending (archaic)',
-    v2yS: 'nidan verb (lower class) with "yu" ending (archaic)',
-    v2zS: 'nidan verb (lower class) with "zu" ending (archaic)',
-    v4b: 'yodan verb with "bu" ending (archaic)',
-    v4g: 'yodan verb with "gu" ending (archaic)',
-    v4h: 'yodan verb with "hu/fu" ending (archaic)',
-    v4k: 'yodan verb with "ku" ending (archaic)',
-    v4m: 'yodan verb with "mu" ending (archaic)',
-    v4r: 'yodan verb with "ru" ending (archaic)',
-    v4s: 'yodan verb with "su" ending (archaic)',
-    v4t: 'yodan verb with "tsu" ending (archaic)',
-    v5aru: 'godan verb - -aru special class',
-    v5b: 'godan verb with "bu" ending',
-    v5g: 'godan verb with "gu" ending',
-    v5k: 'godan verb with "ku" ending',
-    v5kS: 'godan verb - Iku/Yuku special class',
-    v5m: 'godan verb with "mu" ending',
-    v5n: 'godan verb with "nu" ending',
-    v5r: 'godan verb with "ru" ending',
-    v5rI: 'godan verb with "ru" ending (irregular verb)',
-    v5s: 'godan verb with "su" ending',
-    v5t: 'godan verb with "tsu" ending',
-    v5u: 'godan verb with "u" ending',
-    v5uS: 'godan verb with "u" ending (special class)',
-    vi: 'intransitive verb',
-    vk: 'kuru verb - special class',
-    vn: 'irregular nu verb',
-    vr: 'irregular ru verb, plain form ends with -ri',
-    vs: 'noun or participle which takes the aux. verb suru',
-    vsC: 'su verb - precursor to the modern suru',
-    vsI: 'suru verb - irregular',
-    vsS: 'suru verb - special class',
-    vt: 'transitive verb',
-    vUnspec: 'verb unspecified',
-    vz: 'ichidan verb - zuru verb (alternative form of -jiru verbs)',
+    adjF: 'Pre-noun adjective', // 'noun or verb acting prenominally
+    adjI: 'Adjective (い)', // adjective (keiyoushi)
+    adjIx: 'Adjective (よい/いい)', // adjective (keiyoushi) - yoi/ii class // no entry
+    adjKu: 'Adjective (く)', // "ku" adjective (archaic)
+    adjNa: 'Adjective (な)', // adjectival nouns or quasi-adjectives (keiyodoshi)
+    adjNari: 'Adjective (なり)', // archaic/formal form of na-adjective
+    adjNo: 'Adjective (の)', // nouns which may take the genitive case particle "no"
+    adjPn: 'Pre-noun adjective', // pre-noun adjectival (rentaishi)
+    adjShiku: 'Adjective (しく)', // "shiku" adjective (archaic)
+    adjT: 'Adjective (たる)', // "taru" adjective // ignored
+    adv: 'Adverb', // adverb (fukushi)
+    advTo: 'Adverb taking と particle', // adverb taking the "to" particle // ignored
+    aux: 'Auxiliary', // auxiliary
+    auxAdj: 'Auxiliary adjective', // auxiliary adjective
+    auxV: 'Auxiliary verb', // auxiliary verb
+    conj: 'Conjunction', // 'conjunction'
+    cop: 'Copula', // copula // only one entry
+    ctr: 'Counter', // counter
+    exp: 'Expression', // expressions
+    int: 'Interjection', // interjection (kandoushi)
+    n: 'Noun', // noun (common) (futsuumeishi)
+    nPref: 'Noun (prefix)', // noun, used as a prefix
+    nSuf: 'Noun (suffix)', // noun, used as a suffix
+    num: 'Numeric', // numeric
+    pn: 'Pronoun', // pronoun
+    pref: 'Prefix', // prefix
+    prt: 'Particle', // particle
+    suf: 'Suffix', // suffix
+    unc: 'Unclassified', // unclassified // no entry
+    v1: 'Verb (1-dan)', // ichidan verb
+    v1S: 'Verb (1-dan, くれる)', // ichidan verb - kureru special class // no entry
+    v2aS: 'Verb (2-dan, う)', // nidan verb with "u" ending (archaic)
+    v2bK: 'Verb (2-dan, ぶ, formal)', // nidan verb (upper class) with "bu" ending (archaic)
+    v2dS: 'Verb (2-dan, づ, informal)', // nidan verb (lower class) with "dzu" ending (archaic)
+    v2gK: 'Verb (2-dan, ぐ, formal)', // nidan verb (upper class) with "gu" ending (archaic)
+    v2gS: 'Verb (2-dan, ぐ, informal)', // nidan verb (lower class) with "gu" ending (archaic)
+    v2hK: 'Verb (2-dan, ふ, formal)', // nidan verb (upper class) with "hu/fu" ending (archaic)
+    v2hS: 'Verb (2-dan, ふ, informal)', // nidan verb (lower class) with "hu/fu" ending (archaic)
+    v2kK: 'Verb (2-dan, く, formal)', // nidan verb (upper class) with "ku" ending (archaic)
+    v2kS: 'Verb (2-dan, く, informal)', // nidan verb (lower class) with "ku" ending (archaic)
+    v2mS: 'Verb (2-dan, む, informal)', // nidan verb (lower class) with "mu" ending (archaic)
+    v2nS: 'Verb (2-dan, ぬ, informal)', // nidan verb (lower class) with "nu" ending (archaic)
+    v2rK: 'Verb (2-dan, る, formal)', // nidan verb (upper class) with "ru" ending (archaic)
+    v2rS: 'Verb (2-dan, る, informal)', // nidan verb (lower class) with "ru" ending (archaic)
+    v2sS: 'Verb (2-dan, す, informal)', // nidan verb (lower class) with "su" ending (archaic)
+    v2tK: 'Verb (2-dan, つ, formal)', // nidan verb (upper class) with "tsu" ending (archaic)
+    v2tS: 'Verb (2-dan, つ, informal)', // nidan verb (lower class) with "tsu" ending (archaic)
+    v2wS: 'Verb (2-dan, う, informal)', // nidan verb (lower class) with "u" ending and "we" conjugation (archaic)
+    v2yK: 'Verb (2-dan, ゆ, formal)', // nidan verb (upper class) with "yu" ending (archaic)
+    v2yS: 'Verb (2-dan, ゆ, informal)', // nidan verb (lower class) with "yu" ending (archaic)
+    v2zS: 'Verb (2-dan, ず, informal)', // nidan verb (lower class) with "zu" ending (archaic)
+    v4b: 'Verb (4-dan, ぶ)', // yodan verb with "bu" ending (archaic)
+    v4g: 'Verb (4-dan, ぐ)', // yodan verb with "gu" ending (archaic)
+    v4h: 'Verb (4-dan, ふ)', // yodan verb with "hu/fu" ending (archaic)
+    v4k: 'Verb (4-dan, く)', // yodan verb with "ku" ending (archaic)
+    v4m: 'Verb (4-dan, む)', // yodan verb with "mu" ending (archaic)
+    v4r: 'Verb (4-dan, る)', // yodan verb with "ru" ending (archaic)
+    v4s: 'Verb (4-dan, す)', // yodan verb with "su" ending (archaic)
+    v4t: 'Verb (4-dan, つ)', // yodan verb with "tsu" ending (archaic)
+    v5aru: 'Verb (5-dan, ある)', // godan verb - -aru special class
+    v5b: 'Verb (5-dan, ぶ)', // godan verb with "bu" ending
+    v5g: 'Verb (5-dan, ぐ)', // godan verb with "gu" ending
+    v5k: 'Verb (5-dan, く)', // godan verb with "ku" ending
+    v5kS: 'Verb (5-dan, いく/ゆく)', // godan verb - Iku/Yuku special class
+    v5m: 'Verb (5-dan, む)', // godan verb with "mu" ending
+    v5n: 'Verb (5-dan, ぬ)', // godan verb with "nu" ending
+    v5r: 'Verb (5-dan, る)', // godan verb with "ru" ending
+    v5rI: 'Verb (5-dan, る, irregular)', // godan verb with "ru" ending (irregular verb)
+    v5s: 'Verb (5-dan, す)', // godan verb with "su" ending
+    v5t: 'Verb (5-dan, つ)', // godan verb with "tsu" ending
+    v5u: 'Verb (5-dan, う)', // godan verb with "u" ending
+    v5uS: 'Verb (5-dan, う)', // godan verb with "u" ending (special class)
+    vi: 'intransitive', // intransitive verb
+    vk: 'Verb (くる, irregular)', // kuru verb - special class
+    vn: 'Verb (ぬ, irregular)', // irregular nu verb
+    vr: 'Verb (る, irregular)', // irregular ru verb, plain form ends with -ri
+    vs: 'Verb (する)', // noun or participle which takes the aux. verb suru
+    vsC: 'Verb (す)', // su verb - precursor to the modern suru
+    vsI: 'Verb (する, irregular)', // suru verb - irregular
+    vsS: 'Verb (する)', // suru verb - special class
+    vt: 'Transitive', // transitive verb
+    vUnspec: 'Verb (unspecified)', // verb unspecified
+    vz: 'Verb (ずる)', // ichidan verb - zuru verb (alternative form of -jiru verbs)
   },
   wordKanjiInfo: {
-    iK: 'word containing irregular kanji usage',
-    io: 'irregular okurigana usage',
-    oK: 'word containing out-dated kanji',
-    ik: 'word containing irregular kana usage',
-    ateji: 'ateji (phonetic) reading',
-    rK: 'rarely-used kanji form',
-    // sK: 'search-only kanji form',
+    iK: 'irregular kanji', // word containing irregular kanji usage
+    io: 'irregular okurigana', // irregular okurigana usage
+    oK: 'out-dated kanji', // word containing out-dated kanji
+    ik: 'irregular kana', // word containing irregular kana usage
+    ateji: 'ateji', // ateji (phonetic) reading
+    rK: 'rare form', // rarely-used kanji form
+    // sK: 'search-only kanji form
   },
   wordKanaInfo: {
-    gikun: 'gikun (meaning as reading) or jukujikun (special kanji reading)',
-    ok: 'out-dated or obsolete kana usage',
-    ik: 'word containing irregular kana usage',
+    gikun: 'gikun', // gikun (meaning as reading) or jukujikun (special kanji reading)
+    ok: 'out-dated kana', // out-dated or obsolete kana usage
+    ik: 'irregular kana', // 'word containing irregular kana usage
     // sk: 'search-only kana form',
   },
 };
