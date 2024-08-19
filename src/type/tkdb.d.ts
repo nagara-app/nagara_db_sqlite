@@ -87,7 +87,7 @@ export interface Word {
 }
 
 export interface WordForm {
-  form: string;
+  script: string;
   reading?: string;
   furigana?: WordFurigana[] | undefined;
   kanji?: string[];

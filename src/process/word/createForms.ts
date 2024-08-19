@@ -35,7 +35,7 @@ export const createFormPairs = (jmEntry: JMdictEntr): WordForm[] => {
 
     if (hasNoKanji) {
       // Case where reading has no kanji as a combination
-      const form = populateForms({ form: kana }, jmId, jmRele);
+      const form = populateForms({ script: kana }, jmId, jmRele);
       forms.push(form);
     } else if (restrictions !== undefined) {
       // Case where reading is only combinable with specific kanjis
@@ -46,7 +46,7 @@ export const createFormPairs = (jmEntry: JMdictEntr): WordForm[] => {
           throw new Error('Reading restriction not available in Kanji element');
         }
 
-        const form = populateForms({ form: restriction, reading: kana }, jmId, jmRele, jmKele);
+        const form = populateForms({ script: restriction, reading: kana }, jmId, jmRele, jmKele);
         forms.push(form);
       }
     } else if (jmKeles !== undefined) {
@@ -54,12 +54,12 @@ export const createFormPairs = (jmEntry: JMdictEntr): WordForm[] => {
       for (const jmKele of jmKeles) {
         const kanji = jmKele.keb;
 
-        const form = populateForms({ form: kanji, reading: kana }, jmId, jmRele, jmKele);
+        const form = populateForms({ script: kanji, reading: kana }, jmId, jmRele, jmKele);
         forms.push(form);
       }
     } else {
       // Case where there are no kanji and all readings should be a form
-      const form = populateForms({ form: kana }, jmId, jmRele);
+      const form = populateForms({ script: kana }, jmId, jmRele);
       forms.push(form);
     }
   }
@@ -157,7 +157,7 @@ export const isCommon = (priorities?: string[]): boolean | undefined => {
 };
 
 const getJlpt = (wordForm: WordForm, id: string): JLPT | undefined => {
-  const form = wordForm.form;
+  const form = wordForm.script;
   const reading = wordForm.reading;
 
   const tanosVocabs = fileManager.getTanosVocabs();
@@ -182,7 +182,7 @@ const getJlpt = (wordForm: WordForm, id: string): JLPT | undefined => {
 };
 
 const getFurigana = (wordForm: WordForm): WordFurigana[] | undefined => {
-  const form = wordForm.form;
+  const form = wordForm.script;
   const reading = wordForm.reading;
 
   if (reading === undefined) {
@@ -295,8 +295,8 @@ const sortForms = (forms: WordForm[], jmEntry: JMdictEntr): WordForm[] => {
   }
 
   const compareForms = (a: WordForm, b: WordForm): number => {
-    const formIndexA = order.indexOf(a.form);
-    const formIndexB = order.indexOf(b.form);
+    const formIndexA = order.indexOf(a.script);
+    const formIndexB = order.indexOf(b.script);
 
     // Compare form values based on the order array
     if (formIndexA !== formIndexB) {

@@ -103,7 +103,7 @@ const getFormRestrictions = (jmEntry: JMdictEntr, jmSense: JMdictSens): string[]
   // if the sense is usually written in kanji, then add the kana reading as a restriction
   if (jmSenseKanjiRestrictions !== undefined && senseUsuallyWrittenInKana) {
     for (const restriction of jmSenseKanjiRestrictions) {
-      const form = wordForms.find((wordForm) => wordForm.form === restriction);
+      const form = wordForms.find((wordForm) => wordForm.script === restriction);
       const formReading = form?.reading;
 
       if (formReading === undefined) {
