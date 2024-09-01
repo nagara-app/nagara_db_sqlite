@@ -1,11 +1,11 @@
-import { Presets, SingleBar } from 'cli-progress';
-import type { Options } from 'cli-progress';
+import {Presets, SingleBar} from 'cli-progress';
+import type {Options} from 'cli-progress';
 
-import { fileManager } from 'src/process/fileManager';
+import {fileManager} from '../../process/fileManager';
 import createForms from './createForms';
 import createMeanings from './createMeanings';
 
-import type { JLPT, Word, WordForm } from 'src/type/tkdb';
+import type {JLPT, Word, WordForm} from '../../type/tkdb';
 
 export default (): Word[] => {
   const jmdict = fileManager.getJMdict();
@@ -25,7 +25,7 @@ export default (): Word[] => {
     const forms = createForms(jmEntry);
     const meanings = createMeanings(jmEntry);
 
-    const common = forms.some((form) => form.common) ? true : undefined;
+    const common = forms.some(form => form.common) ? true : undefined;
     const jlpt = extractJLPT(forms);
     const frequency = extractFrequency(forms);
 
@@ -46,7 +46,7 @@ export default (): Word[] => {
 };
 
 const extractJLPT = (forms: WordForm[]): JLPT | undefined => {
-  const formsWithJLPT = forms.filter((form) => form.jlpt !== undefined);
+  const formsWithJLPT = forms.filter(form => form.jlpt !== undefined);
 
   if (formsWithJLPT[0] === undefined) {
     return undefined;
@@ -67,7 +67,7 @@ const extractJLPT = (forms: WordForm[]): JLPT | undefined => {
 };
 
 const extractFrequency = (forms: WordForm[]): number | undefined => {
-  const formsWithFrequency = forms.filter((form) => form.frequency !== undefined);
+  const formsWithFrequency = forms.filter(form => form.frequency !== undefined);
 
   if (formsWithFrequency[0] === undefined) {
     return undefined;

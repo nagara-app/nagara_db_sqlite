@@ -4,7 +4,7 @@ export interface TKDB {
   keywords: Keywords;
   words: Word[];
   kanjis: Kanji[];
-  radicals: Radcial[];
+  radicals: Radical[];
 }
 
 // Shared

@@ -1,7 +1,7 @@
-import { parseStringPromise } from 'xml2js';
-import type { ParserOptions } from 'xml2js';
+import {parseStringPromise} from 'xml2js';
+import type {ParserOptions} from 'xml2js';
 
-import { readFile, writeFile } from 'fs/promises';
+import {readFile, writeFile} from 'fs/promises';
 
 export default async (): Promise<void> => {
   const file = await readFile('input/download/kanjivg.xml', 'utf8');

@@ -1,5 +1,5 @@
-import { toArray, toArrayOrUndefined } from 'src/utils';
-import { createFormPairs } from 'src/process/word/createForms';
+import {toArray, toArrayOrUndefined} from '../../utils';
+import {createFormPairs} from '../../process/word/createForms';
 
 import type {
   JMdictEntr,
@@ -10,8 +10,8 @@ import type {
   JMdictSensLSrc,
   JMdictSensMisc,
   JMdictSensPos,
-} from 'src/type/jmdict';
-import type { WordLanguageSource, WordMeaning } from 'src/type/tkdb';
+} from '../../type/jmdict';
+import type {WordLanguageSource, WordMeaning} from '../../type/tkdb';
 
 export default (jmEntry: JMdictEntr): WordMeaning[] => {
   const meanings: WordMeaning[] = [];
@@ -57,39 +57,52 @@ export default (jmEntry: JMdictEntr): WordMeaning[] => {
   return meanings;
 };
 
-const getWordClasses = (jmPartsOfSpeech: JMdictSensPos[] | undefined): string[] | undefined => {
+const getWordClasses = (
+  jmPartsOfSpeech: JMdictSensPos[] | undefined
+): string[] | undefined => {
   if (jmPartsOfSpeech === undefined) {
     return undefined;
   }
   return jmPartsOfSpeech;
 };
 
-const getFieldCategories = (jmFields: JMdictSensField[] | undefined): string[] | undefined => {
+const getFieldCategories = (
+  jmFields: JMdictSensField[] | undefined
+): string[] | undefined => {
   if (jmFields === undefined) {
     return undefined;
   }
   return jmFields;
 };
 
-const getDialectCategories = (jmDialects: JMdictSensDial[] | undefined): string[] | undefined => {
+const getDialectCategories = (
+  jmDialects: JMdictSensDial[] | undefined
+): string[] | undefined => {
   if (jmDialects === undefined) {
     return undefined;
   }
   return jmDialects;
 };
 
-const getMiscCategories = (jmMiscs: JMdictSensMisc[] | undefined): string[] | undefined => {
+const getMiscCategories = (
+  jmMiscs: JMdictSensMisc[] | undefined
+): string[] | undefined => {
   if (jmMiscs === undefined) {
     return undefined;
   }
   return jmMiscs;
 };
 
-const getInformations = (jmSenseInfos: string | undefined): string[] | undefined => {
+const getInformations = (
+  jmSenseInfos: string | undefined
+): string[] | undefined => {
   return jmSenseInfos?.split(';');
 };
 
-const getFormRestrictions = (jmEntry: JMdictEntr, jmSense: JMdictSens): string[] | undefined => {
+const getFormRestrictions = (
+  jmEntry: JMdictEntr,
+  jmSense: JMdictSens
+): string[] | undefined => {
   const formRestrictions: string[] = [];
 
   const wordForms = createFormPairs(jmEntry);
@@ -103,7 +116,7 @@ const getFormRestrictions = (jmEntry: JMdictEntr, jmSense: JMdictSens): string[]
   // if the sense is usually written in kanji, then add the kana reading as a restriction
   if (jmSenseKanjiRestrictions !== undefined && senseUsuallyWrittenInKana) {
     for (const restriction of jmSenseKanjiRestrictions) {
-      const form = wordForms.find((wordForm) => wordForm.script === restriction);
+      const form = wordForms.find(wordForm => wordForm.script === restriction);
       const formReading = form?.reading;
 
       if (formReading === undefined) {
@@ -134,7 +147,9 @@ const getFormRestrictions = (jmEntry: JMdictEntr, jmSense: JMdictSens): string[]
   return formRestrictions;
 };
 
-const getLanguageSources = (jmLsources: JMdictSensLSrc[] | undefined): WordLanguageSource[] | undefined => {
+const getLanguageSources = (
+  jmLsources: JMdictSensLSrc[] | undefined
+): WordLanguageSource[] | undefined => {
   const languageSources: WordLanguageSource[] = [];
 
   if (jmLsources === undefined) {
@@ -162,7 +177,9 @@ const getLanguageSources = (jmLsources: JMdictSensLSrc[] | undefined): WordLangu
   return languageSources;
 };
 
-const createTranslations = (gloss: Array<string | JMdictSensGloss> | undefined): string[] | undefined => {
+const createTranslations = (
+  gloss: Array<string | JMdictSensGloss> | undefined
+): string[] | undefined => {
   if (gloss === undefined) {
     return undefined;
   }

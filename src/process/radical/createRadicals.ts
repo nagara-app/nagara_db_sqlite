@@ -1,8 +1,8 @@
-import { Presets, SingleBar } from 'cli-progress';
-import { fileManager } from '../fileManager';
+import {Presets, SingleBar} from 'cli-progress';
+import {fileManager} from '../fileManager';
 
-import type { Radical } from 'src/type/tkdb';
-import type { Options } from 'cli-progress';
+import type {Options} from 'cli-progress';
+import {Radical} from '../../type/tkdb';
 
 export default (): Radical[] => {
   const tkdbRadicals = fileManager.getTKDBradicals();
@@ -17,7 +17,7 @@ export default (): Radical[] => {
 
   for (const tkdbRadical of tkdbRadicals) {
     // Remove kradical from output
-    radicals.push({ ...tkdbRadical, kradical: undefined });
+    radicals.push({...tkdbRadical, kradical: undefined});
     bar.increment();
   }
 

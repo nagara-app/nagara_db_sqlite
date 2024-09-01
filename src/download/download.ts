@@ -1,20 +1,17 @@
-import AdmZip from 'adm-zip';
-import { basename, extname } from 'path';
-import { gunzip } from 'zlib';
-import { codeToString, convert } from 'encoding-japanese';
-import { http, https } from 'follow-redirects';
-import { writeFile } from 'fs/promises';
+import {basename, extname} from 'path';
+import {gunzip} from 'zlib';
+import {codeToString, convert} from 'encoding-japanese';
+import {http, https} from 'follow-redirects';
+import {writeFile} from 'fs/promises';
 
-import type { FileDownload, ZipDownload, ZipDownloadTarget } from 'src/config';
-import type { Encoding } from 'encoding-japanese';
-import type { IncomingMessage } from 'http';
+import type {Encoding} from 'encoding-japanese';
+import type {IncomingMessage} from 'http';
 
-import { MultiBar, Presets } from 'cli-progress';
-import type { Options } from 'cli-progress';
-
-import chalk from 'chalk';
-
-import config from 'src/config';
+import {MultiBar, Presets} from 'cli-progress';
+import type {Options} from 'cli-progress';
+import config, {FileDownload, ZipDownload, ZipDownloadTarget} from '../config';
+import chalk = require('chalk');
+import AdmZip = require('adm-zip');
 
 const progressBarOptions: Options = {
   hideCursor: true,
@@ -103,9 +100,9 @@ const getFile = async (url: string): Promise<Buffer> => {
 
       const progressBar = multibar.create(total, 0);
 
-      response.on('data', (chunk) => {
+      response.on('data', chunk => {
         chunks.push(chunk);
-        progressBar.increment(chunk.length, { filename });
+        progressBar.increment(chunk.length, {filename});
       });
 
       response.on('end', () => {
@@ -113,7 +110,7 @@ const getFile = async (url: string): Promise<Buffer> => {
         progressBar.stop();
       });
 
-      response.on('error', (err) => {
+      response.on('error', err => {
         reject(err);
       });
     };
@@ -143,7 +140,10 @@ interface UnzipResponse extends ZipDownloadTarget {
   data: Buffer;
 }
 
-const unzipFile = async (zipFile: Buffer, zipTargets: ZipDownloadTarget[]): Promise<UnzipResponse[]> => {
+const unzipFile = async (
+  zipFile: Buffer,
+  zipTargets: ZipDownloadTarget[]
+): Promise<UnzipResponse[]> => {
   return await new Promise<UnzipResponse[]>((resolve, reject) => {
     try {
       const files: UnzipResponse[] = [];
@@ -152,12 +152,12 @@ const unzipFile = async (zipFile: Buffer, zipTargets: ZipDownloadTarget[]): Prom
       const zipEntries = zip.getEntries();
 
       for (const zipEntry of zipEntries) {
-        const zipTarget = zipTargets.find((a) => a.target === zipEntry.entryName);
+        const zipTarget = zipTargets.find(a => a.target === zipEntry.entryName);
         if (zipTarget === undefined) {
           continue;
         }
         const data: Buffer = zipEntry.getData();
-        files.push({ ...zipTarget, data });
+        files.push({...zipTarget, data});
       }
       resolve(files);
     } catch (err) {

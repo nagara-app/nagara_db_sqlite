@@ -1,10 +1,15 @@
-import { isKanji } from 'wanakana';
-
-import { toArray, toArrayOrUndefined } from 'src/utils';
-import { fileManager } from 'src/process/fileManager';
-
-import type { JMdictEntr, JMdictKanji, JMdictKanjiInf, JMdictRdng, JMdictRdngInf, JMdictSens } from 'src/type/jmdict';
-import type { JLPT, WordForm, WordFurigana } from 'src/type/tkdb';
+import {isKanji} from 'wanakana';
+import {
+  JMdictEntr,
+  JMdictKanji,
+  JMdictKanjiInf,
+  JMdictRdng,
+  JMdictRdngInf,
+  JMdictSens,
+} from '../../type/jmdict';
+import {JLPT, WordForm, WordFurigana} from '../../type/tkdb';
+import {toArray, toArrayOrUndefined} from '../../utils';
+import {fileManager} from '../fileManager';
 
 export default (jmEntry: JMdictEntr): WordForm[] => {
   const formPairs = createFormPairs(jmEntry);
@@ -35,18 +40,23 @@ export const createFormPairs = (jmEntry: JMdictEntr): WordForm[] => {
 
     if (hasNoKanji) {
       // Case where reading has no kanji as a combination
-      const form = populateForms({ script: kana }, jmId, jmRele);
+      const form = populateForms({script: kana}, jmId, jmRele);
       forms.push(form);
     } else if (restrictions !== undefined) {
       // Case where reading is only combinable with specific kanjis
       for (const restriction of restrictions) {
-        const jmKele = jmKeles?.find((jmKele) => jmKele.keb === restriction);
+        const jmKele = jmKeles?.find(jmKele => jmKele.keb === restriction);
 
         if (jmKele === undefined) {
           throw new Error('Reading restriction not available in Kanji element');
         }
 
-        const form = populateForms({ script: restriction, reading: kana }, jmId, jmRele, jmKele);
+        const form = populateForms(
+          {script: restriction, reading: kana},
+          jmId,
+          jmRele,
+          jmKele
+        );
         forms.push(form);
       }
     } else if (jmKeles !== undefined) {
@@ -54,12 +64,17 @@ export const createFormPairs = (jmEntry: JMdictEntr): WordForm[] => {
       for (const jmKele of jmKeles) {
         const kanji = jmKele.keb;
 
-        const form = populateForms({ script: kanji, reading: kana }, jmId, jmRele, jmKele);
+        const form = populateForms(
+          {script: kanji, reading: kana},
+          jmId,
+          jmRele,
+          jmKele
+        );
         forms.push(form);
       }
     } else {
       // Case where there are no kanji and all readings should be a form
-      const form = populateForms({ script: kana }, jmId, jmRele);
+      const form = populateForms({script: kana}, jmId, jmRele);
       forms.push(form);
     }
   }
@@ -67,7 +82,9 @@ export const createFormPairs = (jmEntry: JMdictEntr): WordForm[] => {
   return forms;
 };
 
-export const createMissingReles = (jmEntry: JMdictEntr): JMdictRdng[] | undefined => {
+export const createMissingReles = (
+  jmEntry: JMdictEntr
+): JMdictRdng[] | undefined => {
   const jmReles = toArray(jmEntry.r_ele);
   const jmSenses = toArray(jmEntry.sense);
 
@@ -77,13 +94,17 @@ export const createMissingReles = (jmEntry: JMdictEntr): JMdictRdng[] | undefine
   }
 
   const missingReles: JMdictRdng[] = [];
-  const jmRelesKanjiReadings = jmReles.filter((jmRele) => jmRele.re_nokanji === undefined);
+  const jmRelesKanjiReadings = jmReles.filter(
+    jmRele => jmRele.re_nokanji === undefined
+  );
 
   for (const jmRelesKanjiReading of jmRelesKanjiReadings) {
     const missingRele: JMdictRdng = {
       reb: jmRelesKanjiReading.reb,
       re_nokanji: '',
-      ...(jmRelesKanjiReading.re_pri !== undefined && { re_pri: jmRelesKanjiReading.re_pri }),
+      ...(jmRelesKanjiReading.re_pri !== undefined && {
+        re_pri: jmRelesKanjiReading.re_pri,
+      }),
     };
 
     missingReles.push(missingRele);
@@ -92,11 +113,20 @@ export const createMissingReles = (jmEntry: JMdictEntr): JMdictRdng[] | undefine
   return missingReles;
 };
 
-const populateForms = (form: WordForm, id: string, jmRele: JMdictRdng, jmKele?: JMdictKanji): WordForm => {
+const populateForms = (
+  form: WordForm,
+  id: string,
+  jmRele: JMdictRdng,
+  jmKele?: JMdictKanji
+): WordForm => {
   const jmKeb = jmKele?.keb;
 
-  const jmKeInfo: JMdictKanjiInf[] | undefined = toArrayOrUndefined(jmKele?.ke_inf);
-  const jmReInfo: JMdictRdngInf[] | undefined = toArrayOrUndefined(jmRele?.re_inf);
+  const jmKeInfo: JMdictKanjiInf[] | undefined = toArrayOrUndefined(
+    jmKele?.ke_inf
+  );
+  const jmReInfo: JMdictRdngInf[] | undefined = toArrayOrUndefined(
+    jmRele?.re_inf
+  );
   const jmInfo = [...(jmKeInfo ?? []), ...(jmReInfo ?? [])];
 
   const jmKePriorities = toArrayOrUndefined(jmKele?.ke_pri);
@@ -162,7 +192,7 @@ const getJlpt = (wordForm: WordForm, id: string): JLPT | undefined => {
 
   const tanosVocabs = fileManager.getTanosVocabs();
 
-  const match = tanosVocabs.find((vocab) => {
+  const match = tanosVocabs.find(vocab => {
     const jlptForm = vocab.kanji ?? vocab.kana;
     const jlptReading = vocab.kanji !== undefined ? vocab.kana : undefined;
     const jlptId = vocab.id;
@@ -191,7 +221,7 @@ const getFurigana = (wordForm: WordForm): WordFurigana[] | undefined => {
 
   const jmdictFurigana = fileManager.getJmdictFurigana();
 
-  const match = jmdictFurigana.find((entry) => {
+  const match = jmdictFurigana.find(entry => {
     return entry.text === form && entry.reading === reading;
   });
 
@@ -205,13 +235,15 @@ const getFurigana = (wordForm: WordForm): WordFurigana[] | undefined => {
     const ruby = f.ruby;
     const rt = f.rt;
 
-    furigana.push({ ruby, rt });
+    furigana.push({ruby, rt});
   }
 
   return furigana;
 };
 
-export const extractKanji = (input: string | undefined): string[] | undefined => {
+export const extractKanji = (
+  input: string | undefined
+): string[] | undefined => {
   if (input === undefined) {
     return undefined;
   }
@@ -253,7 +285,9 @@ export const extractNfxx = (priority: string): number => {
     return result;
   } else {
     // If the priority is invalid, throw an error
-    throw new Error("Invalid priority format. Expected format is 'nfXX' where XX are two digits.");
+    throw new Error(
+      "Invalid priority format. Expected format is 'nfXX' where XX are two digits."
+    );
   }
 };
 
@@ -261,7 +295,7 @@ export const extractNfxx = (priority: string): number => {
  * Returns true if a word has at least once sense that is usually written in kana but is kanji form
  */
 const wordHasSenseUsuallyWrittenInKana = (jmSenses: JMdictSens[]): boolean => {
-  return jmSenses.some((jmSense) => {
+  return jmSenses.some(jmSense => {
     const jmMiscs = toArrayOrUndefined(jmSense.misc);
     if (jmMiscs?.includes('uk') === true) {
       return true;
@@ -279,8 +313,8 @@ const sortForms = (forms: WordForm[], jmEntry: JMdictEntr): WordForm[] => {
   const jmReles = toArray(jmEntry.r_ele);
   const jmSenses = toArray(jmEntry.sense);
 
-  const kanjiReadings = jmKeles?.map((k) => k.keb);
-  const kanaReadings = jmReles.map((r) => r.reb);
+  const kanjiReadings = jmKeles?.map(k => k.keb);
+  const kanaReadings = jmReles.map(r => r.reb);
 
   const wordWrittenInKana = wordHasSenseUsuallyWrittenInKana(jmSenses);
 

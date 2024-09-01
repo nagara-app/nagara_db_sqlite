@@ -1,6 +1,6 @@
-import type { WordForm, WordMeaning } from 'src/type/tkdb';
-import type { FormMeanings } from './helper';
-import { assignMeaningsToForm, sortMeaningsByCategories } from './helper';
+import {WordForm, WordMeaning} from '../type/tkdb';
+import type {FormMeanings} from './helper';
+import {assignMeaningsToForm, sortMeaningsByCategories} from './helper';
 
 test('Sorting meanings by category', () => {
   const meanings: WordMeaning[] = [
@@ -23,18 +23,26 @@ test('Sorting meanings by category', () => {
       fieldCategories: ['nature'],
       wordClasses: ['Noun'],
       miscCategories: ['food'],
-      languageSources: [{ language: 'eng', description: 'Imported' }],
+      languageSources: [{language: 'eng', description: 'Imported'}],
     },
   ];
 
   const expected = [
     {
       categories: ['Noun', 'nature', 'food'],
-      meanings: [{ translations: ['tree', 'maple'], informations: ['a tree so green'] }, { translations: ['oak'] }],
+      meanings: [
+        {translations: ['tree', 'maple'], informations: ['a tree so green']},
+        {translations: ['oak']},
+      ],
     },
     {
       categories: ['Noun', 'Hakata-ben', 'nature', 'food'],
-      meanings: [{ translations: ['trii'], languageSources: [{ language: 'eng', description: 'Imported' }] }],
+      meanings: [
+        {
+          translations: ['trii'],
+          languageSources: [{language: 'eng', description: 'Imported'}],
+        },
+      ],
     },
   ];
 
@@ -49,11 +57,14 @@ describe('Assign meanings to form', () => {
       script: 'りんご',
     };
     const meanings: WordMeaning[] = [
-      { translations: ['Apple'] },
-      { translations: ['Apfel'], formRestricions: ['林檎'] },
+      {translations: ['Apple']},
+      {translations: ['Apfel'], formRestricions: ['林檎']},
     ];
 
-    const expected: FormMeanings = { form: { script: 'りんご' }, meanings: [{ translations: ['Apple'] }] };
+    const expected: FormMeanings = {
+      form: {script: 'りんご'},
+      meanings: [{translations: ['Apple']}],
+    };
 
     const result = assignMeaningsToForm(form, meanings);
 
@@ -65,13 +76,16 @@ describe('Assign meanings to form', () => {
       script: '林檎',
     };
     const meanings: WordMeaning[] = [
-      { translations: ['Apple'] },
-      { translations: ['Apfel'], formRestricions: ['林檎'] },
+      {translations: ['Apple']},
+      {translations: ['Apfel'], formRestricions: ['林檎']},
     ];
 
     const expected: FormMeanings = {
-      form: { script: '林檎' },
-      meanings: [{ translations: ['Apple'] }, { translations: ['Apfel'], formRestricions: ['林檎'] }],
+      form: {script: '林檎'},
+      meanings: [
+        {translations: ['Apple']},
+        {translations: ['Apfel'], formRestricions: ['林檎']},
+      ],
     };
 
     const result = assignMeaningsToForm(form, meanings);

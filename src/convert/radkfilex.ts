@@ -1,8 +1,7 @@
 // Converts the kradfile and kradfile2 file into JSON formated kradfilex file
 
-import { readFile, writeFile } from 'fs/promises';
-
-import type { Radkfilex } from 'src/type/radkfilex';
+import {readFile, writeFile} from 'fs/promises';
+import {Radkfilex} from '../type/radkfilex';
 
 export default async (): Promise<void> => {
   const radkfilex: Radkfilex[] = [];

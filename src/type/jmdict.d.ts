@@ -106,7 +106,15 @@ export type JMdictKanjiInf = 'ateji' | 'rK' | 'io' | 'ik' | 'iK' | 'oK';
 
 export type JMdictRdngInf = 'ok' | 'ik' | 'gikun';
 
-export type JMdictSensGlossLang = 'dut' | 'ger' | 'rus' | 'spa' | 'hun' | 'swe' | 'fre' | 'slv';
+export type JMdictSensGlossLang =
+  | 'dut'
+  | 'ger'
+  | 'rus'
+  | 'spa'
+  | 'hun'
+  | 'swe'
+  | 'fre'
+  | 'slv';
 
 export type JMdictSensGlossType = 'expl' | 'lit' | 'tm' | 'fig';
 

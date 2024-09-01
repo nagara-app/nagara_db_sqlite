@@ -1,18 +1,18 @@
-import { readJsonFile } from 'src/utils';
+import {readJsonFile} from '../utils';
 
-import type { Radical } from 'src/type/tkdb';
-import type { JMdict } from 'src/type/jmdict';
-import type { Kanjidic2 } from 'src/type/kanjidic2';
-import type { KanjiumAntonym } from 'src/type/kanjium_antonym';
-import type { KanjiumFrequency } from 'src/type/kanjium_frequency';
-import type { KanjiumLookalike } from 'src/type/kanjium_lookalike';
-import type { KanjiumSynonym } from 'src/type/kanjium_synonym';
-import type { Kradfilex } from 'src/type/kradfilex';
-import type { TanosKanji } from 'src/type/tanos_kanji';
-import type { TanosVocab } from 'src/type/tanos_vocab';
-import type { Wordfreq } from 'src/type/wordfreq_ck';
-import type { KVG } from 'src/type/kanjivg';
-import type { JMdictFurigana } from 'src/type/jmdict_furigana';
+import type {Radical} from '../type/tkdb';
+import type {JMdict} from '../type/jmdict';
+import type {Kanjidic2} from '../type/kanjidic2';
+import type {KanjiumAntonym} from '../type/kanjium_antonym';
+import type {KanjiumFrequency} from '../type/kanjium_frequency';
+import type {KanjiumLookalike} from '../type/kanjium_lookalike';
+import type {KanjiumSynonym} from '../type/kanjium_synonym';
+import type {Kradfilex} from '../type/kradfilex';
+import type {TanosKanji} from '../type/tanos_kanji';
+import type {TanosVocab} from '../type/tanos_vocab';
+import type {Wordfreq} from '../type/wordfreq_ck';
+import type {KVG} from '../type/kanjivg';
+import type {JMdictFurigana} from '../type/jmdict_furigana';
 
 class FileManager {
   private tanosVocabs: TanosVocab[] | null = null;
@@ -75,7 +75,7 @@ class FileManager {
       this.kanjivg = kanjivg;
       this.jmdictFurigana = jmdictFurigana;
     } catch (error) {
-      throw new Error(`Failed to load files`);
+      throw new Error('Failed to load files');
     }
   }
 

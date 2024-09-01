@@ -1,4 +1,4 @@
-import chalk from 'chalk';
+import chalk = require('chalk');
 
 import jmdict from './jmdict';
 import kanjidic2 from './kanjidic2';
@@ -8,7 +8,14 @@ import kradfilex from './kradfilex';
 import radkfilex from './radkfilex';
 
 export default async (): Promise<void> => {
-  const convertPromises = [jmdict(), kanjidic2(), radkfilex(), kradfilex(), wordfreq(), kanjivg()];
+  const convertPromises = [
+    jmdict(),
+    kanjidic2(),
+    radkfilex(),
+    kradfilex(),
+    wordfreq(),
+    kanjivg(),
+  ];
 
   console.log('Converting files … ');
 

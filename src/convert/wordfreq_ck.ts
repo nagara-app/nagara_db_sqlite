@@ -1,6 +1,5 @@
-import { readFile, writeFile } from 'fs/promises';
-
-import type { Wordfreq } from 'src/type/wordfreq_ck';
+import {readFile, writeFile} from 'fs/promises';
+import {Wordfreq} from '../type/wordfreq_ck';
 
 export default async (): Promise<void> => {
   const wordfreqCk: Wordfreq[] = [];
@@ -18,7 +17,7 @@ export default async (): Promise<void> => {
 
     if (word === undefined || pos === undefined) continue;
 
-    wordfreqCk.push({ word, pos: +pos });
+    wordfreqCk.push({word, pos: +pos});
   }
 
   const json = JSON.stringify(wordfreqCk, null, 2);

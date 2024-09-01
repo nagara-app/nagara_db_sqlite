@@ -1,4 +1,4 @@
-import type { Word, WordForm, WordMeaning } from 'src/type/tkdb';
+import {Word, WordForm, WordMeaning} from '../type/tkdb';
 
 export interface WordRefubrished extends Word {
   formsCategoriesMeanings: FormCategoriesMeanings[];
@@ -19,12 +19,19 @@ export interface FormMeanings {
   meanings: WordMeaning[];
 }
 
-const areCategoriesEqual = (categories1: string[], categories2: string[]): boolean => {
+const areCategoriesEqual = (
+  categories1: string[],
+  categories2: string[]
+): boolean => {
   if (categories1.length !== categories2.length) return false;
-  return categories1.every((category, index) => category === categories2[index]);
+  return categories1.every(
+    (category, index) => category === categories2[index]
+  );
 };
 
-export const sortMeaningsByCategories = (meanings: WordMeaning[]): CategoriesMeanings[] => {
+export const sortMeaningsByCategories = (
+  meanings: WordMeaning[]
+): CategoriesMeanings[] => {
   const categoriesMeanings: CategoriesMeanings[] = [];
 
   let currentCategories: string[] | undefined;
@@ -49,22 +56,32 @@ export const sortMeaningsByCategories = (meanings: WordMeaning[]): CategoriesMea
     } else if (areCategoriesEqual(currentCategories, categories)) {
       currentMeanings.push(meaning);
     } else {
-      categoriesMeanings.push({ categories: currentCategories, meanings: currentMeanings });
+      categoriesMeanings.push({
+        categories: currentCategories,
+        meanings: currentMeanings,
+      });
       currentCategories = categories;
       currentMeanings = [meaning];
     }
   }
 
   if (currentCategories !== undefined && currentMeanings.length > 0) {
-    categoriesMeanings.push({ categories: currentCategories, meanings: currentMeanings });
+    categoriesMeanings.push({
+      categories: currentCategories,
+      meanings: currentMeanings,
+    });
   }
 
   return categoriesMeanings;
 };
 
-export const assignMeaningsToForm = (form: WordForm, meanings: WordMeaning[]): FormMeanings => {
-  const filteredMeanings = meanings.filter((meaning) => {
-    const includesRestriction = meaning.formRestricions?.includes(form.script) ?? true;
+export const assignMeaningsToForm = (
+  form: WordForm,
+  meanings: WordMeaning[]
+): FormMeanings => {
+  const filteredMeanings = meanings.filter(meaning => {
+    const includesRestriction =
+      meaning.formRestricions?.includes(form.script) ?? true;
     return includesRestriction;
   });
 
@@ -75,18 +92,20 @@ export const assignMeaningsToForm = (form: WordForm, meanings: WordMeaning[]): F
 };
 
 export const createRefubrishedWord = (word: Word): WordRefubrished => {
-  const formMeanings = word.forms.map((form) => {
+  const formMeanings = word.forms.map(form => {
     return assignMeaningsToForm(form, word.meanings);
   });
 
-  const formsCategoriesMeanings: FormCategoriesMeanings[] = formMeanings.map((formMeaning) => {
-    const categoriesMeanings = sortMeaningsByCategories(formMeaning.meanings);
+  const formsCategoriesMeanings: FormCategoriesMeanings[] = formMeanings.map(
+    formMeaning => {
+      const categoriesMeanings = sortMeaningsByCategories(formMeaning.meanings);
 
-    return {
-      form: formMeaning.form,
-      categoriesMeanings,
-    };
-  });
+      return {
+        form: formMeaning.form,
+        categoriesMeanings,
+      };
+    }
+  );
 
   return {
     ...word,

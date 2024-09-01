@@ -1,8 +1,7 @@
-import chalk from 'chalk';
-
-import download from 'src/download/download';
-import convert from 'src/convert/convert';
-import process from 'src/process/process';
+import download from './download/download';
+import convert from './convert/convert';
+import process from './process/process';
+import chalk = require('chalk');
 
 const main = async (): Promise<void> => {
   await download();

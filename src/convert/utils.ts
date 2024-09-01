@@ -1,9 +1,12 @@
-import { createReadStream, createWriteStream, statSync } from 'fs';
+import {createReadStream, createWriteStream, statSync} from 'fs';
 
-import type { MultiBar } from 'cli-progress';
-import { pipeline } from 'stream';
+import type {MultiBar} from 'cli-progress';
+import {pipeline} from 'stream';
 
-export const readFileWithProgress = async (path: string, multibar: MultiBar): Promise<Buffer> => {
+export const readFileWithProgress = async (
+  path: string,
+  multibar: MultiBar
+): Promise<Buffer> => {
   return await new Promise<Buffer>((resolve, reject) => {
     try {
       const readStream = createReadStream(path);
@@ -11,7 +14,7 @@ export const readFileWithProgress = async (path: string, multibar: MultiBar): Pr
       const stats = statSync(path);
       const total = stats.size;
 
-      const progressbar = multibar.create(total, 0, { filename: path });
+      const progressbar = multibar.create(total, 0, {filename: path});
 
       const chunks: Buffer[] = [];
 
@@ -26,7 +29,7 @@ export const readFileWithProgress = async (path: string, multibar: MultiBar): Pr
         resolve(file);
       });
 
-      readStream.on('error', (err) => {
+      readStream.on('error', err => {
         progressbar.stop();
         reject(err);
       });
@@ -36,7 +39,11 @@ export const readFileWithProgress = async (path: string, multibar: MultiBar): Pr
   });
 };
 
-export const writeFileWithProgress = async (file: Buffer, path: string, multibar: MultiBar): Promise<Buffer> => {
+export const writeFileWithProgress = async (
+  file: Buffer,
+  path: string,
+  multibar: MultiBar
+): Promise<Buffer> => {
   return await new Promise<Buffer>((resolve, reject) => {
     try {
       const writeStream = createWriteStream(path);
@@ -45,7 +52,7 @@ export const writeFileWithProgress = async (file: Buffer, path: string, multibar
 
       pipeline(file, writeStream);
 
-      const progressbar = multibar.create(total, 0, { filename: path });
+      const progressbar = multibar.create(total, 0, {filename: path});
 
       const chunks: Buffer[] = [];
 
@@ -60,7 +67,7 @@ export const writeFileWithProgress = async (file: Buffer, path: string, multibar
         resolve(file);
       });
 
-      writeStream.on('error', (err) => {
+      writeStream.on('error', err => {
         progressbar.stop();
         reject(err);
       });
@@ -71,13 +78,15 @@ export const writeFileWithProgress = async (file: Buffer, path: string, multibar
 };
 
 export const toCamelcaseFromSnakecase = (text: string): string => {
-  return text.toLowerCase().replace(/(_\w)/g, (m) => m.toUpperCase().substring(1));
+  return text
+    .toLowerCase()
+    .replace(/(_\w)/g, m => m.toUpperCase().substring(1));
 };
 
 export const toCamelcaseFromKebabcase = (text: string): string => {
   return (
     text.charAt(0).toLowerCase() +
-    text.slice(1).replace(/-./g, (x) => {
+    text.slice(1).replace(/-./g, x => {
       if (x[1] !== undefined) {
         return x[1].toUpperCase();
       } else {

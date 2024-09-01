@@ -1,6 +1,5 @@
-import { readJsonFile, writeJsonFile } from 'src/utils';
-
-import type { TKDB } from 'src/type/tkdb';
+import {TKDB} from '../type/tkdb';
+import {readJsonFile, writeJsonFile} from '../utils';
 
 export default async (): Promise<void> => {
   const tkdb = await readJsonFile<TKDB>('output/tkdb.json');

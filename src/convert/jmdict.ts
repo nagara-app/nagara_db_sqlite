@@ -1,8 +1,8 @@
-import { parseStringPromise } from 'xml2js';
-import type { ParserOptions } from 'xml2js';
+import {parseStringPromise} from 'xml2js';
+import type {ParserOptions} from 'xml2js';
 
-import { readFile, writeFile } from 'fs/promises';
-import { toCamelcaseFromKebabcase } from './utils';
+import {readFile, writeFile} from 'fs/promises';
+import {toCamelcaseFromKebabcase} from './utils';
 
 export default async (): Promise<void> => {
   const file = await readFile('input/download/jmdict.xml', 'utf8');

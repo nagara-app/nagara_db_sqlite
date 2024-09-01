@@ -1,13 +1,12 @@
-import chalk from 'chalk';
+import {writeJsonFile} from '../utils';
+import {fileManager} from '../process/fileManager';
+import createKanjis from '../process/kanji/createKanjis';
+import createWords from '../process/word/createWords';
+import createRadicals from '../process/radical/createRadicals';
 
-import { writeJsonFile } from 'src/utils';
-import { fileManager } from 'src/process/fileManager';
-import createKanjis from 'src/process/kanji/createKanjis';
-import createWords from 'src/process/word/createWords';
-import createRadicals from 'src/process/radical/createRadicals';
-
-import { KEYWORDS } from 'src/keywords';
-import type { TKDB } from 'src/type/tkdb';
+import {KEYWORDS} from '../keywords';
+import type {TKDB} from '../type/tkdb';
+import chalk = require('chalk');
 
 export default async (): Promise<void> => {
   const dateOfCreation = new Date();

@@ -106,12 +106,31 @@ export type Kanjidic2CharMiscVarType =
   | 's_h'
   | 'ucs';
 
-export type Kanjidic2CharRdngMngGrpRdngType = 'pinyin' | 'korean_r' | 'korean_h' | 'vietnam' | 'ja_on' | 'ja_kun';
+export type Kanjidic2CharRdngMngGrpRdngType =
+  | 'pinyin'
+  | 'korean_r'
+  | 'korean_h'
+  | 'vietnam'
+  | 'ja_on'
+  | 'ja_kun';
 export type Kanjidic2CharRdngMngGrpMngLang = 'fr' | 'es' | 'pt'; // ISO 639-1
-export type Kanjidic2MiscGrade = '1' | '2' | '3' | '4' | '5' | '6' | '8' | '9' | '10';
+export type Kanjidic2MiscGrade =
+  | '1'
+  | '2'
+  | '3'
+  | '4'
+  | '5'
+  | '6'
+  | '8'
+  | '9'
+  | '10';
 export type Kanjidic2MiscJlpt = '1' | '2' | '3' | '4';
 export type Kanjidic2CharCpType = 'ucs' | 'jis208' | 'jis212' | 'jis213';
-export type Kanjidic2CharQcodeMisclassType = 'posn' | 'stroke_diff' | 'stroke_count' | 'stroke_and_posn';
+export type Kanjidic2CharQcodeMisclassType =
+  | 'posn'
+  | 'stroke_diff'
+  | 'stroke_count'
+  | 'stroke_and_posn';
 export type Kanjidic2CharQcodeType = 'skip' | 'shDesc' | 'fourCorner' | 'deroo';
 export type Kanjidic2CharDicNumDicRefType =
   | 'nelsonC'

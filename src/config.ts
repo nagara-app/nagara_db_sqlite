@@ -1,6 +1,6 @@
 // http://ftp.usf.edu/pub/ftp.monash.edu.au/pub/nihongo/
 
-import type { Encoding } from 'encoding-japanese';
+import type {Encoding} from 'encoding-japanese';
 
 export interface Config {
   downloads: FileDownload[];
@@ -53,14 +53,34 @@ export default {
     {
       url: 'http://ftp.usf.edu/pub/ftp.monash.edu.au/pub/nihongo/kradzip.zip',
       targets: [
-        { target: 'radkfilex', path: `${downloadPath}radkfilex.txt`, from: 'EUCJP', to: 'UNICODE' },
-        { target: 'kradfile', path: `${downloadPath}kradfile.txt`, from: 'EUCJP', to: 'UNICODE' },
-        { target: 'kradfile2', path: `${downloadPath}kradfile2.txt`, from: 'EUCJP', to: 'UNICODE' },
+        {
+          target: 'radkfilex',
+          path: `${downloadPath}radkfilex.txt`,
+          from: 'EUCJP',
+          to: 'UNICODE',
+        },
+        {
+          target: 'kradfile',
+          path: `${downloadPath}kradfile.txt`,
+          from: 'EUCJP',
+          to: 'UNICODE',
+        },
+        {
+          target: 'kradfile2',
+          path: `${downloadPath}kradfile2.txt`,
+          from: 'EUCJP',
+          to: 'UNICODE',
+        },
       ],
     },
     {
       url: 'https://github.com/Doublevil/JmdictFurigana/releases/latest/download/JmdictFurigana.json.zip',
-      targets: [{ target: 'JmdictFurigana.json', path: `${downloadPath}jmdict_furigana.json` }],
+      targets: [
+        {
+          target: 'JmdictFurigana.json',
+          path: `${downloadPath}jmdict_furigana.json`,
+        },
+      ],
     },
   ],
 } satisfies Config;

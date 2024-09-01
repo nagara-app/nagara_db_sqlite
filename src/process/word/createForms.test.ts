@@ -1,5 +1,11 @@
-import { createMissingReles, extractKanji, extractNfxx, getFrequency, isCommon } from 'src/process/word/createForms';
-import type { JMdictEntr, JMdictRdng } from 'src/type/jmdict';
+import {JMdictEntr, JMdictRdng} from '../../type/jmdict';
+import {
+  createMissingReles,
+  extractKanji,
+  extractNfxx,
+  getFrequency,
+  isCommon,
+} from './createForms';
 
 test('if kanji extracter is returning correct kanjis', () => {
   const testString = '日本語の漢字を抽出する。';
@@ -53,8 +59,8 @@ describe('create correct missing JMdict reading elements', () => {
     };
 
     const expected: JMdictRdng[] = [
-      { reb: 'ばくしゅ', re_nokanji: '' },
-      { reb: 'ビール', re_nokanji: '' },
+      {reb: 'ばくしゅ', re_nokanji: ''},
+      {reb: 'ビール', re_nokanji: ''},
     ];
 
     const missingReles = createMissingReles(jmEntry);
