@@ -11,7 +11,7 @@ import type {
   JMdictSensMisc,
   JMdictSensPos,
 } from '../../type/jmdict';
-import type {WordLanguageSource, WordMeaning} from '../../type/tkdb';
+import type {WordLanguageSource, WordMeaning} from 'tkdb-helper';
 
 export default (jmEntry: JMdictEntr): WordMeaning[] => {
   const meanings: WordMeaning[] = [];
@@ -116,8 +116,8 @@ const getFormRestrictions = (
   // if the sense is usually written in kanji, then add the kana reading as a restriction
   if (jmSenseKanjiRestrictions !== undefined && senseUsuallyWrittenInKana) {
     for (const restriction of jmSenseKanjiRestrictions) {
-      const form = wordForms.find(wordForm => wordForm.script === restriction);
-      const formReading = form?.reading;
+      const form = wordForms.find(wordForm => wordForm.kanji === restriction);
+      const formReading = form?.kana;
 
       if (formReading === undefined) {
         throw new Error('The reading of the kanji form is not found');

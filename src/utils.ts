@@ -1,4 +1,10 @@
 import {readFile, writeFile} from 'fs/promises';
+import {toRomaji, isRomaji} from 'wanakana';
+
+export const toStrictRomaji = (input = ''): string => {
+  const romaji = toRomaji(input);
+  return isRomaji(romaji) ? romaji : '';
+};
 
 export const toArray = <T>(input: T[] | T): T[] => {
   if (Array.isArray(input)) {

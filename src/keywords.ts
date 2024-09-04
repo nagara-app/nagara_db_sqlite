@@ -1,4 +1,4 @@
-import type {Keywords} from './type/tkdb';
+import type {Keywords} from 'tkdb-helper';
 
 export const KEYWORDS: Keywords = {
   jlpt: {

@@ -5,7 +5,7 @@ import {fileManager} from '../../process/fileManager';
 import createForms from './createForms';
 import createMeanings from './createMeanings';
 
-import type {JLPT, Word, WordForm} from '../../type/tkdb';
+import type {JLPT, Word, WordForm} from 'tkdb-helper';
 
 export default (): Word[] => {
   const jmdict = fileManager.getJMdict();
@@ -28,6 +28,7 @@ export default (): Word[] => {
     const common = forms.some(form => form.common) ? true : undefined;
     const jlpt = extractJLPT(forms);
     const frequency = extractFrequency(forms);
+    const romajiReadings = extractRomajiReadings(forms);
 
     words.push({
       id,
@@ -36,6 +37,7 @@ export default (): Word[] => {
       frequency,
       forms,
       meanings,
+      romajiReadings,
     });
 
     bar.increment();
@@ -82,4 +84,15 @@ const extractFrequency = (forms: WordForm[]): number | undefined => {
 
   const frequency = formWithMinFrequency.frequency;
   return frequency;
+};
+
+const extractRomajiReadings = (forms: WordForm[]): string[] | undefined => {
+  const romajiReadings = forms
+    .map(form => form.romaji)
+    .filter((romaji): romaji is string => !!romaji);
+
+  // Convert to Set to ensure unique values, then back to array
+  const uniqueRomajiReadings = [...new Set(romajiReadings)];
+
+  return uniqueRomajiReadings.length ? uniqueRomajiReadings : undefined;
 };

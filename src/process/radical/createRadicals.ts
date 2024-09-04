@@ -2,7 +2,7 @@ import {Presets, SingleBar} from 'cli-progress';
 import {fileManager} from '../fileManager';
 
 import type {Options} from 'cli-progress';
-import {Radical} from '../../type/tkdb';
+import {Radical} from 'tkdb-helper';
 
 export default (): Radical[] => {
   const tkdbRadicals = fileManager.getTKDBradicals();

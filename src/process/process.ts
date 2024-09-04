@@ -5,7 +5,7 @@ import createWords from '../process/word/createWords';
 import createRadicals from '../process/radical/createRadicals';
 
 import {KEYWORDS} from '../keywords';
-import type {TKDB} from '../type/tkdb';
+import type {TKDB} from 'tkdb-helper';
 import chalk = require('chalk');
 
 export default async (): Promise<void> => {

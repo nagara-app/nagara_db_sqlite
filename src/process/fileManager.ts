@@ -1,6 +1,6 @@
 import {readJsonFile} from '../utils';
 
-import type {Radical} from '../type/tkdb';
+import type {Radical} from 'tkdb-helper';
 import type {JMdict} from '../type/jmdict';
 import type {Kanjidic2} from '../type/kanjidic2';
 import type {KanjiumAntonym} from '../type/kanjium_antonym';

@@ -1,4 +1,4 @@
-import {TKDB} from '../type/tkdb';
+import {TKDB} from 'tkdb-helper';
 import {readJsonFile, writeJsonFile} from '../utils';
 
 export default async (): Promise<void> => {

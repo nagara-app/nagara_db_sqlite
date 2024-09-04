@@ -1,11 +1,5 @@
 import {Presets, SingleBar, type Options} from 'cli-progress';
-import {
-  JLPT,
-  Kanji,
-  KanjiComposition,
-  KanjiStroke,
-  Radical,
-} from '../../type/tkdb';
+import {JLPT, Kanji, KanjiComposition, KanjiStroke, Radical} from 'tkdb-helper';
 import {fileManager} from '../fileManager';
 import {toArray, toArrayOrUndefined} from '../../utils';
 import {
