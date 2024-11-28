@@ -5,4 +5,4 @@ export interface TanosVocab {
   kanji?: string | undefined;
 }
 
-export type JLPT = 'n1' | 'n2' | 'n3' | 'n4' | 'n5';
+export type JLPT = 1 | 2 | 3 | 4 | 5;

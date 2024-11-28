@@ -5,7 +5,7 @@ import createWords from '../process/word/createWords';
 import createRadicals from '../process/radical/createRadicals';
 
 import {KEYWORDS} from '../keywords';
-import type {TKDB} from 'tkdb-helper';
+import type {TKDB, Word} from 'tkdb-helper';
 import chalk = require('chalk');
 
 export default async (): Promise<void> => {
@@ -20,7 +20,7 @@ export default async (): Promise<void> => {
   const keywords = KEYWORDS;
   const radicals = createRadicals();
   const kanjis = createKanjis();
-  const words = createWords();
+  const words: Word[] = createWords();
 
   const tkdb: TKDB = {
     dateOfCreation,

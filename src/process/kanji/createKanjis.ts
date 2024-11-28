@@ -1,9 +1,8 @@
 import {Presets, SingleBar, type Options} from 'cli-progress';
-import {JLPT, Kanji, KanjiComposition, KanjiStroke, Radical} from 'tkdb-helper';
+import {JLPT, Kanji, KanjiComposition, KanjiStroke} from 'tkdb-helper';
 import {fileManager} from '../fileManager';
 import {toArray, toArrayOrUndefined} from '../../utils';
 import {
-  Kanjidic2,
   Kanjidic2CharRdngMngGrpMng,
   Kanjidic2CharRdngMngGrpRdng,
   Kanjidic2MiscGrade,
@@ -13,6 +12,8 @@ import {Kradfilex} from '../../type/kradfilex';
 
 export default (): Kanji[] => {
   const kanjidic2 = fileManager.getKanjidic2();
+  const tkdbKanji = fileManager.getTKDBkanji();
+
   const kd2Entries = kanjidic2.character;
   const kanjis: Kanji[] = [];
 
@@ -51,6 +52,10 @@ export default (): Kanji[] => {
     const composition = getComposition(literal);
     const strokes = getStrokes(literal);
 
+    const tkdbKanjiEntry = tkdbKanji.find(k => k.literal === literal);
+    const keyword = tkdbKanjiEntry?.keyword || meanings?.[0];
+    const mnemonic = tkdbKanjiEntry?.mnemonic;
+
     kanjis.push({
       id,
       literal,
@@ -60,6 +65,8 @@ export default (): Kanji[] => {
       kunOku,
       nanori,
       meanings,
+      keyword,
+      mnemonic,
       frequency,
       frequency2,
       grade,
@@ -76,7 +83,6 @@ export default (): Kanji[] => {
   }
 
   bar.stop();
-
   return kanjis;
 };
 
@@ -242,7 +248,7 @@ const getRadicals = (literal: string): string[] | undefined => {
 
   const radicals = filteredRadicals.map(kradical => {
     const tkdbRadical = tkdbRadicals.find(
-      tkdbRadical => tkdbRadical.kradical === kradical
+      tkdbRadical => tkdbRadical.kradReference === kradical
     );
 
     if (tkdbRadical === undefined) {
@@ -251,7 +257,7 @@ const getRadicals = (literal: string): string[] | undefined => {
       );
     }
 
-    return tkdbRadical.radical;
+    return tkdbRadical.literal;
   });
 
   return radicals;
@@ -334,15 +340,27 @@ export const kanjiToHex = (kanji: string): string => {
 };
 
 const getComposition = (literal: string): KanjiComposition[] | undefined => {
-  const kanjivg: KVG = fileManager.getKanjivg();
-  const kanjidic2: Kanjidic2 = fileManager.getKanjidic2();
-  const tkdbRadicals: Radical[] = fileManager.getTKDBradicals();
+  const kanjivg = fileManager.getKanjivg();
+  const kanjidic2 = fileManager.getKanjidic2();
+  const tkdbRadicals = fileManager.getTKDBradicals();
 
   const hexLiteral = kanjiToHex(literal);
-
   const match = kanjivg.kanji.find(kanji => kanji.id === `kanji_${hexLiteral}`);
 
-  if (match === undefined || match.g.g === undefined) {
+  const literalInRadical = !!tkdbRadicals.find(
+    radical => radical.literal === literal
+  );
+
+  if (literalInRadical) {
+    return [
+      {
+        element: literal,
+        type: 'radical',
+      },
+    ];
+  }
+
+  if (!match || !match.g.g) {
     return undefined;
   }
 
@@ -351,47 +369,86 @@ const getComposition = (literal: string): KanjiComposition[] | undefined => {
   const getSubcomp = (
     groups: KVGKanjiGroup[] | undefined
   ): KanjiComposition[] | undefined => {
-    if (groups === undefined) {
-      return undefined;
-    }
+    if (!groups) return undefined;
 
     const composition: KanjiComposition[] = [];
 
     for (const group of groups) {
-      const element = group.element;
+      let element = group.element;
 
-      const isRadical =
-        tkdbRadicals.find(radical => radical.radical === element) !== undefined
-          ? true
-          : undefined;
-
-      if (isRadical) {
-        composition.push({
-          element,
-          isRadical,
-        });
-        continue;
-      }
-
-      const isKanji =
-        kanjidic2.character.find(kanji => kanji.literal === element) !==
-        undefined
-          ? true
-          : undefined;
       const subgroup = toArrayOrUndefined(group.g);
-
       const subComp = getSubcomp(subgroup);
 
-      composition.push({
-        element,
-        isKanji,
-        composition: subComp,
-      });
+      if (!element && subComp) {
+        composition.push(...subComp);
+      }
+
+      element =
+        tkdbRadicals.find(radical => radical.kvgReference === element)
+          ?.literal ?? element;
+
+      const validGrades = ['1', '2', '3', '4', '5', '6', '8'];
+
+      const isKanji = !!kanjidic2.character.find(
+        kanji =>
+          kanji.literal === element &&
+          validGrades.includes(kanji.misc.grade ?? '0')
+      );
+
+      const isRadical = !!tkdbRadicals.find(
+        radical => radical.literal === element
+      );
+
+      const invalidKVGelements = [
+        '叉',
+        '兩',
+        '丰',
+        '丣',
+        '䜌',
+        '隋',
+        '㠯',
+        '㇆',
+        '㇁',
+        '㇒',
+        '畱',
+        '丷',
+      ];
+
+      if (isKanji && isRadical) {
+        composition.push({
+          element,
+          type: 'kanji',
+          composition: [
+            {
+              element,
+              type: 'radical',
+            },
+          ],
+        });
+      } else if (isKanji) {
+        composition.push({
+          element,
+          type: 'kanji',
+          composition: subComp,
+        });
+      } else if (isRadical) {
+        composition.push({
+          element,
+          type: 'radical',
+        });
+      } else if (subComp) {
+        composition.push(...subComp);
+      } else if (invalidKVGelements.includes(element)) {
+        return undefined;
+      } else {
+        throw new Error(
+          `Can not handle ${element} in composition of ${literal} `
+        );
+      }
     }
     return composition;
   };
 
   const composition = getSubcomp(groups);
-
   return composition;
 };

@@ -1,6 +1,5 @@
 import {readJsonFile} from '../utils';
 
-import type {Radical} from 'tkdb-helper';
 import type {JMdict} from '../type/jmdict';
 import type {Kanjidic2} from '../type/kanjidic2';
 import type {KanjiumAntonym} from '../type/kanjium_antonym';
@@ -13,6 +12,8 @@ import type {TanosVocab} from '../type/tanos_vocab';
 import type {Wordfreq} from '../type/wordfreq_ck';
 import type {KVG} from '../type/kanjivg';
 import type {JMdictFurigana} from '../type/jmdict_furigana';
+import {TKDBRadical} from '../type/tkdb_radical';
+import {TKDBKanji} from '../type/tkdb_kanji';
 
 class FileManager {
   private tanosVocabs: TanosVocab[] | null = null;
@@ -25,7 +26,8 @@ class FileManager {
   private kanjiumSynonyms: KanjiumSynonym[] | null = null;
   private kanjiumFrequencies: KanjiumFrequency[] | null = null;
   private kradfilex: Kradfilex[] | null = null;
-  private tkdbRadicals: Radical[] | null = null;
+  private tkdbRadicals: TKDBRadical[] | null = null;
+  private tkdbKanji: TKDBKanji[] | null = null;
   private kanjivg: KVG | null = null;
   private jmdictFurigana: JMdictFurigana[] | null = null;
 
@@ -43,6 +45,7 @@ class FileManager {
         kanjiumFrequencies,
         kradfilex,
         tkdbRadicals,
+        tkdbKanji,
         kanjivg,
         jmdictFurigana,
       ] = await Promise.all([
@@ -56,7 +59,8 @@ class FileManager {
         readJsonFile<KanjiumSynonym[]>('input/kanjium_synonyms.json'),
         readJsonFile<KanjiumFrequency[]>('input/kanjium_frequency.json'),
         readJsonFile<Kradfilex[]>('input/converted/kradfilex.json'),
-        readJsonFile<Radical[]>('input/tkdb_radicals.json'),
+        readJsonFile<TKDBRadical[]>('input/tkdb_radicals.json'),
+        readJsonFile<TKDBKanji[]>('input/tkdb_kanji.json'),
         readJsonFile<KVG>('input/converted/kanjivg.json'),
         readJsonFile<JMdictFurigana[]>('input/download/jmdict_furigana.json'),
       ]);
@@ -72,6 +76,7 @@ class FileManager {
       this.kanjiumFrequencies = kanjiumFrequencies;
       this.kradfilex = kradfilex;
       this.tkdbRadicals = tkdbRadicals;
+      this.tkdbKanji = tkdbKanji;
       this.kanjivg = kanjivg;
       this.jmdictFurigana = jmdictFurigana;
     } catch (error) {
@@ -157,11 +162,18 @@ class FileManager {
     return this.kradfilex;
   }
 
-  public getTKDBradicals(): Radical[] {
+  public getTKDBradicals(): TKDBRadical[] {
     if (this.tkdbRadicals === null) {
       throw new Error('TKDB radical data is not set.');
     }
     return this.tkdbRadicals;
+  }
+
+  public getTKDBkanji(): TKDBKanji[] {
+    if (this.tkdbKanji === null) {
+      throw new Error('TKDB radical data is not set.');
+    }
+    return this.tkdbKanji;
   }
 
   public getKanjivg(): KVG {

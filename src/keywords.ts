@@ -2,22 +2,22 @@ import type {Keywords} from 'tkdb-helper';
 
 export const KEYWORDS: Keywords = {
   jlpt: {
-    n1: 'JLPT N1',
-    n2: 'JLPT N2',
-    n3: 'JLPT N3',
-    n4: 'JLPT N4',
-    n5: 'JLPT N5',
+    1: 'JLPT N1',
+    2: 'JLPT N2',
+    3: 'JLPT N3',
+    4: 'JLPT N4',
+    5: 'JLPT N5',
   },
   kanjiGrade: {
-    jinmeiyou1: 'Jinmeiyou',
-    jinmeiyou2: 'Jinmeiyou',
-    jouyou: 'Jouyou',
-    kyouiku1: 'Kyouiku 1st grade',
-    kyouiku2: 'Kyouiku 2nd grade',
-    kyouiku3: 'Kyouiku 3rd grade',
-    kyouiku4: 'Kyouiku 4th grade',
-    kyouiku5: 'Kyouiku 5th grade',
-    kyouiku6: 'Kyouiku 6th grade',
+    1: 'Kyouiku 1st grade',
+    2: 'Kyouiku 2nd grade',
+    3: 'Kyouiku 3rd grade',
+    4: 'Kyouiku 4th grade',
+    5: 'Kyouiku 5th grade',
+    6: 'Kyouiku 6th grade',
+    8: 'Jouyou',
+    9: 'Jinmeiyou 1',
+    10: 'Jinmeiyou 2',
   },
   wordMeaningDial: {
     bra: 'Brazilian', // Brazilian

@@ -1,8 +1,9 @@
 [
   {
     "id": "04e00",
-    "radical": "一",
-    "kradical": "一",
+    "literal": "一",
+    "kradReference": "一",
+    "kvgReference": "㇐",
     "number": 1,
     "strokecount": 1,
     "frequency": 42,
@@ -15,8 +16,8 @@
   },
   {
     "id": "04e28",
-    "radical": "丨",
-    "kradical": "｜",
+    "literal": "丨",
+    "kradReference": "｜",
     "number": 2,
     "strokecount": 1,
     "frequency": 21,
@@ -30,8 +31,8 @@
   },
   {
     "id": "04e36",
-    "radical": "丶",
-    "kradical": "丶",
+    "literal": "丶",
+    "kradReference": "丶",
     "number": 3,
     "strokecount": 1,
     "frequency": 10,
@@ -44,8 +45,8 @@
   },
   {
     "id": "04e3f",
-    "radical": "丿",
-    "kradical": "ノ",
+    "literal": "丿",
+    "kradReference": "ノ",
     "number": 4,
     "strokecount": 1,
     "frequency": 33,
@@ -58,8 +59,9 @@
   },
   {
     "id": "04e59",
-    "radical": "乙",
-    "kradical": "乙",
+    "literal": "乙",
+    "kradReference": "乙",
+    "kvgReference": "⺄",
     "number": 5,
     "strokecount": 1,
     "frequency": 42,
@@ -76,11 +78,13 @@
   },
   {
     "id": "04e5a",
-    "radical": "乚",
+    "literal": "乚",
     "number": 5,
     "strokecount": 1,
     "frequency": 42,
-    "meanings": "second",
+    "meanings": [
+      "second"
+    ],
     "readings": [
       "おつ"
     ],
@@ -88,8 +92,8 @@
   },
   {
     "id": "04e85",
-    "radical": "亅",
-    "kradical": "亅",
+    "literal": "亅",
+    "kradReference": "亅",
     "number": 6,
     "strokecount": 1,
     "frequency": 19,
@@ -103,32 +107,36 @@
   },
   {
     "id": "04e8c",
-    "radical": "二",
-    "kradical": "二",
+    "literal": "二",
+    "kradReference": "二",
     "number": 7,
     "strokecount": 2,
     "frequency": 29,
-    "meanings": "two",
+    "meanings": [
+      "two"
+    ],
     "readings": [
       "に"
     ]
   },
   {
     "id": "04ea0",
-    "radical": "亠",
-    "kradical": "亠",
+    "literal": "亠",
+    "kradReference": "亠",
     "number": 8,
     "strokecount": 2,
     "frequency": 38,
-    "meanings": "pot lid",
+    "meanings": [
+      "pot lid"
+    ],
     "readings": [
       "なべぶた"
     ]
   },
   {
     "id": "04eba",
-    "radical": "人",
-    "kradical": "人",
+    "literal": "人",
+    "kradReference": "人",
     "number": 9,
     "strokecount": 2,
     "frequency": 794,
@@ -146,8 +154,8 @@
   },
   {
     "id": "04ebb",
-    "radical": "亻",
-    "kradical": "化",
+    "literal": "亻",
+    "kradReference": "化",
     "number": 9,
     "strokecount": 2,
     "frequency": 794,
@@ -162,8 +170,8 @@
   },
   {
     "id": "201a2",
-    "radical": "𠆢",
-    "kradical": "个",
+    "literal": "𠆢",
+    "kradReference": "个",
     "number": 9,
     "strokecount": 2,
     "frequency": 794,
@@ -178,8 +186,8 @@
   },
   {
     "id": "0513f",
-    "radical": "儿",
-    "kradical": "儿",
+    "literal": "儿",
+    "kradReference": "儿",
     "number": 10,
     "strokecount": 2,
     "frequency": 52,
@@ -193,8 +201,8 @@
   },
   {
     "id": "05165",
-    "radical": "入",
-    "kradical": "入",
+    "literal": "入",
+    "kradReference": "入",
     "number": 11,
     "strokecount": 2,
     "frequency": 28,
@@ -207,7 +215,7 @@
   },
   {
     "id": "0516b",
-    "radical": "八",
+    "literal": "八",
     "number": 12,
     "strokecount": 2,
     "frequency": 44,
@@ -224,8 +232,8 @@
   },
   {
     "id": "030cf",
-    "radical": "ハ",
-    "kradical": "ハ",
+    "literal": "ハ",
+    "kradReference": "ハ",
     "number": 12,
     "strokecount": 2,
     "frequency": 44,
@@ -240,8 +248,8 @@
   },
   {
     "id": "05182",
-    "radical": "冂",
-    "kradical": "冂",
+    "literal": "冂",
+    "kradReference": "冂",
     "number": 13,
     "strokecount": 2,
     "frequency": 50,
@@ -255,8 +263,8 @@
   },
   {
     "id": "05196",
-    "radical": "冖",
-    "kradical": "冖",
+    "literal": "冖",
+    "kradReference": "冖",
     "number": 14,
     "strokecount": 2,
     "frequency": 30,
@@ -270,8 +278,8 @@
   },
   {
     "id": "051ab",
-    "radical": "冫",
-    "kradical": "冫",
+    "literal": "冫",
+    "kradReference": "冫",
     "number": 15,
     "strokecount": 2,
     "frequency": 115,
@@ -285,8 +293,8 @@
   },
   {
     "id": "051e0",
-    "radical": "几",
-    "kradical": "几",
+    "literal": "几",
+    "kradReference": "几",
     "number": 16,
     "strokecount": 2,
     "frequency": 38,
@@ -299,8 +307,8 @@
   },
   {
     "id": "051f5",
-    "radical": "凵",
-    "kradical": "凵",
+    "literal": "凵",
+    "kradReference": "凵",
     "number": 17,
     "strokecount": 2,
     "frequency": 23,
@@ -314,8 +322,8 @@
   },
   {
     "id": "05200",
-    "radical": "刀",
-    "kradical": "刀",
+    "literal": "刀",
+    "kradReference": "刀",
     "number": 18,
     "strokecount": 2,
     "frequency": 337,
@@ -333,8 +341,8 @@
   },
   {
     "id": "05202",
-    "radical": "刂",
-    "kradical": "刈",
+    "literal": "刂",
+    "kradReference": "刈",
     "number": 18,
     "strokecount": 2,
     "frequency": 337,
@@ -349,7 +357,8 @@
   },
   {
     "id": "02e88",
-    "radical": "⺈",
+    "literal": "⺈",
+    "kvgReference": "𠂊",
     "number": 18,
     "strokecount": 2,
     "frequency": 337,
@@ -364,8 +373,8 @@
   },
   {
     "id": "0529b",
-    "radical": "力",
-    "kradical": "力",
+    "literal": "力",
+    "kradReference": "力",
     "number": 19,
     "strokecount": 2,
     "frequency": 163,
@@ -380,8 +389,8 @@
   },
   {
     "id": "052f9",
-    "radical": "勹",
-    "kradical": "勹",
+    "literal": "勹",
+    "kradReference": "勹",
     "number": 20,
     "strokecount": 2,
     "frequency": 64,
@@ -395,8 +404,8 @@
   },
   {
     "id": "05315",
-    "radical": "匕",
-    "kradical": "匕",
+    "literal": "匕",
+    "kradReference": "匕",
     "number": 21,
     "strokecount": 2,
     "frequency": 19,
@@ -409,8 +418,8 @@
   },
   {
     "id": "0531a",
-    "radical": "匚",
-    "kradical": "匚",
+    "literal": "匚",
+    "kradReference": "匚",
     "number": 22,
     "strokecount": 2,
     "frequency": 64,
@@ -423,8 +432,8 @@
   },
   {
     "id": "04ea1",
-    "radical": "亡",
-    "kradical": "亡",
+    "literal": "亡",
+    "kradReference": "亡",
     "number": 23,
     "strokecount": 3,
     "frequency": 17,
@@ -441,7 +450,7 @@
   },
   {
     "id": "05338",
-    "radical": "匸",
+    "literal": "匸",
     "number": 23,
     "strokecount": 2,
     "frequency": 17,
@@ -456,8 +465,8 @@
   },
   {
     "id": "05341",
-    "radical": "十",
-    "kradical": "十",
+    "literal": "十",
+    "kradReference": "十",
     "number": 24,
     "strokecount": 2,
     "frequency": 55,
@@ -471,8 +480,8 @@
   },
   {
     "id": "0535c",
-    "radical": "卜",
-    "kradical": "卜",
+    "literal": "卜",
+    "kradReference": "卜",
     "number": 25,
     "strokecount": 2,
     "frequency": 45,
@@ -480,7 +489,11 @@
       "divination to"
     ],
     "readings": [
-      "ぼく・ぼくづくり・ぼくのと・と・うらない"
+      "ぼく",
+      "ぼくづくり",
+      "ぼくのと",
+      "と",
+      "うらない"
     ],
     "variants": [
       "⺊"
@@ -488,7 +501,7 @@
   },
   {
     "id": "02e8a",
-    "radical": "⺊",
+    "literal": "⺊",
     "number": 25,
     "strokecount": 2,
     "frequency": 45,
@@ -496,14 +509,18 @@
       "divination to"
     ],
     "readings": [
-      "ぼく・ぼくづくり・ぼくのと・と・うらない"
+      "ぼく",
+      "ぼくづくり",
+      "ぼくのと",
+      "と",
+      "うらない"
     ],
     "variantOf": "卜"
   },
   {
     "id": "05369",
-    "radical": "卩",
-    "kradical": "卩",
+    "literal": "卩",
+    "kradReference": "卩",
     "number": 26,
     "strokecount": 2,
     "frequency": 40,
@@ -519,7 +536,7 @@
   },
   {
     "id": "0353e",
-    "radical": "㔾",
+    "literal": "㔾",
     "number": 26,
     "strokecount": 2,
     "frequency": 40,
@@ -533,8 +550,8 @@
   },
   {
     "id": "05382",
-    "radical": "厂",
-    "kradical": "厂",
+    "literal": "厂",
+    "kradReference": "厂",
     "number": 27,
     "strokecount": 2,
     "frequency": 129,
@@ -547,8 +564,8 @@
   },
   {
     "id": "053b6",
-    "radical": "厶",
-    "kradical": "厶",
+    "literal": "厶",
+    "kradReference": "厶",
     "number": 28,
     "strokecount": 2,
     "frequency": 40,
@@ -561,8 +578,8 @@
   },
   {
     "id": "053c8",
-    "radical": "又",
-    "kradical": "又",
+    "literal": "又",
+    "kradReference": "又",
     "number": 29,
     "strokecount": 2,
     "frequency": 91,
@@ -576,8 +593,8 @@
   },
   {
     "id": "053e3",
-    "radical": "口",
-    "kradical": "口",
+    "literal": "口",
+    "kradReference": "口",
     "number": 30,
     "strokecount": 3,
     "frequency": 1146,
@@ -595,8 +612,8 @@
   },
   {
     "id": "054c1",
-    "radical": "品",
-    "kradical": "品",
+    "literal": "品",
+    "kradReference": "品",
     "number": 30,
     "strokecount": 9,
     "frequency": 1146,
@@ -612,8 +629,8 @@
   },
   {
     "id": "056d7",
-    "radical": "囗",
-    "kradical": "囗",
+    "literal": "囗",
+    "kradReference": "囗",
     "number": 31,
     "strokecount": 3,
     "frequency": 118,
@@ -627,8 +644,8 @@
   },
   {
     "id": "0571f",
-    "radical": "土",
-    "kradical": "土",
+    "literal": "土",
+    "kradReference": "土",
     "number": 32,
     "strokecount": 3,
     "frequency": 580,
@@ -642,8 +659,8 @@
   },
   {
     "id": "058eb",
-    "radical": "士",
-    "kradical": "士",
+    "literal": "士",
+    "kradReference": "士",
     "number": 33,
     "strokecount": 3,
     "frequency": 24,
@@ -657,8 +674,8 @@
   },
   {
     "id": "05902",
-    "radical": "夂",
-    "kradical": "夂",
+    "literal": "夂",
+    "kradReference": "夂",
     "number": 34,
     "strokecount": 3,
     "frequency": 34,
@@ -671,7 +688,7 @@
   },
   {
     "id": "0590a",
-    "radical": "夊",
+    "literal": "夊",
     "number": 35,
     "strokecount": 3,
     "meanings": [
@@ -683,8 +700,8 @@
   },
   {
     "id": "05915",
-    "radical": "夕",
-    "kradical": "夕",
+    "literal": "夕",
+    "kradReference": "夕",
     "number": 36,
     "strokecount": 3,
     "frequency": 34,
@@ -693,13 +710,15 @@
       "sunset"
     ],
     "readings": [
-      "ゆう・ゆうべ・た"
+      "ゆう",
+      "ゆうべ",
+      "た"
     ]
   },
   {
     "id": "05927",
-    "radical": "大",
-    "kradical": "大",
+    "literal": "大",
+    "kradReference": "大",
     "number": 37,
     "strokecount": 3,
     "frequency": 132,
@@ -714,8 +733,8 @@
   },
   {
     "id": "05973",
-    "radical": "女",
-    "kradical": "女",
+    "literal": "女",
+    "kradReference": "女",
     "number": 38,
     "strokecount": 3,
     "frequency": 681,
@@ -725,13 +744,14 @@
       "female"
     ],
     "readings": [
-      "おんな・おんなへん"
+      "おんな",
+      "おんなへん"
     ]
   },
   {
     "id": "05b50",
-    "radical": "子",
-    "kradical": "子",
+    "literal": "子",
+    "kradReference": "子",
     "number": 39,
     "strokecount": 3,
     "frequency": 83,
@@ -745,8 +765,8 @@
   },
   {
     "id": "05b80",
-    "radical": "宀",
-    "kradical": "宀",
+    "literal": "宀",
+    "kradReference": "宀",
     "number": 40,
     "strokecount": 3,
     "frequency": 246,
@@ -760,8 +780,8 @@
   },
   {
     "id": "05bf8",
-    "radical": "寸",
-    "kradical": "寸",
+    "literal": "寸",
+    "kradReference": "寸",
     "number": 41,
     "strokecount": 3,
     "frequency": 40,
@@ -770,13 +790,14 @@
       "sun (unit of measurement)"
     ],
     "readings": [
-      "すん・すんづくり"
+      "すん",
+      "すんづくり"
     ]
   },
   {
     "id": "05c0f",
-    "radical": "小",
-    "kradical": "小",
+    "literal": "小",
+    "kradReference": "小",
     "number": 42,
     "strokecount": 3,
     "frequency": 41,
@@ -793,8 +814,8 @@
   },
   {
     "id": "02e8c",
-    "radical": "⺌",
-    "kradical": "尚",
+    "literal": "⺌",
+    "kradReference": "尚",
     "number": 42,
     "strokecount": 3,
     "frequency": 41,
@@ -808,7 +829,7 @@
   },
   {
     "id": "02e8d",
-    "radical": "⺍",
+    "literal": "⺍",
     "number": 42,
     "strokecount": 3,
     "frequency": 41,
@@ -822,8 +843,8 @@
   },
   {
     "id": "05c22",
-    "radical": "尢",
-    "kradical": "尢",
+    "literal": "尢",
+    "kradReference": "尢",
     "number": 43,
     "strokecount": 3,
     "frequency": 66,
@@ -840,8 +861,8 @@
   },
   {
     "id": "05c24",
-    "radical": "尤",
-    "kradical": "尤",
+    "literal": "尤",
+    "kradReference": "尤",
     "number": 43,
     "strokecount": 4,
     "frequency": 66,
@@ -855,7 +876,7 @@
   },
   {
     "id": "05c23",
-    "radical": "尣",
+    "literal": "尣",
     "number": 43,
     "strokecount": 4,
     "frequency": 66,
@@ -869,8 +890,8 @@
   },
   {
     "id": "05c38",
-    "radical": "尸",
-    "kradical": "尸",
+    "literal": "尸",
+    "kradReference": "尸",
     "number": 44,
     "strokecount": 3,
     "frequency": 148,
@@ -883,9 +904,15 @@
     ]
   },
   {
+    "id": "21c2a",
+    "literal": "𡰪",
+    "number": 44,
+    "strokecount": 6
+  },
+  {
     "id": "05c6e",
-    "radical": "屮",
-    "kradical": "屮",
+    "literal": "屮",
+    "kradReference": "屮",
     "number": 45,
     "strokecount": 3,
     "frequency": 38,
@@ -898,8 +925,8 @@
   },
   {
     "id": "05c71",
-    "radical": "山",
-    "kradical": "山",
+    "literal": "山",
+    "kradReference": "山",
     "number": 46,
     "strokecount": 3,
     "frequency": 636,
@@ -913,8 +940,8 @@
   },
   {
     "id": "05ddb",
-    "radical": "巛",
-    "kradical": "巛",
+    "literal": "巛",
+    "kradReference": "巛",
     "number": 47,
     "strokecount": 3,
     "frequency": 26,
@@ -931,8 +958,8 @@
   },
   {
     "id": "05ddd",
-    "radical": "川",
-    "kradical": "川",
+    "literal": "川",
+    "kradReference": "川",
     "number": 47,
     "strokecount": 3,
     "frequency": 26,
@@ -946,7 +973,7 @@
   },
   {
     "id": "05ddc",
-    "radical": "巜",
+    "literal": "巜",
     "number": 47,
     "strokecount": 2,
     "frequency": 26,
@@ -960,8 +987,8 @@
   },
   {
     "id": "05de5",
-    "radical": "工",
-    "kradical": "工",
+    "literal": "工",
+    "kradReference": "工",
     "number": 48,
     "strokecount": 3,
     "frequency": 17,
@@ -974,8 +1001,8 @@
   },
   {
     "id": "05df2",
-    "radical": "已",
-    "kradical": "已",
+    "literal": "已",
+    "kradReference": "已",
     "number": 49,
     "strokecount": 3,
     "frequency": 20,
@@ -992,7 +1019,7 @@
   },
   {
     "id": "05df1",
-    "radical": "己",
+    "literal": "己",
     "number": 49,
     "strokecount": 3,
     "frequency": 20,
@@ -1006,7 +1033,7 @@
   },
   {
     "id": "05df3",
-    "radical": "巳",
+    "literal": "巳",
     "number": 49,
     "strokecount": 3,
     "frequency": 20,
@@ -1020,8 +1047,8 @@
   },
   {
     "id": "05dfe",
-    "radical": "巾",
-    "kradical": "巾",
+    "literal": "巾",
+    "kradReference": "巾",
     "number": 50,
     "strokecount": 3,
     "frequency": 295,
@@ -1037,8 +1064,8 @@
   },
   {
     "id": "05e72",
-    "radical": "干",
-    "kradical": "干",
+    "literal": "干",
+    "kradReference": "干",
     "number": 51,
     "strokecount": 3,
     "frequency": 9,
@@ -1051,8 +1078,8 @@
   },
   {
     "id": "05e7a",
-    "radical": "幺",
-    "kradical": "幺",
+    "literal": "幺",
+    "kradReference": "幺",
     "number": 52,
     "strokecount": 3,
     "frequency": 50,
@@ -1065,20 +1092,22 @@
   },
   {
     "id": "05e7f",
-    "radical": "广",
-    "kradical": "广",
+    "literal": "广",
+    "kradReference": "广",
     "number": 53,
     "strokecount": 3,
     "frequency": 15,
-    "meanings": "dotted cliff",
+    "meanings": [
+      "dotted cliff"
+    ],
     "readings": [
       "まだれ"
     ]
   },
   {
     "id": "05ef4",
-    "radical": "廴",
-    "kradical": "廴",
+    "literal": "廴",
+    "kradReference": "廴",
     "number": 54,
     "strokecount": 3,
     "frequency": 9,
@@ -1091,8 +1120,8 @@
   },
   {
     "id": "05efe",
-    "radical": "廾",
-    "kradical": "廾",
+    "literal": "廾",
+    "kradReference": "廾",
     "number": 55,
     "strokecount": 3,
     "frequency": 50,
@@ -1106,8 +1135,8 @@
   },
   {
     "id": "05f0b",
-    "radical": "弋",
-    "kradical": "弋",
+    "literal": "弋",
+    "kradReference": "弋",
     "number": 56,
     "strokecount": 3,
     "frequency": 15,
@@ -1122,8 +1151,8 @@
   },
   {
     "id": "05f13",
-    "radical": "弓",
-    "kradical": "弓",
+    "literal": "弓",
+    "kradReference": "弓",
     "number": 57,
     "strokecount": 3,
     "frequency": 165,
@@ -1137,8 +1166,9 @@
   },
   {
     "id": "05f50",
-    "radical": "彐",
-    "kradical": "ヨ",
+    "literal": "彐",
+    "kradReference": "ヨ",
+    "kvgReference": "⺕",
     "number": 58,
     "strokecount": 3,
     "frequency": 25,
@@ -1154,8 +1184,8 @@
   },
   {
     "id": "05f51",
-    "radical": "彑",
-    "kradical": "彑",
+    "literal": "彑",
+    "kradReference": "彑",
     "number": 58,
     "strokecount": 3,
     "frequency": 25,
@@ -1169,8 +1199,8 @@
   },
   {
     "id": "05f61",
-    "radical": "彡",
-    "kradical": "彡",
+    "literal": "彡",
+    "kradReference": "彡",
     "number": 59,
     "strokecount": 3,
     "frequency": 62,
@@ -1181,13 +1211,14 @@
       "beard"
     ],
     "readings": [
-      "さん・さんづくり"
+      "さん",
+      "さんづくり"
     ]
   },
   {
     "id": "05f73",
-    "radical": "彳",
-    "kradical": "彳",
+    "literal": "彳",
+    "kradReference": "彳",
     "number": 60,
     "strokecount": 3,
     "frequency": 215,
@@ -1201,8 +1232,8 @@
   },
   {
     "id": "05fc3",
-    "radical": "心",
-    "kradical": "心",
+    "literal": "心",
+    "kradReference": "心",
     "meanings": [
       "heart"
     ],
@@ -1215,13 +1246,13 @@
     ],
     "variants": [
       "忄",
-      "㣺"
+      "⺗"
     ]
   },
   {
     "id": "05fc4",
-    "radical": "忄",
-    "kradical": "忙",
+    "literal": "忄",
+    "kradReference": "忙",
     "number": 61,
     "strokecount": 3,
     "frequency": 1115,
@@ -1233,7 +1264,7 @@
   },
   {
     "id": "038fa",
-    "radical": "㣺",
+    "literal": "⺗",
     "number": 61,
     "strokecount": 4,
     "frequency": 1115,
@@ -1245,8 +1276,8 @@
   },
   {
     "id": "06208",
-    "radical": "戈",
-    "kradical": "戈",
+    "literal": "戈",
+    "kradReference": "戈",
     "number": 62,
     "strokecount": 4,
     "frequency": 116,
@@ -1260,8 +1291,8 @@
   },
   {
     "id": "06238",
-    "radical": "戸",
-    "kradical": "戸",
+    "literal": "戸",
+    "kradReference": "戸",
     "number": 63,
     "strokecount": 4,
     "frequency": 44,
@@ -1279,7 +1310,7 @@
   },
   {
     "id": "06236",
-    "radical": "戶",
+    "literal": "戶",
     "number": 63,
     "strokecount": 4,
     "frequency": 44,
@@ -1294,7 +1325,7 @@
   },
   {
     "id": "06237",
-    "radical": "户",
+    "literal": "户",
     "number": 63,
     "strokecount": 4,
     "frequency": 44,
@@ -1309,8 +1340,8 @@
   },
   {
     "id": "0624b",
-    "radical": "手",
-    "kradical": "手",
+    "literal": "手",
+    "kradReference": "手",
     "number": 64,
     "strokecount": 4,
     "frequency": 1203,
@@ -1328,8 +1359,8 @@
   },
   {
     "id": "0624c",
-    "radical": "扌",
-    "kradical": "扎",
+    "literal": "扌",
+    "kradReference": "扎",
     "number": 64,
     "strokecount": 3,
     "frequency": 1203,
@@ -1344,7 +1375,7 @@
   },
   {
     "id": "09fb5",
-    "radical": "龵",
+    "literal": "龵",
     "number": 64,
     "strokecount": 3,
     "frequency": 1203,
@@ -1359,8 +1390,8 @@
   },
   {
     "id": "0652f",
-    "radical": "支",
-    "kradical": "支",
+    "literal": "支",
+    "kradReference": "支",
     "number": 65,
     "strokecount": 4,
     "frequency": 26,
@@ -1373,8 +1404,8 @@
   },
   {
     "id": "06535",
-    "radical": "攵",
-    "kradical": "攵",
+    "literal": "攵",
+    "kradReference": "攵",
     "number": 66,
     "strokecount": 4,
     "frequency": 296,
@@ -1392,7 +1423,7 @@
   },
   {
     "id": "06534",
-    "radical": "攴",
+    "literal": "攴",
     "number": 66,
     "strokecount": 4,
     "frequency": 296,
@@ -1408,8 +1439,8 @@
   },
   {
     "id": "06587",
-    "radical": "文",
-    "kradical": "文",
+    "literal": "文",
+    "kradReference": "文",
     "number": 67,
     "strokecount": 4,
     "frequency": 26,
@@ -1424,8 +1455,8 @@
   },
   {
     "id": "06597",
-    "radical": "斗",
-    "kradical": "斗",
+    "literal": "斗",
+    "kradReference": "斗",
     "number": 68,
     "strokecount": 4,
     "frequency": 32,
@@ -1439,8 +1470,8 @@
   },
   {
     "id": "065a4",
-    "radical": "斤",
-    "kradical": "斤",
+    "literal": "斤",
+    "kradReference": "斤",
     "number": 69,
     "strokecount": 4,
     "frequency": 55,
@@ -1453,8 +1484,8 @@
   },
   {
     "id": "065b9",
-    "radical": "方",
-    "kradical": "方",
+    "literal": "方",
+    "kradReference": "方",
     "number": 70,
     "strokecount": 4,
     "frequency": 55,
@@ -1469,8 +1500,8 @@
   },
   {
     "id": "065e0",
-    "radical": "无",
-    "kradical": "无",
+    "literal": "无",
+    "kradReference": "无",
     "number": 71,
     "strokecount": 4,
     "frequency": 12,
@@ -1486,7 +1517,7 @@
   },
   {
     "id": "065e1",
-    "radical": "旡",
+    "literal": "旡",
     "number": 71,
     "strokecount": 5,
     "frequency": 12,
@@ -1500,8 +1531,8 @@
   },
   {
     "id": "065e5",
-    "radical": "日",
-    "kradical": "日",
+    "literal": "日",
+    "kradReference": "日",
     "number": 72,
     "strokecount": 4,
     "frequency": 453,
@@ -1512,12 +1543,14 @@
     ],
     "readings": [
       "にち"
-    ]
+    ],
+    "keyword": "sun",
+    "mnemonic": "A pictogram of the sun."
   },
   {
     "id": "066f0",
-    "radical": "曰",
-    "kradical": "曰",
+    "literal": "曰",
+    "kradReference": "曰",
     "number": 73,
     "strokecount": 4,
     "frequency": 37,
@@ -1530,8 +1563,8 @@
   },
   {
     "id": "06708",
-    "radical": "月",
-    "kradical": "月",
+    "literal": "月",
+    "kradReference": "月",
     "number": 74,
     "strokecount": 4,
     "frequency": 69,
@@ -1551,7 +1584,7 @@
   },
   {
     "id": "02e9d",
-    "radical": "⺝",
+    "literal": "⺝",
     "number": 74,
     "strokecount": 4,
     "frequency": 69,
@@ -1569,8 +1602,8 @@
   },
   {
     "id": "06728",
-    "radical": "木",
-    "kradical": "木",
+    "literal": "木",
+    "kradReference": "木",
     "number": 75,
     "strokecount": 4,
     "frequency": 1369,
@@ -1584,8 +1617,8 @@
   },
   {
     "id": "06b20",
-    "radical": "欠",
-    "kradical": "欠",
+    "literal": "欠",
+    "kradReference": "欠",
     "number": 76,
     "strokecount": 4,
     "frequency": 235,
@@ -1599,8 +1632,8 @@
   },
   {
     "id": "06b62",
-    "radical": "止",
-    "kradical": "止",
+    "literal": "止",
+    "kradReference": "止",
     "number": 77,
     "strokecount": 4,
     "frequency": 99,
@@ -1609,12 +1642,22 @@
     ],
     "readings": [
       "とめる"
+    ],
+    "variants": [
+      "龰"
     ]
   },
   {
+    "id": "09fb0",
+    "literal": "龰",
+    "number": 77,
+    "strokecount": 4,
+    "variantOf": "止"
+  },
+  {
     "id": "06b79",
-    "radical": "歹",
-    "kradical": "歹",
+    "literal": "歹",
+    "kradReference": "歹",
     "number": 78,
     "strokecount": 4,
     "frequency": 231,
@@ -1631,7 +1674,7 @@
   },
   {
     "id": "06b7a",
-    "radical": "歺",
+    "literal": "歺",
     "number": 78,
     "strokecount": 4,
     "frequency": 231,
@@ -1646,8 +1689,8 @@
   },
   {
     "id": "06bb3",
-    "radical": "殳",
-    "kradical": "殳",
+    "literal": "殳",
+    "kradReference": "殳",
     "number": 79,
     "strokecount": 4,
     "frequency": 93,
@@ -1661,8 +1704,8 @@
   },
   {
     "id": "06bcb",
-    "radical": "毋",
-    "kradical": "毋",
+    "literal": "毋",
+    "kradReference": "毋",
     "number": 80,
     "strokecount": 4,
     "frequency": 16,
@@ -1680,8 +1723,8 @@
   },
   {
     "id": "06bcd",
-    "radical": "母",
-    "kradical": "母",
+    "literal": "母",
+    "kradReference": "母",
     "number": 80,
     "strokecount": 5,
     "frequency": 16,
@@ -1697,8 +1740,8 @@
   },
   {
     "id": "06bd4",
-    "radical": "比",
-    "kradical": "比",
+    "literal": "比",
+    "kradReference": "比",
     "number": 81,
     "strokecount": 4,
     "frequency": 21,
@@ -1712,8 +1755,8 @@
   },
   {
     "id": "06bdb",
-    "radical": "毛",
-    "kradical": "毛",
+    "literal": "毛",
+    "kradReference": "毛",
     "number": 82,
     "strokecount": 4,
     "frequency": 211,
@@ -1727,8 +1770,8 @@
   },
   {
     "id": "06c0f",
-    "radical": "氏",
-    "kradical": "氏",
+    "literal": "氏",
+    "kradReference": "氏",
     "number": 83,
     "strokecount": 4,
     "frequency": 10,
@@ -1741,8 +1784,8 @@
   },
   {
     "id": "06c14",
-    "radical": "气",
-    "kradical": "气",
+    "literal": "气",
+    "kradReference": "气",
     "number": 84,
     "strokecount": 4,
     "frequency": 17,
@@ -1756,13 +1799,15 @@
   },
   {
     "id": "06c34",
-    "radical": "水",
-    "kradical": "水",
+    "literal": "水",
+    "kradReference": "水",
     "number": 85,
     "strokecount": 4,
     "frequency": 1595,
     "top": 25,
-    "meanings": "water",
+    "meanings": [
+      "water"
+    ],
     "readings": [
       "みず"
     ],
@@ -1773,13 +1818,15 @@
   },
   {
     "id": "06c35",
-    "radical": "氵",
-    "kradical": "汁",
+    "literal": "氵",
+    "kradReference": "汁",
     "number": 85,
     "strokecount": 4,
     "frequency": 1595,
     "top": 25,
-    "meanings": "water",
+    "meanings": [
+      "water"
+    ],
     "readings": [
       "みず"
     ],
@@ -1787,12 +1834,14 @@
   },
   {
     "id": "06c3a",
-    "radical": "氺",
+    "literal": "氺",
     "number": 85,
     "strokecount": 5,
     "frequency": 1595,
     "top": 25,
-    "meanings": "water",
+    "meanings": [
+      "water"
+    ],
     "readings": [
       "みず"
     ],
@@ -1800,8 +1849,8 @@
   },
   {
     "id": "0706b",
-    "radical": "火",
-    "kradical": "火",
+    "literal": "火",
+    "kradReference": "火",
     "number": 86,
     "strokecount": 4,
     "frequency": 639,
@@ -1818,8 +1867,8 @@
   },
   {
     "id": "0706c",
-    "radical": "灬",
-    "kradical": "杰",
+    "literal": "灬",
+    "kradReference": "杰",
     "number": 86,
     "strokecount": 4,
     "frequency": 639,
@@ -1834,8 +1883,8 @@
   },
   {
     "id": "0722a",
-    "radical": "爪",
-    "kradical": "爪",
+    "literal": "爪",
+    "kradReference": "爪",
     "number": 87,
     "strokecount": 4,
     "frequency": 36,
@@ -1849,12 +1898,12 @@
     ],
     "variants": [
       "爫",
-      "爫"
+      "⺤"
     ]
   },
   {
     "id": "0722b",
-    "radical": "爫",
+    "literal": "爫",
     "number": 87,
     "strokecount": 4,
     "frequency": 36,
@@ -1870,7 +1919,7 @@
   },
   {
     "id": "0fa49",
-    "radical": "爫",
+    "literal": "⺤",
     "number": 87,
     "strokecount": 4,
     "frequency": 36,
@@ -1886,8 +1935,8 @@
   },
   {
     "id": "07236",
-    "radical": "父",
-    "kradical": "父",
+    "literal": "父",
+    "kradReference": "父",
     "number": 88,
     "strokecount": 4,
     "frequency": 10,
@@ -1900,8 +1949,8 @@
   },
   {
     "id": "0723b",
-    "radical": "爻",
-    "kradical": "爻",
+    "literal": "爻",
+    "kradReference": "爻",
     "number": 89,
     "strokecount": 4,
     "frequency": 16,
@@ -1916,8 +1965,8 @@
   },
   {
     "id": "0723f",
-    "radical": "爿",
-    "kradical": "爿",
+    "literal": "爿",
+    "kradReference": "爿",
     "number": 90,
     "strokecount": 4,
     "frequency": 48,
@@ -1933,7 +1982,8 @@
   },
   {
     "id": "04e2c",
-    "radical": "丬",
+    "literal": "丬",
+    "kvgReference": "⺦",
     "number": 90,
     "strokecount": 3,
     "frequency": 48,
@@ -1947,8 +1997,8 @@
   },
   {
     "id": "07247",
-    "radical": "片",
-    "kradical": "片",
+    "literal": "片",
+    "kradReference": "片",
     "number": 91,
     "strokecount": 4,
     "frequency": 77,
@@ -1961,8 +2011,8 @@
   },
   {
     "id": "07259",
-    "radical": "牙",
-    "kradical": "牙",
+    "literal": "牙",
+    "kradReference": "牙",
     "number": 92,
     "strokecount": 4,
     "frequency": 9,
@@ -1975,8 +2025,8 @@
   },
   {
     "id": "0725b",
-    "radical": "牛",
-    "kradical": "牛",
+    "literal": "牛",
+    "kradReference": "牛",
     "number": 93,
     "strokecount": 4,
     "frequency": 233,
@@ -1993,7 +2043,7 @@
   },
   {
     "id": "0725c",
-    "radical": "牜",
+    "literal": "牜",
     "number": 93,
     "strokecount": 4,
     "frequency": 233,
@@ -2007,7 +2057,7 @@
   },
   {
     "id": "02ea7",
-    "radical": "⺧",
+    "literal": "⺧",
     "number": 93,
     "strokecount": 4,
     "frequency": 233,
@@ -2021,8 +2071,8 @@
   },
   {
     "id": "072ac",
-    "radical": "犬",
-    "kradical": "犬",
+    "literal": "犬",
+    "kradReference": "犬",
     "number": 94,
     "strokecount": 4,
     "frequency": 444,
@@ -2039,8 +2089,9 @@
   },
   {
     "id": "072ad",
-    "radical": "犭",
-    "kradical": "犯",
+    "literal": "犭",
+    "kradReference": "犯",
+    "kvgReference": "⺨",
     "number": 94,
     "strokecount": 3,
     "frequency": 444,
@@ -2055,8 +2106,8 @@
   },
   {
     "id": "07384",
-    "radical": "玄",
-    "kradical": "玄",
+    "literal": "玄",
+    "kradReference": "玄",
     "number": 95,
     "strokecount": 4,
     "frequency": 6,
@@ -2070,7 +2121,7 @@
   },
   {
     "id": "07389",
-    "radical": "玉",
+    "literal": "玉",
     "number": 96,
     "strokecount": 4,
     "frequency": 473,
@@ -2091,8 +2142,8 @@
   },
   {
     "id": "0738b",
-    "radical": "王",
-    "kradical": "王",
+    "literal": "王",
+    "kradReference": "王",
     "number": 96,
     "strokecount": 4,
     "frequency": 473,
@@ -2110,7 +2161,7 @@
   },
   {
     "id": "02ea9",
-    "radical": "⺩",
+    "literal": "⺩",
     "number": 96,
     "strokecount": 4,
     "frequency": 473,
@@ -2128,8 +2179,8 @@
   },
   {
     "id": "074dc",
-    "radical": "瓜",
-    "kradical": "瓜",
+    "literal": "瓜",
+    "kradReference": "瓜",
     "number": 97,
     "strokecount": 5,
     "frequency": 55,
@@ -2142,8 +2193,8 @@
   },
   {
     "id": "074e6",
-    "radical": "瓦",
-    "kradical": "瓦",
+    "literal": "瓦",
+    "kradReference": "瓦",
     "number": 98,
     "strokecount": 5,
     "frequency": 174,
@@ -2156,8 +2207,8 @@
   },
   {
     "id": "07518",
-    "radical": "甘",
-    "kradical": "甘",
+    "literal": "甘",
+    "kradReference": "甘",
     "number": 99,
     "strokecount": 5,
     "frequency": 22,
@@ -2170,8 +2221,8 @@
   },
   {
     "id": "0751f",
-    "radical": "生",
-    "kradical": "生",
+    "literal": "生",
+    "kradReference": "生",
     "number": 100,
     "strokecount": 5,
     "frequency": 22,
@@ -2184,8 +2235,8 @@
   },
   {
     "id": "07528",
-    "radical": "用",
-    "kradical": "用",
+    "literal": "用",
+    "kradReference": "用",
     "number": 101,
     "strokecount": 5,
     "frequency": 10,
@@ -2193,13 +2244,14 @@
       "use"
     ],
     "readings": [
-      "もちいる・よう"
+      "もちいる",
+      "よう"
     ]
   },
   {
     "id": "07530",
-    "radical": "田",
-    "kradical": "田",
+    "literal": "田",
+    "kradReference": "田",
     "number": 102,
     "strokecount": 5,
     "frequency": 192,
@@ -2213,8 +2265,8 @@
   },
   {
     "id": "0758b",
-    "radical": "疋",
-    "kradical": "疋",
+    "literal": "疋",
+    "kradReference": "疋",
     "number": 103,
     "strokecount": 5,
     "frequency": 15,
@@ -2230,7 +2282,7 @@
   },
   {
     "id": "24d14",
-    "radical": "𤴔",
+    "literal": "𤴔",
     "number": 103,
     "strokecount": 5,
     "frequency": 15,
@@ -2244,8 +2296,8 @@
   },
   {
     "id": "07592",
-    "radical": "疒",
-    "kradical": "疔",
+    "literal": "疒",
+    "kradReference": "疔",
     "number": 104,
     "strokecount": 5,
     "frequency": 526,
@@ -2259,8 +2311,8 @@
   },
   {
     "id": "07676",
-    "radical": "癶",
-    "kradical": "癶",
+    "literal": "癶",
+    "kradReference": "癶",
     "number": 105,
     "strokecount": 5,
     "frequency": 15,
@@ -2273,8 +2325,8 @@
   },
   {
     "id": "0767d",
-    "radical": "白",
-    "kradical": "白",
+    "literal": "白",
+    "kradReference": "白",
     "number": 106,
     "strokecount": 5,
     "frequency": 109,
@@ -2287,8 +2339,8 @@
   },
   {
     "id": "076ae",
-    "radical": "皮",
-    "kradical": "皮",
+    "literal": "皮",
+    "kradReference": "皮",
     "number": 107,
     "strokecount": 5,
     "frequency": 94,
@@ -2301,8 +2353,8 @@
   },
   {
     "id": "076bf",
-    "radical": "皿",
-    "kradical": "皿",
+    "literal": "皿",
+    "kradReference": "皿",
     "number": 108,
     "strokecount": 5,
     "frequency": 129,
@@ -2315,8 +2367,8 @@
   },
   {
     "id": "076ee",
-    "radical": "目",
-    "kradical": "目",
+    "literal": "目",
+    "kradReference": "目",
     "number": 109,
     "strokecount": 5,
     "frequency": 647,
@@ -2329,8 +2381,8 @@
   },
   {
     "id": "077db",
-    "radical": "矛",
-    "kradical": "矛",
+    "literal": "矛",
+    "kradReference": "矛",
     "number": 110,
     "strokecount": 5,
     "frequency": 65,
@@ -2344,8 +2396,8 @@
   },
   {
     "id": "077e2",
-    "radical": "矢",
-    "kradical": "矢",
+    "literal": "矢",
+    "kradReference": "矢",
     "strokecount": 5,
     "number": 111,
     "frequency": 64,
@@ -2358,8 +2410,8 @@
   },
   {
     "id": "077f3",
-    "radical": "石",
-    "kradical": "石",
+    "literal": "石",
+    "kradReference": "石",
     "number": 112,
     "strokecount": 5,
     "frequency": 499,
@@ -2373,8 +2425,8 @@
   },
   {
     "id": "0793a",
-    "radical": "示",
-    "kradical": "示",
+    "literal": "示",
+    "kradReference": "示",
     "number": 113,
     "strokecount": 5,
     "frequency": 213,
@@ -2392,8 +2444,8 @@
   },
   {
     "id": "0793b",
-    "radical": "礻",
-    "kradical": "礼",
+    "literal": "礻",
+    "kradReference": "礼",
     "number": 113,
     "strokecount": 4,
     "frequency": 213,
@@ -2409,8 +2461,8 @@
   },
   {
     "id": "079b8",
-    "radical": "禸",
-    "kradical": "禹",
+    "literal": "禸",
+    "kradReference": "禹",
     "number": 114,
     "strokecount": 5,
     "frequency": 12,
@@ -2423,8 +2475,8 @@
   },
   {
     "id": "079be",
-    "radical": "禾",
-    "kradical": "禾",
+    "literal": "禾",
+    "kradReference": "禾",
     "number": 115,
     "strokecount": 5,
     "frequency": 431,
@@ -2437,8 +2489,8 @@
   },
   {
     "id": "07a74",
-    "radical": "穴",
-    "kradical": "穴",
+    "literal": "穴",
+    "kradReference": "穴",
     "number": 116,
     "strokecount": 5,
     "frequency": 298,
@@ -2451,8 +2503,8 @@
   },
   {
     "id": "07acb",
-    "radical": "立",
-    "kradical": "立",
+    "literal": "立",
+    "kradReference": "立",
     "number": 117,
     "strokecount": 5,
     "frequency": 101,
@@ -2466,8 +2518,8 @@
   },
   {
     "id": "07af9",
-    "radical": "竹",
-    "kradical": "竹",
+    "literal": "竹",
+    "kradReference": "竹",
     "number": 118,
     "strokecount": 6,
     "frequency": 953,
@@ -2484,7 +2536,7 @@
   },
   {
     "id": "02eae",
-    "radical": "⺮",
+    "literal": "⺮",
     "number": 118,
     "strokecount": 6,
     "top": 75,
@@ -2498,8 +2550,8 @@
   },
   {
     "id": "07c73",
-    "radical": "米",
-    "kradical": "米",
+    "literal": "米",
+    "kradReference": "米",
     "number": 119,
     "strokecount": 6,
     "frequency": 318,
@@ -2512,8 +2564,8 @@
   },
   {
     "id": "07cf8",
-    "radical": "糸",
-    "kradical": "糸",
+    "literal": "糸",
+    "kradReference": "糸",
     "number": 120,
     "strokecount": 6,
     "frequency": 832,
@@ -2531,7 +2583,7 @@
   },
   {
     "id": "07cf9",
-    "radical": "糹",
+    "literal": "糹",
     "number": 120,
     "strokecount": 6,
     "frequency": 832,
@@ -2547,8 +2599,8 @@
   },
   {
     "id": "07f36",
-    "radical": "缶",
-    "kradical": "缶",
+    "literal": "缶",
+    "kradReference": "缶",
     "number": 121,
     "strokecount": 6,
     "frequency": 77,
@@ -2562,8 +2614,8 @@
   },
   {
     "id": "07f52",
-    "radical": "罒",
-    "kradical": "買",
+    "literal": "罒",
+    "kradReference": "買",
     "number": 122,
     "strokecount": 6,
     "frequency": 163,
@@ -2579,7 +2631,7 @@
   },
   {
     "id": "07f51",
-    "radical": "网",
+    "literal": "网",
     "number": 122,
     "strokecount": 5,
     "frequency": 163,
@@ -2593,8 +2645,8 @@
   },
   {
     "id": "07f8a",
-    "radical": "羊",
-    "kradical": "羊",
+    "literal": "羊",
+    "kradReference": "羊",
     "number": 123,
     "strokecount": 6,
     "frequency": 156,
@@ -2611,7 +2663,8 @@
   },
   {
     "id": "2634c",
-    "radical": "𦍌",
+    "literal": "𦍌",
+    "kvgReference": "⺷",
     "number": 123,
     "strokecount": 6,
     "frequency": 156,
@@ -2625,7 +2678,7 @@
   },
   {
     "id": "02eb6",
-    "radical": "⺶",
+    "literal": "⺶",
     "number": 123,
     "strokecount": 6,
     "frequency": 156,
@@ -2639,8 +2692,8 @@
   },
   {
     "id": "07fbd",
-    "radical": "羽",
-    "kradical": "羽",
+    "literal": "羽",
+    "kradReference": "羽",
     "number": 124,
     "strokecount": 6,
     "frequency": 220,
@@ -2654,7 +2707,7 @@
   },
   {
     "id": "08002",
-    "radical": "耂",
+    "literal": "耂",
     "number": 125,
     "strokecount": 6,
     "frequency": 22,
@@ -2670,8 +2723,8 @@
   },
   {
     "id": "08001",
-    "radical": "老",
-    "kradical": "老",
+    "literal": "老",
+    "kradReference": "老",
     "number": 125,
     "strokecount": 4,
     "frequency": 22,
@@ -2685,8 +2738,8 @@
   },
   {
     "id": "0800c",
-    "radical": "而",
-    "kradical": "而",
+    "literal": "而",
+    "kradReference": "而",
     "number": 126,
     "strokecount": 6,
     "frequency": 22,
@@ -2700,8 +2753,8 @@
   },
   {
     "id": "08012",
-    "radical": "耒",
-    "kradical": "耒",
+    "literal": "耒",
+    "kradReference": "耒",
     "number": 127,
     "strokecount": 6,
     "frequency": 84,
@@ -2714,8 +2767,8 @@
   },
   {
     "id": "08033",
-    "radical": "耳",
-    "kradical": "耳",
+    "literal": "耳",
+    "kradReference": "耳",
     "number": 128,
     "strokecount": 6,
     "frequency": 172,
@@ -2728,8 +2781,8 @@
   },
   {
     "id": "0807f",
-    "radical": "聿",
-    "kradical": "聿",
+    "literal": "聿",
+    "kradReference": "聿",
     "number": 129,
     "strokecount": 6,
     "frequency": 19,
@@ -2745,7 +2798,7 @@
   },
   {
     "id": "02ebb",
-    "radical": "⺻",
+    "literal": "⺻",
     "number": 129,
     "strokecount": 5,
     "frequency": 19,
@@ -2759,8 +2812,8 @@
   },
   {
     "id": "08089",
-    "radical": "肉",
-    "kradical": "肉",
+    "literal": "肉",
+    "kradReference": "肉",
     "number": 130,
     "strokecount": 6,
     "frequency": 674,
@@ -2777,7 +2830,7 @@
   },
   {
     "id": "02ebc",
-    "radical": "⺼",
+    "literal": "⺼",
     "number": 130,
     "strokecount": 4,
     "frequency": 674,
@@ -2792,8 +2845,8 @@
   },
   {
     "id": "081e3",
-    "radical": "臣",
-    "kradical": "臣",
+    "literal": "臣",
+    "kradReference": "臣",
     "number": 131,
     "strokecount": 7,
     "frequency": 16,
@@ -2807,8 +2860,8 @@
   },
   {
     "id": "081ea",
-    "radical": "自",
-    "kradical": "自",
+    "literal": "自",
+    "kradReference": "自",
     "number": 132,
     "strokecount": 6,
     "frequency": 34,
@@ -2821,8 +2874,8 @@
   },
   {
     "id": "081f3",
-    "radical": "至",
-    "kradical": "至",
+    "literal": "至",
+    "kradReference": "至",
     "number": 133,
     "strokecount": 6,
     "frequency": 24,
@@ -2835,8 +2888,9 @@
   },
   {
     "id": "081fc",
-    "radical": "臼",
-    "kradical": "臼",
+    "literal": "臼",
+    "kradReference": "臼",
+    "kvgReference": "𦥑",
     "number": 134,
     "strokecount": 6,
     "frequency": 71,
@@ -2849,8 +2903,8 @@
   },
   {
     "id": "0820c",
-    "radical": "舌",
-    "kradical": "舌",
+    "literal": "舌",
+    "kradReference": "舌",
     "number": 135,
     "strokecount": 6,
     "frequency": 31,
@@ -2863,8 +2917,8 @@
   },
   {
     "id": "0821b",
-    "radical": "舛",
-    "kradical": "舛",
+    "literal": "舛",
+    "kradReference": "舛",
     "number": 136,
     "strokecount": 7,
     "frequency": 10,
@@ -2877,8 +2931,8 @@
   },
   {
     "id": "0821f",
-    "radical": "舟",
-    "kradical": "舟",
+    "literal": "舟",
+    "kradReference": "舟",
     "number": 137,
     "strokecount": 6,
     "frequency": 197,
@@ -2891,8 +2945,8 @@
   },
   {
     "id": "0826e",
-    "radical": "艮",
-    "kradical": "艮",
+    "literal": "艮",
+    "kradReference": "艮",
     "number": 138,
     "strokecount": 6,
     "frequency": 5,
@@ -2905,8 +2959,8 @@
   },
   {
     "id": "08272",
-    "radical": "色",
-    "kradical": "色",
+    "literal": "色",
+    "kradReference": "色",
     "number": 139,
     "strokecount": 6,
     "frequency": 21,
@@ -2920,8 +2974,8 @@
   },
   {
     "id": "08279",
-    "radical": "艹",
-    "kradical": "艾",
+    "literal": "艹",
+    "kradReference": "艾",
     "number": 140,
     "strokecount": 3,
     "frequency": 1902,
@@ -2940,7 +2994,7 @@
   },
   {
     "id": "08278",
-    "radical": "艸",
+    "literal": "艸",
     "number": 140,
     "strokecount": 6,
     "frequency": 1902,
@@ -2955,8 +3009,8 @@
   },
   {
     "id": "04491",
-    "radical": "䒑",
-    "kradical": "并",
+    "literal": "䒑",
+    "kradReference": "并",
     "number": 140,
     "strokecount": 3,
     "frequency": 1902,
@@ -2971,8 +3025,8 @@
   },
   {
     "id": "0864d",
-    "radical": "虍",
-    "kradical": "虍",
+    "literal": "虍",
+    "kradReference": "虍",
     "number": 141,
     "strokecount": 6,
     "frequency": 114,
@@ -2985,8 +3039,8 @@
   },
   {
     "id": "0866b",
-    "radical": "虫",
-    "kradical": "虫",
+    "literal": "虫",
+    "kradReference": "虫",
     "number": 142,
     "strokecount": 6,
     "frequency": 1067,
@@ -2999,8 +3053,8 @@
   },
   {
     "id": "08840",
-    "radical": "血",
-    "kradical": "血",
+    "literal": "血",
+    "kradReference": "血",
     "number": 143,
     "strokecount": 6,
     "frequency": 60,
@@ -3013,8 +3067,8 @@
   },
   {
     "id": "0884c",
-    "radical": "行",
-    "kradical": "行",
+    "literal": "行",
+    "kradReference": "行",
     "number": 144,
     "strokecount": 6,
     "frequency": 53,
@@ -3028,8 +3082,8 @@
   },
   {
     "id": "08863",
-    "radical": "衣",
-    "kradical": "衣",
+    "literal": "衣",
+    "kradReference": "衣",
     "number": 145,
     "strokecount": 6,
     "frequency": 607,
@@ -3045,8 +3099,8 @@
   },
   {
     "id": "08864",
-    "radical": "衤",
-    "kradical": "初",
+    "literal": "衤",
+    "kradReference": "初",
     "number": 145,
     "strokecount": 5,
     "frequency": 607,
@@ -3060,8 +3114,8 @@
   },
   {
     "id": "0897f",
-    "radical": "西",
-    "kradical": "西",
+    "literal": "西",
+    "kradReference": "西",
     "number": 146,
     "strokecount": 6,
     "frequency": 29,
@@ -3078,7 +3132,7 @@
   },
   {
     "id": "08980",
-    "radical": "覀",
+    "literal": "覀",
     "number": 146,
     "strokecount": 6,
     "frequency": 29,
@@ -3092,7 +3146,7 @@
   },
   {
     "id": "0897e",
-    "radical": "襾",
+    "literal": "襾",
     "number": 146,
     "strokecount": 6,
     "frequency": 29,
@@ -3106,8 +3160,8 @@
   },
   {
     "id": "0898b",
-    "radical": "見",
-    "kradical": "見",
+    "literal": "見",
+    "kradReference": "見",
     "number": 147,
     "strokecount": 7,
     "frequency": 161,
@@ -3120,8 +3174,8 @@
   },
   {
     "id": "089d2",
-    "radical": "角",
-    "kradical": "角",
+    "literal": "角",
+    "kradReference": "角",
     "number": 148,
     "strokecount": 7,
     "frequency": 158,
@@ -3134,8 +3188,8 @@
   },
   {
     "id": "08a00",
-    "radical": "言",
-    "kradical": "言",
+    "literal": "言",
+    "kradReference": "言",
     "number": 149,
     "strokecount": 7,
     "frequency": 861,
@@ -3152,7 +3206,7 @@
   },
   {
     "id": "08a01",
-    "radical": "訁",
+    "literal": "訁",
     "number": 149,
     "strokecount": 7,
     "frequency": 861,
@@ -3167,8 +3221,8 @@
   },
   {
     "id": "08c37",
-    "radical": "谷",
-    "kradical": "谷",
+    "literal": "谷",
+    "kradReference": "谷",
     "number": 150,
     "strokecount": 7,
     "frequency": 54,
@@ -3181,8 +3235,8 @@
   },
   {
     "id": "08c46",
-    "radical": "豆",
-    "kradical": "豆",
+    "literal": "豆",
+    "kradReference": "豆",
     "number": 151,
     "strokecount": 7,
     "frequency": 68,
@@ -3195,8 +3249,8 @@
   },
   {
     "id": "08c55",
-    "radical": "豕",
-    "kradical": "豕",
+    "literal": "豕",
+    "kradReference": "豕",
     "number": 152,
     "strokecount": 7,
     "frequency": 148,
@@ -3209,8 +3263,8 @@
   },
   {
     "id": "08c78",
-    "radical": "豸",
-    "kradical": "豸",
+    "literal": "豸",
+    "kradReference": "豸",
     "number": 153,
     "strokecount": 7,
     "frequency": 140,
@@ -3224,8 +3278,8 @@
   },
   {
     "id": "08c9d",
-    "radical": "貝",
-    "kradical": "貝",
+    "literal": "貝",
+    "kradReference": "貝",
     "number": 154,
     "strokecount": 7,
     "frequency": 277,
@@ -3239,8 +3293,8 @@
   },
   {
     "id": "08d64",
-    "radical": "赤",
-    "kradical": "赤",
+    "literal": "赤",
+    "kradReference": "赤",
     "number": 155,
     "strokecount": 7,
     "frequency": 31,
@@ -3254,8 +3308,8 @@
   },
   {
     "id": "08d70",
-    "radical": "走",
-    "kradical": "走",
+    "literal": "走",
+    "kradReference": "走",
     "number": 156,
     "strokecount": 7,
     "frequency": 285,
@@ -3268,8 +3322,8 @@
   },
   {
     "id": "08db3",
-    "radical": "足",
-    "kradical": "足",
+    "literal": "足",
+    "kradReference": "足",
     "number": 157,
     "strokecount": 7,
     "frequency": 580,
@@ -3285,7 +3339,7 @@
   },
   {
     "id": "27fb7",
-    "radical": "𧾷",
+    "literal": "𧾷",
     "number": 157,
     "strokecount": 7,
     "frequency": 580,
@@ -3299,8 +3353,8 @@
   },
   {
     "id": "08eab",
-    "radical": "身",
-    "kradical": "身",
+    "literal": "身",
+    "kradReference": "身",
     "number": 158,
     "strokecount": 7,
     "frequency": 97,
@@ -3313,8 +3367,8 @@
   },
   {
     "id": "08eca",
-    "radical": "車",
-    "kradical": "車",
+    "literal": "車",
+    "kradReference": "車",
     "number": 159,
     "strokecount": 7,
     "frequency": 361,
@@ -3328,8 +3382,8 @@
   },
   {
     "id": "08f9b",
-    "radical": "辛",
-    "kradical": "辛",
+    "literal": "辛",
+    "kradReference": "辛",
     "number": 160,
     "strokecount": 7,
     "frequency": 36,
@@ -3343,19 +3397,22 @@
   },
   {
     "id": "08fb0",
-    "radical": "辰",
-    "kradical": "辰",
+    "literal": "辰",
+    "kradReference": "辰",
     "number": 161,
     "strokecount": 7,
-    "meanings": "morning",
+    "meanings": [
+      "morning"
+    ],
     "readings": [
-      "たつ・しんのたつ"
+      "たつ",
+      "しんのたつ"
     ]
   },
   {
     "id": "02ecc",
-    "radical": "⻌",
-    "kradical": "込",
+    "literal": "⻌",
+    "kradReference": "込",
     "number": 162,
     "strokecount": 3,
     "frequency": 381,
@@ -3373,7 +3430,7 @@
   },
   {
     "id": "08fb5",
-    "radical": "辵",
+    "literal": "辵",
     "number": 162,
     "strokecount": 7,
     "frequency": 381,
@@ -3388,7 +3445,7 @@
   },
   {
     "id": "08fb6",
-    "radical": "辶",
+    "literal": "辶",
     "number": 162,
     "strokecount": 4,
     "frequency": 381,
@@ -3403,8 +3460,8 @@
   },
   {
     "id": "09091",
-    "radical": "邑",
-    "kradical": "邑",
+    "literal": "邑",
+    "kradReference": "邑",
     "number": 163,
     "strokecount": 7,
     "frequency": 350,
@@ -3421,8 +3478,8 @@
   },
   {
     "id": "02ecf",
-    "radical": "⻏",
-    "kradical": "邦",
+    "literal": "⻏",
+    "kradReference": "邦",
     "number": 163,
     "strokecount": 3,
     "frequency": 350,
@@ -3437,21 +3494,23 @@
   },
   {
     "id": "09149",
-    "radical": "酉",
-    "kradical": "酉",
+    "literal": "酉",
+    "kradReference": "酉",
     "number": 164,
     "strokecount": 7,
     "frequency": 290,
     "top": 75,
-    "meanings": "sake",
+    "meanings": [
+      "sake"
+    ],
     "readings": [
       "とり"
     ]
   },
   {
     "id": "091c6",
-    "radical": "釆",
-    "kradical": "釆",
+    "literal": "釆",
+    "kradReference": "釆",
     "number": 165,
     "strokecount": 7,
     "frequency": 14,
@@ -3466,8 +3525,8 @@
   },
   {
     "id": "091cc",
-    "radical": "里",
-    "kradical": "里",
+    "literal": "里",
+    "kradReference": "里",
     "number": 166,
     "strokecount": 7,
     "frequency": 14,
@@ -3481,8 +3540,8 @@
   },
   {
     "id": "091d1",
-    "radical": "金",
-    "kradical": "金",
+    "literal": "金",
+    "kradReference": "金",
     "number": 167,
     "strokecount": 8,
     "frequency": 806,
@@ -3500,7 +3559,7 @@
   },
   {
     "id": "091d2",
-    "radical": "釒",
+    "literal": "釒",
     "number": 167,
     "strokecount": 8,
     "frequency": 806,
@@ -3516,8 +3575,8 @@
   },
   {
     "id": "09577",
-    "radical": "長",
-    "kradical": "長",
+    "literal": "長",
+    "kradReference": "長",
     "number": 168,
     "strokecount": 8,
     "frequency": 55,
@@ -3536,7 +3595,7 @@
   },
   {
     "id": "09578",
-    "radical": "镸",
+    "literal": "镸",
     "number": 168,
     "strokecount": 7,
     "frequency": 55,
@@ -3553,8 +3612,8 @@
   },
   {
     "id": "09580",
-    "radical": "門",
-    "kradical": "門",
+    "literal": "門",
+    "kradReference": "門",
     "number": 169,
     "strokecount": 8,
     "frequency": 246,
@@ -3567,7 +3626,7 @@
   },
   {
     "id": "0961c",
-    "radical": "阜",
+    "literal": "阜",
     "number": 170,
     "strokecount": 8,
     "frequency": 348,
@@ -3585,8 +3644,8 @@
   },
   {
     "id": "02ed6",
-    "radical": "⻖",
-    "kradical": "阡",
+    "literal": "⻖",
+    "kradReference": "阡",
     "number": 170,
     "strokecount": 3,
     "top": 50,
@@ -3601,8 +3660,8 @@
   },
   {
     "id": "096b6",
-    "radical": "隶",
-    "kradical": "隶",
+    "literal": "隶",
+    "kradReference": "隶",
     "number": 171,
     "strokecount": 8,
     "frequency": 12,
@@ -3616,20 +3675,22 @@
   },
   {
     "id": "096b9",
-    "radical": "隹",
-    "kradical": "隹",
+    "literal": "隹",
+    "kradReference": "隹",
     "number": 172,
     "strokecount": 8,
     "frequency": 233,
-    "meanings": "old bird",
+    "meanings": [
+      "old bird"
+    ],
     "readings": [
       "ふるとり"
     ]
   },
   {
     "id": "096e8",
-    "radical": "雨",
-    "kradical": "雨",
+    "literal": "雨",
+    "kradReference": "雨",
     "number": 173,
     "strokecount": 8,
     "frequency": 298,
@@ -3646,7 +3707,7 @@
   },
   {
     "id": "02ed7",
-    "radical": "⻗",
+    "literal": "⻗",
     "number": 173,
     "strokecount": 8,
     "frequency": 298,
@@ -3661,8 +3722,8 @@
   },
   {
     "id": "09752",
-    "radical": "青",
-    "kradical": "青",
+    "literal": "青",
+    "kradReference": "青",
     "number": 174,
     "strokecount": 8,
     "frequency": 17,
@@ -3679,7 +3740,7 @@
   },
   {
     "id": "09751",
-    "radical": "靑",
+    "literal": "靑",
     "number": 174,
     "strokecount": 8,
     "frequency": 17,
@@ -3694,8 +3755,8 @@
   },
   {
     "id": "0975e",
-    "radical": "非",
-    "kradical": "非",
+    "literal": "非",
+    "kradReference": "非",
     "number": 175,
     "strokecount": 8,
     "frequency": 25,
@@ -3708,8 +3769,8 @@
   },
   {
     "id": "09762",
-    "radical": "面",
-    "kradical": "面",
+    "literal": "面",
+    "kradReference": "面",
     "number": 176,
     "strokecount": 9,
     "frequency": 66,
@@ -3722,8 +3783,8 @@
   },
   {
     "id": "09769",
-    "radical": "革",
-    "kradical": "革",
+    "literal": "革",
+    "kradReference": "革",
     "number": 177,
     "strokecount": 9,
     "frequency": 305,
@@ -3737,8 +3798,8 @@
   },
   {
     "id": "097cb",
-    "radical": "韋",
-    "kradical": "韋",
+    "literal": "韋",
+    "kradReference": "韋",
     "number": 178,
     "strokecount": 10,
     "frequency": 100,
@@ -3751,8 +3812,8 @@
   },
   {
     "id": "097ed",
-    "radical": "韭",
-    "kradical": "韭",
+    "literal": "韭",
+    "kradReference": "韭",
     "number": 179,
     "strokecount": 9,
     "frequency": 20,
@@ -3765,8 +3826,8 @@
   },
   {
     "id": "097f3",
-    "radical": "音",
-    "kradical": "音",
+    "literal": "音",
+    "kradReference": "音",
     "number": 180,
     "strokecount": 9,
     "frequency": 43,
@@ -3779,8 +3840,8 @@
   },
   {
     "id": "09801",
-    "radical": "頁",
-    "kradical": "頁",
+    "literal": "頁",
+    "kradReference": "頁",
     "number": 181,
     "strokecount": 9,
     "frequency": 372,
@@ -3793,12 +3854,14 @@
   },
   {
     "id": "098a8",
-    "radical": "風",
-    "kradical": "風",
+    "literal": "風",
+    "kradReference": "風",
     "number": 182,
     "strokecount": 9,
     "frequency": 182,
-    "meanings": "wind",
+    "meanings": [
+      "wind"
+    ],
     "readings": [
       "かぜ"
     ],
@@ -3808,11 +3871,13 @@
   },
   {
     "id": "20628",
-    "radical": "𠘨",
+    "literal": "𠘨",
     "number": 182,
     "strokecount": 2,
     "frequency": 182,
-    "meanings": "wind",
+    "meanings": [
+      "wind"
+    ],
     "readings": [
       "かぜ"
     ],
@@ -3820,8 +3885,8 @@
   },
   {
     "id": "098db",
-    "radical": "飛",
-    "kradical": "飛",
+    "literal": "飛",
+    "kradReference": "飛",
     "number": 183,
     "strokecount": 9,
     "frequency": 92,
@@ -3834,8 +3899,8 @@
   },
   {
     "id": "098df",
-    "radical": "食",
-    "kradical": "食",
+    "literal": "食",
+    "kradReference": "食",
     "number": 184,
     "strokecount": 9,
     "frequency": 403,
@@ -3853,7 +3918,7 @@
   },
   {
     "id": "098e0",
-    "radical": "飠",
+    "literal": "飠",
     "number": 184,
     "strokecount": 8,
     "frequency": 403,
@@ -3868,7 +3933,8 @@
   },
   {
     "id": "2967f",
-    "radical": "𩙿",
+    "literal": "𩙿",
+    "kvgReference": "⻞",
     "number": 184,
     "strokecount": 9,
     "frequency": 403,
@@ -3883,8 +3949,8 @@
   },
   {
     "id": "09996",
-    "radical": "首",
-    "kradical": "首",
+    "literal": "首",
+    "kradReference": "首",
     "number": 185,
     "strokecount": 9,
     "frequency": 20,
@@ -3898,8 +3964,8 @@
   },
   {
     "id": "09999",
-    "radical": "香",
-    "kradical": "香",
+    "literal": "香",
+    "kradReference": "香",
     "number": 186,
     "strokecount": 9,
     "frequency": 37,
@@ -3912,8 +3978,8 @@
   },
   {
     "id": "099ac",
-    "radical": "馬",
-    "kradical": "馬",
+    "literal": "馬",
+    "kradReference": "馬",
     "number": 187,
     "strokecount": 10,
     "frequency": 472,
@@ -3926,8 +3992,8 @@
   },
   {
     "id": "09aa8",
-    "radical": "骨",
-    "kradical": "骨",
+    "literal": "骨",
+    "kradReference": "骨",
     "number": 188,
     "strokecount": 10,
     "frequency": 185,
@@ -3940,8 +4006,8 @@
   },
   {
     "id": "09ad8",
-    "radical": "高",
-    "kradical": "高",
+    "literal": "高",
+    "kradReference": "高",
     "number": 189,
     "strokecount": 10,
     "frequency": 34,
@@ -3955,8 +4021,8 @@
   },
   {
     "id": "09adf",
-    "radical": "髟",
-    "kradical": "髟",
+    "literal": "髟",
+    "kradReference": "髟",
     "number": 190,
     "strokecount": 10,
     "frequency": 243,
@@ -3969,8 +4035,8 @@
   },
   {
     "id": "09b25",
-    "radical": "鬥",
-    "kradical": "鬥",
+    "literal": "鬥",
+    "kradReference": "鬥",
     "number": 191,
     "strokecount": 10,
     "frequency": 23,
@@ -3983,8 +4049,8 @@
   },
   {
     "id": "09b2f",
-    "radical": "鬯",
-    "kradical": "鬯",
+    "literal": "鬯",
+    "kradReference": "鬯",
     "number": 192,
     "strokecount": 10,
     "frequency": 8,
@@ -3998,8 +4064,8 @@
   },
   {
     "id": "09b32",
-    "radical": "鬲",
-    "kradical": "鬲",
+    "literal": "鬲",
+    "kradReference": "鬲",
     "number": 193,
     "strokecount": 10,
     "frequency": 73,
@@ -4013,8 +4079,8 @@
   },
   {
     "id": "09b3c",
-    "radical": "鬼",
-    "kradical": "鬼",
+    "literal": "鬼",
+    "kradReference": "鬼",
     "number": 194,
     "strokecount": 10,
     "frequency": 141,
@@ -4028,8 +4094,8 @@
   },
   {
     "id": "09b5a",
-    "radical": "魚",
-    "kradical": "魚",
+    "literal": "魚",
+    "kradReference": "魚",
     "number": 195,
     "strokecount": 11,
     "frequency": 571,
@@ -4042,8 +4108,8 @@
   },
   {
     "id": "09ce5",
-    "radical": "鳥",
-    "kradical": "鳥",
+    "literal": "鳥",
+    "kradReference": "鳥",
     "number": 196,
     "strokecount": 11,
     "frequency": 750,
@@ -4056,8 +4122,8 @@
   },
   {
     "id": "09e75",
-    "radical": "鹵",
-    "kradical": "鹵",
+    "literal": "鹵",
+    "kradReference": "鹵",
     "number": 197,
     "strokecount": 11,
     "frequency": 44,
@@ -4070,8 +4136,8 @@
   },
   {
     "id": "09e7f",
-    "radical": "鹿",
-    "kradical": "鹿",
+    "literal": "鹿",
+    "kradReference": "鹿",
     "number": 198,
     "strokecount": 11,
     "frequency": 104,
@@ -4084,8 +4150,8 @@
   },
   {
     "id": "09ea6",
-    "radical": "麦",
-    "kradical": "麦",
+    "literal": "麦",
+    "kradReference": "麦",
     "number": 199,
     "strokecount": 7,
     "frequency": 131,
@@ -4101,7 +4167,7 @@
   },
   {
     "id": "09ea5",
-    "radical": "麥",
+    "literal": "麥",
     "number": 199,
     "strokecount": 11,
     "frequency": 131,
@@ -4115,8 +4181,8 @@
   },
   {
     "id": "09ebb",
-    "radical": "麻",
-    "kradical": "麻",
+    "literal": "麻",
+    "kradReference": "麻",
     "number": 200,
     "strokecount": 11,
     "frequency": 34,
@@ -4130,8 +4196,8 @@
   },
   {
     "id": "09ec4",
-    "radical": "黄",
-    "kradical": "黄",
+    "literal": "黄",
+    "kradReference": "黄",
     "number": 201,
     "strokecount": 11,
     "frequency": 42,
@@ -4147,7 +4213,7 @@
   },
   {
     "id": "09ec3",
-    "radical": "黃",
+    "literal": "黃",
     "number": 201,
     "strokecount": 12,
     "frequency": 42,
@@ -4161,8 +4227,8 @@
   },
   {
     "id": "09ecd",
-    "radical": "黍",
-    "kradical": "黍",
+    "literal": "黍",
+    "kradReference": "黍",
     "number": 202,
     "strokecount": 12,
     "frequency": 46,
@@ -4175,8 +4241,8 @@
   },
   {
     "id": "09ed2",
-    "radical": "黒",
-    "kradical": "黒",
+    "literal": "黒",
+    "kradReference": "黒",
     "number": 203,
     "strokecount": 11,
     "frequency": 172,
@@ -4192,7 +4258,7 @@
   },
   {
     "id": "09ed1",
-    "radical": "黑",
+    "literal": "黑",
     "number": 203,
     "strokecount": 12,
     "frequency": 172,
@@ -4206,8 +4272,8 @@
   },
   {
     "id": "09ef9",
-    "radical": "黹",
-    "kradical": "黹",
+    "literal": "黹",
+    "kradReference": "黹",
     "number": 204,
     "strokecount": 12,
     "frequency": 8,
@@ -4221,8 +4287,8 @@
   },
   {
     "id": "09efd",
-    "radical": "黽",
-    "kradical": "黽",
+    "literal": "黽",
+    "kradReference": "黽",
     "number": 205,
     "strokecount": 13,
     "frequency": 40,
@@ -4236,8 +4302,8 @@
   },
   {
     "id": "09f0e",
-    "radical": "鼎",
-    "kradical": "鼎",
+    "literal": "鼎",
+    "kradReference": "鼎",
     "number": 206,
     "strokecount": 13,
     "frequency": 14,
@@ -4250,8 +4316,8 @@
   },
   {
     "id": "09f13",
-    "radical": "鼓",
-    "kradical": "鼓",
+    "literal": "鼓",
+    "kradReference": "鼓",
     "number": 207,
     "strokecount": 13,
     "frequency": 46,
@@ -4264,8 +4330,8 @@
   },
   {
     "id": "09f20",
-    "radical": "鼠",
-    "kradical": "鼠",
+    "literal": "鼠",
+    "kradReference": "鼠",
     "number": 208,
     "strokecount": 13,
     "frequency": 92,
@@ -4279,8 +4345,8 @@
   },
   {
     "id": "09f3b",
-    "radical": "鼻",
-    "kradical": "鼻",
+    "literal": "鼻",
+    "kradReference": "鼻",
     "number": 209,
     "strokecount": 14,
     "frequency": 49,
@@ -4293,8 +4359,8 @@
   },
   {
     "id": "09f4a",
-    "radical": "齊",
-    "kradical": "齊",
+    "literal": "齊",
+    "kradReference": "齊",
     "number": 210,
     "strokecount": 14,
     "frequency": 18,
@@ -4308,8 +4374,8 @@
   },
   {
     "id": "06b6f",
-    "radical": "歯",
-    "kradical": "歯",
+    "literal": "歯",
+    "kradReference": "歯",
     "number": 211,
     "strokecount": 12,
     "frequency": 162,
@@ -4326,7 +4392,7 @@
   },
   {
     "id": "09f52",
-    "radical": "齒",
+    "literal": "齒",
     "number": 211,
     "strokecount": 15,
     "frequency": 162,
@@ -4341,8 +4407,8 @@
   },
   {
     "id": "07adc",
-    "radical": "竜",
-    "kradical": "竜",
+    "literal": "竜",
+    "kradReference": "竜",
     "number": 212,
     "strokecount": 10,
     "frequency": 14,
@@ -4358,7 +4424,7 @@
   },
   {
     "id": "09f8d",
-    "radical": "龍",
+    "literal": "龍",
     "number": 212,
     "strokecount": 16,
     "frequency": 14,
@@ -4372,8 +4438,8 @@
   },
   {
     "id": "04e80",
-    "radical": "亀",
-    "kradical": "亀",
+    "literal": "亀",
+    "kradReference": "亀",
     "number": 213,
     "strokecount": 11,
     "meanings": [
@@ -4389,7 +4455,7 @@
   },
   {
     "id": "09f9c",
-    "radical": "龜",
+    "literal": "龜",
     "number": 213,
     "strokecount": 16,
     "meanings": [
@@ -4403,8 +4469,8 @@
   },
   {
     "id": "09fa0",
-    "radical": "龠",
-    "kradical": "龠",
+    "literal": "龠",
+    "kradReference": "龠",
     "number": 214,
     "strokecount": 17,
     "frequency": 19,
@@ -4417,140 +4483,201 @@
   },
   {
     "id": "030de",
-    "radical": "マ",
-    "kradical": "マ",
+    "literal": "マ",
+    "kradReference": "マ",
     "strokecount": 2
   },
   {
     "id": "04e5d",
-    "radical": "九",
-    "kradical": "九",
+    "literal": "九",
+    "kradReference": "九",
     "strokecount": 2
   },
   {
     "id": "030e6",
-    "radical": "ユ",
-    "kradical": "ユ",
+    "literal": "ユ",
+    "kradReference": "ユ",
     "strokecount": 2
   },
   {
     "id": "04e43",
-    "radical": "乃",
-    "kradical": "乃",
+    "literal": "乃",
+    "kradReference": "乃",
     "strokecount": 2
   },
   {
     "id": "04e5f",
-    "radical": "也",
-    "kradical": "也",
+    "literal": "也",
+    "kradReference": "也",
     "strokecount": 3
   },
   {
     "id": "053ca",
-    "radical": "及",
-    "kradical": "及",
+    "literal": "及",
+    "kradReference": "及",
     "strokecount": 3
   },
   {
     "id": "04e45",
-    "radical": "久",
-    "kradical": "久",
+    "literal": "久",
+    "kradReference": "久",
     "strokecount": 3
   },
   {
     "id": "05143",
-    "radical": "元",
-    "kradical": "元",
+    "literal": "元",
+    "kradReference": "元",
     "strokecount": 4
   },
   {
     "id": "04e95",
-    "radical": "井",
-    "kradical": "井",
+    "literal": "井",
+    "kradReference": "井",
     "strokecount": 4
   },
   {
     "id": "052ff",
-    "radical": "勿",
-    "kradical": "勿",
+    "literal": "勿",
+    "kradReference": "勿",
     "strokecount": 4
   },
   {
     "id": "04e94",
-    "radical": "五",
-    "kradical": "五",
+    "literal": "五",
+    "kradReference": "五",
     "strokecount": 4
   },
   {
     "id": "05c6f",
-    "radical": "屯",
-    "kradical": "屯",
+    "literal": "屯",
+    "kradReference": "屯",
     "strokecount": 4
   },
   {
     "id": "05df4",
-    "radical": "巴",
-    "kradical": "巴",
+    "literal": "巴",
+    "kradReference": "巴",
     "strokecount": 4
   },
   {
     "id": "04e16",
-    "radical": "世",
-    "kradical": "世",
+    "literal": "世",
+    "kradReference": "世",
     "strokecount": 5
   },
   {
     "id": "05de8",
-    "radical": "巨",
-    "kradical": "巨",
+    "literal": "巨",
+    "kradReference": "巨",
     "strokecount": 5
   },
   {
     "id": "0518a",
-    "radical": "冊",
-    "kradical": "冊",
+    "literal": "冊",
+    "kradReference": "冊",
     "strokecount": 5
   },
   {
     "id": "05944",
-    "radical": "奄",
-    "kradical": "奄",
+    "literal": "奄",
+    "kradReference": "奄",
     "strokecount": 8
   },
   {
     "id": "05ca1",
-    "radical": "岡",
-    "kradical": "岡",
+    "literal": "岡",
+    "kradReference": "岡",
     "strokecount": 8
   },
   {
     "id": "0514d",
-    "radical": "免",
-    "kradical": "免",
+    "literal": "免",
+    "kradReference": "免",
     "strokecount": 8
   },
   {
     "id": "06589",
-    "radical": "斉",
-    "kradical": "斉",
+    "literal": "斉",
+    "kradReference": "斉",
     "strokecount": 8
   },
   {
-    "id": "054c1",
-    "radical": "品",
-    "kradical": "品",
-    "strokecount": 9
-  },
-  {
     "id": "05547",
-    "radical": "啇",
-    "kradical": "滴",
+    "literal": "啇",
+    "kradReference": "滴",
     "strokecount": 11
   },
   {
     "id": "07121",
-    "radical": "無",
-    "kradical": "無",
+    "literal": "無",
+    "kradReference": "無",
     "strokecount": 12
+  },
+  {
+    "id": "04e1a",
+    "literal": "业",
+    "realted": "一",
+    "strokecount": 4
+  },
+  {
+    "id": "09fb6",
+    "literal": "龶",
+    "related": "土",
+    "strokecount": 4
+  },
+  {
+    "id": "27607",
+    "literal": "𧘇",
+    "related": "衣",
+    "strokecount": 4
+  },
+  {
+    "id": "04e61",
+    "literal": "乡",
+    "related": "幺",
+    "strokecount": 3
+  },
+  {
+    "id": "09fb7",
+    "literal": "龷",
+    "related": "艸",
+    "strokecount": 4
+  },
+  {
+    "id": "030f0",
+    "literal": "ヰ",
+    "kvgReference": "㐄",
+    "strokecount": 4
+  },
+  {
+    "id": "030b3",
+    "literal": "コ",
+    "strokecount": 2
+  },
+  {
+    "id": "03405",
+    "literal": "㐅",
+    "kvgReference": "乂",
+    "strokecount": 2
+  },
+  {
+    "id": "20089",
+    "literal": "𠂉",
+    "strokecount": 2
+  },
+  {
+    "id": "05eff",
+    "literal": "廿",
+    "strokecount": 4
+  },
+  {
+    "id": "04e02",
+    "literal": "丂",
+    "strokecount": 2
+  },
+  {
+    "id": "20087",
+    "literal": "𠂇",
+    "strokecount": 2
   }
 ]

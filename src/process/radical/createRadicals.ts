@@ -16,8 +16,7 @@ export default (): Radical[] => {
   bar.start(tkdbRadicals.length, 0);
 
   for (const tkdbRadical of tkdbRadicals) {
-    // Remove kradical from output
-    radicals.push({...tkdbRadical, kradical: undefined});
+    radicals.push({...tkdbRadical});
     bar.increment();
   }
 

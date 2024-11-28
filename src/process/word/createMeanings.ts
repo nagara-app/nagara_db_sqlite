@@ -1,9 +1,7 @@
-import {toArray, toArrayOrUndefined} from '../../utils';
-import {createFormPairs} from '../../process/word/createForms';
+import type {WordLanguageSource, WordMeaning} from 'tkdb-helper';
 
 import type {
   JMdictEntr,
-  JMdictSens,
   JMdictSensDial,
   JMdictSensField,
   JMdictSensGloss,
@@ -11,45 +9,63 @@ import type {
   JMdictSensMisc,
   JMdictSensPos,
 } from '../../type/jmdict';
-import type {WordLanguageSource, WordMeaning} from 'tkdb-helper';
 
-export default (jmEntry: JMdictEntr): WordMeaning[] => {
+import {toArray, toArrayOrUndefined, toHash} from '../../utils';
+
+export default (
+  jmEntry: JMdictEntr,
+  kana: string,
+  kanji?: string
+): WordMeaning[] => {
   const meanings: WordMeaning[] = [];
 
   const jmSenses = toArray(jmEntry.sense);
 
   for (const jmSense of jmSenses) {
-    const jmGloss = toArrayOrUndefined(jmSense.gloss);
-    const jmPartsOfSpeech = toArrayOrUndefined(jmSense.pos);
-    const jmFields = toArrayOrUndefined(jmSense.field);
-    const jmDialects = toArrayOrUndefined(jmSense.dial);
-    const jmMiscs = toArrayOrUndefined(jmSense.misc);
-    const jmSenseInfo = jmSense.s_inf;
-    const jmLsources = toArrayOrUndefined(jmSense.lsource);
+    const {gloss, pos, field, dial, misc, s_inf, lsource, stagk, stagr} =
+      jmSense;
 
-    const translations = createTranslations(jmGloss);
+    const restrictedKanaList = toArrayOrUndefined(stagk);
+    const restrictedKanjiList = toArrayOrUndefined(stagr);
 
-    // Skip sense if there is no translation
-    if (translations === undefined) {
+    // This meaning is restricted, but not for this kana
+    const isKanaRestricted =
+      restrictedKanaList && !restrictedKanaList.includes(kana);
+
+    // This meaning is restricted, but not for this kanji
+    const isKanjiRestricted =
+      kanji && restrictedKanjiList && !restrictedKanjiList.includes(kanji);
+
+    // Skip this meaning
+    if (isKanaRestricted || isKanjiRestricted) {
       continue;
     }
 
+    const jmGloss = toArray(gloss);
+    const jmPartsOfSpeech = toArrayOrUndefined(pos);
+    const jmFields = toArrayOrUndefined(field);
+    const jmDialects = toArrayOrUndefined(dial);
+    const jmMiscs = toArrayOrUndefined(misc);
+    const jmSenseInfo = s_inf;
+    const jmLsources = toArrayOrUndefined(lsource);
+
+    const id = toHash(jmGloss.join());
+    const translations = createTranslations(jmGloss);
     const wordClasses = getWordClasses(jmPartsOfSpeech);
     const fieldCategories = getFieldCategories(jmFields);
     const dialectCategories = getDialectCategories(jmDialects);
     const miscCategories = getMiscCategories(jmMiscs);
     const informations = getInformations(jmSenseInfo);
-    const formRestricions = getFormRestrictions(jmEntry, jmSense);
     const languageSources = getLanguageSources(jmLsources);
 
     meanings.push({
+      id,
       translations,
       wordClasses,
       fieldCategories,
       dialectCategories,
       miscCategories,
       informations,
-      formRestricions,
       languageSources,
     });
   }
@@ -60,36 +76,24 @@ export default (jmEntry: JMdictEntr): WordMeaning[] => {
 const getWordClasses = (
   jmPartsOfSpeech: JMdictSensPos[] | undefined
 ): string[] | undefined => {
-  if (jmPartsOfSpeech === undefined) {
-    return undefined;
-  }
   return jmPartsOfSpeech;
 };
 
 const getFieldCategories = (
   jmFields: JMdictSensField[] | undefined
 ): string[] | undefined => {
-  if (jmFields === undefined) {
-    return undefined;
-  }
   return jmFields;
 };
 
 const getDialectCategories = (
   jmDialects: JMdictSensDial[] | undefined
 ): string[] | undefined => {
-  if (jmDialects === undefined) {
-    return undefined;
-  }
   return jmDialects;
 };
 
 const getMiscCategories = (
   jmMiscs: JMdictSensMisc[] | undefined
 ): string[] | undefined => {
-  if (jmMiscs === undefined) {
-    return undefined;
-  }
   return jmMiscs;
 };
 
@@ -99,62 +103,12 @@ const getInformations = (
   return jmSenseInfos?.split(';');
 };
 
-const getFormRestrictions = (
-  jmEntry: JMdictEntr,
-  jmSense: JMdictSens
-): string[] | undefined => {
-  const formRestrictions: string[] = [];
-
-  const wordForms = createFormPairs(jmEntry);
-
-  const jmSenseKanaRestrictions = toArrayOrUndefined(jmSense.stagr);
-  const jmSenseKanjiRestrictions = toArrayOrUndefined(jmSense.stagk);
-
-  const jmMiscs = toArrayOrUndefined(jmSense.misc);
-  const senseUsuallyWrittenInKana = jmMiscs?.includes('uk') === true;
-
-  // if the sense is usually written in kanji, then add the kana reading as a restriction
-  if (jmSenseKanjiRestrictions !== undefined && senseUsuallyWrittenInKana) {
-    for (const restriction of jmSenseKanjiRestrictions) {
-      const form = wordForms.find(wordForm => wordForm.kanji === restriction);
-      const formReading = form?.kana;
-
-      if (formReading === undefined) {
-        throw new Error('The reading of the kanji form is not found');
-      }
-
-      // // proofs that there are kanji restriction that are usually written in kana
-      // console.log('match');
-
-      formRestrictions.push(formReading);
-    }
-  }
-
-  if (jmSenseKanjiRestrictions !== undefined) {
-    for (const restriction of jmSenseKanjiRestrictions) {
-      formRestrictions.push(restriction);
-    }
-  }
-
-  if (jmSenseKanaRestrictions !== undefined) {
-    for (const restriction of jmSenseKanaRestrictions) {
-      formRestrictions.push(restriction);
-    }
-  }
-
-  if (formRestrictions.length < 1) return undefined;
-
-  return formRestrictions;
-};
-
 const getLanguageSources = (
   jmLsources: JMdictSensLSrc[] | undefined
 ): WordLanguageSource[] | undefined => {
   const languageSources: WordLanguageSource[] = [];
 
-  if (jmLsources === undefined) {
-    return undefined;
-  }
+  if (jmLsources === undefined) return undefined;
 
   for (const jmLsource of jmLsources) {
     const description = jmLsource.value;
@@ -170,20 +124,14 @@ const getLanguageSources = (
     });
   }
 
-  if (languageSources.length < 1) {
-    return undefined;
-  }
+  if (languageSources.length < 1) return undefined;
 
   return languageSources;
 };
 
 const createTranslations = (
-  gloss: Array<string | JMdictSensGloss> | undefined
-): string[] | undefined => {
-  if (gloss === undefined) {
-    return undefined;
-  }
-
+  gloss: Array<string | JMdictSensGloss>
+): string[] => {
   const translations: string[] = [];
 
   for (const glossE of gloss) {
@@ -208,7 +156,9 @@ const createTranslations = (
     // }
   }
 
-  if (translations.length < 1) return undefined;
+  if (translations.length < 1) {
+    throw new Error('Translation array can not be empty');
+  }
 
   return translations;
 };

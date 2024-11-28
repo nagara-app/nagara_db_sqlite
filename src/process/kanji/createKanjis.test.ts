@@ -28,3 +28,42 @@ describe('Extracter is returning correct X and Y from path', () => {
     expect(result).toEqual(expected);
   });
 });
+
+// describe('Kanji composition', () => {
+//   test('correct composition elements', () => {
+//     const result = getComposition('俱');
+//     const expected = [
+//       {
+//         element: '亻',
+//         type: 'kanji',
+//         composition: [
+//           {
+//             element: '亻',
+//             type: 'radical',
+//           },
+//         ],
+//       },
+//       {
+//         element: '具',
+//         type: 'kanji',
+//         composition: [
+//           {
+//             element: '目',
+//             type: 'kanji',
+//             composition: [
+//               {
+//                 element: '目',
+//                 type: 'radical',
+//               },
+//             ],
+//           },
+//           {
+//             element: '八',
+//             type: 'radical',
+//           },
+//         ],
+//       },
+//     ];
+//     expect(result).toEqual(expected);
+//   });
+// });

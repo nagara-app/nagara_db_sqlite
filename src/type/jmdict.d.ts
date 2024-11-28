@@ -32,7 +32,7 @@ export interface JMdictSens {
   misc?: JMdictSensMisc | JMdictSensMisc[];
   lsource?: JMdictSensLSrc | JMdictSensLSrc[];
   dial?: JMdictSensDial | JMdictSensDial[];
-  gloss?: string | JMdictSensGloss | Array<string | JMdictSensGloss>;
+  gloss: string | JMdictSensGloss | Array<string | JMdictSensGloss>;
 
   /**
    * These elements, if present, indicate that the sense is restricted to the lexeme represented by the keb.

@@ -1,174 +1,229 @@
-import {isKanji} from 'wanakana';
+import {JLPT, WordForm, WordFurigana} from 'tkdb-helper';
 import {
   JMdictEntr,
   JMdictKanji,
-  JMdictKanjiInf,
   JMdictRdng,
-  JMdictRdngInf,
   JMdictSens,
 } from '../../type/jmdict';
-import {JLPT, WordForm, WordFurigana} from 'tkdb-helper';
-import {toArray, toArrayOrUndefined, toStrictRomaji} from '../../utils';
+import {toArray, toArrayOrUndefined, toHash} from '../../utils';
+import {isKanji} from 'wanakana';
 import {fileManager} from '../fileManager';
+import {toRomaji} from 'wanakana';
+import createMeanings from './createMeanings';
+
+interface Form {
+  kana: string;
+  kanji?: string;
+}
 
 export default (jmEntry: JMdictEntr): WordForm[] => {
-  const formPairs = createFormPairs(jmEntry);
-  const sortedFormPairs = sortForms(formPairs, jmEntry);
-  return sortedFormPairs;
-};
+  const {r_ele, sense, k_ele, ent_seq} = jmEntry;
+  const jmId = ent_seq;
+  const jmReles = toArray(r_ele);
+  const jmKeles = toArrayOrUndefined(k_ele);
+  const jmSenses = toArray(sense);
 
-/**
- * Create valid word forms based on jmdict kanji and reading element pairs considering their restrictions.
- */
-export const createFormPairs = (jmEntry: JMdictEntr): WordForm[] => {
+  let formCombinations = createFormCombinations(jmReles, jmKeles);
+  formCombinations.sort(sortByKanjiAndKana);
+
+  // Confirm if the form combinations need a only kana form
+  const entryNeedsKanaOnlyForm = hasSenseWithKanaForm(jmSenses);
+
+  // If yes, add missing forms
+  if (entryNeedsKanaOnlyForm) {
+    const missingKanaForms = createMissingKanaForms(formCombinations);
+    // Missing Kana forms should come first
+    formCombinations = [...missingKanaForms, ...formCombinations];
+  }
+
   const forms: WordForm[] = [];
+  // Loop through all form combinations and populate word forms
+  for (const formCombination of formCombinations) {
+    const {kana, kanji} = formCombination;
 
-  const jmId = jmEntry.ent_seq;
-  let jmReles = toArray(jmEntry.r_ele);
-  const missingJmReles = createMissingReles(jmEntry);
+    const jmRele = jmReles.find(r => r.reb === kana);
+    const jmKele = jmKeles?.find(k => k.keb === kanji);
 
-  if (missingJmReles !== undefined) {
-    jmReles = jmReles.concat(missingJmReles);
-  }
-
-  const jmKeles = toArrayOrUndefined(jmEntry.k_ele);
-
-  for (const jmRele of jmReles) {
-    const kana = jmRele.reb;
-    const romaji = toStrictRomaji(kana);
-    const restrictions = toArrayOrUndefined(jmRele.re_restr);
-    const hasNoKanji = jmRele.re_nokanji !== undefined;
-
-    if (hasNoKanji) {
-      // Case where reading has no kanji as a combination
-      const form = populateForms({kana, romaji}, jmId, jmRele);
-      forms.push(form);
-    } else if (restrictions !== undefined) {
-      // Case where reading is only combinable with specific kanjis
-      for (const restriction of restrictions) {
-        const jmKele = jmKeles?.find(jmKele => jmKele.keb === restriction);
-
-        if (jmKele === undefined) {
-          throw new Error('Reading restriction not available in Kanji element');
-        }
-
-        const form = populateForms(
-          {kanji: restriction, kana, romaji},
-          jmId,
-          jmRele,
-          jmKele
-        );
-        forms.push(form);
-      }
-    } else if (jmKeles !== undefined) {
-      // Case where all kanji and readings should be combinable
-      for (const jmKele of jmKeles) {
-        const kanji = jmKele.keb;
-
-        const form = populateForms({kanji, kana, romaji}, jmId, jmRele, jmKele);
-        forms.push(form);
-      }
-    } else {
-      // Case where there are no kanji and all readings should be a form
-      const form = populateForms({kana, romaji}, jmId, jmRele);
-      forms.push(form);
+    // jmRele can not be undefined
+    if (jmRele === undefined) {
+      throw new Error(`jmRele not fount for ${jmId} ${kana}`);
     }
+
+    const jmKeInfo = toArrayOrUndefined(jmKele?.ke_inf);
+    const jmReInfo = toArrayOrUndefined(jmRele?.re_inf);
+    const jmInfo = [...(jmKeInfo ?? []), ...(jmReInfo ?? [])];
+
+    const jmRePriorities = toArrayOrUndefined(jmRele?.re_pri);
+    const jmKePriorities = toArrayOrUndefined(jmKele?.ke_pri);
+    const jmPriorities = [...(jmKePriorities ?? []), ...(jmRePriorities ?? [])];
+
+    const wordId = +jmId;
+    const id = toHash(kanji + kana);
+
+    const outdated =
+      jmInfo.includes('oK') || jmInfo.includes('ok') ? true : undefined;
+
+    const infos = jmInfo;
+
+    const romaji = toRomaji(kana);
+
+    const common = isCommon(jmPriorities);
+    const frequency = getFrequency(jmPriorities);
+
+    const jlpt = getJlpt(formCombination, jmId);
+    const furigana = getFurigana(formCombination);
+    const characters = extractKanji(kanji);
+
+    const meanings = createMeanings(jmEntry, kana, kanji);
+
+    forms.push({
+      wordId,
+      id,
+      kana,
+      kanji,
+      romaji,
+      common,
+      frequency,
+      jlpt,
+      furigana,
+      characters,
+      outdated,
+      infos,
+      meanings,
+    });
   }
+
+  // Sort forms
+  forms.sort(sortOutdatedForms);
 
   return forms;
 };
 
-export const createMissingReles = (
-  jmEntry: JMdictEntr
-): JMdictRdng[] | undefined => {
-  const jmReles = toArray(jmEntry.r_ele);
-  const jmSenses = toArray(jmEntry.sense);
+export const createFormCombinations = (
+  jmReles: JMdictRdng[],
+  jmKeles: JMdictKanji[] | undefined
+): Form[] => {
+  const forms = new Map<string, Form>();
 
-  // only create additional forms, if the word is written in kana ususually
-  if (!wordHasSenseUsuallyWrittenInKana(jmSenses)) {
-    return;
+  for (const jmRele of jmReles) {
+    const kana = jmRele.reb;
+    const readingHasNoKanji = jmRele.re_nokanji !== undefined ? true : false;
+    const readingRestrictions = toArrayOrUndefined(jmRele.re_restr);
+
+    // There are only kana forms
+    if (!jmKeles) {
+      forms.set(kana, {kana});
+      continue;
+    }
+
+    // There are also kanji forms, but this particular reading has no kanji
+    if (readingHasNoKanji) {
+      forms.set(kana, {kana});
+      continue;
+    }
+
+    // There are also kanji forms, but there exists restrictions
+    if (readingRestrictions) {
+      for (const restriction of readingRestrictions) {
+        const kanji = restriction;
+        forms.set(kanji + kana, {kana, kanji});
+      }
+      continue;
+    }
+
+    // Each kanji form can be combined
+    for (const jmKele of jmKeles) {
+      const kanji = jmKele.keb;
+      forms.set(kanji + kana, {kana, kanji});
+    }
   }
 
-  const missingReles: JMdictRdng[] = [];
-  const jmRelesKanjiReadings = jmReles.filter(
-    jmRele => jmRele.re_nokanji === undefined
-  );
-
-  for (const jmRelesKanjiReading of jmRelesKanjiReadings) {
-    const missingRele: JMdictRdng = {
-      reb: jmRelesKanjiReading.reb,
-      re_nokanji: '',
-      ...(jmRelesKanjiReading.re_pri !== undefined && {
-        re_pri: jmRelesKanjiReading.re_pri,
-      }),
-    };
-
-    missingReles.push(missingRele);
-  }
-
-  return missingReles;
+  return Array.from(forms.values());
 };
 
-const populateForms = (
-  form: WordForm,
-  id: string,
-  jmRele: JMdictRdng,
-  jmKele?: JMdictKanji
-): WordForm => {
-  const jmKeb = jmKele?.keb;
+export const hasSenseWithKanaForm = (jmSenses: JMdictSens[]): boolean => {
+  return jmSenses.some(jmSense => {
+    const jmMiscs = toArrayOrUndefined(jmSense.misc);
+    return jmMiscs?.includes('uk');
+  });
+};
 
-  const jmKeInfo: JMdictKanjiInf[] | undefined = toArrayOrUndefined(
-    jmKele?.ke_inf
-  );
-  const jmReInfo: JMdictRdngInf[] | undefined = toArrayOrUndefined(
-    jmRele?.re_inf
-  );
-  const jmInfo = [...(jmKeInfo ?? []), ...(jmReInfo ?? [])];
+export const createMissingKanaForms = (forms: Form[]): Form[] => {
+  const missingKanaForms = new Map<string, Form>();
+  // If it already has a kana form, we can skip
+  const hasOnlyKanaForm = forms.some(form => !form.kanji);
+  if (!hasOnlyKanaForm) {
+    for (const form of forms) {
+      const key = form.kana; // Use `kana` as the unique identifier
+      if (!missingKanaForms.has(key)) {
+        missingKanaForms.set(key, {kana: form.kana});
+      }
+    }
+  }
 
-  const jmKePriorities = toArrayOrUndefined(jmKele?.ke_pri);
-  const jmRePriorities = toArrayOrUndefined(jmRele?.re_pri);
-  const jmPriorities = [...(jmKePriorities ?? []), ...(jmRePriorities ?? [])];
+  return Array.from(missingKanaForms.values());
+};
 
-  const common: boolean | undefined = isCommon(jmPriorities);
-  const frequency: number | undefined = getFrequency(jmPriorities);
+const getJlpt = (form: Form, id: string): JLPT | undefined => {
+  const {kana, kanji} = form;
 
-  const outdatedKanji = jmInfo.includes('oK') ? true : undefined;
-  const irregularKanji = jmInfo.includes('iK') ? true : undefined;
-  const rarelyUsedKanji = jmInfo.includes('rK') ? true : undefined;
-  const ateji = jmInfo.includes('ateji') ? true : undefined;
-  const irregularOkurigana = jmInfo.includes('io') ? true : undefined;
-  const outdatedReading = jmInfo.includes('ok') ? true : undefined;
-  const irregularReading = jmInfo.includes('ik') ? true : undefined;
-  const falseReading = jmInfo.includes('gikun') ? true : undefined;
+  const tanosVocabs = fileManager.getTanosVocabs();
 
-  const jlpt = getJlpt(form, id);
-  const furigana = getFurigana(form);
-  const kanjis = extractKanji(jmKeb);
+  const match = tanosVocabs.find(vocab => {
+    const {kana: vocabKana, kanji: vocabKanji, id: vocabId} = vocab;
 
-  const populatedForm = {
-    ...form,
-    common,
-    frequency,
-    outdatedKanji,
-    irregularKanji,
-    rarelyUsedKanji,
-    ateji,
-    irregularOkurigana,
-    outdatedReading,
-    irregularReading,
-    falseReading,
-    jlpt,
-    kanjis,
-    furigana,
-  };
+    const kanaMatch = kana === vocabKana;
+    const kanjiMatch = kanji === vocabKanji;
+    const idMatch = id === vocabId;
 
-  return populatedForm;
+    return idMatch && kanaMatch && kanjiMatch;
+  });
+
+  return match?.jlpt;
+};
+
+const getFurigana = (form: Form): WordFurigana[] | undefined => {
+  const {kana, kanji} = form;
+
+  // Fugiana must have a kanji
+  if (kanji === undefined) return undefined;
+
+  const jmdictFurigana = fileManager.getJmdictFurigana();
+
+  const match = jmdictFurigana.find(entry => {
+    return entry.text === kanji && entry.reading === kana;
+  });
+
+  if (match === undefined) return undefined;
+
+  const furigana: WordFurigana[] = [];
+
+  for (const f of match.furigana) {
+    const ruby = f.ruby;
+    const rt = f.rt;
+
+    furigana.push({ruby, rt});
+  }
+
+  return furigana.length > 0 ? furigana : undefined;
+};
+
+export const extractKanji = (
+  input: string | undefined
+): string[] | undefined => {
+  if (input === undefined) return undefined;
+
+  const characters = Array.from(input);
+
+  const kanjiArray = characters.filter(isKanji);
+
+  if (kanjiArray.length < 1) return;
+
+  return kanjiArray;
 };
 
 export const isCommon = (priorities?: string[]): boolean | undefined => {
-  if (priorities === undefined) {
-    return undefined;
-  }
+  if (priorities === undefined) return undefined;
 
   for (const priority of priorities) {
     if (priority.startsWith('nf')) {
@@ -182,83 +237,8 @@ export const isCommon = (priorities?: string[]): boolean | undefined => {
   return undefined;
 };
 
-const getJlpt = (wordForm: WordForm, id: string): JLPT | undefined => {
-  const kanji = wordForm.kanji;
-  const kana = wordForm.kana;
-
-  const tanosVocabs = fileManager.getTanosVocabs();
-
-  const match = tanosVocabs.find(vocab => {
-    const jlptForm = vocab.kanji ?? vocab.kana;
-    const jlptReading = vocab.kanji !== undefined ? vocab.kana : undefined;
-    const jlptId = vocab.id;
-
-    const readingMatches = jlptReading === kana;
-    const idMatches = jlptId === id;
-    const formMatches = jlptForm === kanji;
-
-    return readingMatches && idMatches && formMatches;
-  });
-
-  if (match === undefined) {
-    return;
-  }
-
-  return match.jlpt;
-};
-
-const getFurigana = (wordForm: WordForm): WordFurigana[] | undefined => {
-  const kanji = wordForm.kanji;
-  const kana = wordForm.kana;
-
-  if (kanji === undefined) {
-    return undefined;
-  }
-
-  const jmdictFurigana = fileManager.getJmdictFurigana();
-
-  const match = jmdictFurigana.find(entry => {
-    return entry.text === kanji && entry.reading === kana;
-  });
-
-  if (match === undefined) {
-    return undefined;
-  }
-
-  const furigana: WordFurigana[] = [];
-
-  for (const f of match.furigana) {
-    const ruby = f.ruby;
-    const rt = f.rt;
-
-    furigana.push({ruby, rt});
-  }
-
-  return furigana;
-};
-
-export const extractKanji = (
-  input: string | undefined
-): string[] | undefined => {
-  if (input === undefined) {
-    return undefined;
-  }
-
-  const characters = Array.from(input);
-
-  const kanjiArray = characters.filter(isKanji);
-
-  if (kanjiArray.length < 1) {
-    return;
-  }
-
-  return kanjiArray;
-};
-
 export const getFrequency = (priorities?: string[]): number | undefined => {
-  if (priorities === undefined) {
-    return undefined;
-  }
+  if (priorities === undefined) return undefined;
 
   // TODO: what about words that only have ICHI1 for example?
   for (const priority of priorities) {
@@ -287,64 +267,24 @@ export const extractNfxx = (priority: string): number => {
   }
 };
 
-/**
- * Returns true if a word has at least once sense that is usually written in kana but is kanji form
- */
-const wordHasSenseUsuallyWrittenInKana = (jmSenses: JMdictSens[]): boolean => {
-  return jmSenses.some(jmSense => {
-    const jmMiscs = toArrayOrUndefined(jmSense.misc);
-    if (jmMiscs?.includes('uk') === true) {
-      return true;
-    } else {
-      return false;
-    }
-  });
+// Sort outdated forms to the end
+const sortOutdatedForms = (a: WordForm, b: WordForm): number => {
+  const aOutdated = a.outdated;
+  const bOutdated = b.outdated;
+  if (aOutdated && !bOutdated) return 1; // Move `a` to the end
+  if (!aOutdated && bOutdated) return -1; // Move `b` to the end
+  return 0; // No change
 };
 
-/**
- * Sorts the word forms by order in jmdict kanji and reading elements.
- */
-const sortForms = (forms: WordForm[], jmEntry: JMdictEntr): WordForm[] => {
-  const jmKeles = toArrayOrUndefined(jmEntry.k_ele);
-  const jmReles = toArray(jmEntry.r_ele);
-  const jmSenses = toArray(jmEntry.sense);
-
-  const kanjiReadings = jmKeles?.map(k => k.keb);
-  const kanaReadings = jmReles.map(r => r.reb);
-
-  const wordWrittenInKana = wordHasSenseUsuallyWrittenInKana(jmSenses);
-
-  const order: string[] = [];
-
-  if (kanjiReadings === undefined) {
-    order.push(...kanaReadings);
-  } else if (wordWrittenInKana) {
-    order.push(...kanaReadings, ...kanjiReadings);
-  } else {
-    order.push(...kanjiReadings, ...kanaReadings);
+// Sort by kanji and then kana
+export const sortByKanjiAndKana = (a: Form, b: Form): number => {
+  // Step 1: Sort by kanji, moving undefined kanji to the end
+  if (a.kanji !== b.kanji) {
+    if (a.kanji === undefined) return 1;
+    if (b.kanji === undefined) return -1;
+    return a.kanji > b.kanji ? 1 : -1;
   }
 
-  const compareForms = (a: WordForm, b: WordForm): number => {
-    const formIndexA = order.indexOf(a.kana);
-    const formIndexB = order.indexOf(b.kana);
-
-    // Compare form values based on the order array
-    if (formIndexA !== formIndexB) {
-      return formIndexA - formIndexB;
-    }
-
-    // If form values are the same, compare reading values if they exist
-    if (a.kana !== undefined && b.kana !== undefined) {
-      return order.indexOf(a.kana) - order.indexOf(b.kana);
-    }
-
-    // If only one of the readings exists, the one with reading should come first
-    if (a.kana !== undefined) return -1;
-    if (b.kana !== undefined) return 1;
-
-    // If neither have a reading, they are considered equal
-    return 0;
-  };
-
-  return forms.sort(compareForms);
+  // Step 2: If kanji are the same, keep the original order of kana
+  return 0;
 };
