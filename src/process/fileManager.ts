@@ -10,7 +10,7 @@ import type {Kradfilex} from '../type/kradfilex';
 import type {TanosKanji} from '../type/tanos_kanji';
 import type {TanosVocab} from '../type/tanos_vocab';
 import type {Wordfreq} from '../type/wordfreq_ck';
-import type {KVG} from '../type/kanjivg';
+import type {KVG, KVGKanji} from '../type/kanjivg';
 import type {JMdictFurigana} from '../type/jmdict_furigana';
 import {TKDBRadical} from '../type/tkdb_radical';
 import {TKDBKanji} from '../type/tkdb_kanji';
@@ -30,6 +30,11 @@ class FileManager {
   private tkdbKanji: TKDBKanji[] | null = null;
   private kanjivg: KVG | null = null;
   private jmdictFurigana: JMdictFurigana[] | null = null;
+
+  private tanosKanjiMap: Map<string, TanosKanji> | null = null;
+  private tanosVocabMap: Map<string, TanosVocab> | null = null;
+  private kanjivgMap: Map<string, KVGKanji> | null = null;
+  private jmdictFuriganaMap: Map<string, JMdictFurigana> | null = null;
 
   public async loadFiles(): Promise<void> {
     try {
@@ -79,6 +84,21 @@ class FileManager {
       this.tkdbKanji = tkdbKanji;
       this.kanjivg = kanjivg;
       this.jmdictFurigana = jmdictFurigana;
+
+      this.tanosKanjiMap = new Map(tanosKanjis.map(item => [item.kanji, item]));
+
+      this.tanosVocabMap = new Map(
+        tanosVocabs.map(item => {
+          const key = [item.id, item.kanji, item.kana].join(':');
+          return [key, item];
+        })
+      );
+
+      this.kanjivgMap = new Map(kanjivg.kanji.map(item => [item.id, item]));
+
+      this.jmdictFuriganaMap = new Map(
+        jmdictFurigana.map(item => [`${item.text}:${item.reading}`, item])
+      );
     } catch (error) {
       throw new Error('Failed to load files');
     }
@@ -89,6 +109,13 @@ class FileManager {
       throw new Error('Tanos vocabulary data is not set.');
     }
     return this.tanosVocabs;
+  }
+
+  public getTanosVocabMap(): Map<string, TanosVocab> {
+    if (this.tanosVocabMap === null) {
+      throw new Error('Tanos Vocab map has not been initialized.');
+    }
+    return this.tanosVocabMap;
   }
 
   public getJMdict(): JMdict {
@@ -125,6 +152,13 @@ class FileManager {
       throw new Error('Tanos Kanji data is not set.');
     }
     return this.tanosKanjis;
+  }
+
+  public getTanosKanjiMap(): Map<string, TanosKanji> {
+    if (this.tanosKanjiMap === null) {
+      throw new Error('Tanos Kanji map has not been initialized.');
+    }
+    return this.tanosKanjiMap;
   }
 
   public getKanjiumAntonyms(): KanjiumAntonym[] {
@@ -183,11 +217,25 @@ class FileManager {
     return this.kanjivg;
   }
 
+  public getKanjivgMap(): Map<string, KVGKanji> {
+    if (this.kanjivgMap === null) {
+      throw new Error('KanjiVG map is not set.');
+    }
+    return this.kanjivgMap;
+  }
+
   public getJmdictFurigana(): JMdictFurigana[] {
     if (this.jmdictFurigana === null) {
-      throw new Error('JMdict furigana data is not set.');
+      throw new Error('Furigana has not been initialized.');
     }
     return this.jmdictFurigana;
+  }
+
+  public getJmdictFuriganaMap(): Map<string, JMdictFurigana> {
+    if (this.jmdictFuriganaMap === null) {
+      throw new Error('Furigana map has not been initialized.');
+    }
+    return this.jmdictFuriganaMap;
   }
 }
 

@@ -167,17 +167,10 @@ export const createMissingKanaForms = (forms: Form[]): Form[] => {
 const getJlpt = (form: Form, id: string): JLPT | undefined => {
   const {kana, kanji} = form;
 
-  const tanosVocabs = fileManager.getTanosVocabs();
+  const tanosVocabMap = fileManager.getTanosVocabMap();
 
-  const match = tanosVocabs.find(vocab => {
-    const {kana: vocabKana, kanji: vocabKanji, id: vocabId} = vocab;
-
-    const kanaMatch = kana === vocabKana;
-    const kanjiMatch = kanji === vocabKanji;
-    const idMatch = id === vocabId;
-
-    return idMatch && kanaMatch && kanjiMatch;
-  });
+  const lookupKey = [id, kanji, kana].join(':');
+  const match = tanosVocabMap.get(lookupKey);
 
   return match?.jlpt;
 };
@@ -188,11 +181,8 @@ const getFurigana = (form: Form): WordFurigana[] | undefined => {
   // Fugiana must have a kanji
   if (kanji === undefined) return undefined;
 
-  const jmdictFurigana = fileManager.getJmdictFurigana();
-
-  const match = jmdictFurigana.find(entry => {
-    return entry.text === kanji && entry.reading === kana;
-  });
+  const jmdictFuriganaMap = fileManager.getJmdictFuriganaMap();
+  const match = jmdictFuriganaMap.get(`${kanji}:${kana}`);
 
   if (match === undefined) return undefined;
 

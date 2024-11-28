@@ -7,7 +7,7 @@ import {
   Kanjidic2CharRdngMngGrpRdng,
   Kanjidic2MiscGrade,
 } from '../../type/kanjidic2';
-import {KVG, KVGKanjiGroup} from '../../type/kanjivg';
+import {KVGKanjiGroup} from '../../type/kanjivg';
 import {Kradfilex} from '../../type/kradfilex';
 
 export default (): Kanji[] => {
@@ -165,15 +165,11 @@ const getGrade = (
 };
 
 const getJLPT = (literal: string): JLPT | undefined => {
-  const tanosKanjis = fileManager.getTanosKanjis();
+  const tanosKanjiMap = fileManager.getTanosKanjiMap();
 
-  const match = tanosKanjis.find(kanji => kanji.kanji === literal);
+  const match = tanosKanjiMap.get(literal);
 
-  if (match === undefined) {
-    return;
-  }
-
-  return match.jlpt;
+  return match?.jlpt;
 };
 
 const getAntonyms = (literal: string): string[] | undefined => {
@@ -264,11 +260,11 @@ const getRadicals = (literal: string): string[] | undefined => {
 };
 
 const getStrokes = (literal: string): KanjiStroke[] | undefined => {
-  const kanjivg: KVG = fileManager.getKanjivg();
+  const kanjivgMap = fileManager.getKanjivgMap();
 
   const hexLiteral = kanjiToHex(literal);
-
-  const match = kanjivg.kanji.find(kanji => kanji.id === `kanji_${hexLiteral}`);
+  const lookupKey = `kanji_${hexLiteral}`;
+  const match = kanjivgMap.get(lookupKey);
 
   if (match === undefined) {
     return undefined;
