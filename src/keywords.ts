@@ -238,18 +238,17 @@ export const KEYWORDS: Keywords = {
     vz: 'Verb (ずる)', // ichidan verb - zuru verb (alternative form of -jiru verbs)
   },
   wordKanjiInfo: {
-    iK: 'irregular kanji', // word containing irregular kanji usage
-    io: 'irregular okurigana', // irregular okurigana usage
-    oK: 'out-dated kanji', // word containing out-dated kanji
-    ik: 'irregular kana', // word containing irregular kana usage
-    ateji: 'ateji', // ateji (phonetic) reading
-    rK: 'rare form', // rarely-used kanji form
-    // sK: 'search-only kanji form
+    iK: {id: 1, description: 'irregular kanji'}, // word containing irregular kanji usage
+    io: {id: 2, description: 'irregular okurigana'}, // irregular okurigana usage
+    oK: {id: 3, description: 'out-dated kanji'}, // word containing out-dated kanji
+    ik: {id: 4, description: 'irregular kana'}, // word containing irregular kana usage
+    ateji: {id: 5, description: 'ateji'}, // ateji (phonetic) reading
   },
   wordKanaInfo: {
-    gikun: 'gikun', // gikun (meaning as reading) or jukujikun (special kanji reading)
-    ok: 'out-dated kana', // out-dated or obsolete kana usage
-    ik: 'irregular kana', // 'word containing irregular kana usage
-    // sk: 'search-only kana form',
+    gikun: {id: 1, description: 'gikun'}, // gikun (meaning as reading) or jukujikun (special kanji reading)
+    ok: {id: 2, description: 'out-dated kana'}, // out-dated or obsolete kana usage
+    ik: {id: 3, description: 'irregular kana'}, // word containing irregular kana usage
+    oik: {id: 4, description: 'old or irregular kana'}, // old or irregular kana form
+    uK: {id: 5, description: 'usually written in Kanji'}, // word usually written using kanji alone
   },
 };

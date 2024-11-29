@@ -10,7 +10,7 @@ import type {IncomingMessage} from 'http';
 import {MultiBar, Presets} from 'cli-progress';
 import type {Options} from 'cli-progress';
 import config, {FileDownload, ZipDownload, ZipDownloadTarget} from '../config';
-import chalk = require('chalk');
+import {green} from 'chalk';
 import AdmZip = require('adm-zip');
 
 const progressBarOptions: Options = {
@@ -37,7 +37,7 @@ export default async (): Promise<void> => {
 
   multibar.stop();
 
-  console.log(chalk.green('All files downloaded'));
+  console.log(green('All files downloaded'));
 };
 
 const downloadFile = async (download: FileDownload): Promise<void> => {

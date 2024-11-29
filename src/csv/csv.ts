@@ -1,6 +1,7 @@
 import {Kanji, Keywords, Radical, Word, TKDB} from 'tkdb-helper';
 import {readJsonFile, writeCSVFile} from '../utils';
-import chalk = require('chalk');
+import {green} from 'chalk';
+import {KEYWORDS} from '../keywords';
 
 export default async (): Promise<void> => {
   const tkdb = await readJsonFile<TKDB>('output/tkdb.json');
@@ -15,31 +16,55 @@ export default async (): Promise<void> => {
   await createKanji(kanjis, radicals);
   await createWords(words);
 
-  console.log(chalk.green('All CSV files are created'));
+  console.log(green('All CSV files are created'));
 };
 
 const createKeywords = async (keywords: Keywords) => {
-  const jlptCsv: string[][] = [];
-  jlptCsv.push(['id', 'descr']);
+  const jlptCSV: string[][] = [];
+  jlptCSV.push(['id', 'jlpt']);
 
-  const gradeCsv: string[][] = [];
-  gradeCsv.push(['id', 'grade']);
+  const gradeCSV: string[][] = [];
+  gradeCSV.push(['id', 'grade']);
+
+  const wordKanaInfoCSV: string[][] = [];
+  wordKanaInfoCSV.push(['id', 'tag', 'description']);
+
+  const wordKanjiInfoCSV: string[][] = [];
+  wordKanjiInfoCSV.push(['id', 'tag', 'description']);
 
   const jlpt = keywords.jlpt;
   const grade = keywords.kanjiGrade;
+  const wordKanaInfo = keywords.wordKanaInfo;
+  const wordKanjiInfo = keywords.wordKanjiInfo;
 
   for (const key in jlpt) {
     const description = jlpt[key];
-    jlptCsv.push([key, description]);
+    jlptCSV.push([key, description]);
   }
 
   for (const key in grade) {
     const description = grade[key];
-    gradeCsv.push([key, description]);
+    gradeCSV.push([key, description]);
   }
 
-  await writeCSVFile(jlptCsv, 'output/csv/jlpt.csv');
-  await writeCSVFile(gradeCsv, 'output/csv/grade.csv');
+  for (const key in wordKanaInfo) {
+    const info = wordKanaInfo[key];
+    const id = info.id.toString();
+    const description = info.description;
+    wordKanaInfoCSV.push([id, key, description]);
+  }
+
+  for (const key in wordKanjiInfo) {
+    const info = wordKanjiInfo[key];
+    const id = info.id.toString();
+    const description = info.description;
+    wordKanjiInfoCSV.push([id, key, description]);
+  }
+
+  await writeCSVFile(jlptCSV, 'output/csv/jlpt.csv');
+  await writeCSVFile(gradeCSV, 'output/csv/grade.csv');
+  await writeCSVFile(wordKanaInfoCSV, 'output/csv/word_kanainfo.csv');
+  await writeCSVFile(wordKanjiInfoCSV, 'output/csv/word_kanjiinfo.csv');
 };
 
 const getRadicalId = (literal: string, radicals: Radical[]): string => {
@@ -304,43 +329,75 @@ const createWords = async (words: Word[]) => {
   const wordFormCSV: string[][] = [];
   wordFormCSV.push([
     'word_id',
-    'form',
+    'id',
     'kanji',
     'kana',
     'position',
     'common',
+    'outdated',
     'frequency',
     'jlpt_id',
   ]);
+
+  const wordFormKanainfoCSV: string[][] = [];
+  wordFormKanainfoCSV.push(['word_id', 'form_id', 'kanainfo_id']);
+
+  const wordFormKanjiinfoCSV: string[][] = [];
+  wordFormKanjiinfoCSV.push(['word_id', 'form_id', 'kanjiinfo_id']);
 
   const wordFuriganaCSV: string[][] = [];
   wordFuriganaCSV.push(['word_id', 'form_id', 'furigana']);
 
   for (const word of words) {
-    const {id, jlpt, forms} = word;
+    const {id, forms} = word;
     const wordId = id.toString();
-    const jlptId = String(jlpt ?? '');
 
-    wordCSV.push([wordId, jlptId]);
+    wordCSV.push([wordId]);
     wordFuriganaCSV.push;
 
     let formPosition = 0;
     for (const form of forms) {
-      const {kanji, kana, common, frequency, jlpt, id, furigana} = form;
+      const {
+        kanji,
+        kana,
+        common,
+        frequency,
+        jlpt,
+        id: formId,
+        furigana,
+        outdated,
+        kanaInfos,
+        kanjiInfos,
+      } = form;
 
       wordFormCSV.push([
         wordId,
-        id,
+        formId,
         kanji ?? '',
         kana,
         formPosition.toString(),
         common?.toString() ?? '',
+        outdated?.toString() ?? '',
         frequency?.toString() ?? '',
         jlpt?.toString() ?? '',
       ]);
 
+      if (kanaInfos) {
+        for (const kanaInfo of kanaInfos) {
+          const kanaInfoId = KEYWORDS.wordKanaInfo[kanaInfo].id.toString();
+          wordFormKanainfoCSV.push([wordId, formId, kanaInfoId]);
+        }
+      }
+
+      if (kanjiInfos) {
+        for (const kanjiInfo of kanjiInfos) {
+          const kanjiInfoId = KEYWORDS.wordKanjiInfo[kanjiInfo].id.toString();
+          wordFormKanjiinfoCSV.push([wordId, formId, kanjiInfoId]);
+        }
+      }
+
       if (furigana) {
-        wordFuriganaCSV.push([wordId, id, JSON.stringify(furigana)]);
+        wordFuriganaCSV.push([wordId, formId, JSON.stringify(furigana)]);
       }
 
       ++formPosition;
@@ -349,5 +406,13 @@ const createWords = async (words: Word[]) => {
 
   await writeCSVFile(wordCSV, 'output/csv/word.csv');
   await writeCSVFile(wordFormCSV, 'output/csv/word_form.csv');
+  await writeCSVFile(
+    wordFormKanainfoCSV,
+    'output/csv/word_form_x_kanainfo.csv'
+  );
+  await writeCSVFile(
+    wordFormKanjiinfoCSV,
+    'output/csv/word_form_x_kanjiinfo.csv'
+  );
   await writeCSVFile(wordFuriganaCSV, 'output/csv/word_furigana.csv');
 };

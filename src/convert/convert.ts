@@ -1,4 +1,4 @@
-import chalk = require('chalk');
+import {green} from 'chalk';
 
 import jmdict from './jmdict';
 import kanjidic2 from './kanjidic2';
@@ -21,5 +21,5 @@ export default async (): Promise<void> => {
 
   await Promise.all(convertPromises);
 
-  console.log(chalk.green('All files converted'));
+  console.log(green('All files converted'));
 };

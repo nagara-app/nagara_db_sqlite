@@ -10,6 +10,7 @@ import {isKanji} from 'wanakana';
 import {fileManager} from '../fileManager';
 import {toRomaji} from 'wanakana';
 import createMeanings from './createMeanings';
+import {setManager} from '../setManager';
 
 interface Form {
   kana: string;
@@ -51,7 +52,6 @@ export default (jmEntry: JMdictEntr): WordForm[] => {
 
     const jmKeInfo = toArrayOrUndefined(jmKele?.ke_inf);
     const jmReInfo = toArrayOrUndefined(jmRele?.re_inf);
-    const jmInfo = [...(jmKeInfo ?? []), ...(jmReInfo ?? [])];
 
     const jmRePriorities = toArrayOrUndefined(jmRele?.re_pri);
     const jmKePriorities = toArrayOrUndefined(jmKele?.ke_pri);
@@ -60,10 +60,17 @@ export default (jmEntry: JMdictEntr): WordForm[] => {
     const wordId = +jmId;
     const id = toHash(kanji + kana);
 
-    const outdated =
-      jmInfo.includes('oK') || jmInfo.includes('ok') ? true : undefined;
+    const kanaInfos = jmReInfo;
+    const kanjiInfos = jmKeInfo;
 
-    const infos = jmInfo;
+    kanaInfos?.forEach(entry => setManager.wordKanaInfoSet.add(entry));
+    kanjiInfos?.forEach(entry => setManager.wordKanjiInfoSet.add(entry));
+
+    const outdated =
+      kanjiInfos?.includes('oK') ||
+      kanaInfos?.includes('ok') ||
+      kanaInfos?.includes('oik') ||
+      undefined;
 
     const romaji = toRomaji(kana);
 
@@ -88,7 +95,8 @@ export default (jmEntry: JMdictEntr): WordForm[] => {
       furigana,
       characters,
       outdated,
-      infos,
+      kanaInfos,
+      kanjiInfos,
       meanings,
     });
   }

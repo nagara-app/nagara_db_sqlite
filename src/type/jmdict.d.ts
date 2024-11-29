@@ -102,9 +102,9 @@ export interface JMdictSensGloss {
   g_type: JMdictSensGlossType | undefined;
 }
 
-export type JMdictKanjiInf = 'ateji' | 'rK' | 'io' | 'ik' | 'iK' | 'oK';
+export type JMdictKanjiInf = 'ateji' | 'io' | 'ik' | 'iK' | 'oK';
 
-export type JMdictRdngInf = 'ok' | 'ik' | 'gikun';
+export type JMdictRdngInf = 'ok' | 'ik' | 'gikun' | 'oik' | 'uK';
 
 export type JMdictSensGlossLang =
   | 'dut'

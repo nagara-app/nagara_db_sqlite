@@ -2,7 +2,7 @@ import download from './download/download';
 import convert from './convert/convert';
 import process from './process/process';
 import csv from './csv/csv';
-import chalk = require('chalk');
+import {bgGreen} from 'chalk';
 
 const main = async (): Promise<void> => {
   await download();
@@ -10,7 +10,7 @@ const main = async (): Promise<void> => {
   await process();
   await csv();
 
-  console.log(chalk.bgGreen('Completed'));
+  console.log(bgGreen('Completed'));
 };
 
 void main();
