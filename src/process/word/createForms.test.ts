@@ -1,7 +1,6 @@
 import {JMdictKanji, JMdictRdng, JMdictSens} from '../../type/jmdict';
 import {
   createFormCombinations,
-  createMissingKanaForms,
   extractKanji,
   extractNfxx,
   getFrequency,
@@ -10,34 +9,11 @@ import {
   sortByKanjiAndKana,
 } from './createForms';
 
-describe('Create missing kana only forms', () => {
-  test('Includes kana only form', () => {
-    const forms = [
-      {kana: 'なに', kanji: '何'},
-      {kana: 'なに', kanji: '何に'},
-      {kana: 'なん'},
-    ];
-    const result = createMissingKanaForms(forms);
-    expect(result).toBeUndefined;
-  });
-
-  test('Includes only forms with kanji', () => {
-    const forms = [
-      {kana: 'なに', kanji: '何'},
-      {kana: 'なに', kanji: '何に'},
-      {kana: 'なん', kanji: '何'},
-    ];
-    const result = createMissingKanaForms(forms);
-    const expected = [{kana: 'なに'}, {kana: 'なん'}];
-    expect(result).toEqual(expected);
-  });
-});
-
 describe('Form creater is creating all possible forms', () => {
   test('Without kanji', () => {
     const jmReles: JMdictRdng[] = [{reb: 'なに'}, {reb: 'なん'}];
     const jmKeles = undefined;
-    const result = createFormCombinations(jmReles, jmKeles);
+    const result = createFormCombinations(jmReles, jmKeles, false);
     const expected = [{kana: 'なに'}, {kana: 'なん'}];
 
     expect(result).toEqual(expected);
@@ -69,7 +45,7 @@ describe('Form creater is creating all possible forms', () => {
         keb: '彼所',
       },
     ];
-    const result = createFormCombinations(jmReles, jmKeles);
+    const result = createFormCombinations(jmReles, jmKeles, false);
     const expected = [
       {kana: 'あそこ', kanji: '彼処'},
       {kana: 'あそこ', kanji: '彼所'},
@@ -89,7 +65,7 @@ describe('Form creater is creating all possible forms', () => {
   test('With kanji', () => {
     const jmReles: JMdictRdng[] = [{reb: 'なに'}, {reb: 'なん'}];
     const jmKeles: JMdictKanji[] = [{keb: '何'}];
-    const result = createFormCombinations(jmReles, jmKeles);
+    const result = createFormCombinations(jmReles, jmKeles, false);
     const expected = [
       {kana: 'なに', kanji: '何'},
       {kana: 'なん', kanji: '何'},
@@ -104,7 +80,7 @@ describe('Form creater is creating all possible forms', () => {
       {reb: 'なん', re_restr: ['何']},
     ];
     const jmKeles: JMdictKanji[] = [{keb: '何'}, {keb: '何に'}];
-    const result = createFormCombinations(jmReles, jmKeles);
+    const result = createFormCombinations(jmReles, jmKeles, false);
     const expected = [
       {kana: 'なに', kanji: '何'},
       {kana: 'なに', kanji: '何に'},
@@ -120,7 +96,7 @@ describe('Form creater is creating all possible forms', () => {
       {reb: 'なん', re_nokanji: ''},
     ];
     const jmKeles: JMdictKanji[] = [{keb: '何'}, {keb: '何に'}];
-    const result = createFormCombinations(jmReles, jmKeles);
+    const result = createFormCombinations(jmReles, jmKeles, false);
     const expected = [
       {kana: 'なに', kanji: '何'},
       {kana: 'なに', kanji: '何に'},
@@ -224,9 +200,11 @@ describe('Sort same kanji first while keeping original kana order', () => {
       {kana: 'あしこ', kanji: '彼所'},
       {kana: 'あこ', kanji: '彼処'},
       {kana: 'あこ', kanji: '彼所'},
+      {kana: 'アソコ'},
     ].sort(sortByKanjiAndKana);
 
     const expected = [
+      {kana: 'アソコ'},
       {kana: 'あそこ', kanji: '彼処'},
       {kana: 'あすこ', kanji: '彼処'},
       {kana: 'かしこ', kanji: '彼処'},

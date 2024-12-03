@@ -1,10 +1,10 @@
 import {Presets, SingleBar} from 'cli-progress';
 import type {Options} from 'cli-progress';
+import type {Word} from 'tkdb-helper';
 
 import {fileManager} from '../../process/fileManager';
 import createForms from './createForms';
-
-import type {Word} from 'tkdb-helper';
+import createSearchWords from './createSearchWords';
 
 export default (): Word[] => {
   const jmdict = fileManager.getJMdict();
@@ -22,10 +22,12 @@ export default (): Word[] => {
   for (const jmEntry of jmEntries) {
     const id = +jmEntry.ent_seq;
     const forms = createForms(jmEntry);
+    const searchWords = createSearchWords(jmEntry);
 
     words.push({
       id,
       forms,
+      searchWords,
     });
 
     bar.increment();

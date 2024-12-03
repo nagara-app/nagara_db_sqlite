@@ -31,11 +31,11 @@ const downloadPath = 'input/download/';
 export default {
   downloads: [
     {
-      url: 'http://ftp.usf.edu/pub/ftp.monash.edu.au/pub/nihongo/JMdict.gz',
+      url: 'http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz',
       path: `${downloadPath}jmdict.xml`,
     },
     {
-      url: 'http://ftp.usf.edu/pub/ftp.monash.edu.au/pub/nihongo/kanjidic2.xml.gz',
+      url: 'http://www.edrdg.org/kanjidic/kanjidic2.xml.gz',
       path: `${downloadPath}kanjidic2.xml`,
     },
     {
@@ -51,7 +51,7 @@ export default {
   ],
   zipDownloads: [
     {
-      url: 'http://ftp.usf.edu/pub/ftp.monash.edu.au/pub/nihongo/kradzip.zip',
+      url: 'http://ftp.edrdg.org/pub/Nihongo/kradzip.zip',
       targets: [
         {
           target: 'radkfilex',

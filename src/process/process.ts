@@ -41,14 +41,8 @@ export default async (): Promise<void> => {
 
 const compareKeywords = (): void => {
   setIncludesExactRecordKeys(
-    setManager.wordKanaInfoSet,
-    KEYWORDS.wordKanaInfo,
-    'Word Kana Info'
-  );
-
-  setIncludesExactRecordKeys(
-    setManager.wordKanjiInfoSet,
-    KEYWORDS.wordKanjiInfo,
-    'Word Kanji Info'
+    setManager.wordFormInfo,
+    KEYWORDS.wordFormInfo,
+    'Word Form Info'
   );
 };

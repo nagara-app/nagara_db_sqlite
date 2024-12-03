@@ -26,16 +26,12 @@ const createKeywords = async (keywords: Keywords) => {
   const gradeCSV: string[][] = [];
   gradeCSV.push(['id', 'grade']);
 
-  const wordKanaInfoCSV: string[][] = [];
-  wordKanaInfoCSV.push(['id', 'tag', 'description']);
-
-  const wordKanjiInfoCSV: string[][] = [];
-  wordKanjiInfoCSV.push(['id', 'tag', 'description']);
+  const wordFormInfoCSV: string[][] = [];
+  wordFormInfoCSV.push(['id', 'tag', 'description']);
 
   const jlpt = keywords.jlpt;
   const grade = keywords.kanjiGrade;
-  const wordKanaInfo = keywords.wordKanaInfo;
-  const wordKanjiInfo = keywords.wordKanjiInfo;
+  const formInfo = keywords.wordFormInfo;
 
   for (const key in jlpt) {
     const description = jlpt[key];
@@ -47,24 +43,16 @@ const createKeywords = async (keywords: Keywords) => {
     gradeCSV.push([key, description]);
   }
 
-  for (const key in wordKanaInfo) {
-    const info = wordKanaInfo[key];
+  for (const key in formInfo) {
+    const info = formInfo[key];
     const id = info.id.toString();
     const description = info.description;
-    wordKanaInfoCSV.push([id, key, description]);
-  }
-
-  for (const key in wordKanjiInfo) {
-    const info = wordKanjiInfo[key];
-    const id = info.id.toString();
-    const description = info.description;
-    wordKanjiInfoCSV.push([id, key, description]);
+    wordFormInfoCSV.push([id, key, description]);
   }
 
   await writeCSVFile(jlptCSV, 'output/csv/jlpt.csv');
   await writeCSVFile(gradeCSV, 'output/csv/grade.csv');
-  await writeCSVFile(wordKanaInfoCSV, 'output/csv/word_kanainfo.csv');
-  await writeCSVFile(wordKanjiInfoCSV, 'output/csv/word_kanjiinfo.csv');
+  await writeCSVFile(wordFormInfoCSV, 'output/csv/word_form_info.csv');
 };
 
 const getRadicalId = (literal: string, radicals: Radical[]): string => {
@@ -118,14 +106,14 @@ const createRadical = async (radicals: Radical[]) => {
     const meanings = radical.meanings ?? [];
     const readings = radical.readings ?? [];
 
-    let meaningIndex = 0;
+    let meaningIndex = 1;
     for (const meaning of meanings) {
       const position = String(meaningIndex);
       radicalMeaningCsv.push([id, position, meaning]);
       meaningIndex++;
     }
 
-    let readingIndex = 0;
+    let readingIndex = 1;
     for (const reading of readings) {
       const position = String(readingIndex);
       radicalReadingCsv.push([id, position, reading]);
@@ -215,28 +203,28 @@ const createKanji = async (kanjis: Kanji[], radicals: Radical[]) => {
     const strokes = kanji.strokes ?? [];
     const compositions = kanji.composition ?? [];
 
-    let meaningIndex = 0;
+    let meaningIndex = 1;
     for (const meaning of meanings) {
       const position = String(meaningIndex);
       kanjiMeaningCsv.push([id, position, meaning]);
       meaningIndex++;
     }
 
-    let kunIndex = 0;
+    let kunIndex = 1;
     for (const kun of kuns) {
       const position = String(kunIndex);
       kanjiKunCsv.push([id, position, kun]);
       kunIndex++;
     }
 
-    let onIndex = 0;
+    let onIndex = 1;
     for (const on of ons) {
       const position = String(onIndex);
       kanjiOnCsv.push([id, position, on]);
       onIndex++;
     }
 
-    let nanoriIndex = 0;
+    let nanoriIndex = 1;
     for (const nanori of nanoris) {
       const position = String(nanoriIndex);
       kanjiNanoriCsv.push([id, position, nanori]);
@@ -258,14 +246,14 @@ const createKanji = async (kanjis: Kanji[], radicals: Radical[]) => {
       kanjiSynonymCsv.push([id, synonymId]);
     }
 
-    let strokeIndex = 0;
+    let strokeIndex = 1;
     for (const stroke of strokes) {
       const position = String(strokeIndex);
       kanjiStrokeCsv.push([id, position, stroke.path, stroke.y, stroke.x]);
       strokeIndex++;
     }
 
-    let compositionIndex = 0;
+    let compositionIndex = 1;
 
     for (const composition of compositions) {
       const position = String(compositionIndex);
@@ -335,15 +323,15 @@ const createWords = async (words: Word[]) => {
     'position',
     'common',
     'outdated',
+    'irregular',
+    'rare',
+    'search_only',
     'frequency',
     'jlpt_id',
   ]);
 
-  const wordFormKanainfoCSV: string[][] = [];
-  wordFormKanainfoCSV.push(['word_id', 'form_id', 'kanainfo_id']);
-
-  const wordFormKanjiinfoCSV: string[][] = [];
-  wordFormKanjiinfoCSV.push(['word_id', 'form_id', 'kanjiinfo_id']);
+  const wordFormInfoCSV: string[][] = [];
+  wordFormInfoCSV.push(['word_id', 'form_id', 'info_id']);
 
   const wordFuriganaCSV: string[][] = [];
   wordFuriganaCSV.push(['word_id', 'form_id', 'furigana']);
@@ -355,7 +343,7 @@ const createWords = async (words: Word[]) => {
     wordCSV.push([wordId]);
     wordFuriganaCSV.push;
 
-    let formPosition = 0;
+    let formIndex = 1;
     for (const form of forms) {
       const {
         kanji,
@@ -365,9 +353,8 @@ const createWords = async (words: Word[]) => {
         jlpt,
         id: formId,
         furigana,
-        outdated,
-        kanaInfos,
-        kanjiInfos,
+        unusual,
+        infos,
       } = form;
 
       wordFormCSV.push([
@@ -375,24 +362,17 @@ const createWords = async (words: Word[]) => {
         formId,
         kanji ?? '',
         kana,
-        formPosition.toString(),
+        formIndex.toString(),
         common?.toString() ?? '',
-        outdated?.toString() ?? '',
+        unusual?.toString() ?? '',
         frequency?.toString() ?? '',
         jlpt?.toString() ?? '',
       ]);
 
-      if (kanaInfos) {
-        for (const kanaInfo of kanaInfos) {
-          const kanaInfoId = KEYWORDS.wordKanaInfo[kanaInfo].id.toString();
-          wordFormKanainfoCSV.push([wordId, formId, kanaInfoId]);
-        }
-      }
-
-      if (kanjiInfos) {
-        for (const kanjiInfo of kanjiInfos) {
-          const kanjiInfoId = KEYWORDS.wordKanjiInfo[kanjiInfo].id.toString();
-          wordFormKanjiinfoCSV.push([wordId, formId, kanjiInfoId]);
+      if (infos) {
+        for (const info of infos) {
+          const kanaInfoId = KEYWORDS.wordFormInfo[info].id.toString();
+          wordFormInfoCSV.push([wordId, formId, kanaInfoId]);
         }
       }
 
@@ -400,19 +380,12 @@ const createWords = async (words: Word[]) => {
         wordFuriganaCSV.push([wordId, formId, JSON.stringify(furigana)]);
       }
 
-      ++formPosition;
+      ++formIndex;
     }
   }
 
   await writeCSVFile(wordCSV, 'output/csv/word.csv');
   await writeCSVFile(wordFormCSV, 'output/csv/word_form.csv');
-  await writeCSVFile(
-    wordFormKanainfoCSV,
-    'output/csv/word_form_x_kanainfo.csv'
-  );
-  await writeCSVFile(
-    wordFormKanjiinfoCSV,
-    'output/csv/word_form_x_kanjiinfo.csv'
-  );
+  await writeCSVFile(wordFormInfoCSV, 'output/csv/word_form_x_info.csv');
   await writeCSVFile(wordFuriganaCSV, 'output/csv/word_furigana.csv');
 };

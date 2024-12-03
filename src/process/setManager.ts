@@ -1,10 +1,8 @@
 export class SetManager {
-  public wordKanaInfoSet: Set<string>;
-  public wordKanjiInfoSet: Set<string>;
+  public wordFormInfo: Set<string>;
 
   constructor() {
-    this.wordKanaInfoSet = new Set();
-    this.wordKanjiInfoSet = new Set();
+    this.wordFormInfo = new Set();
   }
 }
 

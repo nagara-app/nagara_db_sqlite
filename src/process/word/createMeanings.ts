@@ -134,25 +134,22 @@ const createTranslations = (
 ): string[] => {
   const translations: string[] = [];
 
-  for (const glossE of gloss) {
-    if (typeof glossE === 'string') {
-      const text = glossE;
+  for (const entry of gloss) {
+    if (typeof entry === 'string') {
+      const text = entry;
       translations.push(text);
+      continue;
     }
 
-    // else {
-    //   const text = glossE.value;
-    //   const type = glossE.g_type;
-    //   const isNotEnglish = glossE.lang !== undefined;
+    // TODO iplement gloss type
+    // const type = entry.g_type;
 
-    //   if (isNotEnglish) {
-    //     continue;
-    //   }
+    const text = entry.value;
+    translations.push(text);
 
-    //   translations.push({
-    //     text,
-    //     type,
-    //   });
+    // const isEnglish = entry.lang === undefined;
+    // if (isEnglish) {
+    //   translations.push(text);
     // }
   }
 
