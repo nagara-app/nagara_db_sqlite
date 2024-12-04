@@ -32,7 +32,6 @@ export default (jmEntry: JMdictEntr): WordForm[] => {
     jmKeles,
     wordNeedsKanaForm
   );
-  formCombinations.sort(sortByKanjiAndKana);
 
   const forms: WordForm[] = [];
   // Loop through all form combinations and populate word forms
@@ -113,9 +112,10 @@ export const createFormCombinations = (
   jmKeles: JMdictKanji[] | undefined,
   needsKanaForm: boolean
 ): Form[] => {
+  // Map to prevent duplicate form. Key represents a form.
   const forms = new Map<string, Form>();
 
-  // Filter kana and kanji elements from search only forms
+  // Filter kana and kanji elements from search-only forms
   const filteredJmReles = jmReles.filter(
     element => !toArrayOrUndefined(element.re_inf)?.includes('sk')
   );
@@ -123,52 +123,51 @@ export const createFormCombinations = (
     element => !toArrayOrUndefined(element.ke_inf)?.includes('sK')
   );
 
-  for (const jmRele of filteredJmReles) {
-    const kana = jmRele.reb;
-    const kanaInfos = toArrayOrUndefined(jmRele.re_inf);
-
-    // Ensure usual kana form exists if word has sense that is usually written in Kana
-    const unusualKana: JMdictRdngInf[] = ['ik', 'ok', 'rk'];
-    const inUnusualKana = kanaInfos?.some(info => unusualKana.includes(info));
-    if (needsKanaForm && !inUnusualKana) {
+  // 1. Only kana forms
+  if (filteredJmKeles === undefined) {
+    filteredJmReles.forEach(element => {
+      const kana = element.reb;
       forms.set(kana, {kana});
+    });
+  } else {
+    // 2. Needs kana form
+    if (needsKanaForm) {
+      filteredJmReles.forEach(element => {
+        const kana = element.reb;
+
+        // Only add kana forms that are not unusual
+        const infos = toArrayOrUndefined(element.re_inf);
+        const unusualInfo: JMdictRdngInf[] = ['ik', 'ok', 'rk'];
+        const isUnusualKana = infos?.some(info => unusualInfo.includes(info));
+        if (!isUnusualKana) forms.set(kana, {kana});
+      });
     }
 
-    // There are only kana forms
-    if (!filteredJmKeles) {
+    // 3. Kana readings with no kanji
+    const noKanjiJmReles = filteredJmReles.filter(
+      rele => rele.re_nokanji !== undefined
+    );
+    noKanjiJmReles.forEach(rele => {
+      const kana = rele.reb;
       forms.set(kana, {kana});
-      continue;
-    }
+    });
 
-    // There are also kanji forms, but this particular reading has no kanji
-    const readingHasNoKanji = jmRele.re_nokanji !== undefined ? true : false;
-    if (readingHasNoKanji) {
-      forms.set(kana, {kana});
-      continue;
-    }
+    // 4. Kanji forms with associated kana readings
+    const kanjiJmReles = filteredJmReles.filter(
+      rele => rele.re_nokanji === undefined
+    );
+    filteredJmKeles.forEach(kele => {
+      kanjiJmReles.forEach(rele => {
+        const kanji = kele.keb;
+        const kana = rele.reb;
+        const readingRestrictions = toArrayOrUndefined(rele.re_restr);
 
-    // There are also kanji forms, but there exists restrictions
-    const readingRestrictions = toArrayOrUndefined(jmRele.re_restr);
-    if (readingRestrictions) {
-      for (const restriction of readingRestrictions) {
-        const kanji = restriction;
-
-        // Only add the kanji form, if the restriction is available in the present kanji list
-        const isPresentInKanjiList = filteredJmKeles.some(
-          element => element.keb === kanji
-        );
-        if (isPresentInKanjiList) {
-          forms.set(kanji + kana, {kana, kanji});
+        // Do no set the form if it has restrictions that are not matching
+        if (!readingRestrictions || readingRestrictions.includes(kanji)) {
+          forms.set(kanji + kana, {kanji, kana});
         }
-      }
-      continue;
-    }
-
-    // Each kanji form can be combined
-    for (const jmKele of filteredJmKeles) {
-      const kanji = jmKele.keb;
-      forms.set(kanji + kana, {kana, kanji});
-    }
+      });
+    });
   }
 
   return Array.from(forms.values());
@@ -281,17 +280,4 @@ const sortUnusualForms = (a: WordForm, b: WordForm): number => {
   if (aUnusual && !bUnusual) return 1; // Move `a` to the end
   if (!aUnusual && bUnusual) return -1; // Move `b` to the end
   return 0; // No change
-};
-
-// Sort by kana and then kanji
-export const sortByKanjiAndKana = (a: Form, b: Form): number => {
-  // Step 1: Sort by kanji, moving forms with kanji to the end
-  if (a.kanji !== b.kanji) {
-    if (a.kanji === undefined) return -1;
-    if (b.kanji === undefined) return 1;
-    return a.kanji > b.kanji ? 1 : -1;
-  }
-
-  // Step 2: If kanji are the same, keep the original order of kana
-  return 0;
 };
