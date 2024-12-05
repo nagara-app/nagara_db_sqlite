@@ -33,6 +33,10 @@ export default (jmEntry: JMdictEntr): WordForm[] => {
     wordNeedsKanaForm
   );
 
+  if (!wordNeedsKanaForm) {
+    formCombinations.sort(sortKanaFormsToEnd);
+  }
+
   const forms: WordForm[] = [];
   // Loop through all form combinations and populate word forms
   for (const formCombination of formCombinations) {
@@ -57,7 +61,10 @@ export default (jmEntry: JMdictEntr): WordForm[] => {
     const id = toHash(kanji + kana);
 
     // Create combined info and turn to set to prevent duplicates
-    const infos = [...new Set([...(jmReInfo ?? []), ...(jmKeInfo ?? [])])];
+    const infos =
+      jmReInfo || jmKeInfo
+        ? [...new Set([...(jmReInfo ?? []), ...(jmKeInfo ?? [])])]
+        : undefined;
 
     infos?.forEach(entry => setManager.wordFormInfo.add(entry));
 
@@ -271,6 +278,22 @@ export const extractNfxx = (priority: string): number => {
       "Invalid priority format. Expected format is 'nfXX' where XX are two digits."
     );
   }
+};
+
+// Sort kana forms to the end
+export const sortKanaFormsToEnd = (a: Form, b: Form): number => {
+  const aHasKanji = 'kanji' in a;
+  const bHasKanji = 'kanji' in b;
+
+  if (aHasKanji && !bHasKanji) {
+    return -1; // a has kanji, b does not, so a should come first
+  }
+
+  if (!aHasKanji && bHasKanji) {
+    return 1; // b has kanji, a does not, so b should come first
+  }
+
+  return 0; // both have or don't have kanji, maintain their relative order
 };
 
 // Sort unusual forms to the end

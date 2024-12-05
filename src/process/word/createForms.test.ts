@@ -6,6 +6,7 @@ import {
   getFrequency,
   hasSenseWithKanaForm,
   isCommon,
+  sortKanaFormsToEnd,
 } from './createForms';
 
 describe('Form creater is creating all possible forms', () => {
@@ -196,36 +197,28 @@ describe('nfxx extractor returns correct number', () => {
   });
 });
 
-// describe('Sort same kanji first while keeping original kana order', () => {
-//   test('With kanji', () => {
-//     const result = [
-//       {kana: 'あそこ', kanji: '彼処'},
-//       {kana: 'あそこ', kanji: '彼所'},
-//       {kana: 'あすこ', kanji: '彼処'},
-//       {kana: 'あすこ', kanji: '彼所'},
-//       {kana: 'かしこ', kanji: '彼処'},
-//       {kana: 'かしこ', kanji: '彼所'},
-//       {kana: 'あしこ', kanji: '彼処'},
-//       {kana: 'あしこ', kanji: '彼所'},
-//       {kana: 'あこ', kanji: '彼処'},
-//       {kana: 'あこ', kanji: '彼所'},
-//       {kana: 'アソコ'},
-//     ].sort(sortByKanjiAndKana);
+describe('Sort kana to end', () => {
+  test('With kanji', () => {
+    const result = [
+      {kana: 'あそこ'},
+      {kana: 'あすこ'},
+      {kana: 'アソコ'},
+      {kana: 'あそこ', kanji: '彼処'},
+      {kana: 'あすこ', kanji: '彼処'},
+      {kana: 'あそこ', kanji: '彼所'},
+      {kana: 'あすこ', kanji: '彼所'},
+    ].sort(sortKanaFormsToEnd);
 
-//     const expected = [
-//       {kana: 'アソコ'},
-//       {kana: 'あそこ', kanji: '彼処'},
-//       {kana: 'あすこ', kanji: '彼処'},
-//       {kana: 'かしこ', kanji: '彼処'},
-//       {kana: 'あしこ', kanji: '彼処'},
-//       {kana: 'あこ', kanji: '彼処'},
-//       {kana: 'あそこ', kanji: '彼所'},
-//       {kana: 'あすこ', kanji: '彼所'},
-//       {kana: 'かしこ', kanji: '彼所'},
-//       {kana: 'あしこ', kanji: '彼所'},
-//       {kana: 'あこ', kanji: '彼所'},
-//     ];
+    const expected = [
+      {kana: 'あそこ', kanji: '彼処'},
+      {kana: 'あすこ', kanji: '彼処'},
+      {kana: 'あそこ', kanji: '彼所'},
+      {kana: 'あすこ', kanji: '彼所'},
+      {kana: 'あそこ'},
+      {kana: 'あすこ'},
+      {kana: 'アソコ'},
+    ];
 
-//     expect(result).toEqual(expected);
-//   });
-// });
+    expect(result).toEqual(expected);
+  });
+});
