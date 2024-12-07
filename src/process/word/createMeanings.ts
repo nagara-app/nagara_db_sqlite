@@ -11,12 +11,14 @@ import type {
 } from '../../type/jmdict';
 
 import {toArray, toArrayOrUndefined, toHash} from '../../utils';
+import {setManager} from '../setManager';
 
-export default (
-  jmEntry: JMdictEntr,
-  kana: string,
-  kanji?: string
-): WordMeaning[] => {
+interface Form {
+  kana: string;
+  kanji?: string | undefined;
+}
+
+export default (jmEntry: JMdictEntr, form?: Form): WordMeaning[] => {
   const meanings: WordMeaning[] = [];
 
   const jmSenses = toArray(jmEntry.sense);
@@ -25,20 +27,25 @@ export default (
     const {gloss, pos, field, dial, misc, s_inf, lsource, stagk, stagr} =
       jmSense;
 
-    const restrictedKanaList = toArrayOrUndefined(stagk);
-    const restrictedKanjiList = toArrayOrUndefined(stagr);
+    const jmKanaRestrictions = toArrayOrUndefined(stagr);
+    const jmKanjiRestrictions = toArrayOrUndefined(stagk);
 
-    // This meaning is restricted, but not for this kana
-    const isKanaRestricted =
-      restrictedKanaList && !restrictedKanaList.includes(kana);
+    // If form is provided, create only meanings that are restricted to the form
+    if (form) {
+      const {kana, kanji} = form;
 
-    // This meaning is restricted, but not for this kanji
-    const isKanjiRestricted =
-      kanji && restrictedKanjiList && !restrictedKanjiList.includes(kanji);
+      // This meaning is restricted, but not for this kana
+      const isKanaRestricted =
+        jmKanaRestrictions && !jmKanaRestrictions.includes(kana);
 
-    // Skip this meaning
-    if (isKanaRestricted || isKanjiRestricted) {
-      continue;
+      // This meaning is restricted, but not for this kanji
+      const isKanjiRestricted =
+        kanji && jmKanjiRestrictions && !jmKanjiRestrictions.includes(kanji);
+
+      // Skip this meaning
+      if (isKanaRestricted || isKanjiRestricted) {
+        continue;
+      }
     }
 
     const jmGloss = toArray(gloss);
@@ -50,6 +57,10 @@ export default (
     const jmLsources = toArrayOrUndefined(lsource);
 
     const id = toHash(jmGloss.join());
+    const restrictions = getRestrictions(
+      jmKanaRestrictions,
+      jmKanjiRestrictions
+    );
     const translations = createTranslations(jmGloss);
     const wordClasses = getWordClasses(jmPartsOfSpeech);
     const fieldCategories = getFieldCategories(jmFields);
@@ -60,6 +71,7 @@ export default (
 
     meanings.push({
       id,
+      restrictions,
       translations,
       wordClasses,
       fieldCategories,
@@ -76,7 +88,25 @@ export default (
 const getWordClasses = (
   jmPartsOfSpeech: JMdictSensPos[] | undefined
 ): string[] | undefined => {
+  jmPartsOfSpeech?.forEach(pos => {
+    setManager.wordMeaningPos.add(pos);
+  });
+
   return jmPartsOfSpeech;
+};
+
+const getRestrictions = (
+  jmKanaRestrictions: string[] | undefined,
+  jmKanjiRestrictions: string[] | undefined
+): string[] | undefined => {
+  const restrictions = [
+    ...(jmKanaRestrictions ?? []),
+    ...(jmKanjiRestrictions ?? []),
+  ];
+  if (restrictions.length === 0) {
+    return undefined;
+  }
+  return restrictions;
 };
 
 const getFieldCategories = (

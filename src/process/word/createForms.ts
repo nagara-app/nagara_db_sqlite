@@ -7,11 +7,11 @@ import {
   JMdictSens,
 } from '../../type/jmdict';
 import {toArray, toArrayOrUndefined, toHash} from '../../utils';
-import {isKanji} from 'wanakana';
+import {isKanji, toRomaji} from 'wanakana';
+
 import {fileManager} from '../fileManager';
-import {toRomaji} from 'wanakana';
-import createMeanings from './createMeanings';
 import {setManager} from '../setManager';
+import createMeanings from './createMeanings';
 
 interface Form {
   kana: string;
@@ -89,7 +89,7 @@ export default (jmEntry: JMdictEntr): WordForm[] => {
     const furigana = getFurigana(formCombination);
     const characters = extractKanji(kanji);
 
-    const meanings = createMeanings(jmEntry, kana, kanji);
+    const meanings = createMeanings(jmEntry, {kana, kanji});
 
     forms.push({
       wordId,

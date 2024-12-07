@@ -234,7 +234,6 @@ export const KEYWORDS: Keywords = {
     vsI: 'Verb (する, irregular)', // suru verb - irregular
     vsS: 'Verb (する)', // suru verb - special class
     vt: 'Transitive', // transitive verb
-    vUnspec: 'Verb (unspecified)', // verb unspecified
     vz: 'Verb (ずる)', // ichidan verb - zuru verb (alternative form of -jiru verbs)
   },
   wordFormInfo: {

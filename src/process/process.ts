@@ -45,4 +45,10 @@ const compareKeywords = (): void => {
     KEYWORDS.wordFormInfo,
     'Word Form Info'
   );
+
+  setIncludesExactRecordKeys(
+    setManager.wordMeaningPos,
+    KEYWORDS.wordMeaningPos,
+    'Word Meaning POS'
+  );
 };
