@@ -92,10 +92,10 @@ export const setIncludesExactRecordKeys = <T extends string>(
   if (missingKeys.length > 0 || extraKeys.length > 0) {
     let errorMessage = 'Mismatch found:';
     if (missingKeys.length > 0) {
-      errorMessage += `\n  - Missing keys in set ${setIdentifier}: ${missingKeys.join(', ')}`;
+      errorMessage += `\n  - Missing keys in TKDB ${setIdentifier}: ${missingKeys.join(', ')}`;
     }
     if (extraKeys.length > 0) {
-      errorMessage += `\n  - Extra keys in set ${setIdentifier}: ${extraKeys.join(', ')}`;
+      errorMessage += `\n  - Extra keys in TKDB ${setIdentifier}: ${extraKeys.join(', ')}`;
     }
     console.log(red(errorMessage));
   }

@@ -1,4 +1,8 @@
-import type {WordLanguageSource, WordMeaning} from 'tkdb-helper';
+import type {
+  WordLanguageSource,
+  WordMeaning,
+  WordMeaningTranslation,
+} from 'tkdb-helper';
 
 import type {
   JMdictEntr,
@@ -56,24 +60,36 @@ export default (jmEntry: JMdictEntr, form?: Form): WordMeaning[] => {
     const jmSenseInfo = s_inf;
     const jmLsources = toArrayOrUndefined(lsource);
 
-    const id = toHash(jmGloss.join());
     const restrictions = getRestrictions(
       jmKanaRestrictions,
       jmKanjiRestrictions
     );
+
     const translations = createTranslations(jmGloss);
-    const wordClasses = getWordClasses(jmPartsOfSpeech);
+
+    const posCategories = getPosCategories(jmPartsOfSpeech);
     const fieldCategories = getFieldCategories(jmFields);
     const dialectCategories = getDialectCategories(jmDialects);
     const miscCategories = getMiscCategories(jmMiscs);
+    let categories: string[] | undefined;
+    categories = [
+      ...(posCategories ?? []),
+      ...(fieldCategories ?? []),
+      ...(dialectCategories ?? []),
+      ...(miscCategories ?? []),
+    ];
+    categories = categories.length > 0 ? categories : undefined;
+
     const informations = getInformations(jmSenseInfo);
     const languageSources = getLanguageSources(jmLsources);
+
+    const id = getId(categories, translations, informations);
 
     meanings.push({
       id,
       restrictions,
       translations,
-      wordClasses,
+      posCategories,
       fieldCategories,
       dialectCategories,
       miscCategories,
@@ -85,7 +101,28 @@ export default (jmEntry: JMdictEntr, form?: Form): WordMeaning[] => {
   return meanings;
 };
 
-const getWordClasses = (
+const getId = (
+  categories: string[] | undefined,
+  translations: WordMeaningTranslation[],
+  informations: string[] | undefined
+): string => {
+  const flattedTranslations = translations.flatMap(translation => {
+    const orderedValues: string[] = [];
+    if (translation.type) orderedValues.push(translation.type); // Push `type` first if it exists
+    orderedValues.push(translation.text);
+    return orderedValues;
+  });
+
+  let hashable = '';
+
+  hashable += categories?.sort().join();
+  hashable += flattedTranslations.join();
+  hashable += informations?.join();
+
+  return toHash(hashable);
+};
+
+const getPosCategories = (
   jmPartsOfSpeech: JMdictSensPos[] | undefined
 ): string[] | undefined => {
   jmPartsOfSpeech?.forEach(pos => {
@@ -112,18 +149,27 @@ const getRestrictions = (
 const getFieldCategories = (
   jmFields: JMdictSensField[] | undefined
 ): string[] | undefined => {
+  jmFields?.forEach(field => {
+    setManager.wordMeaningField.add(field);
+  });
   return jmFields;
 };
 
 const getDialectCategories = (
   jmDialects: JMdictSensDial[] | undefined
 ): string[] | undefined => {
+  jmDialects?.forEach(dial => {
+    setManager.wordMeaningDial.add(dial);
+  });
   return jmDialects;
 };
 
 const getMiscCategories = (
   jmMiscs: JMdictSensMisc[] | undefined
 ): string[] | undefined => {
+  jmMiscs?.forEach(misc => {
+    setManager.wordMeaningMisc.add(misc);
+  });
   return jmMiscs;
 };
 
@@ -161,26 +207,28 @@ const getLanguageSources = (
 
 const createTranslations = (
   gloss: Array<string | JMdictSensGloss>
-): string[] => {
-  const translations: string[] = [];
+): WordMeaningTranslation[] => {
+  const translations: WordMeaningTranslation[] = [];
 
   for (const entry of gloss) {
     if (typeof entry === 'string') {
       const text = entry;
-      translations.push(text);
-      continue;
+      translations.push({text});
+    } else {
+      const type = entry.g_type;
+      const text = entry.value;
+
+      if (type) {
+        setManager.wordTranslationType.add(type);
+      }
+
+      // TODO: Implement other languages
+      // const isEnglish = entry.lang === undefined;
+      // if (isEnglish) {
+      // }
+
+      translations.push({text, type});
     }
-
-    // TODO iplement gloss type
-    // const type = entry.g_type;
-
-    const text = entry.value;
-    translations.push(text);
-
-    // const isEnglish = entry.lang === undefined;
-    // if (isEnglish) {
-    //   translations.push(text);
-    // }
   }
 
   if (translations.length < 1) {

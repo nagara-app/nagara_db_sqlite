@@ -51,4 +51,28 @@ const compareKeywords = (): void => {
     KEYWORDS.wordMeaningPos,
     'Word Meaning POS'
   );
+
+  setIncludesExactRecordKeys(
+    setManager.wordMeaningField,
+    KEYWORDS.wordMeaningField,
+    'Word Meaning Field'
+  );
+
+  setIncludesExactRecordKeys(
+    setManager.wordMeaningMisc,
+    KEYWORDS.wordMeaningMisc,
+    'Word Meaning Misc'
+  );
+
+  setIncludesExactRecordKeys(
+    setManager.wordMeaningDial,
+    KEYWORDS.wordMeaningDial,
+    'Word Meaning Dial'
+  );
+
+  setIncludesExactRecordKeys(
+    setManager.wordTranslationType,
+    KEYWORDS.wordTranslationType,
+    'Word Translation Type'
+  );
 };
