@@ -426,6 +426,14 @@ const createWords = async (words: Word[]) => {
   const wordMeaningInfoCSV: string[][] = [];
   wordMeaningInfoCSV.push(['word_id', 'meaning_id', 'position', 'info']);
 
+  const wordMeaningRestrictionCSV: string[][] = [];
+  wordMeaningRestrictionCSV.push([
+    'word_id',
+    'meaning_id',
+    'position',
+    'restriction',
+  ]);
+
   for (const word of words) {
     const {id, forms, meanings} = word;
     const wordId = id.toString();
@@ -483,6 +491,7 @@ const createWords = async (words: Word[]) => {
         dialectCategories,
         translations,
         informations,
+        restrictions,
       } = meaning;
 
       if (posCategories) {
@@ -526,6 +535,19 @@ const createWords = async (words: Word[]) => {
         }
       }
 
+      if (restrictions) {
+        let restrictionIndex = 0;
+        for (const restriction of restrictions) {
+          wordMeaningRestrictionCSV.push([
+            wordId,
+            meaningId,
+            restrictionIndex.toString(),
+            restriction,
+          ]);
+          ++restrictionIndex;
+        }
+      }
+
       let translationIndex = 1;
       for (const translation of translations) {
         const typeId = translation.type
@@ -563,4 +585,8 @@ const createWords = async (words: Word[]) => {
   );
   await writeCSVFile(wordTranslationCSV, 'output/csv/word_translation.csv');
   await writeCSVFile(wordMeaningInfoCSV, 'output/csv/word_meaning_info.csv');
+  await writeCSVFile(
+    wordMeaningRestrictionCSV,
+    'output/csv/word_meaning_restriction.csv'
+  );
 };
