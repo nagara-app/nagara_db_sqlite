@@ -423,6 +423,9 @@ const createWords = async (words: Word[]) => {
     'type_id',
   ]);
 
+  const wordMeaningInfoCSV: string[][] = [];
+  wordMeaningInfoCSV.push(['word_id', 'meaning_id', 'position', 'info']);
+
   for (const word of words) {
     const {id, forms, meanings} = word;
     const wordId = id.toString();
@@ -479,6 +482,7 @@ const createWords = async (words: Word[]) => {
         miscCategories,
         dialectCategories,
         translations,
+        informations,
       } = meaning;
 
       if (posCategories) {
@@ -506,6 +510,19 @@ const createWords = async (words: Word[]) => {
         for (const category of dialectCategories) {
           const dialId = KEYWORDS.wordMeaningDial[category].id.toString();
           wordMeaningDialectCSV.push([wordId, meaningId, dialId]);
+        }
+      }
+
+      if (informations) {
+        let infoIndex = 0;
+        for (const info of informations) {
+          wordMeaningInfoCSV.push([
+            wordId,
+            meaningId,
+            infoIndex.toString(),
+            info,
+          ]);
+          ++infoIndex;
         }
       }
 
@@ -545,4 +562,5 @@ const createWords = async (words: Word[]) => {
     'output/csv/word_meaning_x_dial.csv'
   );
   await writeCSVFile(wordTranslationCSV, 'output/csv/word_translation.csv');
+  await writeCSVFile(wordMeaningInfoCSV, 'output/csv/word_meaning_info.csv');
 };
