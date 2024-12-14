@@ -14,7 +14,7 @@ export default async (): Promise<void> => {
   await createKeywords(keywords);
   await createRadical(radicals);
   await createKanji(kanjis, radicals);
-  await createWords(words);
+  await createWords(words, kanjis);
 
   console.log(green('All CSV files are created'));
 };
@@ -373,7 +373,7 @@ const createKanji = async (kanjis: Kanji[], radicals: Radical[]) => {
   await writeCSVFile(strokecountCsv, 'output/csv/strokecount.csv');
 };
 
-const createWords = async (words: Word[]) => {
+const createWords = async (words: Word[], kanjis: Kanji[]) => {
   const wordCSV: string[][] = [];
   wordCSV.push(['id', 'jlpt_id']);
 
@@ -398,6 +398,9 @@ const createWords = async (words: Word[]) => {
 
   const wordFuriganaCSV: string[][] = [];
   wordFuriganaCSV.push(['word_id', 'form_id', 'furigana']);
+
+  const wordKanjiCSV: string[][] = [];
+  wordKanjiCSV.push(['word_id', 'form_id', 'kanji_id', 'position']);
 
   const wordMeaningCSV: string[][] = [];
   wordMeaningCSV.push(['word_id', 'id', 'position']);
@@ -453,6 +456,7 @@ const createWords = async (words: Word[]) => {
         furigana,
         unusual,
         infos,
+        usedKanji: usedKanjiData,
       } = form;
 
       wordFormCSV.push([
@@ -476,6 +480,26 @@ const createWords = async (words: Word[]) => {
 
       if (furigana) {
         wordFuriganaCSV.push([wordId, formId, JSON.stringify(furigana)]);
+      }
+
+      if (usedKanjiData) {
+        let kanjiPosition = 1;
+        for (const usedKanji of usedKanjiData) {
+          const literal = usedKanji;
+
+          try {
+            const kanjiId = getKanjiId(literal, kanjis);
+            wordKanjiCSV.push([
+              wordId,
+              formId,
+              kanjiId,
+              kanjiPosition.toString(),
+            ]);
+            ++kanjiPosition;
+          } catch (error) {
+            // Ignore the error and continue with the next character
+          }
+        }
       }
 
       ++formIndex;
@@ -571,7 +595,8 @@ const createWords = async (words: Word[]) => {
   await writeCSVFile(wordCSV, 'output/csv/word.csv');
   await writeCSVFile(wordFormCSV, 'output/csv/word_form.csv');
   await writeCSVFile(wordFormInfoCSV, 'output/csv/word_form_x_info.csv');
-  await writeCSVFile(wordFuriganaCSV, 'output/csv/word_furigana.csv');
+  await writeCSVFile(wordFuriganaCSV, 'output/csv/word_form_furigana.csv');
+  await writeCSVFile(wordKanjiCSV, 'output/csv/word_form_x_kanji.csv');
   await writeCSVFile(wordMeaningCSV, 'output/csv/word_meaning.csv');
   await writeCSVFile(wordMeaningPosCSV, 'output/csv/word_meaning_x_pos.csv');
   await writeCSVFile(

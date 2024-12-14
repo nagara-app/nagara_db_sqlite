@@ -87,7 +87,7 @@ export default (jmEntry: JMdictEntr): WordForm[] => {
 
     const jlpt = getJlpt(formCombination, jmId);
     const furigana = getFurigana(formCombination);
-    const characters = extractKanji(kanji);
+    const usedKanji = extractKanji(kanji);
 
     const meanings = createMeanings(jmEntry, {kana, kanji});
 
@@ -101,7 +101,7 @@ export default (jmEntry: JMdictEntr): WordForm[] => {
       frequency,
       jlpt,
       furigana,
-      characters,
+      usedKanji,
       unusual,
       infos,
       meanings,
@@ -226,13 +226,19 @@ export const extractKanji = (
 ): string[] | undefined => {
   if (input === undefined) return undefined;
 
+  const uniqueKanjiSet = new Set<string>();
   const characters = Array.from(input);
-
   const kanjiArray = characters.filter(isKanji);
 
-  if (kanjiArray.length < 1) return;
+  kanjiArray.forEach(kanji => {
+    uniqueKanjiSet.add(kanji);
+  });
 
-  return kanjiArray;
+  const uniqueKanjiArray = Array.from(uniqueKanjiSet);
+
+  if (uniqueKanjiArray.length < 1) return;
+
+  return uniqueKanjiArray;
 };
 
 export const isCommon = (priorities?: string[]): boolean | undefined => {
